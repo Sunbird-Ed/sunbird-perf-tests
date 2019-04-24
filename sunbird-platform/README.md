@@ -55,7 +55,7 @@ Tidying up remote @ Wed Apr 24 16:45:04 IST 2019 (1556104504507)
 ```
 
 Other Logs:
-~/logs/r1_user_enrollment_list_t15/logs/jmeter.log
-~/logs/r1_user_enrollment_list_t15/logs/output.xml
+* ~/logs/r1_user_enrollment_list_t15/logs/jmeter.log
+* ~/logs/r1_user_enrollment_list_t15/logs/output.xml
 
 
