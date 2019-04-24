@@ -1,3 +1,4 @@
+#!/bin/bash
 start(){
 	echo $rootOrgSize
 	local i=1
