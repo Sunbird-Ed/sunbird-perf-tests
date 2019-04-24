@@ -1,4 +1,6 @@
-Pre-requisites:
+The purpose of this document is to describe the steps required to perform a sunbird platform (learner service) load test.
+
+## Pre-requisites
 * Clone this repo (i.e. sunbird-perf-tests) in home directory
 * Setup Apache JMeter 5.1.1 (apache-jmeter-5.1.1) in home directory
 * Update Apache JMeter configuration properties (jmeter.properties)
@@ -17,7 +19,7 @@ nohup ~/apache-jmeter-5.1.1/bin/jmeter-server &
 mkdir ~/logs ~/current_scenario
 ```
 
-Steps to run a scenario:
+## How to run?
 
 1. Run load test scenario script with necessary arguments:
 
@@ -28,5 +30,5 @@ sh run_scenario.sh <JMETER_IP_LIST> <HOST> <SCENARIO_NAME> <SCENARIO_ID> <THREAD
 e.g.
 
 ```
-sh run_scenario.sh "28.0.0.18,28.0.0.19,28.0.0.20" "dev.sunbirded.org" user-enrollment-list r1_user_enrollment_list_t15 5 1 1 "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+sh run_scenario.sh "28.0.0.18,28.0.0.19,28.0.0.20" "dev.sunbirded.org" user-enrollment-list r1_user_enrollment_list_t15 5 1 1 "ABCDEFabcdef012345" "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 ```
