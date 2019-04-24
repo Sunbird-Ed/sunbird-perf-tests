@@ -11,7 +11,7 @@ start(){
 
 createRootOrgCql(){
 	now=`date +%Y-%m-%d.%H:%M:%S%z`
-	local query="Insert into sunbird.organisation (id, orgName, channel, createddate, isrootorg,slug,status, hashtagid) values ('root-org-$1','root-org-name-$1','channel$1','$now',true,'channel$1',1,'channel$1');"
+	local query="INSERT INTO sunbird.organisation (id, orgName, channel, createddate, isrootorg,slug,status, hashtagid) VALUES ('root-org-$1','root-org-name-$1','channel$1','$now',true,'channel$1',1,'channel$1');"
 	echo $query
 	if [ $1 == 1 ]
 	then
