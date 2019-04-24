@@ -13,7 +13,9 @@ jmeter.save.saveservice.requestHeaders=true
 nohup ~/apache-jmeter-5.1.1/bin/jmeter-server &
 ```
 * Create necessary folders for running scenario script in home directory
+```
 mkdir ~/logs ~/current_scenario
+```
 
 Steps to run a scenario:
 
