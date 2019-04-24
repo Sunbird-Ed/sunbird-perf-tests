@@ -97,10 +97,10 @@ createUserForRootOrg(){
 
 createUserForRootOrgAsCreator(){
 	now=`date +%Y-%m-%d.%H:%M:%S%z`
-	local query="Insert into sunbird.user (id, channel, email, emailverified , firstName, rootorgid,status,username,roles,createddate) values ('user-creator-$1-$2',channel$1,'user-$1-$2@gmaol.com',true,'name-$1-$2','root-org-$1',1,'username-$1-$2',['Public','BOOK_CREATOR','CONTENT_CREATOR'],$now);"
+	local query="Insert into sunbird.user (id, channel, email, emailverified , firstName, rootorgid,status,username,roles,createddate) values ('creator-$2',channel$1,'user-$1-$2@gmaol.com',true,'name-$1-$2','root-org-$1',1,'username-$1-$2',['Public','BOOK_CREATOR','CONTENT_CREATOR'],$now);"
 	echo $query
 	echo $query >> $userfile
-	local user_root_org_query="Insert into sunbird.user_org (id, organisationid,userid, hashtagid,orgjoindate,roles,isdeleted ) values ('user-org-root-creator-$1-$2','root-org-$1','user-creator-$1-$2','root-org-$1',$now,['Public','BOOK_CREATOR','CONTENT_CREATOR'],false);"
+	local user_root_org_query="Insert into sunbird.user_org (id, organisationid,userid, hashtagid,orgjoindate,roles,isdeleted ) values ('user-org-root-creator-$1-$2','root-org-$1','creator-$2','root-org-$1',$now,['Public','BOOK_CREATOR','CONTENT_CREATOR'],false);"
 	echo $user_root_org_query >> $userorgfile
 }
 rootOrgSize="$1"
