@@ -7,7 +7,8 @@ scenario_id=$4
 numThreads=$5
 rampupTime=$6
 ctrlLoops=$7
-accessToken=$8
+apiKey=$8
+accessToken=$9
 
 JMETER_HOME=~/apache-jmeter-5.1.1
 SCENARIO_LOGS=~/logs
@@ -34,6 +35,7 @@ sed -i tmp "s/RAMPUP_TIME/${rampupTime}/g" $JMX_FILE_PATH
 sed -i tmp "s/CTRL_LOOPS/${ctrlLoops}/g" $JMX_FILE_PATH
 sed -i tmp "s/ACCESS_TOKEN/${accessToken}/g" $JMX_FILE_PATH
 sed -i tmp "s/HOST/${host}/g" $JMX_FILE_PATH
+sed -i tmp "s/API_KEY/${apiKey}/g" $JMX_FILE_PATH
 
 nohup $JMETER_HOME/bin/jmeter.sh -n -t $JMX_FILE_PATH -R$JMETER_CLUSTER_IPS -l $SCENARIO_LOGS/$scenario_id/logs/output.xml -j $SCENARIO_LOGS/$scenario_id/logs/jmeter.log > $SCENARIO_LOGS/$scenario_id/logs/scenario.log 2>&1 &
 
