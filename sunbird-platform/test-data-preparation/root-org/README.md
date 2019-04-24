@@ -1,4 +1,4 @@
-The purpose of this document is to describe the steps required to run the script to generate the root org creation cql
+The purpose of this document is to describe the steps required to run the scripts for automated creation of root orgs.
 
 # Pre-requisites
 
@@ -8,15 +8,18 @@ Clone this repo (sunbird-perf-tests) in home directory and go to test-data-prepe
 
 Run load test scenario script with necessary arguments:
 
-    sh create-root-org.sh <SIZE_OF_ROOT_ORG> <FILE_NAME>
+```
+sh create-root-org.sh <SIZE_OF_ROOT_ORG> <FILE_NAME>
+```
 
-# eg:
+e.g.
+```
+sh create-root-org.sh 28 org.cql
+```
 
-    sh create-root-org.sh 28 org.cql
-    
 ## How to verify?
 
-    org.cql will be created in the path specified above
+org.cql will be created in the path specified above.
 
 ## Scenario data :
 
