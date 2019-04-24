@@ -20,7 +20,7 @@ Steps to run a scenario:
 1. Run load test scenario script with necessary arguments:
 
 ```
-sh run_scenario.sh <JMETER_IP_LIST> <HOST> <SCENARIO_NAME> <SCENARIO_ID> <THREADS_COUNT> <RAMPUP_TIME> <CTRL_LOOPS> <ACCESS_TOKEN>
+sh run_scenario.sh <JMETER_IP_LIST> <HOST> <SCENARIO_NAME> <SCENARIO_ID> <THREADS_COUNT> <RAMPUP_TIME> <CTRL_LOOPS> <API_KEY> <ACCESS_TOKEN>
 ```
 
 e.g.
