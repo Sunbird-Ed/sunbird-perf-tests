@@ -1,6 +1,6 @@
 The purpose of this document is to describe the steps required to perform a sunbird platform (learner service) load test.
 
-## Pre-requisites
+### Pre-requisites
 * Clone this repo (i.e. sunbird-perf-tests) in home directory
 * Setup Apache JMeter 5.1.1 (apache-jmeter-5.1.1) in home directory
 * Update Apache JMeter configuration properties (jmeter.properties)
@@ -19,7 +19,7 @@ nohup ~/apache-jmeter-5.1.1/bin/jmeter-server &
 mkdir ~/logs ~/current_scenario
 ```
 
-## How to run?
+### How to run?
 
 1. Run load test scenario script with necessary arguments:
 
