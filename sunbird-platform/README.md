@@ -30,7 +30,7 @@ sh run_scenario.sh <JMETER_IP_LIST> <HOST> <SCENARIO_NAME> <SCENARIO_ID> <THREAD
 e.g.
 
 ```
-sh run_scenario.sh "28.0.0.18,28.0.0.19,28.0.0.20" "dev.sunbirded.org" user-enrollment-list r1_user_enrollment_list_t15 5 1 1 "ABCDEFabcdef012345" "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+sh run_scenario.sh "28.0.0.18,28.0.0.19,28.0.0.20" "dev.sunbirded.org" user-enrollment-list r1_user_enrollment_list_t5 5 1 1 "ABCDEFabcdef012345" "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 ```
 
 ### How to verify?
@@ -39,7 +39,7 @@ Logs are organised per scenario (`~/logs/<SCENARIO_ID>/logs/*.log`). Sample logs
 
 Scenario Log:
 ```
-cat ~/logs/r1_user_enrollment_list_t15/logs/scenario.log 
+cat ~/logs/r1_user_enrollment_list_t5/logs/scenario.log 
 Creating summariser <summary>
 Created the tree successfully using /Users/vinaya/current_scenario/user-enrollment-list.jmx
 Configuring remote engine: 127.0.0.1
@@ -55,7 +55,7 @@ Tidying up remote @ Wed Apr 24 16:45:04 IST 2019 (1556104504507)
 ```
 
 Other Logs:
-* ~/logs/r1_user_enrollment_list_t15/logs/jmeter.log
-* ~/logs/r1_user_enrollment_list_t15/logs/output.xml
+* ~/logs/r1_user_enrollment_list_t5/logs/jmeter.log
+* ~/logs/r1_user_enrollment_list_t5/logs/output.xml
 
 
