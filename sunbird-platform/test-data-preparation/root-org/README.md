@@ -1,11 +1,5 @@
 The purpose of this document is to describe the steps required to run the scripts for automated creation of root orgs.
 
-# Pre-requisites
-
-Clone this repo (sunbird-perf-tests) in home directory and go to test-data-preperation folder and move to root-org folder
-
-## How to run?
-
 1. Run load test scenario script with necessary arguments:
 
 ```
