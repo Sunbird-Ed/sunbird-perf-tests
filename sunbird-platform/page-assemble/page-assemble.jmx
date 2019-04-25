@@ -10,7 +10,7 @@
         <collectionProp name="Arguments.arguments">
           <elementProp name="host" elementType="Argument">
             <stringProp name="Argument.name">host</stringProp>
-            <stringProp name="Argument.value">HOST</stringProp>
+            <stringProp name="Argument.value">HOST/api</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="uri" elementType="Argument">
@@ -20,7 +20,7 @@
           </elementProp>
           <elementProp name="apiKey" elementType="Argument">
             <stringProp name="Argument.name">apiKey</stringProp>
-            <stringProp name="Argument.value">API-KEY</stringProp>
+            <stringProp name="Argument.value">API_KEY</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="numThreads" elementType="Argument">
@@ -52,10 +52,10 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">30</stringProp>
+          <stringProp name="LoopController.loops">${ctrlLoops}</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">10</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <stringProp name="ThreadGroup.num_threads">${numThreads}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${rampupTime}</stringProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
@@ -75,9 +75,9 @@
          &quot;source&quot;:&quot;web&quot;,&#xd;
          &quot;name&quot;:&quot;${name}&quot;,&#xd;
          &quot;filters&quot;:{&#xd;
-         	&quot;gradeLevel&quot; : [&quot;${gradeLevel}&quot;],&#xd;
-         	&quot;medium&quot; : [&quot;${medium}&quot;],&#xd;
-         	&quot;board&quot; : [&quot;${board}&quot;]&#xd;
+          &quot;gradeLevel&quot; : [&quot;${gradeLevel}&quot;],&#xd;
+          &quot;medium&quot; : [&quot;${medium}&quot;],&#xd;
+          &quot;board&quot; : [&quot;${board}&quot;]&#xd;
          },&#xd;
          &quot;mode&quot;:&quot;soft&quot;&#xd;
       }&#xd;
@@ -102,12 +102,12 @@
         </HTTPSamplerProxy>
         <hashTree/>
         <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="page assemble test data" enabled="true">
-          <stringProp name="filename">C:/Users/Manzarul/Desktop/TestData/Sample_upload/pageassemble.csv</stringProp>
-          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="filename">${csvFile}</stringProp>
+          <stringProp name="fileEncoding">UTF-8</stringProp>
           <stringProp name="variableNames">name,gradeLevel,medium,board</stringProp>
-          <boolProp name="ignoreFirstLine">false</boolProp>
+          <boolProp name="ignoreFirstLine">true</boolProp>
           <stringProp name="delimiter">,</stringProp>
-          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="quotedData">true</boolProp>
           <boolProp name="recycle">true</boolProp>
           <boolProp name="stopThread">false</boolProp>
           <stringProp name="shareMode">shareMode.all</stringProp>
@@ -117,7 +117,7 @@
           <collectionProp name="HeaderManager.headers">
             <elementProp name="" elementType="Header">
               <stringProp name="Header.name">Authorization</stringProp>
-              <stringProp name="Header.value">${api-key}</stringProp>
+              <stringProp name="Header.value">${apiKey}</stringProp>
             </elementProp>
             <elementProp name="" elementType="Header">
               <stringProp name="Header.name">content-type</stringProp>
