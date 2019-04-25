@@ -14,10 +14,18 @@ Run load test scenario script with necessary arguments:
 
     sh create-root-org.sh 28 50000 suborg.cql
     
-## How to verify?
+2. `suborg.cql` will be created in the path specified above.
 
-    suborg.cql will be created in the path specified above
+    ```
+    $ cat suborg.cql
+    INSERT INTO sunbird.organisation (id, orgName, channel, createddate, isrootorg,slug,status, hashtagid,rootorgid) VALUES ('root-org-1','root-org-name-1','channel1','2019-04-24.13:14:05+0000',false,'channel1',1,'root-
+    org-1','root-org-1');
+    INSERT INTO sunbird.organisation (id, orgName, channel, createddate, isrootorg,slug,status, hashtagid,rootorgid) VALUES ('root-org-2','root-org-name-2','channel2','2019-04-24.13:14:05+0000',true,'channel2',1,'root-
+    org-2','root-org-1');
+    ...
+    ```
+3. Run the CQL commands generated on the cassandra server.
 
-## Scenario data :
-
-    INSERT INTO sunbird.organisation (id, orgName, channel, createddate, isrootorg,slug,status, hashtagid,rootorgid) VALUES ('school-2-3','school-name-2-3','channel2','2019-04-24.18:32:51+0530',false,'channel2',1,'channel2','root-org-2');
+```
+cqlsh -f suborg.cql
+```
