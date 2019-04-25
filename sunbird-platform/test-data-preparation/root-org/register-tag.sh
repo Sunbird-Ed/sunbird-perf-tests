@@ -22,13 +22,13 @@ registerRootOrg(){
 		 curl -X POST \
 		  $baseurl/tag/register/root-org-$1\
 		  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI0YzZhNjhiMWMzNDc0YmZiYjM5NGI0MDYwODVjZjRhZiJ9.0ZRY7Ya87ZKJl8Wj7a9uIbROivP0b2KpUOjKgLwnLQE' \
-		  -d '{}'
+		  -d '{}' | jq
 		else
 		echo curl -X POST \
 		  $baseurl/tag/register/root-org-$1\
 		  -H \''Content-Type: application/json' \' \
 		  -H \''Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI0YzZhNjhiMWMzNDc0YmZiYjM5NGI0MDYwODVjZjRhZiJ9.0ZRY7Ya87ZKJl8Wj7a9uIbROivP0b2KpUOjKgLwnLQE'\' \
-		  -d \''{}'\'
+		  -d \''{}'\' | jq
 	fi	  
 }
 
