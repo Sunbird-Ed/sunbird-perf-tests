@@ -20,15 +20,18 @@ createSubOrgCql(){
 	# echo $now
 	local query="INSERT INTO sunbird.organisation (id, orgName, channel, createddate, isrootorg,slug,status, hashtagid,rootorgid) VALUES ('school-$1-$2','school-name-$1-$2','channel$1','$now',false,'channel$1',1,'school-$1-$2','root-org-$1');"
 	echo $query
-	if [ $1 == 1 ]
+	if [ $count == 0 ]
 	then
+		echo $count
+		count=`expr $count + 1`
 		echo $query > $suborgfile
 	else
+		echo $count
 		echo $query >> $suborgfile
 	fi
 
 }
-
+count=0
 rootOrgSize="$1"
 subOrgSize="$2"
 suborgfile="$3"
