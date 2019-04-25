@@ -10,13 +10,19 @@ start(){
 }
 
 registerChannel(){
-	
-curl -X POST \
-  $baseurl/learning-service/channel/v3/create \
-  -H 'Accept: */*' \
-  -d '{"request":{"channel":{"name":"'channel$1'","description":"Channel for 'channel$1'","code":"'channel$1'"}}}'
+	if [ $exec == true ]
+  then  
+     curl -X POST \
+      $baseurl/learning-service/channel/v3/create \
+      -d '{"request":{"channel":{"name":"'channel$1'","description":"Channel for 'channel$1'","code":"'channel$1'"}}}'
+  else
+    echo  curl -X POST \
+      $baseurl/learning-service/channel/v3/create \
+      -d '{"request":{"channel":{"name":"'channel$1'","description":"Channel for 'channel$1'","code":"'channel$1'"}}}'  
+  fi    
 }
 
 rootOrgSize="$1"
 baseurl="$2"
+exec="$3"
 start

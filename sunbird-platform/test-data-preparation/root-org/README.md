@@ -4,15 +4,15 @@ The purpose of this document is to describe the steps required to run the script
 
 ```
 sh create-root-org.sh <NUM_ROOT_ORGS> <OUTPUT_CQL_FILE_NAME>
-sh register-channel.sh <NUM_ROOT_ORGS> <BASE_URL>
-sh register-root-org.sh <NUM_ROOT_ORGS> <BASE_URL>
+sh register-channel.sh <NUM_ROOT_ORGS> <BASE_URL> <EXEC>
+sh register-root-org.sh <NUM_ROOT_ORGS> <BASE_URL> <EXEC>
 ```
 
 e.g.
 ```
 sh create-root-org.sh 28 org.cql
-sh register-channel.sh 28 http://28.0.3.5:8080
-sh register-root-org.sh 28 http://28.0.3.5:8080
+sh register-channel.sh 28 http://28.0.3.14:9000 true
+sh register-root-org.sh 28 http://28.0.3.5:8080 false
 ```
 2. `org.cql` will be created in the path specified above.
 
