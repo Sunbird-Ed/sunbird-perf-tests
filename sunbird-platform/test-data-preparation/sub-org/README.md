@@ -12,7 +12,7 @@ Run load test scenario script with necessary arguments:
 
 # eg:
 
-    sh create-root-org.sh 28 50000 org.cql
+    sh create-root-org.sh 28 50000 suborg.cql
     
 ## How to verify?
 
