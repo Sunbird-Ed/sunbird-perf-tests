@@ -12,7 +12,7 @@ start(){
 registerChannel(){
 	
 curl -X POST \
-  $baseurl/channel/v3/create \
+  $baseurl/learning-service/channel/v3/create \
   -H 'Accept: */*' \
   -d '{"request":{"channel":{"name":"'channel$1'","description":"Channel for 'channel$1'","code":"'channel$1'"}}}'
 }
