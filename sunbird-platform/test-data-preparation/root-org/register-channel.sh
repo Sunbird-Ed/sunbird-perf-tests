@@ -20,7 +20,7 @@ registerChannel(){
     echo  'curl -X POST \
       '$baseurl'/learning-service/channel/v3/create \
       -H 'Content-Type: application/json' \
-      -d \''{"request":{"channel":{"name":"'channel$1'","description":"Channel for 'channel$1'","code":"'channel$1'"}}}'\'
+      -d '{"request":{"channel":{"name":"'channel$1'","description":"Channel for 'channel$1'","code":"'channel$1'"}}}''
   fi    
 }
 
