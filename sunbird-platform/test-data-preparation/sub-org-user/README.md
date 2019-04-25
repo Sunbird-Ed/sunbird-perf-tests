@@ -1,4 +1,4 @@
-The purpose of this document is to describe the steps required to run the scripts for automated creation of root orgs.
+The purpose of this document is to describe the steps required to run the scripts for automated creation of user to sub orgs.
 
 1. Run load test scenario script with necessary arguments:
 
@@ -14,13 +14,13 @@ sh create-user-sub-org.sh 28 50000 1 user.cql userorg.cql
 
 ```
 $ cat user.cql
-INSERT INTO sunbird.user (id, channel, email, emailverified , firstName, rootorgid,status,username,roles,createddate) VALUES ('user-i-j-k',channeli,'user-i-j-k@gmaol.com',true,'name-i-j-k','root-org-i',1,'username-i-j-k',['Public'],2019-04-25.12:48:22+0530);
+INSERT INTO sunbird.user (id, channel, email, emailverified , firstName, rootorgid,status,username,roles,createddate) VALUES ('user-1-1-1',channeli,'user-1-1-1@gmaol.com',true,'name-1-1-1','root-org-1',1,'username-1-1-1',['Public'],2019-04-25.12:48:22+0530);
 ...
 
 $ cat userorg.cql
 
-INSERT INTO sunbird.user_org (id, organisationid,userid, hashtagid,orgjoindate,roles,isdeleted ) VALUES ('user-org-sub-root-i','root-org-i','user-i-j-k','root-org-i',2019-04-25.12:48:22+0530,['Public'],false);
-INSERT INTO sunbird.user_org (id, organisationid,userid, hashtagid,orgjoindate,roles,isdeleted ) VALUES ('user-sub-org-i','school-i-j','user-i-j-k','school-i-j',2019-04-25.12:48:22+0530,['Public'],false);
+INSERT INTO sunbird.user_org (id, organisationid,userid, hashtagid,orgjoindate,roles,isdeleted ) VALUES ('user-org-sub-root-1','root-org-1','user-1-1-1','root-org-1',2019-04-25.12:48:22+0530,['Public'],false);
+INSERT INTO sunbird.user_org (id, organisationid,userid, hashtagid,orgjoindate,roles,isdeleted ) VALUES ('user-sub-org-2','school-1-1','user-1-1-1','school-1-1',2019-04-25.12:48:22+0530,['Public'],false);
 
 ```
 

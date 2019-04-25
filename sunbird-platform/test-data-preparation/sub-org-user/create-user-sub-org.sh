@@ -11,7 +11,7 @@ start(){
 			local k=1
 			while [ $k -le $userSubOrgSize ]
 				do
-				   	createUserForSubOrg i j k
+				   	createUserForSubOrg $i $j $k
 				    k=`expr $k + 1`
 			    done
 		   	
