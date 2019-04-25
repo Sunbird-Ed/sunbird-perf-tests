@@ -14,6 +14,11 @@ registerRootOrg(){
 
 	if [ $exec == true ]
 	  then  	
+	  	echo curl -X POST \
+		  $baseurl/tag/register/root-org-$1\
+		  -H \''Content-Type: application/json' \' \
+		  -H \''Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI0YzZhNjhiMWMzNDc0YmZiYjM5NGI0MDYwODVjZjRhZiJ9.0ZRY7Ya87ZKJl8Wj7a9uIbROivP0b2KpUOjKgLwnLQE'\' \
+		  -d \''{}'\'
 		 curl -X POST \
 		  $baseurl/tag/register/root-org-$1\
 		  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI0YzZhNjhiMWMzNDc0YmZiYjM5NGI0MDYwODVjZjRhZiJ9.0ZRY7Ya87ZKJl8Wj7a9uIbROivP0b2KpUOjKgLwnLQE' \
@@ -21,6 +26,7 @@ registerRootOrg(){
 		else
 		echo curl -X POST \
 		  $baseurl/tag/register/root-org-$1\
+		  -H \''Content-Type: application/json' \' \
 		  -H \''Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI0YzZhNjhiMWMzNDc0YmZiYjM5NGI0MDYwODVjZjRhZiJ9.0ZRY7Ya87ZKJl8Wj7a9uIbROivP0b2KpUOjKgLwnLQE'\' \
 		  -d \''{}'\'
 	fi	  
