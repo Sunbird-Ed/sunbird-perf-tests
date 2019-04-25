@@ -24,13 +24,13 @@ mkdir ~/logs ~/current_scenario
 1. Run load test scenario script with necessary arguments:
 
 ```
-sh run_scenario.sh <JMETER_IP_LIST> <HOST> <SCENARIO_NAME> <SCENARIO_ID> <THREADS_COUNT> <RAMPUP_TIME> <CTRL_LOOPS> <API_KEY> <ACCESS_TOKEN>
+sh run_scenario.sh <JMETER_IP_LIST> <HOST> <SCENARIO_NAME> <SCENARIO_ID> <THREADS_COUNT> <RAMPUP_TIME> <CTRL_LOOPS> <API_KEY> <ACCESS_TOKEN> <CSV_FILE>
 ```
 
 e.g.
 
 ```
-sh run_scenario.sh "28.0.0.18,28.0.0.19,28.0.0.20" "dev.sunbirded.org" user-enrollment-list r1_user_enrollment_list_t5 5 1 1 "ABCDEFabcdef012345" "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+sh run_scenario.sh "28.0.0.18,28.0.0.19,28.0.0.20" "dev.sunbirded.org" user-enrollment-list r1_user_enrollment_list_t5 5 1 1 "ABCDEFabcdef012345" "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz" "/home/data.csv"
 ```
 
 ### How to verify?
