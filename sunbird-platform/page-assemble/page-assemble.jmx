@@ -10,7 +10,7 @@
         <collectionProp name="Arguments.arguments">
           <elementProp name="host" elementType="Argument">
             <stringProp name="Argument.name">host</stringProp>
-            <stringProp name="Argument.value">HOST</stringProp>
+            <stringProp name="Argument.value">HOST/api</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="uri" elementType="Argument">
@@ -75,9 +75,9 @@
          &quot;source&quot;:&quot;web&quot;,&#xd;
          &quot;name&quot;:&quot;${name}&quot;,&#xd;
          &quot;filters&quot;:{&#xd;
-         	&quot;gradeLevel&quot; : [&quot;${gradeLevel}&quot;],&#xd;
-         	&quot;medium&quot; : [&quot;${medium}&quot;],&#xd;
-         	&quot;board&quot; : [&quot;${board}&quot;]&#xd;
+          &quot;gradeLevel&quot; : [&quot;${gradeLevel}&quot;],&#xd;
+          &quot;medium&quot; : [&quot;${medium}&quot;],&#xd;
+          &quot;board&quot; : [&quot;${board}&quot;]&#xd;
          },&#xd;
          &quot;mode&quot;:&quot;soft&quot;&#xd;
       }&#xd;
