@@ -23,10 +23,10 @@ start(){
 
 createUserForSubOrg(){
 	now=`date +%Y-%m-%d.%H:%M:%S%z`
-	local query="INSERT INTO sunbird.user (id, channel, email, emailverified , firstName, rootorgid,status,username,roles,createddate) VALUES ('user-$1-$2-$3',channel$1,'user-$1-$2-$3@gmaol.com',true,'name-$1-$2-$3','root-org-$1',1,'username-$1-$2-$3',['Public'],$now);"
+	local query="INSERT INTO sunbird.user (id, channel, email, emailverified , firstName, rootorgid,status,username,roles,createddate) VALUES ('user-$1-$2-$3','channel$1','user-$1-$2-$3@gmaol.com',true,'name-$1-$2-$3','root-org-$1',1,'username-$1-$2-$3',['PUBLIC'],'$now');"
 	echo $query
-	local user_root_org_query="INSERT INTO sunbird.user_org (id, organisationid,userid, hashtagid,orgjoindate,roles,isdeleted ) VALUES ('user-org-sub-root-$1','root-org-$1','user-$1-$2-$3','root-org-$1',$now,['Public'],false);"
-	local user_sub_org_query="INSERT INTO sunbird.user_org (id, organisationid,userid, hashtagid,orgjoindate,roles,isdeleted ) VALUES ('user-sub-org-$1','school-$1-$2','user-$1-$2-$3','school-$1-$2',$now,['Public'],false);"
+	local user_root_org_query="INSERT INTO sunbird.user_org (id, organisationid,userid, hashtagid,orgjoindate,roles,isdeleted ) VALUES ('user-org-sub-root-$1','root-org-$1','user-$1-$2-$3','root-org-$1','$now',['PUBLIC'],false);"
+	local user_sub_org_query="INSERT INTO sunbird.user_org (id, organisationid,userid, hashtagid,orgjoindate,roles,isdeleted ) VALUES ('user-sub-org-$1','school-$1-$2','user-$1-$2-$3','school-$1-$2','$now',['PUBLIC'],false);"
 	
 	echo $rootOrgSize
 	if [ $count == 1 ]
