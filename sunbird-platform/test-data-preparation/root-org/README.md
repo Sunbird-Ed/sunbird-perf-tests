@@ -11,8 +11,8 @@ sh register-tag.sh <NUM_ROOT_ORGS> <BASE_URL> <EXEC>
 e.g.
 ```
 sh create-root-org.sh 28 org.cql
-sh register-channel.sh 28 http://28.0.3.14:9000 true
-sh register-tag.sh 28 http://28.0.3.5:8080 false
+sh register-channel.sh 28  http://28.0.3.5:8080 true
+sh register-tag.sh 28 http://28.0.3.14:9000 false
 ```
 2. `org.cql` will be created in the path specified above.
 
