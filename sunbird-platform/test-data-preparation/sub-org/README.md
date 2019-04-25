@@ -8,11 +8,11 @@ Clone this repo (sunbird-perf-tests) in home directory and go to test-data-prepe
 
 Run load test scenario script with necessary arguments:
 
-    sh create-root-org.sh <SIZE_OF_ROOT_ORG> <SIZE_OF_SUB_ORG> <FILE_NAME>
+    sh create-sub-org.sh <SIZE_OF_ROOT_ORG> <SIZE_OF_SUB_ORG> <FILE_NAME>
 
 # eg:
 
-    sh create-root-org.sh 28 50000 suborg.cql
+    sh create-sub-org.sh 28 50000 suborg.cql
     
 2. `suborg.cql` will be created in the path specified above.
 
