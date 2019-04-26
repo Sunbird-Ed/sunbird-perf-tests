@@ -16,7 +16,7 @@ nohup ~/apache-jmeter-5.1.1/bin/jmeter-server &
 ```
 * Create necessary folders for running scenario script in home directory
 ```
-mkdir ~/logs ~/current_scenario
+mkdir ~/current_scenario
 ```
 
 ### How to run?
@@ -24,13 +24,13 @@ mkdir ~/logs ~/current_scenario
 1. Run load test scenario script with necessary arguments:
 
 ```
-sh run_scenario.sh <JMETER_IP_LIST> <HOST> <SCENARIO_NAME> <SCENARIO_ID> <THREADS_COUNT> <RAMPUP_TIME> <CTRL_LOOPS> <API_KEY> <ACCESS_TOKEN> <CSV_FILE>
+sh run_scenario.sh <JMETER_HOME> <JMETER_IP_LIST> <HOST> <SCENARIO_NAME> <SCENARIO_ID> <THREADS_COUNT> <RAMPUP_TIME> <CTRL_LOOPS> <API_KEY> <ACCESS_TOKEN> <CSV_FILE>
 ```
 
 e.g.
 
 ```
-sh run_scenario.sh "28.0.0.18,28.0.0.19,28.0.0.20" "dev.sunbirded.org" user-enrollment-list r1_user_enrollment_list_t5 5 1 1 "ABCDEFabcdef012345" "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz" "/home/data.csv"
+sh run_scenario.sh ~/apache-jmeter-5.1.1 "28.0.0.18,28.0.0.19,28.0.0.20" "dev.sunbirded.org" system-settings r1_system-settings_t5 5 1 1 "ABCDEFabcdef012345" "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz" "/tmp/data.csv"
 ```
 
 ### How to verify?
@@ -39,7 +39,7 @@ Logs are organised per scenario (`~/logs/<SCENARIO_ID>/logs/*.log`). Sample logs
 
 Scenario Log:
 ```
-cat ~/logs/r1_user_enrollment_list_t5/logs/scenario.log 
+cat ~/sunbird-perf-tests/sunbird-platform/logs/user-enrollment/r1_user-enrollment_t5/logs/scenario.log 
 Creating summariser <summary>
 Created the tree successfully using /Users/vinaya/current_scenario/user-enrollment-list.jmx
 Configuring remote engine: 127.0.0.1
@@ -55,7 +55,7 @@ Tidying up remote @ Wed Apr 24 16:45:04 IST 2019 (1556104504507)
 ```
 
 Other Logs:
-* ~/logs/r1_user_enrollment_list_t5/logs/jmeter.log
-* ~/logs/r1_user_enrollment_list_t5/logs/output.xml
+* ~/sunbird-perf-tests/sunbird-platform/logs/user-enrollment/r1_user-enrollment_t5/logs/jmeter.log
+* ~/sunbird-perf-tests/sunbird-platform/logs/user-enrollment/r1_user-enrollment_t5/logs/output.xml
 
 
