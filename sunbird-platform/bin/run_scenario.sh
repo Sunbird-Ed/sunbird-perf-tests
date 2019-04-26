@@ -61,10 +61,10 @@ mv jmx.tmp $JMX_FILE_PATH
 sed "s/HOST/${host}/g" $JMX_FILE_PATH > jmx.tmp
 mv jmx.tmp $JMX_FILE_PATH
 
-sed -i "s/API_KEY/${apiKey}/g" $JMX_FILE_PATH > jmx.tmp
+sed "s/API_KEY/${apiKey}/g" $JMX_FILE_PATH > jmx.tmp
 mv jmx.tmp $JMX_FILE_PATH
 
-sed -i "s#CSV_FILE#${csvFile}#g" $JMX_FILE_PATH > jmx.tmp
+sed "s#CSV_FILE#${csvFile}#g" $JMX_FILE_PATH > jmx.tmp
 mv jmx.tmp $JMX_FILE_PATH
 
 echo "Running ... "
