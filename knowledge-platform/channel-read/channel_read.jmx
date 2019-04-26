@@ -19,7 +19,7 @@
           </elementProp>
           <elementProp name="host" elementType="Argument">
             <stringProp name="Argument.name">host</stringProp>
-            <stringProp name="Argument.value">28.0.3.8</stringProp>
+            <stringProp name="Argument.value">28.0.3.5</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="port" elementType="Argument">
@@ -93,7 +93,7 @@
         </HeaderManager>
         <hashTree/>
         <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-          <stringProp name="filename">/Users/kumar/Downloads/channel_read_1.csv</stringProp>
+          <stringProp name="filename">/mnt/data/benchmark/current_scenario/channel_ids.csv</stringProp>
           <stringProp name="fileEncoding"></stringProp>
           <stringProp name="variableNames">identifier</stringProp>
           <stringProp name="delimiter">,</stringProp>
