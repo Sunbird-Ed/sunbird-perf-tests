@@ -25,20 +25,20 @@ createUserForSubOrg(){
 	if [ $exec == true ]
   	then  
     echo  curl -X POST \
-      $baseurl/api/v2/user/create \
+      $baseurl/user/v2/create \
       -H \''Content-Type: application/json'\' \
-      -d \' '{"request":{"firstName":"'name-$1-$2-$3'","email":"'user-$1-$2-$3@gmaol.com'","emailVerified":true,"channel":"'channel$1'","organisationId":"'school-$1-$2'"}}' \' '| jq' 
+      -d \' '{"request":{"firstName":"'name-$1-$2-$3'","email":"'user-$1-$2-$3@gmail.com'","emailVerified":true,"channel":"'channel$1'","organisationId":"'school-$1-$2'","password":"password"}}' \' '| jq' 
 
      curl -X POST \
-      $baseurl/api/v2/user/create \
+      $baseurl/user/v2/create \
       -H 'Content-Type: application/json' \
-      -d '{"request":{"firstName":"'name-$1-$2-$3'","email":"'user-$1-$2-$3@gmaol.com'","emailVerified":true,"channel":"'channel$1'","organisationId":"'school-$1-$2'"}}' | jq
+      -d '{"request":{"firstName":"'name-$1-$2-$3'","email":"'user-$1-$2-$3@gmail.com'","emailVerified":true,"channel":"'channel$1'","organisationId":"'school-$1-$2'","password":"password"}}' | jq
 
   else
     echo  curl -X POST \
-      $baseurl/api/user/v2/create \
+      $baseurl/user/v2/create \
       -H \''Content-Type: application/json'\' \
-      -d \' '{"request":{"firstName":"'name-$1-$2-$3'","email":"'user-$1-$2-$3@gmaol.com'","emailVerified":true,"channel":"'channel$1'","organisationId":"'school-$1-$2'"}}' \' '| jq' 
+      -d \' '{"request":{"firstName":"'name-$1-$2-$3'","email":"'user-$1-$2-$3@gmail.com'","emailVerified":true,"channel":"'channel$1'","organisationId":"'school-$1-$2'","password":"password"}}' \' '| jq' 
 
   fi 
 
