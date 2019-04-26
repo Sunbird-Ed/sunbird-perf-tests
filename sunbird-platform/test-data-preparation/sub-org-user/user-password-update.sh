@@ -22,13 +22,13 @@ start(){
 }
 updatePassword(){
 echo curl -X POST \
-      $baseurl/auth/admin/realms/master/users/user-$1-$2-$3/reset-password \
+      $baseurl/auth/admin/realms/sunbird/users/user-$1-$2-$3/reset-password \
       -H \''Authorization: Bearer '$token''\' \
       -H \''Content-Type: application/json'\' \
       -d \''{"type": "password", "value": "password", "temporary": "false"}'\' '| jq'
 
 	 curl -X POST \
-      $baseurl/auth/admin/realms/master/users/user-$1-$2-$3/reset-password \
+      $baseurl/auth/admin/realms/sunbird/users/user-$1-$2-$3/reset-password \
       -H 'Authorization: Bearer '$token'' \
       -H 'Content-Type: application/json' \
       -d '{"type": "password", "value": "password", "temporary": "false"}' | jq
