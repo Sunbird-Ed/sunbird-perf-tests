@@ -93,7 +93,7 @@
         </HeaderManager>
         <hashTree/>
         <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-          <stringProp name="filename">/Users/kumar/Downloads/framework_read_1.csv</stringProp>
+          <stringProp name="filename">/mnt/data/benchmark/current_scenario/frameworkIds.csv</stringProp>
           <stringProp name="fileEncoding"></stringProp>
           <stringProp name="variableNames">identifier</stringProp>
           <stringProp name="delimiter">,</stringProp>
