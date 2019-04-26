@@ -1,0 +1,11 @@
+Creating summariser <summary>
+Created the tree successfully using /home/vinaya/current_scenario/page-assemble.jmx
+Configuring remote engine: 28.0.0.24
+Configuring remote engine: 28.0.0.25
+Starting remote engines
+Starting the test @ Thu Apr 25 14:31:36 UTC 2019 (1556202696098)
+Remote engines have been started
+Waiting for possible Shutdown/StopTestNow/Heapdump message on port 4445
+summary =    600 in 00:00:11 =   53.4/s Avg:  5281 Min:   440 Max:  9591 Err:    24 (4.00%)
+Tidying up remote @ Thu Apr 25 14:31:48 UTC 2019 (1556202708320)
+... end of run

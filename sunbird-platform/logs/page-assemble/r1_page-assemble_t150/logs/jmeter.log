@@ -1,0 +1,84 @@
+2019-04-25 14:18:10,324 INFO o.a.j.u.JMeterUtils: Setting Locale to en_US
+2019-04-25 14:18:10,338 INFO o.a.j.JMeter: Loading user properties from: /mnt/data/benchmark/apache-jmeter-4.0/bin/user.properties
+2019-04-25 14:18:10,338 INFO o.a.j.JMeter: Loading system properties from: /mnt/data/benchmark/apache-jmeter-4.0/bin/system.properties
+2019-04-25 14:18:10,345 INFO o.a.j.JMeter: Copyright (c) 1998-2018 The Apache Software Foundation
+2019-04-25 14:18:10,345 INFO o.a.j.JMeter: Version 4.0 r1823414
+2019-04-25 14:18:10,345 INFO o.a.j.JMeter: java.version=1.8.0_03-Ubuntu
+2019-04-25 14:18:10,345 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2019-04-25 14:18:10,345 INFO o.a.j.JMeter: os.name=Linux
+2019-04-25 14:18:10,345 INFO o.a.j.JMeter: os.arch=amd64
+2019-04-25 14:18:10,345 INFO o.a.j.JMeter: os.version=4.15.0-1041-azure
+2019-04-25 14:18:10,346 INFO o.a.j.JMeter: file.encoding=UTF-8
+2019-04-25 14:18:10,346 INFO o.a.j.JMeter: Max memory     =1860698112
+2019-04-25 14:18:10,346 INFO o.a.j.JMeter: Available Processors =2
+2019-04-25 14:18:10,351 INFO o.a.j.JMeter: Default Locale=English (United States)
+2019-04-25 14:18:10,351 INFO o.a.j.JMeter: JMeter  Locale=English (United States)
+2019-04-25 14:18:10,352 INFO o.a.j.JMeter: JMeterHome=/mnt/data/benchmark/apache-jmeter-4.0
+2019-04-25 14:18:10,352 INFO o.a.j.JMeter: user.dir  =/home/vinaya/sunbird-perf-tests/sunbird-platform
+2019-04-25 14:18:10,352 INFO o.a.j.JMeter: PWD       =/home/vinaya/sunbird-perf-tests/sunbird-platform
+2019-04-25 14:18:10,355 INFO o.a.j.JMeter: IP: 28.0.0.23 Name: jmeter-lms-1 FullName: 28.0.0.23
+2019-04-25 14:18:10,359 INFO o.a.j.s.FileServer: Default base='/home/vinaya/sunbird-perf-tests/sunbird-platform'
+2019-04-25 14:18:10,365 INFO o.a.j.s.FileServer: Set new base='/home/vinaya/current_scenario'
+2019-04-25 14:18:10,537 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2019-04-25 14:18:10,563 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2019-04-25 14:18:10,568 INFO o.a.j.s.SaveService: Using SaveService properties version 4.0
+2019-04-25 14:18:10,579 INFO o.a.j.s.SaveService: Loading file: /home/vinaya/current_scenario/page-assemble.jmx
+2019-04-25 14:18:10,649 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2019-04-25 14:18:10,649 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2019-04-25 14:18:10,649 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2019-04-25 14:18:10,649 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2019-04-25 14:18:10,649 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2019-04-25 14:18:10,649 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2019-04-25 14:18:10,683 INFO o.a.j.JMeter: Creating summariser <summary>
+2019-04-25 14:18:10,686 INFO o.a.j.e.DistributedRunner: Configuring remote engine: 28.0.0.24
+2019-04-25 14:18:10,687 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-04-25 14:18:10,780 INFO o.a.j.e.DistributedRunner: Configuring remote engine: 28.0.0.25
+2019-04-25 14:18:10,780 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-04-25 14:18:10,789 INFO o.a.j.e.DistributedRunner: Starting remote engines
+2019-04-25 14:18:10,790 INFO o.a.j.e.DistributedRunner: Starting the test @ Thu Apr 25 14:18:10 UTC 2019 (1556201890789)
+2019-04-25 14:18:10,790 INFO o.a.j.e.ClientJMeterEngine: running clientengine run method
+2019-04-25 14:18:10,794 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2019-04-25 14:18:10,794 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2019-04-25 14:18:11,190 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-04-25 14:18:11,190 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-04-25 14:18:11,193 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2019-04-25 14:18:11,199 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2019-04-25 14:18:11,199 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2019-04-25 14:18:11,199 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-04-25 14:18:11,199 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-04-25 14:18:11,199 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2019-04-25 14:18:11,200 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2019-04-25 14:18:11,201 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-04-25 14:18:11,201 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-04-25 14:18:11,555 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-04-25 14:18:11,555 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-04-25 14:18:11,653 INFO o.a.j.e.ClientJMeterEngine: sent test to 28.0.0.25 basedir='.'
+2019-04-25 14:18:11,653 INFO o.a.j.e.ClientJMeterEngine: Sending properties {}
+2019-04-25 14:18:11,656 INFO o.a.j.e.ClientJMeterEngine: sent run command to 28.0.0.25
+2019-04-25 14:18:11,657 INFO o.a.j.e.ClientJMeterEngine: running clientengine run method
+2019-04-25 14:18:11,657 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-04-25 14:18:11,657 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-04-25 14:18:11,658 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2019-04-25 14:18:11,658 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2019-04-25 14:18:11,658 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-04-25 14:18:11,658 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-04-25 14:18:11,658 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2019-04-25 14:18:11,658 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2019-04-25 14:18:11,658 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-04-25 14:18:11,658 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-04-25 14:18:11,667 INFO o.a.j.JMeter: Started remote host:  28.0.0.25 (1556201891667)
+2019-04-25 14:18:11,676 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-04-25 14:18:11,676 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-04-25 14:18:11,700 INFO o.a.j.e.ClientJMeterEngine: sent test to 28.0.0.24 basedir='.'
+2019-04-25 14:18:11,700 INFO o.a.j.e.ClientJMeterEngine: Sending properties {}
+2019-04-25 14:18:11,703 INFO o.a.j.e.ClientJMeterEngine: sent run command to 28.0.0.24
+2019-04-25 14:18:11,703 INFO o.a.j.e.DistributedRunner: Remote engines have been started
+2019-04-25 14:18:11,708 INFO o.a.j.JMeter: Started remote host:  28.0.0.24 (1556201891708)
+2019-04-25 14:18:12,334 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2019-04-25 14:18:12,335 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2019-04-25 14:18:12,335 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2019-04-25 14:18:12,335 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2019-04-25 14:18:15,067 INFO o.a.j.JMeter: Finished remote host: 28.0.0.25 (1556201895067)
+2019-04-25 14:18:15,084 INFO o.a.j.r.Summariser: summary =    150 in 00:00:03 =   43.9/s Avg:  1866 Min:   601 Max:  2738 Err:     0 (0.00%)
+2019-04-25 14:18:15,085 INFO o.a.j.JMeter: Finished remote host: 28.0.0.24 (1556201895085)
+2019-04-25 14:18:20,088 INFO o.a.j.JMeter: Interrupting RMI Reaper
