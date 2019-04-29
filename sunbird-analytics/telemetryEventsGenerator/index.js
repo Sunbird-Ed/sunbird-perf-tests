@@ -69,9 +69,7 @@ function dispatch(cb) {
             targetEvents = getTraceEvents()
             console.log("Tracer events are pushed..")
         }
-        dispatcher.dispatch({
-                "events": targetEvents.splice(0, BATCH_SIZE)
-            },
+        dispatcher.dispatch(targetEvents.splice(0, BATCH_SIZE),
             function(err, res) {
                 if (err) {
                     console.log('error', err);

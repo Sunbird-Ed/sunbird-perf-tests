@@ -16,23 +16,30 @@ client.on('error', function(err) {
 
 var KafkaDispatcher = {
     dispatch: function(telemetryEvent, cb) {
-        console.log("telemetryEvent" + JSON.stringify(telemetryEvent))
+        // console.log("telemetryEvent" + JSON.stringify(telemetryEvent))
         itemsProcessed = 0;
         payloads = [{
             topic: 'loadtest.telemetry.ingest'
         }];
-        forEach(telemetryEvent.events, function(item, index, arr) {
-            payloads[0].messages = JSON.stringify(item)
-            console.log("Before Events are ", payloads[0].messages)
-            producer.send(payloads, function(err, data) {
-                console.log("Events are pushed");
-                if (!err) itemsProcessed++
-                    if (itemsProcessed === arr.length) {
-                        if (cb) cb(err, data)
-                    }
-            });
+        payloads[0].messages = JSON.stringify(telemetryEvent)
+        console.log("payloads" + payloads)
+        producer.send(payloads, function(err, res) {
+                if (res) {
+                    if (cb) cb(err, res)
+                }
+            })
+            // forEach(telemetryEvent.events, function(item, index, arr) {
+            //     payloads[0].messages = JSON.stringify(item)
+            //     console.log("Before Events are ", payloads[0].messages)
+            //     producer.send(payloads, function(err, data) {
+            //         console.log("Events are pushed");
+            //         if (!err) itemsProcessed++
+            //             if (itemsProcessed === arr.length) {
+            //                 if (cb) cb(err, data)
+            //             }
+            //     });
 
-        });
+        // });
 
         producer.on('error', function(err, data) {
             console.log('error: ' + err);
