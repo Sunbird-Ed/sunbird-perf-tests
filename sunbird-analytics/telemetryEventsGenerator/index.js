@@ -3,9 +3,11 @@ var faker = require('faker')
 const TService = require("./telemetryEventService")
 const createCsvWriter = require('csv-writer').createObjectCsvWriter
 var traceEvents = require("./tracerEvents")
+var dispatcher = require('./kafkaDispatcher')
 var TRACE_LIMIT_SIZE = 30
 var isPushed = false;
 var TOTAL_EVENTS_COUNT = 0;
+var SYNC_EVENTS = false;
 http.createServer(function(req, res) {
     res.writeHead(200, { 'Content-Type': 'text/plain' });
 }).listen(8080);
@@ -46,43 +48,59 @@ var syncEvents = () => {
                 console.log(TOTAL_EVENTS_COUNT + " Events are synced", body.toString());
             });
         });
-        var target = []
-        var targetEvents = Object.assign(target, events);
-        if ((TOTAL_EVENTS_COUNT >= TRACE_LIMIT_SIZE) && !isPushed) {
-            console.log("Tracer events are pushed..")
-            updatedTracerEvents = []
-            traceEvents.forEach(function(e) {
-                e.mid = "LOAD_TEST_" + process.env.machine_id + "_" + faker.random.uuid() + "_TRACE"
-                e.ets = new Date().getTime()
-                e.did = faker.random.uuid()
-                updatedTracerEvents.push(JSON.parse(JSON.stringify(e)))
-            })
-            targetEvents = updatedTracerEvents;
-            //console.log("trace Events " + JSON.stringify(events))
-            isPushed = true
-        }
+        targetEvents = getTraceEvents()
+        isPushed = true
         var data = JSON.stringify({
-                id: 'ekstep.telemetry',
-                ver: '3.0',
-                ets: Date.now(),
-                events: targetEvents.splice(0, BATCH_SIZE)
-            })
-            //console.log("events" + data)
+            id: 'loadtest.telemetry',
+            ver: '3.0',
+            ets: Date.now(),
+            events: targetEvents.splice(0, BATCH_SIZE)
+        })
         req.write(data);
         req.end();
     }
 }
 
+function dispatch(cb) {
+    if (events.length >= BATCH_SIZE) {
+        if ((TOTAL_EVENTS_COUNT >= TRACE_LIMIT_SIZE) && !isPushed) {
+            targetEvents = getTraceEvents()
+            console.log("Tracer events are pushed..")
+        }
+        dispatcher.KafkaDispatcher.dispatch(targetEvents.splice(0, BATCH_SIZE), function(err, response) {
+            if (err) {
+                console.log('error', err);
+                cb(null, { id: 'loadtest.api.telemetry', params: { err: err } });
+            } else {
+                TOTAL_EVENTS_COUNT = TOTAL_EVENTS_COUNT + BATCH_SIZE
+                cb(res, { id: 'loadtest.api.telemetry' });
+            }
+        })
+    }
+}
 
-
+function getTraceEvents() {
+    var target = []
+    var targetEvents = Object.assign(target, events);
+    updatedTracerEvents = []
+    traceEvents.forEach(function(e) {
+        e.mid = "LOAD_TEST_" + process.env.machine_id + "_" + faker.random.uuid() + "_TRACE"
+        e.ets = new Date().getTime()
+        e.did = faker.random.uuid()
+        updatedTracerEvents.push(JSON.parse(JSON.stringify(e)))
+    })
+    return updatedTracerEvents;
+}
 
 function generate(eid, eventsSize) {
     for (let index = 1; index <= eventsSize; index++) {
         var eventData = TService.generateEvents(eid)
         events.push(JSON.parse(JSON.stringify(eventData)))
-        syncEvents()
+        SYNC_EVENTS ? syncEvents() : dispatch(function(res, err) { if (res) { console.log(res) } else { console.log("Failed to push into kafka") } })
     }
 }
+
+
 
 setInterval(() => {
     generate(EID_LIST[0], EVENT_SIZE_SPLIT[EID_LIST[0]])
