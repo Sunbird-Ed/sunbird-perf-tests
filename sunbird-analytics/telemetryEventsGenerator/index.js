@@ -19,7 +19,7 @@ const EVENT_SIZE_SPLIT = {
     "SEARCH": 6,
     "LOG": 4
 }
-const EVENTS_GENERATE_INTERVAL_TIME = 3000 // 15 sec
+const EVENTS_GENERATE_INTERVAL_TIME = 100 // 15 sec
 var events = []
 var syncEvents = () => {
     if (events.length >= BATCH_SIZE) {
@@ -67,6 +67,7 @@ function dispatch(cb) {
     if (events.length >= BATCH_SIZE) {
         if ((TOTAL_EVENTS_COUNT >= TRACE_LIMIT_SIZE) && !isPushed) {
             targetEvents = getTraceEvents()
+            isPushed = true
             console.log("Tracer events are pushed..")
         }
         dispatcher.dispatch(targetEvents.splice(0, BATCH_SIZE),
@@ -83,7 +84,6 @@ function dispatch(cb) {
 }
 
 function getTraceEvents() {
-
     updatedTracerEvents = []
     traceEvents.forEach(function(e) {
         e.mid = "LOAD_TEST_" + process.env.machine_id + "_" + faker.random.uuid() + "_TRACE"
