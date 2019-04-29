@@ -69,15 +69,18 @@ function dispatch(cb) {
             targetEvents = getTraceEvents()
             console.log("Tracer events are pushed..")
         }
-        dispatcher.dispatch(targetEvents.splice(0, BATCH_SIZE), function(err, response) {
-            if (err) {
-                console.log('error', err);
-                cb(null, { id: 'loadtest.api.telemetry', params: { err: err } });
-            } else {
-                TOTAL_EVENTS_COUNT = TOTAL_EVENTS_COUNT + BATCH_SIZE
-                cb(res, { id: 'loadtest.api.telemetry' });
-            }
-        })
+        dispatcher.dispatch({
+                "events": targetEvents.splice(0, BATCH_SIZE)
+            },
+            function(err, res) {
+                if (err) {
+                    console.log('error', err);
+                    cb(null, { id: 'loadtest.api.telemetry', params: { err: err } });
+                } else {
+                    TOTAL_EVENTS_COUNT = TOTAL_EVENTS_COUNT + BATCH_SIZE
+                    cb(res, { id: 'loadtest.api.telemetry' });
+                }
+            })
     }
 }
 

@@ -16,7 +16,7 @@ client.on('error', function(err) {
 
 var KafkaDispatcher = {
     dispatch: function(telemetryEvent, cb) {
-        console.log("telemetryEvent" + telemetryEvent)
+        console.log("telemetryEvent" + JSON.stringify(telemetryEvent))
         itemsProcessed = 0;
         payloads = [{
             topic: 'loadtest.telemetry.ingest'
