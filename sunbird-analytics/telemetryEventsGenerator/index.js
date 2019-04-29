@@ -62,12 +62,14 @@ var syncEvents = () => {
 }
 
 function dispatch(cb) {
+    var target = []
+    var targetEvents = Object.assign(target, events);
     if (events.length >= BATCH_SIZE) {
         if ((TOTAL_EVENTS_COUNT >= TRACE_LIMIT_SIZE) && !isPushed) {
             targetEvents = getTraceEvents()
             console.log("Tracer events are pushed..")
         }
-        dispatcher.KafkaDispatcher.dispatch(targetEvents.splice(0, BATCH_SIZE), function(err, response) {
+        dispatcher.dispatch(targetEvents.splice(0, BATCH_SIZE), function(err, response) {
             if (err) {
                 console.log('error', err);
                 cb(null, { id: 'loadtest.api.telemetry', params: { err: err } });
@@ -80,8 +82,7 @@ function dispatch(cb) {
 }
 
 function getTraceEvents() {
-    var target = []
-    var targetEvents = Object.assign(target, events);
+
     updatedTracerEvents = []
     traceEvents.forEach(function(e) {
         e.mid = "LOAD_TEST_" + process.env.machine_id + "_" + faker.random.uuid() + "_TRACE"

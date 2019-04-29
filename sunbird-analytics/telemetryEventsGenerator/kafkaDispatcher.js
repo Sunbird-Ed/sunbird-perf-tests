@@ -16,6 +16,7 @@ client.on('error', function(err) {
 
 var KafkaDispatcher = {
     dispatch: function(telemetryEvent, cb) {
+        console.log("telemetryEvent" + telemetryEvent)
         itemsProcessed = 0;
         payloads = [{
             topic: 'loadtest.telemetry.ingest'
@@ -39,3 +40,4 @@ var KafkaDispatcher = {
         });
     }
 }
+module.exports = KafkaDispatcher
