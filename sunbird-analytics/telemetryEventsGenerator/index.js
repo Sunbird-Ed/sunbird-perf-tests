@@ -1,7 +1,6 @@
 var http = require('http');
 var faker = require('faker')
 const TService = require("./telemetryEventService")
-const createCsvWriter = require('csv-writer').createObjectCsvWriter
 var traceEvents = require("./tracerEvents")
 var dispatcher = require('./kafkaDispatcher')
 var TRACE_LIMIT_SIZE = 30
