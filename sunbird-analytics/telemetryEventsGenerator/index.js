@@ -1,6 +1,6 @@
 var http = require('http');
 var faker = require('faker')
-const TService = require("./TelemetryService")
+const TService = require("./telemetryEventService")
 const createCsvWriter = require('csv-writer').createObjectCsvWriter
 var traceEvents = require("./tracerEvents")
 var TRACE_LIMIT_SIZE = 30
