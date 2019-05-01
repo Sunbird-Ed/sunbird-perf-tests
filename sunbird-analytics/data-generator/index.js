@@ -1,11 +1,15 @@
 // Read the process parameter
 let data = require('./data');
+var kafka = require('kafka-node')
+var client = new kafka.KafkaClient({ kafkaHost: 'localhost:9092' })
 let faker = require('faker');
-let eventsToBeGenerated = process.argv[0];
-
+let eventsToBeGenerated = process.argv[2];
+console.log("eventsToBeGenerated" + eventsToBeGenerated)
+let events = [];
 let batchSize = 200;
-let ratio = {impression: 100, search: 50, log: 50};
-let loops = eventsToBeGenerated/batchSize;
+let ratio = { impression: 100, search: 60, log: 40 };
+let loops = eventsToBeGenerated / batchSize;
+var kafkaDispatcher = require('./kafkaDispatcher')
 
 
 function getEvent(type) {
@@ -17,22 +21,66 @@ function getEvent(type) {
 }
 
 function generateBatch() {
-    let events = [];
-    for (i = 0; i < ratio.impression; i++) {
-        events.push(getEvent('IMPRESSION'));
+
+    for (let i = 0; i < ratio.log; i++) {
+        events.push(JSON.parse(JSON.stringify(getEvent('LOG'))));
     }
-    for (i = 0; i < ratio.search; i++) {
-        events.push(getEvent('SEARCH'));
+    for (let i = 0; i < ratio.impression; i++) {
+        events.push(JSON.parse(JSON.stringify(getEvent('IMPRESSION'))));
     }
-    for (i = 0; i < ratio.log; i++) {
-        events.push(getEvent('LOG'));
+    for (let i = 0; i < ratio.search; i++) {
+        events.push(JSON.parse(JSON.stringify(getEvent('SEARCH'))));
     }
-    kafkaDispatcher.dispatch(events);
+    if (events.length >= batchSize) {
+        console.log("Events are" + events.length)
+        dispatch(events.splice(0, batchSize), function(err, res) {
+            if (err) {
+                console.error("error occure" + err)
+            }
+        })
+    }
+}
+
+function dispatch(message) {
+    kafkaDispatcher.dispatch(message,
+        function(err, res) {
+            if (err) {
+                console.log('error', err);
+            }
+        })
 }
 
 function generateData() {
-    for (i = 0; i < batchSize; i++) {
+    for (i = 1; i <= loops; i++) {
         generateBatch();
     }
-    console.log("events", 0, "batches", 0);
+    var tracerEvents = getTraceEvents()
+    dispatch(tracerEvents, function(err, res) {
+        if (!err) {
+            console.log("Tracer Events are pushed")
+        } else {
+            console.error("Error occur due to" + err)
+        }
+    })
+    console.log("events", events.length, "batches", 0);
 }
+
+function getTraceEvents() {
+    var traceEvents = require("./tracerEvents")
+    updatedTracerEvents = []
+    traceEvents.forEach(function(e) {
+        e.mid = "LOAD_TEST_" + process.env.machine_id + "_" + faker.random.uuid() + "_TRACE"
+        e.ets = new Date().getTime()
+        e.did = faker.random.uuid()
+        updatedTracerEvents.push(JSON.parse(JSON.stringify(e)))
+    })
+    return updatedTracerEvents;
+}
+client.on('ready', function() {
+    console.log('kafka is ready ready');
+    generateData()
+})
+
+client.on('error', function(err) {
+    console.log('kafka is not ready : ' + err);
+})
