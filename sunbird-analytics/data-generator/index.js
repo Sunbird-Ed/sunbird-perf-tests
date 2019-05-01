@@ -10,6 +10,7 @@ let batchSize = 200;
 let ratio = { impression: 100, search: 60, log: 40 };
 let loops = eventsToBeGenerated / batchSize;
 var kafkaDispatcher = require('./kafkaDispatcher')
+require('events').EventEmitter.defaultMaxListeners = 10000
 
 
 function getEvent(type) {
@@ -62,7 +63,7 @@ function generateData() {
             console.error("Error occur due to" + err)
         }
     })
-    console.log("events", events.length, "batches", 0);
+    console.log("Process is done")
 }
 
 function getTraceEvents() {
