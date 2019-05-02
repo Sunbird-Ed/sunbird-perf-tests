@@ -5,10 +5,11 @@ var kafka = require('kafka-node'),
 
 var KafkaDispatcher = {
     dispatch: function(telemetryEvent, cb) {
+        var eventObject = { "id": "loadtest.telemetry", "ver": "3.0", "ets": new Date().getTime(), "events": telemetryEvent, "mid": "56c0c430-748b-11e8-ae77-cd19397ca6b0", "syncts": 1529500243955 }
         payloads = [{
             topic: 'loadtest.telemetry.ingest'
         }];
-        payloads[0].messages = JSON.stringify(telemetryEvent)
+        payloads[0].messages = JSON.stringify(eventObject)
         console.log("payloads" + payloads)
         producer.send(payloads, function(err, res) {
             if (res) {
