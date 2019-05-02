@@ -37,10 +37,9 @@ function generateBatch() {
         events.push(JSON.parse(JSON.stringify(getEvent('SEARCH'))));
     }
     if (events.length >= batchSize) {
-        console.log("Events are" + events.length)
         dispatch(events.splice(0, batchSize), function(err, res) {
             if (err) {
-                console.error("error occure" + err)
+                console.error("error occur" + err)
             }
         })
     }
