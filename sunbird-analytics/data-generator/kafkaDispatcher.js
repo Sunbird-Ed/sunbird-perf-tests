@@ -9,8 +9,10 @@ var KafkaDispatcher = {
             topic: 'loadtest.telemetry.ingest'
         }];
         payloads[0].messages = JSON.stringify(telemetryEvent)
+        console.log("payloads" + payloads)
         producer.send(payloads, function(err, res) {
             if (res) {
+                console.log("Success")
                 if (cb) cb(err, res)
             }
         })
