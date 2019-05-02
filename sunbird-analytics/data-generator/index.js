@@ -59,6 +59,7 @@ function generateData() {
         generateBatch();
     }
     var tracerEvents = getTraceEvents()
+    console.log("Dispatching trace events...")
     dispatch(tracerEvents, function(err, res) {
         if (!err) {
             console.log("Tracer Events are pushed")
