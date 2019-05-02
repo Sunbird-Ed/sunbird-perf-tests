@@ -1,8 +1,7 @@
 var kafka = require('kafka-node'),
     Producer = kafka.Producer,
-    client = new kafka.KafkaClient({ kafkaHost: 'localhost:9092' }),
-    forEach = require('async-foreach').forEach
-producer = new Producer(client);
+    client = new kafka.KafkaClient({ kafkaHost: '28.0.3.25:9092' }),
+    producer = new Producer(client);
 
 var KafkaDispatcher = {
     dispatch: function(telemetryEvent, cb) {

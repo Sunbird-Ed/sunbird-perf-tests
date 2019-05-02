@@ -1,7 +1,7 @@
 // Read the process parameter
 let data = require('./data');
 var kafka = require('kafka-node')
-var client = new kafka.KafkaClient({ kafkaHost: 'localhost:9092' })
+var client = new kafka.KafkaClient({ kafkaHost: '28.0.3.25:9092' })
 let faker = require('faker');
 let eventsToBeGenerated = process.argv[2];
 console.log("eventsToBeGenerated" + eventsToBeGenerated)
