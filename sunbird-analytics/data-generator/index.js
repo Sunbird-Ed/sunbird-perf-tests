@@ -10,14 +10,18 @@ let batchSize = 200;
 let ratio = { impression: 100, search: 60, log: 40 };
 let loops = eventsToBeGenerated / batchSize;
 var kafkaDispatcher = require('./kafkaDispatcher')
-require('events').EventEmitter.defaultMaxListeners = 10000
+require('events').EventEmitter.defaultMaxListeners = 1000
 
 
 function getEvent(type) {
     let event = data[type];
+    if (type === "SEARCH") {
+        event.edata.filters.dialcodes = faker.random.arrayElement(data.dialCodes)
+    }
     event.mid = faker.random.uuid();
-    event.context.did = data.dids[faker.random.number({ min: 1, max: 1000 })];
-    event.object.id = data.contentIds[faker.random.number({ min: 1, max: 1000 })];
+    event.context.did = faker.random.arrayElement(data.dids);
+    event.context.channel = faker.random.arrayElement(data.channelIds);
+    event.object.id = faker.random.arrayElement(data.contentIds);
     return event;
 }
 
