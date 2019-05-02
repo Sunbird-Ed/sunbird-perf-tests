@@ -18,7 +18,7 @@ function getEvent(type) {
     if (type === "SEARCH") {
         event.edata.filters.dialcodes = faker.random.arrayElement(data.dialCodes)
     }
-    event.mid = faker.random.uuid();
+    event.mid = "LOAD_TEST_" + process.env.machine_id + "_" + faker.random.uuid()
     event.context.did = faker.random.arrayElement(data.dids);
     event.context.channel = faker.random.arrayElement(data.channelIds);
     event.object.id = faker.random.arrayElement(data.contentIds);
