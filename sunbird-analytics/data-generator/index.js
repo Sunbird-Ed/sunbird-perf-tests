@@ -1,7 +1,7 @@
 // Read the process parameter
 let data = require('./data');
-var kafka = require('kafka-node')
-var client = new kafka.KafkaClient({ kafkaHost: '28.0.3.25:9092' })
+//var kafka = require('kafka-node')
+//var client = new kafka.KafkaClient({ kafkaHost: '28.0.3.25:9092' })
 let faker = require('faker');
 let eventsToBeGenerated = process.argv[2];
 console.log("eventsToBeGenerated" + eventsToBeGenerated)
@@ -81,11 +81,14 @@ function getTraceEvents() {
     })
     return updatedTracerEvents;
 }
-client.on('ready', function() {
-    console.log('kafka is ready ready');
-    generateData()
-})
+// client.on('ready', function() {
+//     console.log('kafka is ready ready');
 
-client.on('error', function(err) {
-    console.log('kafka is not ready : ' + err);
-})
+// })
+
+// client.on('error', function(err) {
+//     console.log('kafka is not ready : ' + err);
+// })
+setTimeout(function() {
+    generateData()
+}, 2000)
