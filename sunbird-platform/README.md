@@ -24,13 +24,13 @@ mkdir ~/current_scenario
 1. Run load test scenario script with necessary arguments:
 
 ```
-sh run_scenario.sh <JMETER_HOME> <JMETER_IP_LIST> <HOST> <SCENARIO_NAME> <SCENARIO_ID> <THREADS_COUNT> <RAMPUP_TIME> <CTRL_LOOPS> <API_KEY> <ACCESS_TOKEN> <CSV_FILE>
+sh run_scenario.sh <JMETER_HOME> <JMETER_IP_LIST> <HOST> <SCENARIO_NAME> <SCENARIO_ID> <THREADS_COUNT> <RAMPUP_TIME> <CTRL_LOOPS> <API_KEY> <ACCESS_TOKEN> <CSV_FILE><DOMAIN_FILE>
 ```
 
 e.g.
 
 ```
-sh run_scenario.sh ~/apache-jmeter-5.1.1 "28.0.0.18,28.0.0.19,28.0.0.20" "dev.sunbirded.org" system-settings r1_system-settings_t5 5 1 1 "ABCDEFabcdef012345" "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz" "/tmp/data.csv"
+sh run_scenario.sh ~/apache-jmeter-5.1.1 "28.0.0.18,28.0.0.19,28.0.0.20" "dev.sunbirded.org" system-settings r1_system-settings_t5 5 1 1 "ABCDEFabcdef012345" "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz" "/tmp/data.csv /tmp/sunbird-perf-tests/sunbird-platform/common/config/domain-end-point.csv"
 ```
 
 ### How to verify?

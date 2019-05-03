@@ -11,6 +11,7 @@ ctrlLoops=$8
 apiKey=$9
 accessToken=${10}
 csvFile=${11}
+csvFileHost=${12}
 
 JMETER_HOME=/mnt/data/benchmark/apache-jmeter-4.0
 JMETER_HOME=${jmeterHome}
@@ -45,6 +46,7 @@ echo "ctrlLoops = " ${ctrlLoops}
 echo "apiKey = " ${apiKey}
 echo "accessToken = " ${accessToken}
 echo "csvFile = " ${csvFile}
+echo "csvFileHost= "${csvFileHost}
 
 sed "s/THREADS_COUNT/${numThreads}/g" $JMX_FILE_PATH > jmx.tmp
 mv jmx.tmp $JMX_FILE_PATH
@@ -65,6 +67,9 @@ sed "s/API_KEY/${apiKey}/g" $JMX_FILE_PATH > jmx.tmp
 mv jmx.tmp $JMX_FILE_PATH
 
 sed "s#CSV_FILE#${csvFile}#g" $JMX_FILE_PATH > jmx.tmp
+mv jmx.tmp $JMX_FILE_PATH
+
+sed "s#DOMAIN_FILE#${csvFileHost}#g" $JMX_FILE_PATH > jmx.tmp
 mv jmx.tmp $JMX_FILE_PATH
 
 echo "Running ... "
