@@ -5,6 +5,7 @@ let data = require('./data');
 let faker = require('faker');
 var async = require("async");
 let eventsToBeGenerated = process.argv[2];
+let trace = process.argv[3];
 console.log("eventsToBeGenerated" + eventsToBeGenerated)
 let events = [];
 let batchSize = 200;
@@ -104,13 +105,15 @@ function getTraceEvents() {
             resolve()
         }));
     }
-    var tracerEvents = getTraceEvents()
-    dispatch(tracerEvents, function(err, res) {
-        if (!err) {
-            console.log(tracerEvents.length + " Tracer Events are pushed")
-            console.log("Process is done")
-        } else {
-            console.error("Error occur due to" + err)
-        }
-    })
+    if (trace === "true") {
+        var tracerEvents = getTraceEvents()
+        dispatch(tracerEvents, function(err, res) {
+            if (!err) {
+                console.log(tracerEvents.length + " Tracer Events are pushed")
+                console.log("Process is done")
+            } else {
+                console.error("Error occur due to" + err)
+            }
+        })
+    }
 })();
