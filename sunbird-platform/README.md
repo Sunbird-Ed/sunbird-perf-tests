@@ -24,7 +24,7 @@ mkdir ~/current_scenario
 1. Run load test scenario script with necessary arguments:
 
 ```
-sh run_scenario.sh <JMETER_HOME> <JMETER_IP_LIST> <HOST> <SCENARIO_NAME> <SCENARIO_ID> <THREADS_COUNT> <RAMPUP_TIME> <CTRL_LOOPS> <API_KEY> <ACCESS_TOKEN> <CSV_FILE>
+sh run_scenario.sh <JMETER_HOME> <JMETER_IP_LIST> <HOST> <SCENARIO_NAME> <SCENARIO_ID> <THREADS_COUNT> <RAMPUP_TIME> <CTRL_LOOPS> <API_KEY> <ACCESS_TOKEN> <CSV_FILE><DOMAIN_FILE>
 ```
 
 e.g.
