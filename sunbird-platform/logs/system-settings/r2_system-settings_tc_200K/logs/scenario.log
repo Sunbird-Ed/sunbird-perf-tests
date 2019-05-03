@@ -1,0 +1,35 @@
+Creating summariser <summary>
+Created the tree successfully using /home/vinaya/current_scenario/system-settings.jmx
+Configuring remote engine: 28.0.0.24
+Configuring remote engine: 28.0.0.25
+Configuring remote engine: 28.0.0.27
+Configuring remote engine: 28.0.0.29
+Starting remote engines
+Starting the test @ Tue Apr 30 05:57:06 UTC 2019 (1556603826242)
+Remote engines have been started
+Waiting for possible Shutdown/StopTestNow/Heapdump message on port 4445
+summary +   9805 in 00:00:23 =  422.1/s Avg:   393 Min:    11 Max:  2336 Err:     0 (0.00%) Active: 200 Started: 200 Finished: 0
+summary +  20400 in 00:00:30 =  689.1/s Avg:   298 Min:     3 Max:  2683 Err: 10203 (50.01%) Active: 200 Started: 200 Finished: 0
+summary =  30205 in 00:00:53 =  571.8/s Avg:   329 Min:     3 Max:  2683 Err: 10203 (33.78%)
+summary +  48000 in 00:00:30 = 1596.9/s Avg:   124 Min:     2 Max:  2181 Err: 48000 (100.00%) Active: 200 Started: 200 Finished: 0
+summary =  78205 in 00:01:23 =  943.5/s Avg:   203 Min:     2 Max:  2683 Err: 58203 (74.42%)
+summary +  25900 in 00:00:31 =  847.9/s Avg:   220 Min:     2 Max:  2256 Err: 25900 (100.00%) Active: 200 Started: 200 Finished: 0
+summary = 104105 in 00:01:53 =  917.8/s Avg:   207 Min:     2 Max:  2683 Err: 84103 (80.79%)
+summary +   9000 in 00:00:29 =  305.9/s Avg:   669 Min:     2 Max:  4145 Err:  9000 (100.00%) Active: 200 Started: 200 Finished: 0
+summary = 113105 in 00:02:23 =  791.7/s Avg:   244 Min:     2 Max:  4145 Err: 93103 (82.32%)
+summary +  22800 in 00:00:30 =  755.3/s Avg:   272 Min:     2 Max:  4163 Err: 22800 (100.00%) Active: 200 Started: 200 Finished: 0
+summary = 135905 in 00:02:53 =  785.4/s Avg:   249 Min:     2 Max:  4163 Err: 115903 (85.28%)
+summary +  13300 in 00:00:30 =  442.8/s Avg:   444 Min:     4 Max:  2486 Err:   166 (1.25%) Active: 199 Started: 200 Finished: 1
+summary = 149205 in 00:03:23 =  734.7/s Avg:   266 Min:     2 Max:  4163 Err: 116069 (77.79%)
+summary +  12900 in 00:00:30 =  432.0/s Avg:   459 Min:    10 Max:  4858 Err:     0 (0.00%) Active: 199 Started: 200 Finished: 1
+summary = 162105 in 00:03:53 =  695.9/s Avg:   282 Min:     2 Max:  4858 Err: 116069 (71.60%)
+summary +  12900 in 00:00:30 =  431.2/s Avg:   458 Min:    10 Max:  3052 Err:     0 (0.00%) Active: 189 Started: 200 Finished: 11
+summary = 175005 in 00:04:23 =  665.8/s Avg:   295 Min:     2 Max:  4858 Err: 116069 (66.32%)
+summary +   9200 in 00:00:30 =  304.4/s Avg:   576 Min:    10 Max:  3174 Err:     0 (0.00%) Active: 170 Started: 200 Finished: 30
+summary = 184205 in 00:04:53 =  628.5/s Avg:   309 Min:     2 Max:  4858 Err: 116069 (63.01%)
+summary +   8600 in 00:00:30 =  287.3/s Avg:   550 Min:    10 Max:  5303 Err:     0 (0.00%) Active: 113 Started: 200 Finished: 87
+summary = 192805 in 00:05:23 =  596.9/s Avg:   319 Min:     2 Max:  5303 Err: 116069 (60.20%)
+summary +   7195 in 00:00:29 =  252.2/s Avg:   246 Min:    10 Max:  1498 Err:     0 (0.00%) Active: 0 Started: 200 Finished: 200
+summary = 200000 in 00:05:52 =  568.9/s Avg:   317 Min:     2 Max:  5303 Err: 116069 (58.03%)
+Tidying up remote @ Tue Apr 30 06:02:58 UTC 2019 (1556604178739)
+... end of run
