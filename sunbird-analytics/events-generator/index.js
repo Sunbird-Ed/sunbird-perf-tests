@@ -10,7 +10,7 @@ let batchSize = 200;
 let impression = process.argv[5];
 let search = process.argv[6];
 let log = process.argv[7];
-let ratio = { impression: 100, search: 60, log: 40 };
+let ratio = { impression: impression, search: search, log: log };
 let loops = eventsToBeGenerated / batchSize;
 var kafkaDispatcher = require('./kafkaDispatcher')
 require('events').EventEmitter.defaultMaxListeners = 10000
@@ -94,7 +94,6 @@ function getTraceEvents() {
 
 
 (async function loop() {
-    console.log("Loops", loops)
     for (let i = 1; i <= loops; i++) {
         await new Promise(resolve => generateBatch(function() {
             resolve()
