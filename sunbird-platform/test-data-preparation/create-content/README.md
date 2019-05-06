@@ -8,7 +8,7 @@ Clone this repo (sunbird-perf-tests) in home directory and go to test-data-prepe
 
 Run load test scenario script with necessary arguments:
 
-    sh create-course.sh <SIZE_OF_ROOT_ORG> <NUMBER_OF_COURSE> <BASE_URL> <CREATOR_ID> <CREATOR_USERNAME> <REVIEWER_USERNAME> <AUTH_KEU> <FILEPATH_STORE_COURSEID>
+    sh create-course.sh <SIZE_OF_ROOT_ORG> <NUMBER_OF_COURSE> <BASE_URL> <CREATOR_ID> <CREATOR_USERNAME> <REVIEWER_USERNAME> <AUTH_KEY> <FILEPATH_STORE_COURSEID>
     sh create-user-content-reviewer.sh <NUM_ROOT_ORGS> <NUMBER_OF_USER> <USER_FILE> <USER_ORG_FILE>
     sh user-password-update.sh <NUM_ROOT_ORGS> <NUM_USER_SUB_ORG> <BASE_AUTH_URL> <TOKEN> <FEDERATION_ID> 
 
