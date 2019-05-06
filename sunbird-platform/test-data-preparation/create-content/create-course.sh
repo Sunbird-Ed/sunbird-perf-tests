@@ -198,7 +198,7 @@ updateHierarchy(){
 
 publishCourse(){
 	token=`curl -X POST \
-				  $authUrl/realms/sunbird/protocol/openid-connect/token \
+				  $authUrl/auth/realms/sunbird/protocol/openid-connect/token \
 				  -H 'Content-Type: application/x-www-form-urlencoded' \
 				  -H 'Postman-Token: 03fb2525-c0c9-4619-9def-bbe955b3a335' \
 				  -H 'cache-control: no-cache' \
