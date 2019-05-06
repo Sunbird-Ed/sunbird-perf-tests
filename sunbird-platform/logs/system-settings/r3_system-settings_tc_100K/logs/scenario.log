@@ -1,0 +1,31 @@
+Creating summariser <summary>
+Created the tree successfully using /home/vinaya/current_scenario/system-settings.jmx
+Configuring remote engine: 28.0.0.24
+Configuring remote engine: 28.0.0.25
+Configuring remote engine: 28.0.0.27
+Configuring remote engine: 28.0.0.29
+Starting remote engines
+Starting the test @ Fri May 03 11:52:40 UTC 2019 (1556884360928)
+Remote engines have been started
+Waiting for possible Shutdown/StopTestNow/Heapdump message on port 4445
+summary +   6305 in 00:00:18 =  343.4/s Avg:   240 Min:     0 Max:   482 Err:    45 (0.71%) Active: 100 Started: 99 Finished: 0
+summary +  10600 in 00:00:30 =  350.8/s Avg:   281 Min:     0 Max:   662 Err:    17 (0.16%) Active: 100 Started: 99 Finished: 0
+summary =  16905 in 00:00:49 =  348.0/s Avg:   265 Min:     0 Max:   662 Err:    62 (0.37%)
+summary +  11000 in 00:00:30 =  361.9/s Avg:   276 Min:     0 Max:   600 Err:    29 (0.26%) Active: 100 Started: 99 Finished: 0
+summary =  27905 in 00:01:19 =  353.3/s Avg:   269 Min:     0 Max:   662 Err:    91 (0.33%)
+summary +  10500 in 00:00:29 =  358.4/s Avg:   278 Min:     0 Max:  1241 Err:    20 (0.19%) Active: 100 Started: 99 Finished: 0
+summary =  38405 in 00:01:48 =  354.7/s Avg:   272 Min:     0 Max:  1241 Err:   111 (0.29%)
+summary +  10800 in 00:00:30 =  357.4/s Avg:   279 Min:     0 Max:  1084 Err:    12 (0.11%) Active: 100 Started: 99 Finished: 0
+summary =  49205 in 00:02:18 =  355.3/s Avg:   273 Min:     0 Max:  1241 Err:   123 (0.25%)
+summary +  10600 in 00:00:30 =  354.6/s Avg:   283 Min:     0 Max:  1190 Err:    17 (0.16%) Active: 100 Started: 99 Finished: 0
+summary =  59805 in 00:02:48 =  355.2/s Avg:   275 Min:     0 Max:  1241 Err:   140 (0.23%)
+summary +  10900 in 00:00:30 =  364.7/s Avg:   272 Min:     0 Max:  1103 Err:     4 (0.04%) Active: 100 Started: 99 Finished: 0
+summary =  70705 in 00:03:18 =  356.6/s Avg:   275 Min:     0 Max:  1241 Err:   144 (0.20%)
+summary +  10700 in 00:00:30 =  354.6/s Avg:   282 Min:     0 Max:  1182 Err:    15 (0.14%) Active: 100 Started: 99 Finished: 0
+summary =  81405 in 00:03:48 =  356.3/s Avg:   276 Min:     0 Max:  1241 Err:   159 (0.20%)
+summary +  10600 in 00:00:30 =  354.4/s Avg:   282 Min:     0 Max:   952 Err:    16 (0.15%) Active: 96 Started: 99 Finished: 4
+summary =  92005 in 00:04:18 =  356.1/s Avg:   276 Min:     0 Max:  1241 Err:   175 (0.19%)
+summary +   7995 in 00:00:22 =  358.6/s Avg:   205 Min:    10 Max:   719 Err:     0 (0.00%) Active: 0 Started: 99 Finished: 100
+summary = 100000 in 00:04:41 =  356.3/s Avg:   271 Min:     0 Max:  1241 Err:   175 (0.18%)
+Tidying up remote @ Fri May 03 11:57:22 UTC 2019 (1556884642424)
+... end of run

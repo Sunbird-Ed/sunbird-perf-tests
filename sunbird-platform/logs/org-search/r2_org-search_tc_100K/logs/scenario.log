@@ -1,0 +1,23 @@
+Creating summariser <summary>
+Created the tree successfully using /home/vinaya/current_scenario/org-search.jmx
+Configuring remote engine: 28.0.0.24
+Configuring remote engine: 28.0.0.25
+Configuring remote engine: 28.0.0.27
+Configuring remote engine: 28.0.0.29
+Starting remote engines
+Starting the test @ Fri May 03 10:14:22 UTC 2019 (1556878462324)
+Remote engines have been started
+Waiting for possible Shutdown/StopTestNow/Heapdump message on port 4445
+summary +  10105 in 00:00:07 = 1450.8/s Avg:    62 Min:     0 Max:   360 Err:    78 (0.77%) Active: 100 Started: 100 Finished: 0
+summary +  44900 in 00:00:30 = 1498.0/s Avg:    64 Min:     0 Max:  1058 Err:    50 (0.11%) Active: 100 Started: 100 Finished: 0
+summary =  55005 in 00:00:37 = 1489.1/s Avg:    63 Min:     0 Max:  1058 Err:   128 (0.23%)
+summary +   3800 in 00:00:31 =  123.1/s Avg:   753 Min:     5 Max:  3679 Err:     4 (0.11%) Active: 100 Started: 100 Finished: 0
+summary =  58805 in 00:01:08 =  867.2/s Avg:   108 Min:     0 Max:  3679 Err:   132 (0.22%)
+summary +   3000 in 00:00:30 =  101.6/s Avg:  1013 Min:     7 Max:  1113 Err:    18 (0.60%) Active: 100 Started: 100 Finished: 0
+summary =  61805 in 00:01:37 =  634.8/s Avg:   152 Min:     0 Max:  3679 Err:   150 (0.24%)
+summary +   3000 in 00:00:31 =   98.1/s Avg:  1013 Min:     6 Max:  1103 Err:    10 (0.33%) Active: 100 Started: 100 Finished: 0
+summary =  64805 in 00:02:08 =  506.5/s Avg:   192 Min:     0 Max:  3679 Err:   160 (0.25%)
+summary +  35195 in 00:00:25 = 1403.6/s Avg:    71 Min:     0 Max:  3157 Err:    18 (0.05%) Active: 0 Started: 100 Finished: 100
+summary = 100000 in 00:02:33 =  653.5/s Avg:   149 Min:     0 Max:  3679 Err:   178 (0.18%)
+Tidying up remote @ Fri May 03 10:16:56 UTC 2019 (1556878616184)
+... end of run
