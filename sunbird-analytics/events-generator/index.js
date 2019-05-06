@@ -105,8 +105,7 @@ function getTraceEvents() {
         var tracerEvents = getTraceEvents()
         dispatch(tracerEvents, isBatch, function(err, res) {
             if (!err) {
-                console.log(tracerEvents.length + " Tracer Events are pushed")
-                console.log("Process is done")
+                console.log("Event pushed")
             } else {
                 console.error("Error occur due to" + err)
             }
