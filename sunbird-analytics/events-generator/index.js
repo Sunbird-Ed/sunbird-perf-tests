@@ -101,8 +101,9 @@ function getTraceEvents() {
         }));
     }
     if (trace === "true") {
+        let isBatch = topic.includes(key) ? true : false
         var tracerEvents = getTraceEvents()
-        dispatch(tracerEvents, function(err, res) {
+        dispatch(tracerEvents, isBatch, function(err, res) {
             if (!err) {
                 console.log(tracerEvents.length + " Tracer Events are pushed")
                 console.log("Process is done")
