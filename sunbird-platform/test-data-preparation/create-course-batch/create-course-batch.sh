@@ -2,8 +2,7 @@
 
 start(){
 	now=`date +%Y-%m-%d`
-	count=1;
-	IFS=","
+	count=0;
 
 while read f1 f2 f3 f4
 do
