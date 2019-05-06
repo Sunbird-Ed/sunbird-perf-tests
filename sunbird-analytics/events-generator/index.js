@@ -15,7 +15,7 @@ let loops = eventsToBeGenerated / batchSize;
 var kafkaDispatcher = require('./kafkaDispatcher')
 require('events').EventEmitter.defaultMaxListeners = 10000
 let topic = process.argv[4];
-let defaultTopic = "loadtest.telemetry.ingest"
+let key = "ingest"
 
 
 function getEvent(type) {
@@ -41,7 +41,7 @@ function generateBatch(cb) {
         events.push(JSON.parse(JSON.stringify(getEvent('SEARCH'))));
     }
     if (events.length >= batchSize) {
-        let isBatch = topic === defaultTopic ? true : false
+        let isBatch = topic.includes(key) ? true : false
         dispatch(events.splice(0, batchSize), isBatch,
             function(err, res) {
                 if (err) {
