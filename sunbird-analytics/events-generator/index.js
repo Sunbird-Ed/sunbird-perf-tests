@@ -94,7 +94,7 @@ function getTraceEvents() {
 
 
 (async function loop() {
-    console.log("Generating IMPRESSION:" + impression + "LOG" + log + "SEARCH" + search)
+    console.log("Generating IMPRESSION:" + impression + " LOG: " + log + " SEARCH: " + search)
     for (let i = 1; i <= loops; i++) {
         await new Promise(resolve => generateBatch(function() {
             resolve()
