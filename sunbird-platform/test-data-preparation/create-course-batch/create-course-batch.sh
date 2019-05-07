@@ -2,18 +2,21 @@
 
 start(){
 	now=`date +%Y-%m-%d`
-	count=1;
-	while read  courseId type ceatedFor; do
+	count=0;
+
+while read f1 f2 f3 f4
+do
 		count=`expr $count + 1`
-		local query="INSERT INTO sunbird.course_batch (id, courseid, createdfor, description, enrollmenttype,startdate,status, hashtagid,rootorgid) VALUES ('course_batch-$type-$count','$courseId',['$createdFor'],'Cousrse description','$type','$now',1,'course_batch-$count');"
-		if [ $count == 0 ]
+        echo "Line is : $f1 $f2 $f3 $f4"
+        local query="INSERT INTO sunbird.course_batch (id, courseid, createdfor, description, enrollmenttype,startdate,status, hashtagid,createdby) VALUES ('course_batch-$f2-$count','$f1',['$f3'],'Cousrse description','$f2','$now',1,'course_batch-$f2-$count','$f4');"
+        echo $query
+        if [ $count == 1 ]
 	then
 		echo $query > $coursebatch
 	else
 		echo $query >> $coursebatch
 	fi
-
-	done < "$file"	
+done < "$file"
 }
 file="$1"
 coursebatch="$2"

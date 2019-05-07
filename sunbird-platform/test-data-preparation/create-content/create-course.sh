@@ -19,7 +19,7 @@ createCourse(){
 	# echo $now
 	echo curl -X POST \
   $baseUrl/content/v1/create \
-  -H \''Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJkMTc1MDIwNDdlODc0ODZjOTM0ZDQ1ODdlYTQ4MmM3MyJ9.7LWocwCn5rrCScFQYOne8_Op2EOo-xTCK5JCFarHKSs'\' \
+  -H \''Authorization: Bearer '$authKey''\' \
   -H \''Content-Type: application/json'\' \
   -H \''X-Channel-Id: channel'\' \
   -d \''{
@@ -46,7 +46,7 @@ createCourse(){
 }'
  courseId=`curl -X POST \
   $baseUrl/content/v1/create \
-  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJkMTc1MDIwNDdlODc0ODZjOTM0ZDQ1ODdlYTQ4MmM3MyJ9.7LWocwCn5rrCScFQYOne8_Op2EOo-xTCK5JCFarHKSs' \
+  -H 'Authorization: Bearer '$authKey'' \
   -H 'Content-Type: application/json' \
   -H 'Postman-Token: 8280ac0a-fc15-449e-9e8d-b3e2a1558c77' \
   -H 'X-Channel-Id: channel' \
@@ -89,7 +89,7 @@ createCourse(){
 }
 updateHierarchy(){
 		token=`curl -X POST \
-				  $authUrl/realms/sunbird/protocol/openid-connect/token \
+				  $authUrl/auth/realms/sunbird/protocol/openid-connect/token \
 				  -H 'Content-Type: application/x-www-form-urlencoded' \
 				  -H 'Postman-Token: 03fb2525-c0c9-4619-9def-bbe955b3a335' \
 				  -H 'cache-control: no-cache' \
@@ -100,7 +100,7 @@ updateHierarchy(){
 
 		echo curl -X PATCH \
 		  $baseUrl/course/v1/hierarchy/update \
-		  -H \''Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJkMTc1MDIwNDdlODc0ODZjOTM0ZDQ1ODdlYTQ4MmM3MyJ9.7LWocwCn5rrCScFQYOne8_Op2EOo-xTCK5JCFarHKSs'\' \
+		  -H \''Authorization: Bearer '$authKey''\' \
 		  -H \''Content-Type: application/json'\' \
 		  -H \''X-Channel-Id: channel'\' \
 		  -H \''x-authenticated-user-token: '$token'' \'\
@@ -147,7 +147,7 @@ updateHierarchy(){
 		}' 
 	 curl -X PATCH \
 		  $baseUrl/course/v1/hierarchy/update \
-		  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJkMTc1MDIwNDdlODc0ODZjOTM0ZDQ1ODdlYTQ4MmM3MyJ9.7LWocwCn5rrCScFQYOne8_Op2EOo-xTCK5JCFarHKSs' \
+		  -H 'Authorization: Bearer '$authKey'' \
 		  -H 'Content-Type: application/json' \
 		  -H 'X-Channel-Id: channel'\' \
 		  -H 'x-authenticated-user-token: '$token'' \
@@ -198,7 +198,7 @@ updateHierarchy(){
 
 publishCourse(){
 	token=`curl -X POST \
-				  $authUrl/realms/sunbird/protocol/openid-connect/token \
+				  $authUrl/auth/realms/sunbird/protocol/openid-connect/token \
 				  -H 'Content-Type: application/x-www-form-urlencoded' \
 				  -H 'Postman-Token: 03fb2525-c0c9-4619-9def-bbe955b3a335' \
 				  -H 'cache-control: no-cache' \
@@ -209,7 +209,7 @@ publishCourse(){
 
 		echo curl -X POST \
 		  $baseUrl/content/v1/publish/"$1" \
-		  -H \''Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJkMTc1MDIwNDdlODc0ODZjOTM0ZDQ1ODdlYTQ4MmM3MyJ9.7LWocwCn5rrCScFQYOne8_Op2EOo-xTCK5JCFarHKSs'\' \
+		  -H \''Authorization: Bearer '$authKey''\' \
 		  -H \''Content-Type: application/json'\' \
 		  -H \''X-Channel-Id: channel'\' \
 		  -H \''x-authenticated-user-token: '$token'' \'\
@@ -224,7 +224,7 @@ publishCourse(){
 		
 	 curl -X POST \
 		  $baseUrl/content/v1/publish/"$1" \
-		  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJkMTc1MDIwNDdlODc0ODZjOTM0ZDQ1ODdlYTQ4MmM3MyJ9.7LWocwCn5rrCScFQYOne8_Op2EOo-xTCK5JCFarHKSs' \
+		  -H 'Authorization: Bearer '$authKey'' \
 		  -H 'Content-Type: application/json' \
 		  -H 'X-Channel-Id: channel'\' \
 		  -H 'x-authenticated-user-token: '$token'' \
@@ -245,5 +245,6 @@ authUrl="$4"
 userId="$5"
 username="$6"
 usernamereviewer="$7"
-file="$8"
+authKey="$8"
+file="$9"
 start
