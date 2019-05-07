@@ -6,7 +6,7 @@ start(){
 	while [ $i -le $rootOrgSize ] 
 	do 	
 		local j=1
-		while [ $j -le $rootOrgUserSize ] 
+		while [ $j -le $userSize ] 
 		do 
 			createUserForRootOrgAsReviewer $i $j
 			j=`expr $j + 1`
@@ -35,9 +35,9 @@ createUserForRootOrgAsReviewer(){
 	
 	
 }
-count
+count=0
 rootOrgSize="$1"
-rootOrgUserSize="$2"
+userSize="$2"
 cretorUserFile="$3"
 cretorUserOrgFile="$4"
 start

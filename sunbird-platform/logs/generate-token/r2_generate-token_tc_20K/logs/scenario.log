@@ -1,0 +1,67 @@
+Creating summariser <summary>
+Created the tree successfully using /home/vinaya/current_scenario/generate-token.jmx
+Configuring remote engine: 28.0.0.24
+Configuring remote engine: 28.0.0.25
+Configuring remote engine: 28.0.0.27
+Configuring remote engine: 28.0.0.29
+Starting remote engines
+Starting the test @ Mon May 06 06:18:08 UTC 2019 (1557123488576)
+Remote engines have been started
+Waiting for possible Shutdown/StopTestNow/Heapdump message on port 4445
+summary +      5 in 00:00:21 =    0.2/s Avg:   120 Min:    36 Max:   209 Err:     0 (0.00%) Active: 20 Started: 19 Finished: 0
+summary +    400 in 00:01:00 =    6.6/s Avg:   927 Min:    30 Max:  2752 Err:     0 (0.00%) Active: 20 Started: 19 Finished: 0
+summary =    405 in 00:01:21 =    5.0/s Avg:   917 Min:    30 Max:  2752 Err:     0 (0.00%)
+summary +    375 in 00:01:01 =    6.2/s Avg:  3182 Min:  1070 Max:  3399 Err:     0 (0.00%) Active: 20 Started: 19 Finished: 0
+summary =    780 in 00:02:22 =    5.5/s Avg:  2006 Min:    30 Max:  3399 Err:     0 (0.00%)
+summary +    375 in 00:01:00 =    6.2/s Avg:  3244 Min:  3174 Max:  3504 Err:     0 (0.00%) Active: 20 Started: 19 Finished: 0
+summary =   1155 in 00:03:22 =    5.7/s Avg:  2408 Min:    30 Max:  3504 Err:     0 (0.00%)
+summary +    376 in 00:01:00 =    6.2/s Avg:  3249 Min:  3175 Max:  3430 Err:     0 (0.00%) Active: 20 Started: 19 Finished: 0
+summary =   1531 in 00:04:23 =    5.8/s Avg:  2614 Min:    30 Max:  3504 Err:     0 (0.00%)
+summary +    376 in 00:01:02 =    6.1/s Avg:  3200 Min:  1079 Max:  3464 Err:     0 (0.00%) Active: 20 Started: 19 Finished: 0
+summary =   1907 in 00:05:24 =    5.9/s Avg:  2730 Min:    30 Max:  3504 Err:     0 (0.00%)
+summary +    377 in 00:01:00 =    6.3/s Avg:  3226 Min:  1097 Max:  3404 Err:     0 (0.00%) Active: 20 Started: 19 Finished: 0
+summary =   2284 in 00:06:24 =    5.9/s Avg:  2812 Min:    30 Max:  3504 Err:     0 (0.00%)
+summary +    378 in 00:01:00 =    6.3/s Avg:  3245 Min:  1156 Max:  4435 Err:     0 (0.00%) Active: 20 Started: 19 Finished: 0
+summary =   2662 in 00:07:25 =    6.0/s Avg:  2873 Min:    30 Max:  4435 Err:     0 (0.00%)
+summary +    367 in 00:01:01 =    6.0/s Avg:  3237 Min:  2174 Max:  3390 Err:     0 (0.00%) Active: 20 Started: 19 Finished: 0
+summary =   3029 in 00:08:26 =    6.0/s Avg:  2917 Min:    30 Max:  4435 Err:     0 (0.00%)
+summary +  10771 in 00:28:25 =    6.3/s Avg:  3240 Min:  1072 Max:  5270 Err:     0 (0.00%) Active: 20 Started: 19 Finished: 0
+summary =  13800 in 00:36:51 =    6.2/s Avg:  3169 Min:    30 Max:  5270 Err:     0 (0.00%)
+summary +    371 in 00:01:01 =    6.1/s Avg:  3268 Min:   106 Max:  5298 Err:     0 (0.00%) Active: 20 Started: 19 Finished: 0
+summary =  14171 in 00:37:52 =    6.2/s Avg:  3172 Min:    30 Max:  5298 Err:     0 (0.00%)
+summary +    371 in 00:01:01 =    6.1/s Avg:  3271 Min:  1073 Max:  5016 Err:     0 (0.00%) Active: 20 Started: 19 Finished: 0
+summary =  14542 in 00:38:53 =    6.2/s Avg:  3174 Min:    30 Max:  5298 Err:     0 (0.00%)
+summary +    382 in 00:01:01 =    6.3/s Avg:  3191 Min:  1089 Max:  3463 Err:     0 (0.00%) Active: 20 Started: 19 Finished: 0
+summary =  14924 in 00:39:54 =    6.2/s Avg:  3175 Min:    30 Max:  5298 Err:     0 (0.00%)
+summary +    379 in 00:01:00 =    6.3/s Avg:  3221 Min:  2182 Max:  3393 Err:     0 (0.00%) Active: 20 Started: 19 Finished: 0
+summary =  15303 in 00:40:54 =    6.2/s Avg:  3176 Min:    30 Max:  5298 Err:     0 (0.00%)
+summary +    189 in 00:00:57 =    3.3/s Avg:  3226 Min:  3169 Max:  3380 Err:     0 (0.00%) Active: 20 Started: 19 Finished: 0
+summary =  15492 in 00:41:51 =    6.2/s Avg:  3176 Min:    30 Max:  5298 Err:     0 (0.00%)
+summary +    377 in 00:01:01 =    6.1/s Avg:  3237 Min:  2190 Max:  4561 Err:     0 (0.00%) Active: 20 Started: 19 Finished: 0
+summary =  15869 in 00:42:52 =    6.2/s Avg:  3178 Min:    30 Max:  5298 Err:     0 (0.00%)
+summary +    376 in 00:01:00 =    6.3/s Avg:  3257 Min:  2224 Max:  4559 Err:     1 (0.27%) Active: 20 Started: 19 Finished: 0
+summary =  16245 in 00:43:52 =    6.2/s Avg:  3180 Min:    30 Max:  5298 Err:     1 (0.01%)
+summary +    376 in 00:01:00 =    6.2/s Avg:  3230 Min:  2225 Max:  3470 Err:     0 (0.00%) Active: 20 Started: 19 Finished: 0
+summary =  16621 in 00:44:53 =    6.2/s Avg:  3181 Min:    30 Max:  5298 Err:     1 (0.01%)
+summary +    375 in 00:01:01 =    6.1/s Avg:  3230 Min:  3164 Max:  3390 Err:     0 (0.00%) Active: 20 Started: 19 Finished: 0
+summary =  16996 in 00:45:54 =    6.2/s Avg:  3182 Min:    30 Max:  5298 Err:     1 (0.01%)
+summary +    373 in 00:01:00 =    6.2/s Avg:  3239 Min:  1085 Max:  4363 Err:     0 (0.00%) Active: 20 Started: 19 Finished: 0
+summary =  17369 in 00:46:54 =    6.2/s Avg:  3183 Min:    30 Max:  5298 Err:     1 (0.01%)
+summary +    378 in 00:01:01 =    6.2/s Avg:  3209 Min:  1081 Max:  4512 Err:     0 (0.00%) Active: 20 Started: 19 Finished: 0
+summary =  17747 in 00:47:55 =    6.2/s Avg:  3184 Min:    30 Max:  5298 Err:     1 (0.01%)
+summary +    287 in 00:00:56 =    5.1/s Avg:  3171 Min:  1081 Max:  3388 Err:     0 (0.00%) Active: 20 Started: 19 Finished: 0
+summary =  18034 in 00:48:51 =    6.2/s Avg:  3183 Min:    30 Max:  5298 Err:     1 (0.01%)
+summary +    378 in 00:01:00 =    6.3/s Avg:  3236 Min:  2204 Max:  3471 Err:     0 (0.00%) Active: 20 Started: 19 Finished: 0
+summary =  18412 in 00:49:51 =    6.2/s Avg:  3184 Min:    30 Max:  5298 Err:     1 (0.01%)
+summary +    376 in 00:01:01 =    6.2/s Avg:  3216 Min:  2202 Max:  3424 Err:     0 (0.00%) Active: 20 Started: 19 Finished: 0
+summary =  18788 in 00:50:52 =    6.2/s Avg:  3185 Min:    30 Max:  5298 Err:     1 (0.01%)
+summary +    369 in 00:01:00 =    6.1/s Avg:  3279 Min:  1089 Max:  4701 Err:     0 (0.00%) Active: 20 Started: 19 Finished: 0
+summary =  19157 in 00:51:52 =    6.2/s Avg:  3187 Min:    30 Max:  5298 Err:     1 (0.01%)
+summary +    372 in 00:01:01 =    6.1/s Avg:  3224 Min:  2263 Max:  3441 Err:     0 (0.00%) Active: 17 Started: 19 Finished: 3
+summary =  19529 in 00:52:53 =    6.2/s Avg:  3188 Min:    30 Max:  5298 Err:     1 (0.01%)
+summary +    453 in 00:00:29 =   15.6/s Avg:  3046 Min:  1072 Max:  3439 Err:     0 (0.00%) Active: 0 Started: 19 Finished: 20
+summary =  19982 in 00:53:22 =    6.2/s Avg:  3184 Min:    30 Max:  5298 Err:     1 (0.01%)
+summary +     18 in 00:00:00 = 9000.0/s Avg:  2556 Min:    20 Max:  3277 Err:     0 (0.00%) Active: 0 Started: 19 Finished: 20
+summary =  20000 in 00:53:22 =    6.2/s Avg:  3184 Min:    20 Max:  5298 Err:     1 (0.01%)
+Tidying up remote @ Mon May 06 07:11:31 UTC 2019 (1557126691430)
+... end of run
