@@ -1,0 +1,146 @@
+2019-05-07 14:57:24,053 INFO o.a.j.u.JMeterUtils: Setting Locale to en_US
+2019-05-07 14:57:24,068 INFO o.a.j.JMeter: Loading user properties from: /mnt/data/benchmark/apache-jmeter-4.0/bin/user.properties
+2019-05-07 14:57:24,068 INFO o.a.j.JMeter: Loading system properties from: /mnt/data/benchmark/apache-jmeter-4.0/bin/system.properties
+2019-05-07 14:57:24,075 INFO o.a.j.JMeter: Copyright (c) 1998-2018 The Apache Software Foundation
+2019-05-07 14:57:24,075 INFO o.a.j.JMeter: Version 4.0 r1823414
+2019-05-07 14:57:24,075 INFO o.a.j.JMeter: java.version=1.8.0_191
+2019-05-07 14:57:24,075 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2019-05-07 14:57:24,075 INFO o.a.j.JMeter: os.name=Linux
+2019-05-07 14:57:24,075 INFO o.a.j.JMeter: os.arch=amd64
+2019-05-07 14:57:24,075 INFO o.a.j.JMeter: os.version=4.15.0-1041-azure
+2019-05-07 14:57:24,076 INFO o.a.j.JMeter: file.encoding=UTF-8
+2019-05-07 14:57:24,076 INFO o.a.j.JMeter: Max memory     =1860698112
+2019-05-07 14:57:24,076 INFO o.a.j.JMeter: Available Processors =2
+2019-05-07 14:57:24,081 INFO o.a.j.JMeter: Default Locale=English (United States)
+2019-05-07 14:57:24,081 INFO o.a.j.JMeter: JMeter  Locale=English (United States)
+2019-05-07 14:57:24,081 INFO o.a.j.JMeter: JMeterHome=/mnt/data/benchmark/apache-jmeter-4.0
+2019-05-07 14:57:24,082 INFO o.a.j.JMeter: user.dir  =/home/vinaya/sunbird-perf-tests/sunbird-platform
+2019-05-07 14:57:24,082 INFO o.a.j.JMeter: PWD       =/home/vinaya/sunbird-perf-tests/sunbird-platform
+2019-05-07 14:57:24,088 INFO o.a.j.JMeter: IP: 28.0.0.23 Name: jmeter-lms-1 FullName: 28.0.0.23
+2019-05-07 14:57:24,092 INFO o.a.j.s.FileServer: Default base='/home/vinaya/sunbird-perf-tests/sunbird-platform'
+2019-05-07 14:57:24,097 INFO o.a.j.s.FileServer: Set new base='/home/vinaya/current_scenario'
+2019-05-07 14:57:24,277 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2019-05-07 14:57:24,299 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2019-05-07 14:57:24,304 INFO o.a.j.s.SaveService: Using SaveService properties version 4.0
+2019-05-07 14:57:24,312 INFO o.a.j.s.SaveService: Loading file: /home/vinaya/current_scenario/user-read-with-same-access-token.jmx
+2019-05-07 14:57:24,384 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2019-05-07 14:57:24,384 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2019-05-07 14:57:24,384 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2019-05-07 14:57:24,384 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2019-05-07 14:57:24,384 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2019-05-07 14:57:24,384 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2019-05-07 14:57:24,419 INFO o.a.j.JMeter: Creating summariser <summary>
+2019-05-07 14:57:24,422 INFO o.a.j.e.DistributedRunner: Configuring remote engine: 28.0.0.24
+2019-05-07 14:57:24,424 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-05-07 14:57:24,532 INFO o.a.j.e.DistributedRunner: Configuring remote engine: 28.0.0.25
+2019-05-07 14:57:24,532 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-05-07 14:57:24,541 INFO o.a.j.e.DistributedRunner: Configuring remote engine: 28.0.0.27
+2019-05-07 14:57:24,541 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-05-07 14:57:24,550 INFO o.a.j.e.DistributedRunner: Configuring remote engine: 28.0.0.29
+2019-05-07 14:57:24,550 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-05-07 14:57:24,558 INFO o.a.j.e.DistributedRunner: Starting remote engines
+2019-05-07 14:57:24,560 INFO o.a.j.e.DistributedRunner: Starting the test @ Tue May 07 14:57:24 UTC 2019 (1557241044558)
+2019-05-07 14:57:24,560 INFO o.a.j.e.ClientJMeterEngine: running clientengine run method
+2019-05-07 14:57:24,563 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2019-05-07 14:57:24,563 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2019-05-07 14:57:24,973 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-05-07 14:57:24,973 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-05-07 14:57:24,976 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2019-05-07 14:57:24,981 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2019-05-07 14:57:24,981 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2019-05-07 14:57:24,982 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-05-07 14:57:24,982 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-05-07 14:57:25,326 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-05-07 14:57:25,326 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-05-07 14:57:25,327 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-05-07 14:57:25,327 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-05-07 14:57:25,327 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2019-05-07 14:57:25,327 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2019-05-07 14:57:25,424 INFO o.a.j.e.ClientJMeterEngine: sent test to 28.0.0.25 basedir='.'
+2019-05-07 14:57:25,425 INFO o.a.j.e.ClientJMeterEngine: Sending properties {}
+2019-05-07 14:57:25,429 INFO o.a.j.e.ClientJMeterEngine: sent run command to 28.0.0.25
+2019-05-07 14:57:25,429 INFO o.a.j.e.ClientJMeterEngine: running clientengine run method
+2019-05-07 14:57:25,431 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-05-07 14:57:25,431 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-05-07 14:57:25,431 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2019-05-07 14:57:25,431 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2019-05-07 14:57:25,431 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-05-07 14:57:25,431 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-05-07 14:57:25,439 INFO o.a.j.JMeter: Started remote host:  28.0.0.25 (1557241045439)
+2019-05-07 14:57:25,447 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-05-07 14:57:25,448 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-05-07 14:57:25,448 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-05-07 14:57:25,449 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-05-07 14:57:25,449 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2019-05-07 14:57:25,449 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2019-05-07 14:57:25,467 INFO o.a.j.e.ClientJMeterEngine: sent test to 28.0.0.24 basedir='.'
+2019-05-07 14:57:25,467 INFO o.a.j.e.ClientJMeterEngine: Sending properties {}
+2019-05-07 14:57:25,470 INFO o.a.j.e.ClientJMeterEngine: sent run command to 28.0.0.24
+2019-05-07 14:57:25,470 INFO o.a.j.e.ClientJMeterEngine: running clientengine run method
+2019-05-07 14:57:25,470 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-05-07 14:57:25,470 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-05-07 14:57:25,471 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2019-05-07 14:57:25,471 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2019-05-07 14:57:25,471 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-05-07 14:57:25,471 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-05-07 14:57:25,476 INFO o.a.j.JMeter: Started remote host:  28.0.0.24 (1557241045476)
+2019-05-07 14:57:25,485 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-05-07 14:57:25,486 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-05-07 14:57:25,486 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-05-07 14:57:25,486 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-05-07 14:57:25,486 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2019-05-07 14:57:25,486 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2019-05-07 14:57:25,502 INFO o.a.j.e.ClientJMeterEngine: sent test to 28.0.0.27 basedir='.'
+2019-05-07 14:57:25,502 INFO o.a.j.e.ClientJMeterEngine: Sending properties {}
+2019-05-07 14:57:25,507 INFO o.a.j.e.ClientJMeterEngine: sent run command to 28.0.0.27
+2019-05-07 14:57:25,507 INFO o.a.j.e.ClientJMeterEngine: running clientengine run method
+2019-05-07 14:57:25,507 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-05-07 14:57:25,508 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-05-07 14:57:25,508 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2019-05-07 14:57:25,508 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2019-05-07 14:57:25,508 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-05-07 14:57:25,508 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-05-07 14:57:25,512 INFO o.a.j.JMeter: Started remote host:  28.0.0.27 (1557241045512)
+2019-05-07 14:57:25,524 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-05-07 14:57:25,524 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-05-07 14:57:25,524 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-05-07 14:57:25,524 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-05-07 14:57:25,524 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2019-05-07 14:57:25,524 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2019-05-07 14:57:25,542 INFO o.a.j.e.ClientJMeterEngine: sent test to 28.0.0.29 basedir='.'
+2019-05-07 14:57:25,543 INFO o.a.j.e.ClientJMeterEngine: Sending properties {}
+2019-05-07 14:57:25,544 INFO o.a.j.e.ClientJMeterEngine: sent run command to 28.0.0.29
+2019-05-07 14:57:25,544 INFO o.a.j.e.DistributedRunner: Remote engines have been started
+2019-05-07 14:57:25,548 INFO o.a.j.JMeter: Started remote host:  28.0.0.29 (1557241045548)
+2019-05-07 14:57:25,575 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2019-05-07 14:57:25,575 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2019-05-07 14:57:25,575 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2019-05-07 14:57:25,575 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2019-05-07 14:57:31,159 INFO o.a.j.r.Summariser: summary +    805 in 00:00:06 =  140.8/s Avg:   206 Min:    32 Max:   647 Err:     0 (0.00%) Active: 100 Started: 99 Finished: 0
+2019-05-07 14:58:00,143 INFO o.a.j.r.Summariser: summary +   9200 in 00:00:29 =  317.4/s Avg:   316 Min:    23 Max:  1063 Err:     0 (0.00%) Active: 100 Started: 99 Finished: 0
+2019-05-07 14:58:00,144 INFO o.a.j.r.Summariser: summary =  10005 in 00:00:35 =  288.3/s Avg:   308 Min:    23 Max:  1063 Err:     0 (0.00%)
+2019-05-07 14:58:30,009 INFO o.a.j.r.Summariser: summary +  10400 in 00:00:30 =  348.2/s Avg:   288 Min:    22 Max:  1295 Err:     0 (0.00%) Active: 100 Started: 99 Finished: 0
+2019-05-07 14:58:30,010 INFO o.a.j.r.Summariser: summary =  20405 in 00:01:05 =  316.0/s Avg:   297 Min:    22 Max:  1295 Err:     0 (0.00%)
+2019-05-07 14:59:00,065 INFO o.a.j.r.Summariser: summary +  10400 in 00:00:30 =  346.0/s Avg:   288 Min:    21 Max:  1515 Err:     0 (0.00%) Active: 100 Started: 99 Finished: 0
+2019-05-07 14:59:00,066 INFO o.a.j.r.Summariser: summary =  30805 in 00:01:35 =  325.5/s Avg:   294 Min:    21 Max:  1515 Err:     0 (0.00%)
+2019-05-07 14:59:30,317 INFO o.a.j.r.Summariser: summary +  10100 in 00:00:30 =  333.9/s Avg:   298 Min:    21 Max:  1640 Err:     0 (0.00%) Active: 100 Started: 99 Finished: 0
+2019-05-07 14:59:30,320 INFO o.a.j.r.Summariser: summary =  40905 in 00:02:05 =  327.6/s Avg:   295 Min:    21 Max:  1640 Err:     0 (0.00%)
+2019-05-07 15:00:00,480 INFO o.a.j.r.Summariser: summary +   9400 in 00:00:30 =  311.6/s Avg:   320 Min:    21 Max:  1506 Err:     0 (0.00%) Active: 100 Started: 99 Finished: 0
+2019-05-07 15:00:00,480 INFO o.a.j.r.Summariser: summary =  50305 in 00:02:35 =  324.5/s Avg:   300 Min:    21 Max:  1640 Err:     0 (0.00%)
+2019-05-07 15:00:30,734 INFO o.a.j.r.Summariser: summary +   9700 in 00:00:30 =  320.6/s Avg:   307 Min:    20 Max:  3646 Err:     0 (0.00%) Active: 100 Started: 99 Finished: 0
+2019-05-07 15:00:30,735 INFO o.a.j.r.Summariser: summary =  60005 in 00:03:05 =  323.8/s Avg:   301 Min:    20 Max:  3646 Err:     0 (0.00%)
+2019-05-07 15:01:00,078 INFO o.a.j.r.Summariser: summary +  10700 in 00:00:29 =  364.6/s Avg:   283 Min:    22 Max:  3697 Err:     0 (0.00%) Active: 100 Started: 99 Finished: 0
+2019-05-07 15:01:00,079 INFO o.a.j.r.Summariser: summary =  70705 in 00:03:35 =  329.4/s Avg:   298 Min:    20 Max:  3697 Err:     0 (0.00%)
+2019-05-07 15:01:30,017 INFO o.a.j.r.Summariser: summary +  10400 in 00:00:30 =  347.4/s Avg:   279 Min:    21 Max:  3553 Err:     0 (0.00%) Active: 100 Started: 99 Finished: 0
+2019-05-07 15:01:30,017 INFO o.a.j.r.Summariser: summary =  81105 in 00:04:05 =  331.6/s Avg:   296 Min:    20 Max:  3697 Err:     0 (0.00%)
+2019-05-07 15:02:00,138 INFO o.a.j.r.Summariser: summary +   9900 in 00:00:30 =  328.7/s Avg:   303 Min:    20 Max:  3854 Err:     2 (0.02%) Active: 96 Started: 99 Finished: 4
+2019-05-07 15:02:00,138 INFO o.a.j.r.Summariser: summary =  91005 in 00:04:35 =  331.3/s Avg:   297 Min:    20 Max:  3854 Err:     2 (0.00%)
+2019-05-07 15:02:31,211 INFO o.a.j.r.Summariser: summary +   8200 in 00:00:31 =  263.9/s Avg:   270 Min:     5 Max:  3440 Err:     1 (0.01%) Active: 17 Started: 99 Finished: 83
+2019-05-07 15:02:31,212 INFO o.a.j.r.Summariser: summary =  99205 in 00:05:06 =  324.4/s Avg:   294 Min:     5 Max:  3854 Err:     3 (0.00%)
+2019-05-07 15:02:33,529 INFO o.a.j.JMeter: Finished remote host: 28.0.0.24 (1557241353529)
+2019-05-07 15:02:33,786 INFO o.a.j.JMeter: Finished remote host: 28.0.0.27 (1557241353786)
+2019-05-07 15:02:34,588 INFO o.a.j.JMeter: Finished remote host: 28.0.0.29 (1557241354588)
+2019-05-07 15:02:35,557 INFO o.a.j.r.Summariser: summary +    795 in 00:00:04 =  183.0/s Avg:   114 Min:    20 Max:  3115 Err:     0 (0.00%) Active: 0 Started: 99 Finished: 100
+2019-05-07 15:02:35,557 INFO o.a.j.r.Summariser: summary = 100000 in 00:05:10 =  322.5/s Avg:   293 Min:     5 Max:  3854 Err:     3 (0.00%)
+2019-05-07 15:02:35,557 INFO o.a.j.JMeter: Finished remote host: 28.0.0.25 (1557241355557)
+2019-05-07 15:02:40,559 INFO o.a.j.JMeter: Interrupting RMI Reaper
