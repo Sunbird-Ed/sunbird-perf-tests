@@ -12,6 +12,7 @@ apiKey=$9
 accessToken=${10}
 csvFile=${11}
 csvFileHost=${12}
+pathPrefix=${13}
 
 JMETER_HOME=/mnt/data/benchmark/apache-jmeter-4.0
 JMETER_HOME=${jmeterHome}
@@ -38,6 +39,7 @@ cp ~/sunbird-perf-tests/sunbird-platform/$scenario_name/$scenario_name.jmx $JMX_
 
 echo "ip = " ${ip}
 echo "host = " ${host}
+echo "pathPrefix = " ${pathPrefix}
 echo "scenario_name = " ${scenario_name}
 echo "scenario_id = " ${scenario_id}
 echo "numThreads = " ${numThreads}
@@ -70,6 +72,9 @@ sed "s#CSV_FILE#${csvFile}#g" $JMX_FILE_PATH > jmx.tmp
 mv jmx.tmp $JMX_FILE_PATH
 
 sed "s#DOMAIN_FILE#${csvFileHost}#g" $JMX_FILE_PATH > jmx.tmp
+mv jmx.tmp $JMX_FILE_PATH
+
+sed "s#PATH_PREFIX#${pathPrefix}#g" $JMX_FILE_PATH > jmx.tmp
 mv jmx.tmp $JMX_FILE_PATH
 
 echo "Running ... "

@@ -38,6 +38,11 @@
             <stringProp name="Argument.value">DOMAIN_FILE</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
+          <elementProp name="pathPrefix" elementType="Argument">
+            <stringProp name="Argument.name">pathPrefix</stringProp>
+            <stringProp name="Argument.value">PATH_PREFIX</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
           <elementProp name="host" elementType="Argument">
             <stringProp name="Argument.name">host</stringProp>
             <stringProp name="Argument.value"></stringProp>
@@ -87,7 +92,7 @@
             </elementProp>
             <elementProp name="" elementType="Header">
               <stringProp name="Header.name">X-URL</stringProp>
-              <stringProp name="Header.value">${protocol}://${host}:${port}/api/data/v1/system/settings/get/${settingName}</stringProp>
+              <stringProp name="Header.value">${protocol}://${host}:${port}${pathPrefix}/data/v1/system/settings/get/${settingName}</stringProp>
             </elementProp>
           </collectionProp>
         </HeaderManager>
@@ -100,7 +105,7 @@
           <stringProp name="HTTPSampler.port">${port}</stringProp>
           <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/api/data/v1/system/settings/get/${settingName}</stringProp>
+          <stringProp name="HTTPSampler.path">${pathPrefix}/data/v1/system/settings/get/${settingName}</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
