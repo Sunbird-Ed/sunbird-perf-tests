@@ -20,7 +20,7 @@
           </elementProp>
           <elementProp name="host" elementType="Argument">
             <stringProp name="Argument.name">host</stringProp>
-            <stringProp name="Argument.value">HOST</stringProp>
+            <stringProp name="Argument.value"></stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="port" elementType="Argument">
@@ -43,9 +43,24 @@
             <stringProp name="Argument.value">ACCESS_TOKEN</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
-          <elementProp name="csvFile" elementType="Argument">
-            <stringProp name="Argument.name">csvFile</stringProp>
+          <elementProp name="csvFileRequest" elementType="Argument">
+            <stringProp name="Argument.name">csvFileRequest</stringProp>
             <stringProp name="Argument.value">CSV_FILE</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="csvFileHost" elementType="Argument">
+            <stringProp name="Argument.name">csvFileHost</stringProp>
+            <stringProp name="Argument.value">DOMAIN_FILE</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="protocol" elementType="Argument">
+            <stringProp name="Argument.name">protocol</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pathPrefix" elementType="Argument">
+            <stringProp name="Argument.name">pathPrefix</stringProp>
+            <stringProp name="Argument.value">PATH_PREFIX</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
@@ -72,9 +87,9 @@
           </elementProp>
           <stringProp name="HTTPSampler.domain">${host}</stringProp>
           <stringProp name="HTTPSampler.port">${port}</stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/api/user/v1/read/${userId}</stringProp>
+          <stringProp name="HTTPSampler.path">${pathPrefix}/user/v1/read/${userId}</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -102,6 +117,10 @@
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">x-authenticated-user-token</stringProp>
                 <stringProp name="Header.value">${userToken}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-URL</stringProp>
+                <stringProp name="Header.value">${protocol}://${host}:${port}${pathPrefix}/user/v1/read/${userId}</stringProp>
               </elementProp>
             </collectionProp>
           </HeaderManager>
@@ -143,6 +162,18 @@
           </ResultCollector>
           <hashTree/>
         </hashTree>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+          <stringProp name="filename">${csvFileHost}</stringProp>
+          <stringProp name="fileEncoding">UTF-8</stringProp>
+          <stringProp name="variableNames">protocol,host,port</stringProp>
+          <boolProp name="ignoreFirstLine">true</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+        </CSVDataSet>
+        <hashTree/>
       </hashTree>
       <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="false">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
@@ -181,7 +212,7 @@
       </ResultCollector>
       <hashTree/>
       <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-        <stringProp name="filename">${csvFile} </stringProp>
+        <stringProp name="filename">${csvFileRequest} </stringProp>
         <stringProp name="fileEncoding">UTF-8</stringProp>
         <stringProp name="variableNames">userId,userName</stringProp>
         <boolProp name="ignoreFirstLine">true</boolProp>
