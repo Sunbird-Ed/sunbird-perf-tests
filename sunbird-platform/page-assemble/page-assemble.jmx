@@ -101,7 +101,7 @@
             </elementProp>
             <elementProp name="" elementType="Header">
               <stringProp name="Header.name">X-URL</stringProp>
-              <stringProp name="Header.value">${protocol}://${host}:${port}${pathPrefix}/data/v1/page/assemble?orgdetails=orgName,email</stringProp>
+              <stringProp name="Header.value">${protocol}://${host}:${port}${pathPrefix}/v1/page/assemble?orgdetails=orgName,email</stringProp>
             </elementProp>
           </collectionProp>
         </HeaderManager>
@@ -132,7 +132,7 @@
           <stringProp name="HTTPSampler.port">${port}</stringProp>
           <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">${pathPrefix}/data/v1/page/assemble?orgdetails=orgName,email</stringProp>
+          <stringProp name="HTTPSampler.path">${pathPrefix}/v1/page/assemble?orgdetails=orgName,email</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
