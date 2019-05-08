@@ -1,0 +1,2 @@
+protocol,host,port
+https,loadtest.ntp.in,443
