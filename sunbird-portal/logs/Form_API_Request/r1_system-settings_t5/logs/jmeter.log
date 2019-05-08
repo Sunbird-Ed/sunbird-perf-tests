@@ -1,0 +1,79 @@
+2019-05-08 12:46:36,026 INFO o.a.j.u.JMeterUtils: Setting Locale to en_IN
+2019-05-08 12:46:36,040 INFO o.a.j.JMeter: Loading user properties from: /home/rajeev/apache-jmeter-4.0/bin/user.properties
+2019-05-08 12:46:36,041 INFO o.a.j.JMeter: Loading system properties from: /home/rajeev/apache-jmeter-4.0/bin/system.properties
+2019-05-08 12:46:36,046 INFO o.a.j.JMeter: Copyright (c) 1998-2018 The Apache Software Foundation
+2019-05-08 12:46:36,046 INFO o.a.j.JMeter: Version 4.0 r1823414
+2019-05-08 12:46:36,046 INFO o.a.j.JMeter: java.version=1.8.0_201
+2019-05-08 12:46:36,046 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2019-05-08 12:46:36,046 INFO o.a.j.JMeter: os.name=Linux
+2019-05-08 12:46:36,046 INFO o.a.j.JMeter: os.arch=amd64
+2019-05-08 12:46:36,046 INFO o.a.j.JMeter: os.version=4.15.0-48-generic
+2019-05-08 12:46:36,047 INFO o.a.j.JMeter: file.encoding=UTF-8
+2019-05-08 12:46:36,047 INFO o.a.j.JMeter: Max memory     =3650093056
+2019-05-08 12:46:36,047 INFO o.a.j.JMeter: Available Processors =4
+2019-05-08 12:46:36,050 INFO o.a.j.JMeter: Default Locale=English (India)
+2019-05-08 12:46:36,050 INFO o.a.j.JMeter: JMeter  Locale=English (India)
+2019-05-08 12:46:36,050 INFO o.a.j.JMeter: JMeterHome=/home/rajeev/apache-jmeter-4.0
+2019-05-08 12:46:36,050 INFO o.a.j.JMeter: user.dir  =/home/rajeev
+2019-05-08 12:46:36,050 INFO o.a.j.JMeter: PWD       =/home/rajeev
+2019-05-08 12:46:36,051 INFO o.a.j.JMeter: IP: 127.0.1.1 Name: netops-Latitude-5580 FullName: netops-Latitude-5580
+2019-05-08 12:46:36,053 INFO o.a.j.s.FileServer: Default base='/home/rajeev'
+2019-05-08 12:46:36,057 INFO o.a.j.s.FileServer: Set new base='/home/rajeev/current_scenario'
+2019-05-08 12:46:36,196 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2019-05-08 12:46:36,210 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2019-05-08 12:46:36,214 INFO o.a.j.s.SaveService: Using SaveService properties version 4.0
+2019-05-08 12:46:36,220 INFO o.a.j.s.SaveService: Loading file: /home/rajeev/current_scenario/Form_API_Request.jmx
+2019-05-08 12:46:36,273 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2019-05-08 12:46:36,273 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2019-05-08 12:46:36,273 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2019-05-08 12:46:36,274 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2019-05-08 12:46:36,274 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2019-05-08 12:46:36,274 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2019-05-08 12:46:36,297 INFO o.a.j.JMeter: Creating summariser <summary>
+2019-05-08 12:46:36,301 INFO o.a.j.e.DistributedRunner: Configuring remote engine: 127.0.0.1
+2019-05-08 12:46:36,313 ERROR o.a.j.e.DistributedRunner: Failed to create engine at 127.0.0.1
+java.rmi.ConnectIOException: Exception creating connection to: 127.0.0.1; nested exception is: 
+	java.io.FileNotFoundException: rmi_keystore.jks (No such file or directory)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:631) ~[?:1.8.0_201]
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:216) ~[?:1.8.0_201]
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:202) ~[?:1.8.0_201]
+	at sun.rmi.server.UnicastRef.newCall(UnicastRef.java:338) ~[?:1.8.0_201]
+	at sun.rmi.registry.RegistryImpl_Stub.lookup(RegistryImpl_Stub.java:112) ~[?:1.8.0_201]
+	at org.apache.jmeter.engine.ClientJMeterEngine.getEngine(ClientJMeterEngine.java:70) ~[ApacheJMeter_core.jar:4.0 r1823414]
+	at org.apache.jmeter.engine.ClientJMeterEngine.<init>(ClientJMeterEngine.java:83) ~[ApacheJMeter_core.jar:4.0 r1823414]
+	at org.apache.jmeter.engine.DistributedRunner.createEngine(DistributedRunner.java:237) ~[ApacheJMeter_core.jar:4.0 r1823414]
+	at org.apache.jmeter.engine.DistributedRunner.getClientEngine(DistributedRunner.java:213) [ApacheJMeter_core.jar:4.0 r1823414]
+	at org.apache.jmeter.engine.DistributedRunner.init(DistributedRunner.java:93) [ApacheJMeter_core.jar:4.0 r1823414]
+	at org.apache.jmeter.JMeter.runNonGui(JMeter.java:1011) [ApacheJMeter_core.jar:4.0 r1823414]
+	at org.apache.jmeter.JMeter.startNonGui(JMeter.java:915) [ApacheJMeter_core.jar:4.0 r1823414]
+	at org.apache.jmeter.JMeter.start(JMeter.java:543) [ApacheJMeter_core.jar:4.0 r1823414]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_201]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_201]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_201]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_201]
+	at org.apache.jmeter.NewDriver.main(NewDriver.java:245) [ApacheJMeter.jar:4.0 r1823414]
+Caused by: java.io.FileNotFoundException: rmi_keystore.jks (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method) ~[?:1.8.0_201]
+	at java.io.FileInputStream.open(FileInputStream.java:195) ~[?:1.8.0_201]
+	at java.io.FileInputStream.<init>(FileInputStream.java:138) ~[?:1.8.0_201]
+	at java.io.FileInputStream.<init>(FileInputStream.java:93) ~[?:1.8.0_201]
+	at org.apache.jmeter.rmi.SSLRMIClientSocketFactory.loadStore(SSLRMIClientSocketFactory.java:125) ~[ApacheJMeter_core.jar:4.0 r1823414]
+	at org.apache.jmeter.rmi.SSLRMIClientSocketFactory.createSocket(SSLRMIClientSocketFactory.java:83) ~[ApacheJMeter_core.jar:4.0 r1823414]
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:613) ~[?:1.8.0_201]
+	... 17 more
+2019-05-08 12:46:36,316 ERROR o.a.j.u.JMeterUtils: Exception creating connection to: 127.0.0.1; nested exception is: 
+	java.io.FileNotFoundException: rmi_keystore.jks (No such file or directory)
+2019-05-08 12:46:36,317 INFO o.a.j.e.DistributedRunner: Failed to configure 127.0.0.1
+2019-05-08 12:46:36,317 INFO o.a.j.e.DistributedRunner: Stopping remote engines
+2019-05-08 12:46:36,317 INFO o.a.j.e.DistributedRunner: Remote engines have been stopped
+2019-05-08 12:46:36,317 ERROR o.a.j.JMeter: Error in NonGUIDriver
+java.lang.RuntimeException: Following remote engines could not be configured:[127.0.0.1]
+	at org.apache.jmeter.engine.DistributedRunner.init(DistributedRunner.java:112) ~[ApacheJMeter_core.jar:4.0 r1823414]
+	at org.apache.jmeter.JMeter.runNonGui(JMeter.java:1011) [ApacheJMeter_core.jar:4.0 r1823414]
+	at org.apache.jmeter.JMeter.startNonGui(JMeter.java:915) [ApacheJMeter_core.jar:4.0 r1823414]
+	at org.apache.jmeter.JMeter.start(JMeter.java:543) [ApacheJMeter_core.jar:4.0 r1823414]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_201]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_201]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_201]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_201]
+	at org.apache.jmeter.NewDriver.main(NewDriver.java:245) [ApacheJMeter.jar:4.0 r1823414]

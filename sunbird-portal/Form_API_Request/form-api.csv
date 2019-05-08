@@ -1,0 +1,5 @@
+type,action,subtype
+framework,search,framework-code
+content,search,explore
+content,search,resourcebundle
+content,filter,explore-course
