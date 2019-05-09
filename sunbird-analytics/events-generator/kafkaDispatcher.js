@@ -8,11 +8,11 @@ var incrementor = 0;
 let topic = process.argv[4];
 let nof_partition = process.argv[8]
 console.log("nof_partition" + nof_partition)
-var partition = Array.from(new Array(nof_partition), (x, index) => index + 0);
+var partition = undefined;
 console.log("partition" + partition)
 client.on('ready', function() {
     console.log('kafka is ready ready');
-
+    partition = Array.from(new Array(nof_partition), (x, index) => index + 0);
 })
 
 client.on('error', function(err) {
