@@ -62,17 +62,18 @@ var KafkaDispatcher = {
 
     },
     initialize: function() {
-        partitions = [...Array(nof_partition)].map((_, i) => i + 0)
+
 
     }
 }
 
 function getPartitionNumber() {
+    partitions = [0, 1, 2, 3, 4, 5, 6, 7]
     var res = undefined
     incrementor++
-    if (incrementor <= nof_partition) {
+    if (incrementor <= 8) {
         res = partitions[incrementor - 1]
-        if (incrementor === nof_partition) {
+        if (incrementor === 8) {
             incrementor = 0
         }
         return res
