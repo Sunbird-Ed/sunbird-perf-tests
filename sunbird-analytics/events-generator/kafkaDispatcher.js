@@ -8,11 +8,10 @@ var incrementor = 0;
 let topic = process.argv[4];
 let nof_partition = process.argv[8]
 console.log("nof_partition" + nof_partition)
-var partition = undefined;
-console.log("partition" + partition)
+let partitions = Array.from(new Array(nof_partition), (x, index) => index + 0);
+console.log("partitions" + partitions)
 client.on('ready', function() {
     console.log('kafka is ready ready');
-    partition = Array.from(new Array(nof_partition), (x, index) => index + 0);
 })
 
 client.on('error', function(err) {
@@ -69,7 +68,7 @@ function getPartitionNumber() {
     var res = undefined
     incrementor++
     if (incrementor <= nof_partition) {
-        res = partition[incrementor - 1]
+        res = partitions[incrementor - 1]
         if (incrementor === nof_partition) {
             incrementor = 0
         }
