@@ -95,6 +95,7 @@ function getTraceEvents() {
 
 (async function loop() {
     console.log("Generating IMPRESSION:" + impression + " LOG: " + log + " SEARCH: " + search)
+    kafkaDispatcher.initialize()
     for (let i = 1; i <= loops; i++) {
         await new Promise(resolve => generateBatch(function() {
             resolve()
