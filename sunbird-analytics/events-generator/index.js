@@ -10,7 +10,8 @@ let batchSize = 200;
 let impression = process.argv[5];
 let search = process.argv[6];
 let log = process.argv[7];
-let ratio = { impression: impression, search: search, log: log };
+let device_summary = process.argv[8];
+let ratio = { impression: impression, search: search, log: log, device_summary: device_summary };
 let loops = eventsToBeGenerated / batchSize;
 var kafkaDispatcher = require('./kafkaDispatcher')
 require('events').EventEmitter.defaultMaxListeners = 10000
@@ -26,7 +27,9 @@ function getEvent(type) {
     event.mid = "LOAD_TEST_" + process.env.machine_id + "_" + faker.random.uuid()
     event.context.did = faker.random.arrayElement(data.dids);
     event.context.channel = faker.random.arrayElement(data.channelIds);
-    event.object.id = faker.random.arrayElement(data.contentIds);
+    if (event.object) {
+        event.object.id = faker.random.arrayElement(data.contentIds);
+    }
     return event;
 }
 
@@ -39,6 +42,9 @@ function generateBatch(cb) {
     }
     for (let i = 0; i < ratio.search; i++) {
         events.push(JSON.parse(JSON.stringify(getEvent('SEARCH'))));
+    }
+    for (let i = 0; i < ratio.device_summary; i++) {
+        events.push(JSON.parse(JSON.stringify(getEvent('ME_DEVICE_SUMMARY'))));
     }
     if (events.length >= batchSize) {
         let isBatch = topic.includes(key) ? true : false

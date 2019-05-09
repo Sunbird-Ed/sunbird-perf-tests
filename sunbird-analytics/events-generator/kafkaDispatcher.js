@@ -6,9 +6,9 @@ var kafka = require('kafka-node'),
 var count = 0;
 var incrementor = 0;
 let topic = process.argv[4];
-let nof_partition = process.argv[8]
-var partitions = [];
-console.log("nof_partition" + nof_partition)
+let no_of_partitions = process.argv[9];
+let partitions = [];
+console.log("nof_partition" + no_of_partitions)
 client.on('ready', function() {
     console.log('kafka is ready ready');
 })
@@ -19,6 +19,7 @@ client.on('error', function(err) {
 
 var KafkaDispatcher = {
     dispatchBatch: function(telemetryEvent, cb) {
+        this.createPartitions(Number(no_of_partitions))
         var eventObject = { "id": "loadtest.telemetry", "ver": "3.0", "ets": new Date().getTime(), "events": telemetryEvent, "mid": "56c0c430-748b-11e8-ae77-cd19397ca6b0", "syncts": 1529500243955 }
         payloads = [{
             topic: topic,
@@ -41,9 +42,10 @@ var KafkaDispatcher = {
         });
     },
     dispatch: function(event, cb) {
+        this.createPartitions(Number(no_of_partitions))
         payloads = [{
             topic: topic,
-            partition: getPartitionNumber(),
+            partition: getPartitionNumber()
         }];
         payloads[0].messages = JSON.stringify(event)
         producer.send(payloads, function(err, res) {
@@ -59,26 +61,23 @@ var KafkaDispatcher = {
                 if (cb) cb(err, undefined)
             }
         });
-
     },
-    initialize: function() {
-
-
+    createPartitions: function(number) {
+        partitions = [...Array(number)].map((_, i) => i + 0)
     }
 }
 
 function getPartitionNumber() {
-    partitions = [0, 1, 2, 3, 4, 5, 6, 7]
     var res = undefined
     incrementor++
-    if (incrementor <= 8) {
+    if (incrementor <= Number(no_of_partitions)) {
         res = partitions[incrementor - 1]
-        if (incrementor === 8) {
+        if (incrementor === Number(no_of_partitions)) {
             incrementor = 0
         }
         return res
     }
-
 }
+
 
 module.exports = KafkaDispatcher
