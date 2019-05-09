@@ -7,6 +7,7 @@ var count = 0;
 var incrementor = 0;
 let topic = process.argv[4];
 let nof_partition = process.argv[8]
+var partition = Array.from(new Array(nof_partition), (x, index) => index + 0);
 client.on('ready', function() {
     console.log('kafka is ready ready');
 
@@ -64,7 +65,6 @@ var KafkaDispatcher = {
 
 function getPartitionNumber() {
     var res = undefined
-    var partition = Array.from(new Array(nof_partition), (x, index) => index + 0);
     incrementor++
     if (incrementor <= nof_partition) {
         res = partition[incrementor - 1]
