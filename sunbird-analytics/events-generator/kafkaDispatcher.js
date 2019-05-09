@@ -8,7 +8,7 @@ var incrementor = 0;
 let topic = process.argv[4];
 let nof_partition = process.argv[8]
 console.log("nof_partition" + nof_partition)
-let partitions = Array.from(new Array(nof_partition), (x, index) => index + 0);
+let partitions = [...Array(nof_partition)].map((_, i) => i + 0)
 console.log("partitions" + partitions)
 client.on('ready', function() {
     console.log('kafka is ready ready');
