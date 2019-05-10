@@ -89,7 +89,7 @@
           <stringProp name="HTTPSampler.port">${port}</stringProp>
           <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">${pathPrefix}/user/v1/read/${userId}</stringProp>
+          <stringProp name="HTTPSampler.path">/${userId}</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -120,7 +120,7 @@
               </elementProp>
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">X-URL</stringProp>
-                <stringProp name="Header.value">${protocol}://${host}:${port}${pathPrefix}/user/v1/read/${userId}</stringProp>
+                <stringProp name="Header.value">${protocol}://${host}:${port}${pathPrefix}/${userId}</stringProp>
               </elementProp>
             </collectionProp>
           </HeaderManager>
