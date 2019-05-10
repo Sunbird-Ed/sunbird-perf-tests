@@ -94,7 +94,9 @@
 		&quot;type&quot;:&quot;${type}&quot;,&#xd;
 		&quot;action&quot;:&quot;${action}&quot;,&#xd;
 		&quot;subType&quot;:&quot;${subType}&quot;,&#xd;
-		&quot;rootOrgId&quot;:&quot;*&quot;&#xd;
+		&quot;rootOrgId&quot;:&quot;${rootOrgId}&quot;,&#xd;
+		&quot;component&quot;:&quot;${component}&quot;,&#xd;
+		&quot;framework&quot;:&quot;${framework}&quot;&#xd;
 	}&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
