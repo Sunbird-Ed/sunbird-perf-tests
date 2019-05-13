@@ -108,6 +108,7 @@
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
           <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
           <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
         </HTTPSamplerProxy>
@@ -116,7 +117,7 @@
           <collectionProp name="HeaderManager.headers">
             <elementProp name="" elementType="Header">
               <stringProp name="Header.name">X-URI</stringProp>
-              <stringProp name="Header.value">${protocol}://${host}:${port}/${pathPrefix}</stringProp>
+              <stringProp name="Header.value">${protocol}://${host}:${port}${pathPrefix}</stringProp>
             </elementProp>
           </collectionProp>
         </HeaderManager>
