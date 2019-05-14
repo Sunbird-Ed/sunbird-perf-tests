@@ -1,0 +1,5 @@
+type,action,subType,rootOrgId,component,framework
+framework,search,framework-code,01268904781886259221,abcd,NCF
+content,search,explore,01268904781886259221,abcd,NCF
+content,search,resourcebundle,01268904781886259221,abcd,NCF
+content,filter,explore-course,01268904781886259221,abcd,NCF
