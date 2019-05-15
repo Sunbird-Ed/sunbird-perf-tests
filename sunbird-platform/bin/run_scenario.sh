@@ -1,24 +1,23 @@
 #!/bin/bash
 
-jmeterHome=$1
-ips=$2
-host=$3
-scenario_name=$4
-scenario_id=$5
-numThreads=$6
-rampupTime=$7
-ctrlLoops=$8
-apiKey=$9
-accessToken=${10}
-csvFile=${11}
-csvFileHost=${12}
-pathPrefix=${13}
-
-JMETER_HOME=/mnt/data/benchmark/apache-jmeter-4.0
-JMETER_HOME=${jmeterHome}
-
+source /usr/local/bin/creds.sh
+JMETER_HOME="/mnt/data/benchmark/apache-jmeter-4.0"
+ips="28.0.0.34,28.0.0.35,28.0.0.36,28.0.0.37"
+host=28.0.0.8 # Dummy value; have to change
+protocol=https
+port=443
+date=$(date +"%T")
+csvFileHost="/home/smy/sunbird-perf-tests/sunbird-platform/bin/hostFile.csv" # 
 SCENARIO_LOGS=~/sunbird-perf-tests/sunbird-platform/logs/$scenario_name
 JMETER_CLUSTER_IPS=$ips
+scenario_id=${date//:}
+
+scenario_name=$1
+numThreads=$2
+rampupTime=$3
+ctrlLoops=$4
+csvFile=$5 # request body
+pathPrefix=$6
 
 echo "Executing $scenario_id"
 
