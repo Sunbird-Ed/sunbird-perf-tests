@@ -12,21 +12,14 @@ accessToken=$(curl -s -X POST https://loadtest.ntp.net.in/auth/realms/sunbird/pr
 #protocol=https
 #port=443
 csvFileHost="/mount/data/benchmark/current_scenario/hostFile.csv"
-scenario_id=$(date +"%A_%Hh-%Mm-%Ss")
+scenario_id=$(date +"%dth_%B_%A_%Hh-%Mm-%Ss")
 
 echo "Executing $scenario_id"
-
-if [ -f $SCENARIO_LOGS/$scenario_id ]
-then
-	rm $SCENARIO_LOGS/$scenario_id
-fi
-
 
 mkdir -p $SCENARIO_LOGS
 mkdir -p $SCENARIO_LOGS/$scenario_id
 mkdir -p $SCENARIO_LOGS/$scenario_id/logs
 mkdir -p $SCENARIO_LOGS/$scenario_id/server/
-
 
 echo "ip = " ${ip}
 echo "host = " ${host}
