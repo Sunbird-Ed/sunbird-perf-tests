@@ -58,7 +58,7 @@ sed -i "s#PROTOCOL#${protocol}#g" $JMX_FILE_PATH
 #JMETER_CLUSTER_IPS="28.0.0.34,28.0.0.35,28.0.0.36,28.0.0.37"
 for server in $(echo "$JMETER_CLUSTER_IPS" | tr ","  " ");
 do
-#scp /mount/data/benchmark/current_scenario/hostFile.csv $ssh_jmeter_slave_user@$server:/mount/data/benchmark/current_scenario/hostFile.csv
+scp $data_file_path/hostFile.csv $ssh_jmeter_slave_user@$server:$data_file_path/hostFile.csv
 scp ../$scenario_name/$scenario_name.csv $ssh_jmeter_slave_user@$server:$csvFile
 done
 
