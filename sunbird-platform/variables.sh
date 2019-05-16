@@ -7,6 +7,7 @@ scenario_name=
 numThreads=
 rampupTime=
 ctrlLoops=
+pathPrefix=
 
 # Comma seperated ips of jmeter slves
 # eg: 
@@ -15,6 +16,9 @@ JMETER_CLUSTER_IPS=""
 
 # Jwt token to authorize kong
 apiKey="" # BEarer token
+
+# ssh user to jmeter slaves
+ssh_jmeter_slave_user="deployer"
 
 # Username and password to generate x-authenticated-token
 # for user related actions
@@ -27,7 +31,4 @@ JMETER_HOME="/mount/data/benchmark/apache-jmeter-4.0"
 data_file_path="/mount/data/benchmark/current_scenario/"
 
 # Scenarios logs location
-SCENARIO_LOGS=~/logs/$scenario_name
-
-# ssh user to jmeter slaves
-ssh_jmeter_slave_user="deployer"
+scenario_logs_path=~/logs/$scenario_name

@@ -1,9 +1,9 @@
 #!/bin/bash
 set -e
 source variables.sh
+
 # filepath for data file in jmeter slaves
 csvFile="$data_file_path/$scenario_name.csv" # request body
-pathPrefix=$5
 
 # Generating x-authenticated-token
 accessToken=$(curl -s -X POST https://loadtest.ntp.net.in/auth/realms/sunbird/protocol/openid-connect/token  -H 'content-type: application/x-www-form-urlencoded'  --data "client_id=admin-cli&username=${username}&password=${password}&grant_type=password" | jq -r '.access_token') # X-AUTHENTICATED-TOKEN
@@ -13,6 +13,8 @@ accessToken=$(curl -s -X POST https://loadtest.ntp.net.in/auth/realms/sunbird/pr
 #port=443
 csvFileHost="/mount/data/benchmark/current_scenario/hostFile.csv"
 scenario_id=$(date +"%dth_%B_%A_%Hh-%Mm-%Ss")
+# logs location
+SCENARIO_LOGS=$scenario_logs_path/$scenario_id
 
 echo "Executing $scenario_id"
 
