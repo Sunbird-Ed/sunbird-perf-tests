@@ -65,4 +65,4 @@ nohup $JMETER_HOME/bin/jmeter.sh -n -t $JMX_FILE_PATH -R ${JMETER_CLUSTER_IPS} -
 echo "Log file ..."
 echo "$SCENARIO_LOGS/${scenario_id}/logs/scenario.log"
 
-echo "Execution of $scenario_id Complete."
+echo "Execution of $scenario_id started".
