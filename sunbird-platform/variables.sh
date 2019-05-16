@@ -7,7 +7,11 @@ scenario_name=
 numThreads=
 rampupTime=
 ctrlLoops=
+# Name of API which loadtests
 pathPrefix=
+# value to prefix the log
+# By default it'll be date_month_day_hour_minute_second
+# eg: 16th_May_Thursday_13h-25m-41s
 custom_log_id=
 
 # Comma seperated ips of jmeter slves
