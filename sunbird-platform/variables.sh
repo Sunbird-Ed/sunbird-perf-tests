@@ -8,6 +8,7 @@ numThreads=
 rampupTime=
 ctrlLoops=
 pathPrefix=
+custom_log_id=
 
 # Comma seperated ips of jmeter slves
 # eg: 
