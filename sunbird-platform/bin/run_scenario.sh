@@ -11,9 +11,8 @@ accessToken=$(curl -s -X POST https://loadtest.ntp.net.in/auth/realms/sunbird/pr
 #host=28.0.0.8 # Dummy value; have to change
 #protocol=https
 #port=443
-date=$(date +"%T")
 csvFileHost="/mount/data/benchmark/current_scenario/hostFile.csv"
-scenario_id=${date//:}
+scenario_id=$(date +"%A_%Hh-%Mm-%Ss")
 
 echo "Executing $scenario_id"
 
