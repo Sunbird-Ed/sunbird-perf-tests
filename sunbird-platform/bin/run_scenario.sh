@@ -16,9 +16,8 @@ SCENARIO_LOGS=$scenario_logs_path/${scenario_id}${custom_log_id}
 echo "Executing $scenario_id"
 
 mkdir -p $SCENARIO_LOGS
-mkdir -p $SCENARIO_LOGS/$scenario_id
-mkdir -p $SCENARIO_LOGS/$scenario_id/logs
-mkdir -p $SCENARIO_LOGS/$scenario_id/server/
+mkdir -p $SCENARIO_LOGS/logs
+mkdir -p $SCENARIO_LOGS/server/
 
 echo "ip = " ${ip}
 echo "host = " ${host}
