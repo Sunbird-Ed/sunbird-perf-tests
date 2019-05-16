@@ -1,41 +1,33 @@
 #!/bin/bash
+set -e
+source variables.sh
+# filepath for data file in jmeter slaves
+csvFile="$data_file_path/$scenario_name.csv" # request body
+pathPrefix=$5
 
-jmeterHome=$1
-ips=$2
-host=$3
-scenario_name=$4
-scenario_id=$5
-numThreads=$6
-rampupTime=$7
-ctrlLoops=$8
-apiKey=$9
-accessToken=${10}
-csvFile=${11}
-csvFileHost=${12}
-pathPrefix=${13}
+# Generating x-authenticated-token
+accessToken=$(curl -s -X POST https://loadtest.ntp.net.in/auth/realms/sunbird/protocol/openid-connect/token  -H 'content-type: application/x-www-form-urlencoded'  --data "client_id=admin-cli&username=${username}&password=${password}&grant_type=password" | jq -r '.access_token') # X-AUTHENTICATED-TOKEN
 
-JMETER_HOME=/mnt/data/benchmark/apache-jmeter-4.0
-JMETER_HOME=${jmeterHome}
-
-SCENARIO_LOGS=~/sunbird-perf-tests/sunbird-platform/logs/$scenario_name
-JMETER_CLUSTER_IPS=$ips
+#host=28.0.0.8 # Dummy value; have to change
+#protocol=https
+#port=443
+date=$(date +"%T")
+csvFileHost="/mount/data/benchmark/current_scenario/hostFile.csv"
+scenario_id=${date//:}
 
 echo "Executing $scenario_id"
 
-if [ -f ~/logs/$scenario_id ]
+if [ -f $SCENARIO_LOGS/$scenario_id ]
 then
-	rm ~/logs/$scenario_id
+	rm $SCENARIO_LOGS/$scenario_id
 fi
 
-JMX_FILE_PATH=~/current_scenario/$scenario_name.jmx
 
-mkdir $SCENARIO_LOGS
-mkdir $SCENARIO_LOGS/$scenario_id
-mkdir $SCENARIO_LOGS/$scenario_id/logs
-mkdir $SCENARIO_LOGS/$scenario_id/server/
+mkdir -p $SCENARIO_LOGS
+mkdir -p $SCENARIO_LOGS/$scenario_id
+mkdir -p $SCENARIO_LOGS/$scenario_id/logs
+mkdir -p $SCENARIO_LOGS/$scenario_id/server/
 
-rm ~/current_scenario/*.jmx
-cp ~/sunbird-perf-tests/sunbird-platform/$scenario_name/$scenario_name.jmx $JMX_FILE_PATH
 
 echo "ip = " ${ip}
 echo "host = " ${host}
@@ -50,39 +42,35 @@ echo "accessToken = " ${accessToken}
 echo "csvFile = " ${csvFile}
 echo "csvFileHost= "${csvFileHost}
 
-sed "s/THREADS_COUNT/${numThreads}/g" $JMX_FILE_PATH > jmx.tmp
-mv jmx.tmp $JMX_FILE_PATH
 
-sed "s/RAMPUP_TIME/${rampupTime}/g" $JMX_FILE_PATH > jmx.tmp
-mv jmx.tmp $JMX_FILE_PATH
+# Temporary directory to sed
+mkdir -p ~/current_scenario
+JMX_FILE_PATH=~/current_scenario/$scenario_name.jmx
+rm -rf ~/current_scenario/*.jmx
+cp ../$scenario_name/$scenario_name.jmx $JMX_FILE_PATH
 
-sed "s/CTRL_LOOPS/${ctrlLoops}/g" $JMX_FILE_PATH > jmx.tmp
-mv jmx.tmp $JMX_FILE_PATH
+sed -i "s/THREADS_COUNT/${numThreads}/g" $JMX_FILE_PATH 
+sed -i "s/RAMPUP_TIME/${rampupTime}/g" $JMX_FILE_PATH
+sed -i "s/CTRL_LOOPS/${ctrlLoops}/g" $JMX_FILE_PATH
+sed -i "s/ACCESS_TOKEN/${accessToken}/g" $JMX_FILE_PATH
+sed -i "s/HOST/${host}/g" $JMX_FILE_PATH
+sed -i "s/API_KEY/${apiKey}/g" $JMX_FILE_PATH
+sed -i "s#CSV_FILE#${csvFile}#g" $JMX_FILE_PATH
+sed -i "s#DOMAIN_FILE#${csvFileHost}#g" $JMX_FILE_PATH
+sed -i "s#PATH_PREFIX#${pathPrefix}#g" $JMX_FILE_PATH
 
-sed "s/ACCESS_TOKEN/${accessToken}/g" $JMX_FILE_PATH > jmx.tmp
-mv jmx.tmp $JMX_FILE_PATH
-
-sed "s/HOST/${host}/g" $JMX_FILE_PATH > jmx.tmp
-mv jmx.tmp $JMX_FILE_PATH
-
-sed "s/API_KEY/${apiKey}/g" $JMX_FILE_PATH > jmx.tmp
-mv jmx.tmp $JMX_FILE_PATH
-
-sed "s#CSV_FILE#${csvFile}#g" $JMX_FILE_PATH > jmx.tmp
-mv jmx.tmp $JMX_FILE_PATH
-
-sed "s#DOMAIN_FILE#${csvFileHost}#g" $JMX_FILE_PATH > jmx.tmp
-mv jmx.tmp $JMX_FILE_PATH
-
-sed "s#PATH_PREFIX#${pathPrefix}#g" $JMX_FILE_PATH > jmx.tmp
-mv jmx.tmp $JMX_FILE_PATH
+#JMETER_CLUSTER_IPS="28.0.0.34,28.0.0.35,28.0.0.36,28.0.0.37"
+for server in $(echo "$JMETER_CLUSTER_IPS" | tr ","  " ");
+do
+#scp /mount/data/benchmark/current_scenario/hostFile.csv $ssh_jmeter_slave_user@$server:/mount/data/benchmark/current_scenario/hostFile.csv
+scp ../$scenario_name/$scenario_name.csv $ssh_jmeter_slave_user@$server:$csvFile
+done
 
 echo "Running ... "
-echo "$JMETER_HOME/bin/jmeter.sh -n -t $JMX_FILE_PATH -R ${ips} -l $SCENARIO_LOGS/$scenario_id/logs/output.xml -j $SCENARIO_LOGS/$scenario_id/logs/jmeter.log > $SCENARIO_LOGS/$scenario_id/logs/scenario.log"
 
-nohup $JMETER_HOME/bin/jmeter.sh -n -t $JMX_FILE_PATH -R ${ips} -l $SCENARIO_LOGS/$scenario_id/logs/output.xml -j $SCENARIO_LOGS/$scenario_id/logs/jmeter.log > $SCENARIO_LOGS/$scenario_id/logs/scenario.log 2>&1 &
+$JMETER_HOME/bin/jmeter.sh -n -t $JMX_FILE_PATH -R ${JMETER_CLUSTER_IPS} -l $SCENARIO_LOGS/${scenario_id}/logs/output.xml -j $SCENARIO_LOGS/${scenario_id}/logs/jmeter.log > $SCENARIO_LOGS/${scenario_id}/logs/scenario.log 2>&1
 
 echo "Log file ..."
-echo "$SCENARIO_LOGS/$scenario_id/logs/scenario.log"
+echo "$SCENARIO_LOGS/${scenario_id}/logs/scenario.log"
 
 echo "Execution of $scenario_id Complete."
