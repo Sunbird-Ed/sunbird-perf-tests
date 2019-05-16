@@ -40,7 +40,7 @@
           </elementProp>
           <elementProp name="csvFileHost" elementType="Argument">
             <stringProp name="Argument.name">csvFileHost</stringProp>
-            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.value">DOMAIN_FILE</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="port" elementType="Argument">
