@@ -64,9 +64,9 @@ done
 
 echo "Running ... "
 
-nohup $JMETER_HOME/bin/jmeter.sh -n -t $JMX_FILE_PATH -R ${JMETER_CLUSTER_IPS} -l $SCENARIO_LOGS/${scenario_id}/logs/output.xml -j $SCENARIO_LOGS/${scenario_id}/logs/jmeter.log &> $SCENARIO_LOGS/${scenario_id}/logs/scenario.log &
+nohup $JMETER_HOME/bin/jmeter.sh -n -t $JMX_FILE_PATH -R ${JMETER_CLUSTER_IPS} -l $SCENARIO_LOGS/${scenario_id}/logs/output.xml -j $SCENARIO_LOGS/logs/jmeter.log &> $SCENARIO_LOGS/logs/scenario.log &
 
 echo "Log file ..."
-echo "$SCENARIO_LOGS/${scenario_id}/logs/scenario.log"
+echo "$SCENARIO_LOGS/logs/scenario.log"
 
 echo "Execution of $scenario_id started".
