@@ -8,9 +8,6 @@ csvFile="$data_file_path/$scenario_name.csv" # request body
 # Generating x-authenticated-token
 accessToken=$(curl -s -X POST https://loadtest.ntp.net.in/auth/realms/sunbird/protocol/openid-connect/token  -H 'content-type: application/x-www-form-urlencoded'  --data "client_id=admin-cli&username=${username}&password=${password}&grant_type=password" | jq -r '.access_token') # X-AUTHENTICATED-TOKEN
 
-#host=28.0.0.8 # Dummy value; have to change
-#protocol=https
-#port=443
 csvFileHost="/mount/data/benchmark/current_scenario/hostFile.csv"
 scenario_id=$(date +"%dth_%B_%A_%Hh-%Mm-%Ss")
 # logs location
@@ -52,6 +49,11 @@ sed -i "s/API_KEY/${apiKey}/g" $JMX_FILE_PATH
 sed -i "s#CSV_FILE#${csvFile}#g" $JMX_FILE_PATH
 sed -i "s#DOMAIN_FILE#${csvFileHost}#g" $JMX_FILE_PATH
 sed -i "s#PATH_PREFIX#${pathPrefix}#g" $JMX_FILE_PATH
+
+
+sed -i "s#HOST#${host}#g" $JMX_FILE_PATH
+sed -i "s#PORT#${port}#g" $JMX_FILE_PATH
+sed -i "s#PROTOCOL#${protocol}#g" $JMX_FILE_PATH
 
 #JMETER_CLUSTER_IPS="28.0.0.34,28.0.0.35,28.0.0.36,28.0.0.37"
 for server in $(echo "$JMETER_CLUSTER_IPS" | tr ","  " ");

@@ -9,6 +9,13 @@ rampupTime=
 ctrlLoops=
 # Name of API which loadtests
 pathPrefix=
+
+# host against jmeter to run
+# ip or domain name
+host=
+protocol=https
+port=443
+
 # value to prefix the log
 # By default it'll be date_month_day_hour_minute_second
 # eg: 16th_May_Thursday_13h-25m-41s
