@@ -36,4 +36,4 @@ JMETER_HOME="/mount/data/benchmark/apache-jmeter-4.0"
 data_file_path="/mount/data/benchmark/current_scenario/"
 
 # Scenarios logs location
-scenario_logs_path=~/logs/$scenario_name
+scenario_logs_path=~/logs

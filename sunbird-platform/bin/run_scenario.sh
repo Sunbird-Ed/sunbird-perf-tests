@@ -19,7 +19,7 @@ accessToken=$(curl -s -X POST https://loadtest.ntp.net.in/auth/realms/sunbird/pr
 csvFileHost="/mount/data/benchmark/current_scenario/hostFile.csv"
 scenario_id=$(date +"%dth_%B_%A_%Hh-%Mm-%Ss")
 # logs location
-SCENARIO_LOGS=$scenario_logs_path/${scenario_id}${custom_log_id}
+SCENARIO_LOGS=$scenario_logs_path/$scenario_name/${scenario_id}${custom_log_id}
 
 echo "Executing $scenario_id"
 
