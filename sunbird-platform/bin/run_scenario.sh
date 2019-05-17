@@ -27,7 +27,7 @@ mkdir -p $SCENARIO_LOGS
 mkdir -p $SCENARIO_LOGS/logs
 mkdir -p $SCENARIO_LOGS/server/
 
-echo "ip = " ${ip}
+echo "ip = " ${JMETER_CLUSTER_IPS}
 echo "host = " ${host}
 echo "pathPrefix = " ${pathPrefix}
 echo "scenario_name = " ${scenario_name}
