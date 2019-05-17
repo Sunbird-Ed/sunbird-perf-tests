@@ -2,13 +2,6 @@
 # Variable file for run_scenario.sh
 # This file will be sourced to run_scenario.sh
 
-# Parameter for Jmeter
-scenario_name=
-numThreads=
-rampupTime=
-ctrlLoops=
-# Name of API which loadtests
-pathPrefix=
 
 # host against jmeter to run
 # ip or domain name

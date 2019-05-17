@@ -2,6 +2,14 @@
 set -e
 source variables.sh
 
+# Parameter for Jmeter
+scenario_name=$1
+numThreads=$2
+rampupTime=$3
+ctrlLoops=$4
+# Name of API which loadtests
+pathPrefix=$5
+
 # filepath for data file in jmeter slaves
 csvFile="$data_file_path/$scenario_name.csv" # request body
 
