@@ -33,7 +33,7 @@ password="password"
 # Jmeter location
 JMETER_HOME="/mount/data/benchmark/apache-jmeter-4.0"
 # Datafile path in slaves
-data_file_path="/mount/data/benchmark/current_scenario/"
+data_file_path="/mount/data/benchmark/current_scenario"
 
 # Scenarios logs location
 scenario_logs_path=~/logs
