@@ -19,12 +19,12 @@
           </elementProp>
           <elementProp name="host" elementType="Argument">
             <stringProp name="Argument.name">host</stringProp>
-            <stringProp name="Argument.value">28.0.3.8</stringProp>
+            <stringProp name="Argument.value">HOST</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="port" elementType="Argument">
             <stringProp name="Argument.name">port</stringProp>
-            <stringProp name="Argument.value">8080</stringProp>
+            <stringProp name="Argument.value">PORT</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="TXN_ID" elementType="Argument">
@@ -58,9 +58,9 @@
           </elementProp>
           <stringProp name="HTTPSampler.domain">${host}</stringProp>
           <stringProp name="HTTPSampler.port">${port}</stringProp>
-          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.protocol">PROTOCOL</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/learning-service/content/v3/hierarchy/${identifier}</stringProp>
+          <stringProp name="HTTPSampler.path">PATH_PREFIX</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -93,7 +93,7 @@
         </HeaderManager>
         <hashTree/>
         <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-          <stringProp name="filename">/mnt/data/benchmark/current_scenario/content_get_data.csv</stringProp>
+          <stringProp name="filename">CSV_FILE</stringProp>
           <stringProp name="fileEncoding"></stringProp>
           <stringProp name="variableNames">identifier</stringProp>
           <stringProp name="delimiter">,</stringProp>
