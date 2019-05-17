@@ -2,13 +2,6 @@
 # Variable file for run_scenario.sh
 # This file will be sourced to run_scenario.sh
 
-# Parameter for Jmeter
-scenario_name=
-numThreads=
-rampupTime=
-ctrlLoops=
-# Name of API which loadtests
-pathPrefix=
 
 # host against jmeter to run
 # ip or domain name
@@ -16,7 +9,6 @@ host=
 protocol=https
 port=443
 
-# (Optional)
 # value to prefix the log
 # By default it'll be date_month_day_hour_minute_second
 # eg: 16th_May_Thursday_13h-25m-41s
@@ -44,4 +36,4 @@ JMETER_HOME="/mount/data/benchmark/apache-jmeter-4.0"
 data_file_path="/mount/data/benchmark/current_scenario/"
 
 # Scenarios logs location
-scenario_logs_path=~/logs/$scenario_name
+scenario_logs_path=~/logs
