@@ -29,7 +29,7 @@
           <elementProp name="HTTPsampler.Files" elementType="HTTPFileArgs">
             <collectionProp name="HTTPFileArgs.files">
               <elementProp name="/mnt/data/benchmark/current_scenario/telemetry_events.json.gz" elementType="HTTPFileArg">
-                <stringProp name="File.path">/mnt/data/benchmark/current_scenario/telemetry_events.json.gz</stringProp>
+                <stringProp name="File.path">CSV_FILE/telemetry_events.json.gz</stringProp>
                 <stringProp name="File.paramname"></stringProp>
                 <stringProp name="File.mimetype">application/gzip</stringProp>
               </elementProp>
@@ -38,11 +38,11 @@
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">28.0.0.16</stringProp>
-          <stringProp name="HTTPSampler.port">8000</stringProp>
-          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.domain">HOST</stringProp>
+          <stringProp name="HTTPSampler.port">PORT</stringProp>
+          <stringProp name="HTTPSampler.protocol">PROTOCOL</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/data/v1/telemetry</stringProp>
+          <stringProp name="HTTPSampler.path">PATH_PREFIX</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -87,7 +87,7 @@
           <elementProp name="HTTPsampler.Files" elementType="HTTPFileArgs">
             <collectionProp name="HTTPFileArgs.files">
               <elementProp name="/mnt/data/benchmark/current_scenario/telemetry_events.json.gz" elementType="HTTPFileArg">
-                <stringProp name="File.path">/mnt/data/benchmark/current_scenario/telemetry_events.json.gz</stringProp>
+                <stringProp name="File.path">CSV_FILE/telemetry_events.json.gz</stringProp>
                 <stringProp name="File.paramname"></stringProp>
                 <stringProp name="File.mimetype">application/gzip</stringProp>
               </elementProp>
@@ -96,11 +96,11 @@
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">28.0.0.8</stringProp>
-          <stringProp name="HTTPSampler.port">8000</stringProp>
-          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.domain">HOST</stringProp>
+          <stringProp name="HTTPSampler.port">PORT</stringProp>
+          <stringProp name="HTTPSampler.protocol">PROTOCOL</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/data/v1/telemetry</stringProp>
+          <stringProp name="HTTPSampler.path">PATH_PREFIX</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -116,7 +116,7 @@
           <elementProp name="HTTPsampler.Files" elementType="HTTPFileArgs">
             <collectionProp name="HTTPFileArgs.files">
               <elementProp name="/mnt/data/benchmark/current_scenario/telemetry_events.json.gz" elementType="HTTPFileArg">
-                <stringProp name="File.path">/mnt/data/benchmark/current_scenario/telemetry_events.json.gz</stringProp>
+                <stringProp name="File.path">CSV_FILE/telemetry_events.json.gz</stringProp>
                 <stringProp name="File.paramname"></stringProp>
                 <stringProp name="File.mimetype">application/gzip</stringProp>
               </elementProp>
@@ -125,11 +125,11 @@
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">28.0.0.14</stringProp>
-          <stringProp name="HTTPSampler.port">8000</stringProp>
-          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.domain">HOST</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">PROTOCOL</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/data/v1/telemetry</stringProp>
+          <stringProp name="HTTPSampler.path">PATH_PREFIX</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -145,7 +145,7 @@
           <elementProp name="HTTPsampler.Files" elementType="HTTPFileArgs">
             <collectionProp name="HTTPFileArgs.files">
               <elementProp name="/mnt/data/benchmark/current_scenario/telemetry_events.json.gz" elementType="HTTPFileArg">
-                <stringProp name="File.path">/mnt/data/benchmark/current_scenario/telemetry_events.json.gz</stringProp>
+                <stringProp name="File.path">CSV_FILE/telemetry_events.json.gz</stringProp>
                 <stringProp name="File.paramname"></stringProp>
                 <stringProp name="File.mimetype">application/gzip</stringProp>
               </elementProp>
@@ -154,11 +154,11 @@
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">28.0.0.13</stringProp>
-          <stringProp name="HTTPSampler.port">8000</stringProp>
-          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.domain">HOST</stringProp>
+          <stringProp name="HTTPSampler.port">PORT</stringProp>
+          <stringProp name="HTTPSampler.protocol">PROTOCOL</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/data/v1/telemetry</stringProp>
+          <stringProp name="HTTPSampler.path">PATH_PREFIX</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
