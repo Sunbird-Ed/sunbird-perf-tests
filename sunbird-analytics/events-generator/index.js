@@ -2,6 +2,7 @@
 let data = require('./data');
 let faker = require('faker');
 var async = require("async");
+var deviceList = require('./deviceList')
 let eventsToBeGenerated = process.argv[2];
 let trace = process.argv[3];
 console.log("eventsToBeGenerated" + eventsToBeGenerated)
@@ -25,7 +26,7 @@ function getEvent(type) {
         event.edata.filters.dialcodes = faker.random.arrayElement(data.dialCodes)
     }
     event.mid = "LOAD_TEST_" + process.env.machine_id + "_" + faker.random.uuid()
-    event.context.did = faker.random.arrayElement(data.dids);
+    event.context.did = faker.random.arrayElement(deviceList.dids);
     event.context.channel = faker.random.arrayElement(data.channelIds);
     if (event.object) {
         event.object.id = faker.random.arrayElement(data.contentIds);
