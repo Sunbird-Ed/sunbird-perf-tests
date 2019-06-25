@@ -6,7 +6,9 @@ Data preparation scripts, JMX files, JMeter scripts for performance testing
 
 ### **Environment Details**
 
-A production like environment was created for this test. Here are the list of VMs and their configurations from the test.
+A new environment was created for this test. Here are the VMs and their configurations from the test.
+
+![Infra View](https://github.com/Sunbird-Ed/sunbird-perf-tests/blob/master/images/LoadTestInfra.jpg)
 
 3 Jmeter clusters (1 master + 4 slaves in each cluster) were setup to perform API testing and verifying improvements in parallel.
 
