@@ -1,4 +1,9 @@
 // Read the process parameter
+// 
+// Command to run this script : 
+// pm2 start index.js --no-autorestart --node-args="--max-old-space-size=30000 index.js eventsCount dispatchTrace topic impression search log device_summary kafkapartition"
+//Example: pm2 start index.js --no-autorestart --node-args="--max-old-space-size=30000 index.js 600 false loadtest.secor.analytics.raw 200 0 0 0 8"
+// 
 let data = require('./data');
 let faker = require('faker');
 var async = require("async");
