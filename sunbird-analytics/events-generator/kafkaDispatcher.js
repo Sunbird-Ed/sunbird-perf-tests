@@ -1,7 +1,7 @@
 var kafka = require('kafka-node'),
     Producer = kafka.Producer,
-    client = new kafka.KafkaClient({ kafkaHost: '28.0.3.25:9092, 28.0.3.27:9092, 28.0.3.26:9092' }),
-    //client = new kafka.KafkaClient({kafkaHost: 'localhost:9092'}),
+    // Include the host and port of the kafka
+    client = new kafka.KafkaClient({ kafkaHost: 'localhost:9092' }),
     producer = new Producer(client)
 var count = 0;
 var incrementor = 0;
