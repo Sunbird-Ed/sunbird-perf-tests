@@ -33,7 +33,7 @@ A new environment was created for this test. Here are the VMs and their configur
 | channel/v1/read | 1247.3 @ 182 | 1681.7 @ 123 |   |
 | content/v1/search | 899.6 @ 261 | 1592.1 @ 125 |
 | data/v1/telemetry | 285.3 @ 389 | 497 @ 211 |
-| device/v3/register | 920.6 @ 413 | 2051.1 @ 362 |   |
+| device/v3/register | 536.1 @ 426 | 923.9 @ 228 |   |
 | org/v1/search | 553.6 @ 398 | 874.4 @ 238 |   |
 | data/v1/form/read | 386.9 @ 582  | 764.1 @ 281 |   |
 | /v1/tenant/info | 779.2 @ 275  | 1460.1 @ 133 |   |
