@@ -27,17 +27,17 @@ A new environment was created for this test. Here are the VMs and their configur
 
 | **API** | **1 Server (Throughput/sec @ avg resp time )** | **2 Servers (Throughput/sec @ avg resp time)** | **3 Servers (Throughput/sec @ avg resp time )** |
 | --- | --- | --- | --- |
-| content/v1/read | 2309.5 @ 319 | 4444.0 @ 106 |   | 
-| course/v1/hierarchy |    | 1973.0 @ 96 |    |
-| framework/v1/read | 87.6 @ 1123 | 184.3 @ 1058 |   |
-| channel/v1/read | 1287.4 @ 150 | 1894.7 @ 99 |   |
-| content/v1/search |  | 1871.3 @ 261 |  |
-| data/v1/telemetry |  | 384.4 @ 947 | 580.2 @ 658 |
+| content/v1/read | 2459.7 @ 92 | 4560.4 @ 45 |   | 
+| course/v1/hierarchy |    | 1642.2 @ 119 |    |
+| framework/v1/read | 2153 @ 38 | 3604 @ 20 |   |
+| channel/v1/read | 1247.3 @ 182 | 1681.7 @ 123 |   |
+| content/v1/search |  | 899.6 @ 261 | 1592.1 @ 125 |
+| data/v1/telemetry |  | 285.3 @ 389 | 497 @ 211 |
 | device/v3/register | 920.6 @ 413 | 2051.1 @ 362 |   |
 | org/v1/search | 2666.5 @ 147 | 2678.9 @ 217 |   |
 | data/v1/form/read |   | 2137.4 @ 354 |   |
-| /v1/tenant/info |   | 3411.8 @ 242 |   |
-| /data/v1/page/assemble |   | 358 @ 236 |   |
+| /v1/tenant/info | 779.2 @ 275  | 1460.1 @ 133 |   |
+| /data/v1/page/assemble | 443.8 @ 506 | 449.1 @ 500 |   |
 
 **2. APIs being invoked in sequence via Proxy &amp; API Manager**
 
