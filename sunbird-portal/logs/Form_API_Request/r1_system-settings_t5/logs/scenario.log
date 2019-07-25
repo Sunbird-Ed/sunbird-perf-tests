@@ -1,9 +1,0 @@
-Creating summariser <summary>
-Created the tree successfully using /home/rajeev/current_scenario/Form_API_Request.jmx
-Configuring remote engine: 127.0.0.1
-Exception creating connection to: 127.0.0.1; nested exception is: 
-	java.io.FileNotFoundException: rmi_keystore.jks (No such file or directory)
-Failed to configure 127.0.0.1
-Stopping remote engines
-Remote engines have been stopped
-Error in NonGUIDriver java.lang.RuntimeException: Following remote engines could not be configured:[127.0.0.1]
