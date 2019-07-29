@@ -202,10 +202,19 @@ A new environment was created for this test. Here are the VMs and their configur
 
 
 ## Installation Details
-1. Clone this repo on your jmeter master machine by running **git clone https://github.com/Sunbird-Ed/sunbird-perf-tests**
-2. **cd sunbird-perf-tests/initial-setup**
-3. **./setup_jmeter.sh**
-4. Follow the onscreen instructions and provide input for the script.
+
+#### Jmeter machine requirements
+* At least 2 core, 4GB RAM, Ubuntu 16.04
+* Atleast 2 VM's, one master and one slave
+* Port 1099 to be open between master and slaves for jmeter to communicate
+
+
+#### Setup script
+1. Clone this repo on your jmeter master machine by running 
+2. **git clone https://github.com/Sunbird-Ed/sunbird-perf-tests**
+3. **cd sunbird-perf-tests/initial-setup**
+4. **./setup_jmeter.sh**
+5. Follow the onscreen instructions and provide input for the script.
 
 The scenarios and jmeter binary will be installed in the current user's home directory
 
@@ -228,3 +237,19 @@ In this file, enter the tenant id's from your sunbird installation. Please see c
 
 **urls.csv**
 In this file, enter the agent IP's or your sunbird domain. Please see comments inside the file for more information.
+
+
+#### Details on varibles used in Jmeter scenario files
+
+**THREADS_COUNT** - This defines the number of threads for the scenario under execution
+
+**RAMPUP_TIME** - This defines the ramp up time for the scenario under exectuion
+
+**CTRL_LOOPS** - This defines the number of loops that the scenario should run
+
+**PROTOCOL** - This is the protocol used to connect to your sunbird installation (http / https). If you are using agent IP's in the urls.csv file or if your domain does not have a SSL certificate, use http. If you are using the domain name in the url.csv file and yout domain has a SSL certificate, use https
+
+**PORT** - This defines the port which should be used for connecting to your sunbird installtion. Usually this is 80, but this can be a port number of a specific service if you want to run individual API benchmarking by directly calling the service rather than going through proxy / nginx
+
+**DATADIR** - This defines the path where your data directory resides. By default this is ~/benchmark/testdata
+
