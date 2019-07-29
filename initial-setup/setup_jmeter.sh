@@ -24,18 +24,18 @@ echo "JMETER_MASTER = $JMETER_MASTER"
 echo "JMETER_SLAVES = $JMETER_SLAVES"
 }
 
+if [ ! -d "$JMETER_HOME/apache-jmeter-4.0" ]; then
 echo -e "\n\e[0;32m${bold}Creating jmeter directories in your home${normal}"
 mkdir -p $JMETER_HOME
 mkdir -p $JMETER_HOME/logs
 mkdir -p $JMETER_HOME/current_scenario
 
-if [ ! -d "$JMETER_HOME/apache-jmeter-4.0" ]; then
 echo -e "\n\e[0;32m${bold}Download jmeter${normal}"
-wget https://archive.apache.org/dist/jmeter/source/apache-jmeter-4.0_src.tgz
+wget https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-4.0.tgz
 
 echo -e "\n\e[0;32m${bold}Extracting jmeter${normal}"
-tar -xf apache-jmeter-4.0_src.tgz -C $JMETER_HOME
-rm -rf apache-jmeter-4.0_src.tgz
+tar -xf apache-jmeter-4.0.tgz -C $JMETER_HOME
+rm -rf apache-jmeter-4.0.tgz
 
 echo -e "\n\e[0;32m${bold}Updating jmeter property files${normal}"
 cp jmeter_properties/jmeter.properties $JMETER_HOME/apache-jmeter-4.0/bin/
@@ -45,7 +45,8 @@ echo -e "\n\e[0;32m${bold}Copying scenario and script files to jmeter home${norm
 pwd
 cp -r ./scripts $JMETER_HOME
 cp -r ./scenarios $JMETER_HOME
-fi
+cp -r ./testdata $JMETER_HOME
+
 
 clusterData
 displayChoice
@@ -70,7 +71,11 @@ case $choice in
 esac
 done
 
-echo -e "\n\e[0;32m${bold}Updating run_Scenario.sh with Jmeter cluster info${normal}"
+echo -e "\n\e[0;32m${bold}Updating run_scenario.sh with Jmeter cluster info${normal}"
 sed -i "s/JMETER_CLUSTER_REPLACE/$JMETER_SLAVES/g" $JMETER_HOME/scripts/run_scenario.sh
 
 echo -e "\n\e[0;32m${bold}Setup complete. Please follow the documentation on the steps to run the scenarios${normal}"
+
+else
+echo -e "\n\e[0;33m${bold}~/benchmark directory already exists. Skipping installation..${normal}"
+fi
