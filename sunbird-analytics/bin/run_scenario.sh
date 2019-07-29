@@ -11,7 +11,7 @@ ctrlLoops=$4
 pathPrefix=$5
 
 # filepath for data file in jmeter slaves
-csvFile="$data_file_path/$scenario_name.csv" # request body
+csvFile="$data_file_path" # request body
 
 # Generating x-authenticated-token
 accessToken=$(curl -s -X POST https://loadtest.ntp.net.in/auth/realms/sunbird/protocol/openid-connect/token  -H 'content-type: application/x-www-form-urlencoded'  --data "client_id=admin-cli&username=${username}&password=${password}&grant_type=password" | jq -r '.access_token') # X-AUTHENTICATED-TOKEN

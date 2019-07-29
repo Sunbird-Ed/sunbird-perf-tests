@@ -1,0 +1,8008 @@
+{
+  "id": "ekstep.telemetry",
+  "ver": "3.0",
+  "ets": 12312313,
+  "events": [
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    },
+    {
+      "eid": "IMPRESSION",
+      "ets": 12312314,
+      "ver": "3.0",
+      "mid": "TELEMETRY_API_TEST:123123123-12313-123",
+      "actor": {
+        "id": "132123",
+        "type": "User"
+      },
+      "context": {
+        "channel": "2423423423",
+        "pdata": {
+          "id": "dev.sunbird.portal",
+          "ver": "1.15.0",
+          "pid": "sunbird-portal"
+        },
+        "env": "library",
+        "sid": "2423423423",
+        "did": "2423423423",
+        "cdata": [],
+        "rollup": {
+          "l1": "2423423423"
+        },
+        "uid": "2423423423"
+      },
+      "object": {
+        "id": "domain_67238",
+        "type": "Story",
+        "ver": "1",
+        "rollup": {}
+      },
+      "tags": [
+        "b00bc992ef25f1a9a8d63291e20efc8d"
+      ],
+      "edata": {
+        "type": "play",
+        "pageid": "content-player",
+        "uri": "/resources/play/content/domain_67238"
+      }
+    }
+  ]
+}
+
