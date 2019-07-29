@@ -2,6 +2,8 @@
 Data preparation scripts, JMX files, JMeter scripts for performance testing
 
 
+Please refer this section on [Installation Details](#installation-details). This will give you details on how to setup jmeter on your machines and run the benchmarking scenarios against your infrastructure.
+
 # Perf testing summary
 
 ### **Environment Details**
@@ -198,4 +200,93 @@ A new environment was created for this test. Here are the VMs and their configur
 | Without Upstream + HTTPS  (Current Production) | 600000 | 212 | 494 | 190 | 1030 | 1046 |
 | With Upstream + HTTP  (Proposed) | 1200000 | 62 | 138 | 66 | 95 | 2300 |
 
+
+## Installation Details
+
+#### Jmeter machine requirements
+* At least 2 core, 4GB RAM, Ubuntu 16.04
+* Atleast 2 VM's, one master and one slave
+* Port 1099 to be open between master and slaves for jmeter to communicate
+
+
+#### Jmeter setup on master
+1. Clone this repo on your jmeter master machine by running 
+2. **git clone https://github.com/Sunbird-Ed/sunbird-perf-tests**
+3. **cd sunbird-perf-tests/initial-setup**
+4. **./setup_jmeter.sh**
+5. Follow the onscreen instructions and provide input for the script.
+
+The scenarios and jmeter binary will be installed in the current user's home directory
+
+#### Details on csv input data for jmeter scenarions
+
+**bearer.csv**
+
+In this file, enter the jwt bearer key of your sunbird installation. Please see comments inside the file for more information.
+
+**content.csv**
+
+In this file, enter the do_id's (content id's) from your sunbird installation. Please see comments inside the file for more information.
+
+**dialcodes.csv**
+
+In this file, enter the dial codes of content id's from your sunbird installation. Please see comments inside the file for more information.
+
+**orgs.csv**
+
+In this file, enter the org id's from your sunbird installation. Please see comments inside the file for more information.
+
+**tenants.csv**
+
+In this file, enter the tenant id's from your sunbird installation. Please see comments inside the file for more information.
+
+**urls.csv**
+
+In this file, enter the agent IP's or your sunbird domain. Please see comments inside the file for more information.
+
+
+#### Details on varibles used in Jmeter scenario files
+
+**THREADS_COUNT**
+
+This defines the number of threads for the scenario under execution
+
+**RAMPUP_TIME**
+
+This defines the ramp up time for the scenario under exectuion
+
+**CTRL_LOOPS**
+
+This defines the number of loops that the scenario should run
+
+**PROTOCOL**
+
+This is the protocol used to connect to your sunbird installation (http / https). If you are using agent IP's in the urls.csv file or if your domain does not have a SSL certificate, use http. If you are using the domain name in the url.csv file and yout domain has a SSL certificate, use https
+
+**PORT**
+
+This defines the port which should be used for connecting to your sunbird installtion. Usually this is 80, but this can be a port number of a specific service if you want to run individual API benchmarking by directly calling the service rather than going through proxy / nginx
+
+**DATADIR**
+
+This defines the path where your data directory resides. By default this is ~/benchmark/testdata
+
+
+#### Jmeter setup on slaves
+1. Copy the ~/benchmark/apache-jmeter-4.0 and ~/benchmark/testdata directory from your jmeter master to jmeter slaves
+2. **mkdir ~/benchmark && scp -r username@jmeter_master:~/benchmark/\{apache-jmeter-4.0,testdata\} ~/benchmark/**
+
+
+#### Starting jmeter server on master and slaves
+1. Start the jmeter server by using below command on the master and all slaves
+2. **nohup ~/benchmark/apache-jmeter-4.0/bin/jmeter-server &**
+
+
+#### Few points to be noted
+1. The **jmeter-server** must be running on master and slaves before starting the tests.
+2. The testdata directory must be present under ~/benchmark/ in master and all slaves.
+3. If there is a change in the csv files, this should be copied to all servers in the jmeter cluster.
+4. The scenario files can reside only in master and it need not be present in slaves.
+5. If there are connection issues while starting the run, kill and restart the **jmeter-server** process on the machines where the issue exists.
+6. If there are connection issues or you want to stop a scenario test which is currently running, use the command **~/benchmark/apache-jmeter-4.0/bin/stoptest.sh** on the master. This will notifiy the slaves and stop the current running test.
 
