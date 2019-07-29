@@ -2,6 +2,8 @@
 Data preparation scripts, JMX files, JMeter scripts for performance testing
 
 
+[Installation Details](#installation-details)
+
 # Perf testing summary
 
 ### **Environment Details**
@@ -199,3 +201,4 @@ A new environment was created for this test. Here are the VMs and their configur
 | With Upstream + HTTP  (Proposed) | 1200000 | 62 | 138 | 66 | 95 | 2300 |
 
 
+## Installation Details
