@@ -2,7 +2,7 @@
 Data preparation scripts, JMX files, JMeter scripts for performance testing
 
 
-[Installation Details](#installation-details)
+Please refer this section on [Installation Details](#installation-details). This will give you details on how to setup jmeter on your machines and run the benchmarking scenarios against your infrastructure.
 
 # Perf testing summary
 
@@ -202,3 +202,29 @@ A new environment was created for this test. Here are the VMs and their configur
 
 
 ## Installation Details
+1. Clone this repo on your jmeter master machine by running **git clone https://github.com/Sunbird-Ed/sunbird-perf-tests**
+2. **cd sunbird-perf-tests/initial-setup**
+3. **./setup_jmeter.sh**
+4. Follow the onscreen instructions and provide input for the script.
+
+The scenarios and jmeter binary will be installed in the current user's home directory
+
+#### Details on csv input data for jmeter scenarions
+
+**bearer.csv**
+In this file, enter the jwt bearer key of your sunbird installation. Please see comments inside the file for more information.
+
+**content.csv**
+In this file, enter the do_id's (content id's) from your sunbird installation. Please see comments inside the file for more information.
+
+**dialcodes.csv**
+In this file, enter the dial codes of content id's from your sunbird installation. Please see comments inside the file for more information.
+
+**orgs.csv**
+In this file, enter the org id's from your sunbird installation. Please see comments inside the file for more information.
+
+**tenants.csv**
+In this file, enter the tenant id's from your sunbird installation. Please see comments inside the file for more information.
+
+**urls.csv**
+In this file, enter the agent IP's or your sunbird domain. Please see comments inside the file for more information.
