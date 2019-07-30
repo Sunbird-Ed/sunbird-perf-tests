@@ -13,6 +13,9 @@ csvFile=${10}
 csvFileHost=${11}
 courseId=${12}
 batchId=${13}
+userCreateApi=${14}
+batchEnrolApi=${15}
+
 JMETER_HOME=/mnt/data/benchmark/apache-jmeter-4.0
 JMETER_HOME=${jmeterHome}
 
@@ -48,6 +51,8 @@ echo "csvFile = " ${csvFile}
 echo "csvFileHost= "${csvFileHost}
 echo "courseId= "${courseId}
 echo "batchId= "${batchId}
+echo "userCreateApi= "${userCreateApi}
+echo "batchEnrolApi= "${batchEnrolApi}
 
 sed "s/THREADS_COUNT/${numThreads}/g" $JMX_FILE_PATH > jmx.tmp
 mv jmx.tmp $JMX_FILE_PATH
@@ -75,6 +80,12 @@ sed "s#COURSE_ID#${courseId}#g" $JMX_FILE_PATH > jmx.tmp
 mv jmx.tmp $JMX_FILE_PATH
 
 sed "s#BATCH_ID#${batchId}#g" $JMX_FILE_PATH > jmx.tmp
+mv jmx.tmp $JMX_FILE_PATH
+
+sed "s#USER_CREATE_API#${userCreateApi}#g" $JMX_FILE_PATH > jmx.tmp
+mv jmx.tmp $JMX_FILE_PATH
+
+sed "s#BATCH_ENROL_API#${batchEnrolApi}#g" $JMX_FILE_PATH > jmx.tmp
 mv jmx.tmp $JMX_FILE_PATH
 
 echo "Running ... "

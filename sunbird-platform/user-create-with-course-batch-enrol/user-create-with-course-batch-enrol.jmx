@@ -53,12 +53,22 @@
             <stringProp name="Argument.value">BATCH_ID</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
+          <elementProp name="userCreateApi" elementType="Argument">
+            <stringProp name="Argument.name">userCreateApi</stringProp>
+            <stringProp name="Argument.value">USER_CREATE_API</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="batchEnrolApi" elementType="Argument">
+            <stringProp name="Argument.name">batchEnrolApi</stringProp>
+            <stringProp name="Argument.value">BATCH_ENROL_API</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
         </collectionProp>
       </elementProp>
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
     <hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Course Batch Enroll Api" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Course Batch Enroll" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -95,7 +105,7 @@
           <stringProp name="HTTPSampler.port">${port}</stringProp>
           <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/api/user/v1/create</stringProp>
+          <stringProp name="HTTPSampler.path">${userCreateApi}</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -168,6 +178,7 @@
             <boolProp name="FileSaver.successonly">true</boolProp>
             <boolProp name="FileSaver.skipsuffix">false</boolProp>
             <boolProp name="FileSaver.skipautonumber">false</boolProp>
+            <boolProp name="FileSaver.ignoreTC">false</boolProp>
           </ResultSaver>
           <hashTree/>
         </hashTree>
@@ -288,7 +299,7 @@
           <stringProp name="HTTPSampler.port">${port}</stringProp>
           <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/api/course/v1/enrol</stringProp>
+          <stringProp name="HTTPSampler.path">${batchEnrolApi}</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
