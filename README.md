@@ -208,8 +208,9 @@ A new environment was created for this test. Here are the VMs and their configur
 * Atleast 2 VM's, one master and one slave
 * Port 1099 to be open between master and slaves for jmeter to communicate
 
-
 #### Jmeter setup on master
+** Note: Same user must be present on both master and slave since we will be copying the files folder under ~ directory. The script can be changd to install the files and folder under a common location like /mount which will be availble on both systems. In this case the user name will not matter **
+
 1. Clone this repo on your jmeter master machine by running 
 2. **git clone https://github.com/Sunbird-Ed/sunbird-perf-tests**
 3. **cd sunbird-perf-tests/initial-setup**
