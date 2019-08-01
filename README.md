@@ -343,7 +343,8 @@ To run the scenario, switch to **jmeter_installation_path/scripts**. In this dir
   * JMX file name you would like to run. Provide only file name. Check scenarios directory for file names.
 
 Below is an example on how to run this scenario from your **jmeter_installation_path/scripts**
-**./run_scenario.sh SoakTestRun 10 5 30 https 443 SoakTest.jmx**
+
+`**./run_scenario.sh SoakTestRun 10 5 30 https 443 SoakTest.jmx**`
 
 **2. ChannelRead.jmx**
 
@@ -356,7 +357,8 @@ This scenario uses the following csv files. Ensure you have updated these csv fi
 For this scenario, we need to enter the IP or load balancer IP of the KnowledgePlatform **learning** machine in the urls.csv. Here we are directly hitting the learning machine / learning LB which is running on port 8080. The protocal is http here since we making an internal call.
 
 Below is an example on how to run this scenario from your **jmeter_installation_path/scripts**
-**./run_scenario.sh ChannelRead 10 5 30 http 8080 ChannelRead.jmx**
+
+`**./run_scenario.sh ChannelRead 10 5 30 http 8080 ChannelRead.jmx**`
 
 **3. ContentRead.jmx**
 
@@ -369,7 +371,8 @@ This scenario uses the following csv files. Ensure you have updated these csv fi
 For this scenario, we need to enter the IP or load balancer IP of the KnowledgePlatform **learning** machine in the urls.csv. Here we are directly hitting the learning machine / learning LB which is running on port 8080. The protocal is http here since we making an internal call.
 
 Below is an example on how to run this scenario from your **jmeter_installation_path/scripts**
-**./run_scenario.sh ContentRead 10 5 30 http 8080 ContentRead.jmx**
+
+`**./run_scenario.sh ContentRead 10 5 30 http 8080 ContentRead.jmx**`
 
 
 **4. ContentHierarchy.jmx**
@@ -383,4 +386,5 @@ This scenario uses the following csv files. Ensure you have updated these csv fi
 For this scenario, we need to enter the IP or load balancer IP of the KnowledgePlatform **learning** machine in the urls.csv. Here we are directly hitting the learning machine / learning LB which is running on port 8080. The protocal is http here since we making an internal call.
 
 Below is an example on how to run this scenario from your **jmeter_installation_path/scripts**
-**./run_scenario.sh ContentHierarchy 10 5 30 http 8080 ContentHierarchy.jmx**
+
+`**./run_scenario.sh ContentHierarchy 10 5 30 http 8080 ContentHierarchy.jmx**`
