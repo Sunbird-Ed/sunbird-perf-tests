@@ -37,15 +37,15 @@ echo -e "\n\e[0;32m${bold}Extracting jmeter${normal}"
 tar -xf apache-jmeter-4.0.tgz -C $JMETER_HOME
 rm -rf apache-jmeter-4.0.tgz
 
-echo -e "\n\e[0;32m${bold}Updating jmeter property files${normal}"
+echo -e "\n\e[0;32m${bold}Updating jmeter property files and libs${normal}"
 cp jmeter_properties/jmeter.properties $JMETER_HOME/apache-jmeter-4.0/bin/
+tar -xf jmeter_properties/jmeter-libs.tar -C ~/apache-jmeter-4.0
 
 echo -e "\n\e[0;32m${bold}Copying scenario and script files to jmeter home${normal}"
 pwd
 cp -r ./scripts $JMETER_HOME
 cp -r ./scenarios $JMETER_HOME
 cp -r ./testdata $JMETER_HOME
-
 
 clusterData
 displayChoice
