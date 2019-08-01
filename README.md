@@ -222,27 +222,41 @@ The scenarios and jmeter binary will be installed in the current user's home dir
 
 **bearer.csv**
 
-In this file, enter the jwt bearer key of your sunbird installation. Please see comments inside the file for more information.
+In this file, enter the jwt bearer key of your sunbird installation.
+
+**channel.csv**
+
+In this file, enter the channel id's from your sunbird installation.
+
+**collections.csv**
+
+In this file, enter the do_id's of collections from your sunbird installation.
 
 **content.csv**
 
-In this file, enter the do_id's (content id's) from your sunbird installation. Please see comments inside the file for more information.
+In this file, enter the do_id's (content id's) from your sunbird installation.
 
 **dialcodes.csv**
 
-In this file, enter the dial codes of content id's from your sunbird installation. Please see comments inside the file for more information.
+In this file, enter the dial codes (QR codes) of content id's from your sunbird installation.
+
+**frameworks.csv**
+
+In this file, enter the framework id's from your sunbird installation.
 
 **orgs.csv**
 
-In this file, enter the org id's from your sunbird installation. Please see comments inside the file for more information.
+In this file, enter the org id's from your sunbird installation. 
 
 **tenants.csv**
 
-In this file, enter the tenant id's from your sunbird installation. Please see comments inside the file for more information.
+In this file, enter the tenant id's from your sunbird installation. 
 
 **urls.csv**
 
-In this file, enter the agent IP's or your sunbird domain. Please see comments inside the file for more information.
+In this file, enter the IP's of your machines or your sunbird domain.
+
+More details on these csv files and examples are mentioned in the below sections which has details on running the scenarios.
 
 
 #### Details on varibles used in Jmeter scenario files
@@ -271,6 +285,7 @@ This defines the port which should be used for connecting to your sunbird instal
 
 This defines the path where your data directory resides. By default this is ~/benchmark/testdata
 
+More details on these variables and examples are mentioned in the below sections which has details on running the scenarios.
 
 #### Jmeter setup on slaves
 1. Copy the ~/benchmark/apache-jmeter-4.0 and ~/benchmark/testdata directory from your jmeter master to jmeter slaves
@@ -278,7 +293,7 @@ This defines the path where your data directory resides. By default this is ~/be
 
 
 #### Starting jmeter server on master and slaves
-1. Start the jmeter server by using below command on the master and all slaves
+1. Start the jmeter server by using below command on the master and all slaves.
 2. **nohup ~/benchmark/apache-jmeter-4.0/bin/jmeter-server &**
 
 
@@ -292,4 +307,114 @@ This defines the path where your data directory resides. By default this is ~/be
 7. All the CSV files needs to be updated with contents before starting the test.
 
 
-#### Running the script
+#### Running the scenarios
+
+**1. SoakTest.jmx**
+
+This scenario file contains the following API's which will be invoked as part of the run
+  * ContentHierarchy
+  * ContentRead
+  * ContentSearch
+  * FormRead
+  * OrgSearch
+  * DeviceRegister
+  * Telemetry
+  * PageAssemble
+  * TenantInfo
+
+This scenario uses the following csv files. Ensure you have updated these csv files with contents and also copied on all the jmeter machines under **jmeter_installation_path/testdata**
+  * content.csv
+  * collections.csv
+  * dialcodes.csv
+  * orgs.csv
+  * tenants.csv
+  * urls.csv
+  * bearer.csv
+  
+For this scenario, we need to enter the domanin name (without http:// or https://) in the urls.csv. The port to enter is 443 in case of https and 80 in case of http.
+
+To run the scenario, switch to **jmeter_installation_path/scripts**. In this directory a file name **run_scenario.sh** will be present. This script takes 7 arguments. The order and the list of parameters required for this script are as below:
+  * Scenario ID - This will be directory name where the log files will be saved
+  * Number of threads
+  * Ramp up time
+  * Number of loops
+  * Protocol - http / https
+  * Port number
+  * JMX file name you would like to run. Provide only file name. Check scenarios directory for file names.
+
+Below is an example on how to run this scenario from your **jmeter_installation_path/scripts**
+
+`**./run_scenario.sh SoakTestRun 10 5 30 https 443 SoakTest.jmx**`
+
+**2. ChannelRead.jmx**
+
+This scenario file contains the following API's which will be invoked as part of the run
+  * ChannelRead
+
+This scenario uses the following csv files. Ensure you have updated these csv files with contents and also copied on all the jmeter machines under **jmeter_installation_path/testdata**
+  * channels.csv
+  
+For this scenario, we need to enter the IP or load balancer IP of the KnowledgePlatform **learning** machine in the urls.csv. Here we are directly hitting the learning machine / learning LB which is running on port 8080. The protocal is http here since we making an internal call.
+
+Below is an example on how to run this scenario from your **jmeter_installation_path/scripts**
+
+`**./run_scenario.sh ChannelRead 10 5 30 http 8080 ChannelRead.jmx**`
+
+**3. ContentRead.jmx**
+
+This scenario file contains the following API's which will be invoked as part of the run
+  * ContentRead
+
+This scenario uses the following csv files. Ensure you have updated these csv files with contents and also copied on all the jmeter machines under **jmeter_installation_path/testdata**
+  * content.csv
+  
+For this scenario, we need to enter the IP or load balancer IP of the KnowledgePlatform **learning** machine in the urls.csv. Here we are directly hitting the learning machine / learning LB which is running on port 8080. The protocal is http here since we making an internal call.
+
+Below is an example on how to run this scenario from your **jmeter_installation_path/scripts**
+
+`**./run_scenario.sh ContentRead 10 5 30 http 8080 ContentRead.jmx**`
+
+
+**4. ContentHierarchy.jmx**
+
+This scenario file contains the following API's which will be invoked as part of the run
+  * ContentHierarchy
+
+This scenario uses the following csv files. Ensure you have updated these csv files with contents and also copied on all the jmeter machines under **jmeter_installation_path/testdata**
+  * collections.csv
+  
+For this scenario, we need to enter the IP or load balancer IP of the KnowledgePlatform **learning** machine in the urls.csv. Here we are directly hitting the learning machine / learning LB which is running on port 8080. The protocal is http here since we making an internal call.
+
+Below is an example on how to run this scenario from your **jmeter_installation_path/scripts**
+
+`**./run_scenario.sh ContentHierarchy 10 5 30 http 8080 ContentHierarchy.jmx**`
+
+**5. ContentSearch.jmx**
+
+This scenario file contains the following API's which will be invoked as part of the run
+  * ContentSearch
+
+This scenario uses the following csv files. Ensure you have updated these csv files with contents and also copied on all the jmeter machines under **jmeter_installation_path/testdata**
+  * dialcodes.csv
+  
+For this scenario, we need to enter the IP or load balancer IP of the KnowledgePlatform **search** machine in the urls.csv. Here we are directly hitting the search machine / search LB which is running on port 9000. The protocal is http here since we making an internal call.
+
+Below is an example on how to run this scenario from your **jmeter_installation_path/scripts**
+
+`**./run_scenario.sh ContentSearch 10 5 30 http 9000 ContentSearch.jmx**`
+
+
+**6. FrameWorkRead.jmx**
+
+This scenario file contains the following API's which will be invoked as part of the run
+  * FrameWorkRead
+
+This scenario uses the following csv files. Ensure you have updated these csv files with contents and also copied on all the jmeter machines under **jmeter_installation_path/testdata**
+  * frameworks.csv
+  
+For this scenario, we need to enter the IP or load balancer IP of the KnowledgePlatform **learning** machine in the urls.csv. Here we are directly hitting the learning machine / learning LB which is running on port 8080. The protocal is http here since we making an internal call.
+
+Below is an example on how to run this scenario from your **jmeter_installation_path/scripts**
+
+`**./run_scenario.sh FrameWorkRead 10 5 30 http 8080 FrameWorkRead.jmx**`
+
