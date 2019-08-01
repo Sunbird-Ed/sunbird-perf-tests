@@ -49,7 +49,7 @@ cp $JMX_FILE_PATH $SCENARIO_LOGS/$scenario_id/logs
 
 echo "Check logs at $JMETER_HOME/logs/$scenario_id/logs/scenario.log"
 
-nohup $JMETER_HOME/apache-jmeter-4.0/bin/jmeter.sh -n -t $JMX_FILE_PATH -R127.0.0.1,192.168.33.11 -l $SCENARIO_LOGS/$scenario_id/logs/output.xml -e -o $SCENARIO_LOGS/$scenario_id/logs/summary -j $SCENARIO_LOGS/$scenario_id/logs/jmeter.log > $SCENARIO_LOGS/$scenario_id/logs/scenario.log 2>&1 &
+nohup $JMETER_HOME/apache-jmeter-4.0/bin/jmeter.sh -n -t $JMX_FILE_PATH -RJMETER_CLUSTER_REPLACE -l $SCENARIO_LOGS/$scenario_id/logs/output.xml -e -o $SCENARIO_LOGS/$scenario_id/logs/summary -j $SCENARIO_LOGS/$scenario_id/logs/jmeter.log > $SCENARIO_LOGS/$scenario_id/logs/scenario.log 2>&1 &
 
 
 echo "Execution of $scenario_id Complete."
