@@ -14,7 +14,7 @@ echo -e "\e[0;35m${bold}Choose 3 to quit the setup${normal}"
 }
 
 clusterData(){
-echo -e "\e[0;33m${bold}Please enter the jmeter cluster IP's with , as delimiter between IP's. The first IP will be considered as master IP. Do not input spaces!${normal}"
+echo -e "\e[0;33m${bold}Please enter the jmeter IP's with , as delimiter. For single node enter 127.0.0.1. Do not input spaces!${normal}"
 read -p 'Jmeter cluster IPs: ' JMETER_CLUSTER
 
 echo -e "\n\e[0;32m${bold}This will be your jmeter cluster${normal}"
