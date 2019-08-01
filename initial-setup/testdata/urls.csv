@@ -5,6 +5,6 @@
 
 mysunbird.com
 
-#The above lines are sample. Enter the IP address of your agent nodes if you want to run jmeter tests by connecting to your agent IP's
+#The above lines are sample. Enter the IP address of your agent (+ manager if required) nodes if you want to run jmeter tests by connecting to your agent IP's
 #You can also provide the domain name of your sunbird installation if you want to run against your domain name.
 #This file should contain only the above line. Please remove these comment lines before running.                                                                      
