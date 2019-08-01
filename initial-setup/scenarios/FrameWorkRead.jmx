@@ -108,7 +108,7 @@
         </HTTPSamplerProxy>
         <hashTree/>
         <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="FrameWorkReadData" enabled="true">
-          <stringProp name="filename">${DATA_DIR}/frameworkIds.csv</stringProp>
+          <stringProp name="filename">${DATA_DIR}/frameworks.csv</stringProp>
           <stringProp name="fileEncoding"></stringProp>
           <stringProp name="variableNames">identifier</stringProp>
           <stringProp name="delimiter">,</stringProp>
