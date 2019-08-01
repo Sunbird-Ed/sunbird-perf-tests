@@ -205,8 +205,7 @@ A new environment was created for this test. Here are the VMs and their configur
 
 #### Jmeter machine requirements
 * At least 2 core, 4GB RAM, Ubuntu 16.04
-* Atleast 2 VM's, one master and one slave
-* Port 1099 to be open between master and slaves for jmeter to communicate
+* Port 1099 to be open between master and slaves for jmeter to communicate if two machines are used
 
 #### Jmeter setup on master
 ** Note: Same user must be present on both master and slave since we will be copying the files folder under ~ directory. The script can be changd to install the files and folder under a common location like /mount which will be availble on both systems. In this case the user name will not matter **
@@ -257,9 +256,11 @@ This defines the number of threads for the scenario under execution
 This defines the ramp up time for the scenario under exectuion
 
 **CTRL_LOOPS**
+
 This defines the number of loops that the scenario should run
 
 **PROTOCOL**
+
 This is the protocol used to connect to your sunbird installation (http / https). If you are using agent IP's in the urls.csv file or if your domain does not have a SSL certificate, use http. If you are using the domain name in the url.csv file and yout domain has a SSL certificate, use https
 
 **PORT**
