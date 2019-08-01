@@ -71,9 +71,12 @@ case $choice in
 esac
 done
 
+echo -e "\n\e[0;32m${bold}Installing openjdk8 and openjfx${normal}"
+sudo apt install openjdk-8-jdk
+sudo apt install openjfx
+
 echo -e "\n\e[0;32m${bold}Updating run_scenario.sh with Jmeter cluster info${normal}"
 sed -i "s/JMETER_CLUSTER_REPLACE/$JMETER_SLAVES/g" $JMETER_HOME/scripts/run_scenario.sh
-
 echo -e "\n\e[0;32m${bold}Setup complete. Please follow the documentation on the steps to run the scenarios${normal}"
 
 else
