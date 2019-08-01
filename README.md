@@ -310,6 +310,7 @@ More details on these variables and examples are mentioned in the below sections
 #### Running the scenarios
 
 1. SoakTest.jmx
+
 This scenario file contains the following API's which will be invoked as part of the run
   * ContentHierarchy
   * ContentRead
@@ -332,7 +333,7 @@ This scenario uses the following csv files. Ensure you have updated these csv fi
   
 For this scenario, we need to enter the domanin name (without http:// or https://) in the urls.csv.
 
-To run the scenario, switch to **jmeter_installation_path/scripts**. In this directory a file name **run_scenario.sh** will be present. This script takes 7 arguments. The parameters and the order to pass for this script are as below:
+To run the scenario, switch to **jmeter_installation_path/scripts**. In this directory a file name **run_scenario.sh** will be present. This script takes 7 arguments. The order and the list of parameters required for this script are as below:
   * Scenario ID - This will be directory name where the log files will be saved
   * Number of threads
   * Ramp up time
