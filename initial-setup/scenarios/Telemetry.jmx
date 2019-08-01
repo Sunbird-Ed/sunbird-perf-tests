@@ -91,8 +91,8 @@
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="SendTelemetry" enabled="true">
           <elementProp name="HTTPsampler.Files" elementType="HTTPFileArgs">
             <collectionProp name="HTTPFileArgs.files">
-              <elementProp name="/mount/data/benchmark/current_scenario/telemetry_events.json.gz" elementType="HTTPFileArg">
-                <stringProp name="File.path">/mount/data/benchmark/current_scenario/telemetry_events.json.gz</stringProp>
+              <elementProp name="telemetry_events.json.gz" elementType="HTTPFileArg">
+                <stringProp name="File.path">${DATA_DIR}/telemetry_events.json.gz</stringProp>
                 <stringProp name="File.paramname"></stringProp>
                 <stringProp name="File.mimetype">application/gzip</stringProp>
               </elementProp>
@@ -127,6 +127,7 @@
           <boolProp name="stopThread">false</boolProp>
           <stringProp name="shareMode">shareMode.all</stringProp>
         </CSVDataSet>
+        <hashTree/>
         <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Bearer" enabled="true">
           <stringProp name="filename">${DATA_DIR}/bearer.csv</stringProp>
           <stringProp name="fileEncoding"></stringProp>
