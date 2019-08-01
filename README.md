@@ -309,7 +309,7 @@ More details on these variables and examples are mentioned in the below sections
 
 #### Running the scenarios
 
-1. SoakTest.jmx
+**1. SoakTest.jmx**
 
 This scenario file contains the following API's which will be invoked as part of the run
   * ContentHierarchy
@@ -345,7 +345,7 @@ To run the scenario, switch to **jmeter_installation_path/scripts**. In this dir
 Below is an example on how to run this scenario from your **jmeter_installation_path/scripts**
 **./run_scenario.sh SoakTestRun 10 5 30 https 443 SoakTest.jmx**
 
-2. ChannelRead.jmx
+**2. ChannelRead.jmx**
 
 This scenario file contains the following API's which will be invoked as part of the run
   * ChannelRead
@@ -358,7 +358,7 @@ For this scenario, we need to enter the IP or load balancer IP of the KnowledgeP
 Below is an example on how to run this scenario from your **jmeter_installation_path/scripts**
 **./run_scenario.sh ChannelRead 10 5 30 http 8080 ChannelRead.jmx**
 
-3. ContentRead.jmx
+**3. ContentRead.jmx**
 
 This scenario file contains the following API's which will be invoked as part of the run
   * ContentRead
@@ -372,7 +372,7 @@ Below is an example on how to run this scenario from your **jmeter_installation_
 **./run_scenario.sh ContentRead 10 5 30 http 8080 ContentRead.jmx**
 
 
-4. ContentHierarchy.jmx
+**4. ContentHierarchy.jmx**
 
 This scenario file contains the following API's which will be invoked as part of the run
   * ContentHierarchy
