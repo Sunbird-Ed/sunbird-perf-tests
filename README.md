@@ -222,27 +222,41 @@ The scenarios and jmeter binary will be installed in the current user's home dir
 
 **bearer.csv**
 
-In this file, enter the jwt bearer key of your sunbird installation. Please see comments inside the file for more information.
+In this file, enter the jwt bearer key of your sunbird installation.
+
+**channel.csv**
+
+In this file, enter the channel id's from your sunbird installation.
+
+**collections.csv**
+
+In this file, enter the do_id's of collections from your sunbird installation.
 
 **content.csv**
 
-In this file, enter the do_id's (content id's) from your sunbird installation. Please see comments inside the file for more information.
+In this file, enter the do_id's (content id's) from your sunbird installation.
 
 **dialcodes.csv**
 
-In this file, enter the dial codes of content id's from your sunbird installation. Please see comments inside the file for more information.
+In this file, enter the dial codes of content id's from your sunbird installation.
+
+**frameworks.csv**
+
+In this file, enter the dial codes of content id's from your sunbird installation.
 
 **orgs.csv**
 
-In this file, enter the org id's from your sunbird installation. Please see comments inside the file for more information.
+In this file, enter the org id's from your sunbird installation. 
 
 **tenants.csv**
 
-In this file, enter the tenant id's from your sunbird installation. Please see comments inside the file for more information.
+In this file, enter the tenant id's from your sunbird installation. 
 
 **urls.csv**
 
-In this file, enter the agent IP's or your sunbird domain. Please see comments inside the file for more information.
+In this file, enter the IP's of your machines or your sunbird domain.
+
+More details on these csv files and examples are mentioned in the below sections which has details on running the scenarios.
 
 
 #### Details on varibles used in Jmeter scenario files
@@ -271,6 +285,7 @@ This defines the port which should be used for connecting to your sunbird instal
 
 This defines the path where your data directory resides. By default this is ~/benchmark/testdata
 
+More details on these variables and examples are mentioned in the below sections which has details on running the scenarios.
 
 #### Jmeter setup on slaves
 1. Copy the ~/benchmark/apache-jmeter-4.0 and ~/benchmark/testdata directory from your jmeter master to jmeter slaves
@@ -278,7 +293,7 @@ This defines the path where your data directory resides. By default this is ~/be
 
 
 #### Starting jmeter server on master and slaves
-1. Start the jmeter server by using below command on the master and all slaves
+1. Start the jmeter server by using below command on the master and all slaves.
 2. **nohup ~/benchmark/apache-jmeter-4.0/bin/jmeter-server &**
 
 
