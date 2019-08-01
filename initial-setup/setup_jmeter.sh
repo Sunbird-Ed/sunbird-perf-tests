@@ -39,7 +39,7 @@ rm -rf apache-jmeter-4.0.tgz
 
 echo -e "\n\e[0;32m${bold}Updating jmeter property files and libs${normal}"
 cp jmeter_properties/jmeter.properties $JMETER_HOME/apache-jmeter-4.0/bin/
-tar -xf jmeter_properties/jmeter-libs.tar -C ~/apache-jmeter-4.0
+tar -xf jmeter_properties/jmeter-libs.tar -C $JMETER_HOME/apache-jmeter-4.0
 
 echo -e "\n\e[0;32m${bold}Copying scenario and script files to jmeter home${normal}"
 pwd
