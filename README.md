@@ -388,3 +388,33 @@ For this scenario, we need to enter the IP or load balancer IP of the KnowledgeP
 Below is an example on how to run this scenario from your **jmeter_installation_path/scripts**
 
 `**./run_scenario.sh ContentHierarchy 10 5 30 http 8080 ContentHierarchy.jmx**`
+
+**5. ContentSearch.jmx**
+
+This scenario file contains the following API's which will be invoked as part of the run
+  * ContentSearch
+
+This scenario uses the following csv files. Ensure you have updated these csv files with contents and also copied on all the jmeter machines under **jmeter_installation_path/testdata**
+  * dialcodes.csv
+  
+For this scenario, we need to enter the IP or load balancer IP of the KnowledgePlatform **search** machine in the urls.csv. Here we are directly hitting the search machine / search LB which is running on port 9000. The protocal is http here since we making an internal call.
+
+Below is an example on how to run this scenario from your **jmeter_installation_path/scripts**
+
+`**./run_scenario.sh ContentSearch 10 5 30 http 9000 ContentSearch.jmx**`
+
+
+**6. FrameWorkRead.jmx**
+
+This scenario file contains the following API's which will be invoked as part of the run
+  * FrameWorkRead
+
+This scenario uses the following csv files. Ensure you have updated these csv files with contents and also copied on all the jmeter machines under **jmeter_installation_path/testdata**
+  * frameworks.csv
+  
+For this scenario, we need to enter the IP or load balancer IP of the KnowledgePlatform **learning** machine in the urls.csv. Here we are directly hitting the learning machine / learning LB which is running on port 8080. The protocal is http here since we making an internal call.
+
+Below is an example on how to run this scenario from your **jmeter_installation_path/scripts**
+
+`**./run_scenario.sh FrameWorkRead 10 5 30 http 8080 FrameWorkRead.jmx**`
+
