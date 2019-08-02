@@ -355,7 +355,6 @@ This scenario file contains the following API's which will be invoked as part of
 This scenario uses the following csv files:
   * channels.csv
   * urls.csv
-  * bearer.csv
   
 For this scenario, we need to enter the IP or load balancer IP of the KnowledgePlatform **learning** machine in the urls.csv. Here we are directly invoking the learning machine / learning LB which is running on port 8080. The protocal is http here since we are making an internal call.
 
@@ -371,7 +370,6 @@ This scenario file contains the following API's which will be invoked as part of
 This scenario uses the following csv files:
   * content.csv
   * urls.csv
-  * bearer.csv
   
 Here we will be directly invoking the learning machine / learning LB.
 
@@ -388,7 +386,6 @@ This scenario file contains the following API's which will be invoked as part of
 This scenario uses the following csv files:
   * collections.csv
   * urls.csv
-  * bearer.csv
   
 Here we will be directly invoking the learning machine / learning LB.
 
@@ -405,7 +402,6 @@ This scenario file contains the following API's which will be invoked as part of
 This scenario uses the following csv files:
   * frameworks.csv
   * urls.csv
-  * bearer.csv
   
 Here we will be directly invoking the learning machine / learning LB.
 
@@ -422,7 +418,6 @@ This scenario file contains the following API's which will be invoked as part of
 This scenario uses the following csv files:
   * dialcodes.csv
   * urls.csv
-  * bearer.csv
   
 For this scenario, we need to enter the IP or load balancer IP of the KnowledgePlatform **search** machine in the urls.csv. Here we are directly invoking the search machine / search LB which is running on port 9000. The protocal is http here since we are making an internal call.
 
@@ -438,9 +433,8 @@ This scenario file contains the following API's which will be invoked as part of
 
 This scenario uses the following csv files:
   * urls.csv
-  * bearer.csv
   
-For this scenario, we need to enter the IP or load balancer IP of the docker manager / agents in the urls.csv. Here we are directly invoking the player service on port 3000. The protocal is http here since we are making an internal call.
+For this scenario, we need to enter the IP of the docker agents or swarm load balancer IP in the urls.csv. Here we are directly invoking the player service on port 3000. The protocal is http here since we are making an internal call.
 
 Below is an example on how to run this scenario from your **jmeter_installation_path/scripts**
 
@@ -454,7 +448,6 @@ This scenario file contains the following API's which will be invoked as part of
 
 This scenario uses the following csv files:
   * urls.csv
-  * bearer.csv
   * tenants.csv
   
 Here we will be directly invoking the player service.
@@ -470,10 +463,9 @@ This scenario file contains the following API's which will be invoked as part of
 
 This scenario uses the following csv files:
   * urls.csv
-  * bearer.csv
   * dialcodes.csv
   
-For this scenario, we need to enter the IP or load balancer IP of the docker manager / agents in the urls.csv. Here we are directly invoking the learner service on port 9000. The protocal is http here since we are making an internal call.
+For this scenario, we need to enter the IP of the docker agents or swarm load balancer IP in the urls.csv. Here we are directly invoking the learner service on port 9000. The protocal is http here since we are making an internal call.
 
 Below is an example on how to run this scenario from your **jmeter_installation_path/scripts**
 
@@ -487,7 +479,6 @@ This scenario file contains the following API's which will be invoked as part of
 
 This scenario uses the following csv files:
   * urls.csv
-  * bearer.csv
   * orgs.csv
   
 Here we will be directly invoking the learner service.
@@ -504,11 +495,10 @@ This scenario file contains the following API's which will be invoked as part of
 
 This scenario uses the following csv files:
   * urls.csv
-  * bearer.csv
 
 This file also uses **telemetry_events.json.gz**. This contains the telemetry payload in json format. We have compressed it in gzip format to reduce the transfer size. You need not modify this file.
   
-For this scenario, we need to enter the IP or load balancer IP of the docker manager / agents in the urls.csv. Here we are directly invoking the telemetry service on port 9001. The protocal is http here since we are making an internal call.
+For this scenario, we need to enter the IP of the docker agents or swarm load balancer IP in the urls.csv. Here we are directly invoking the telemetry service on port 9001. The protocal is http here since we are making an internal call.
 
 Below is an example on how to run this scenario from your **jmeter_installation_path/scripts**
 
@@ -524,7 +514,7 @@ This scenario uses the following csv files:
   * urls.csv
   * bearer.csv
   
-For this scenario, we need to enter the IP or load balancer IP of the docker manager / agents or domain name in the urls.csv. Here we are invoking the device register api through proxy on port 443 in case of https or port 80 in case of http.
+For this scenario, we need to enter the IP of the docker agents or swarm load balancer IP in the urls.csv. Here we are invoking the device register api through proxy on port 443 in case of https or port 80 in case of http.
 
 Below is an example on how to run this scenario from your **jmeter_installation_path/scripts**
 
