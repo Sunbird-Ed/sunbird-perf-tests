@@ -12,7 +12,7 @@ echo -e "\n\e[0;33m${bold}3. Ramp up time${normal}"
 echo -e "\n\e[0;33m${bold}4. Number of loops${normal}"
 echo -e "\n\e[0;33m${bold}5. Protocol - http / https${normal}"
 echo -e "\n\e[0;33m${bold}6. Port number${normal}"
-echo -e "\n\e[0;33m${bold}7. JMX file name you would like to run. Provide only file name. Check scenarios directory${normal}"
+echo -e "\n\e[0;33m${bold}7. JMX file name you would like to run. Provide only file name. Check scenarios directory for file names${normal}"
 exit 1
 fi
 
