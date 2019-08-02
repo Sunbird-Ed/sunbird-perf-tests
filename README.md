@@ -218,7 +218,7 @@ _Note: Same user must be present on both master and slave since we will be copyi
 
 The scenarios and jmeter binary will be installed in the current user's home directory.
 
-#### Details on csv input data for jmeter scenarions
+#### Details on csv input data for jmeter scenarios
 
 **bearer.csv**
 
@@ -259,7 +259,7 @@ In this file, enter the IP's of your machines or your sunbird domain.
 
 
 
-#### Details on varibles used in Jmeter scenario files
+#### Details on varibles used in jmeter scenario files
 
 **THREADS_COUNT**
 
