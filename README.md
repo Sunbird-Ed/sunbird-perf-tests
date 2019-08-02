@@ -259,7 +259,7 @@ In this file, enter the IP's of your machines or your sunbird domain.
 
 
 
-#### Details on varibles used in jmeter scenario files
+#### Details on variables used in jmeter scenario files
 
 **THREADS_COUNT**
 
