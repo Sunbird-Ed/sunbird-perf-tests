@@ -140,46 +140,37 @@
             <objProp>
               <name>saveConfig</name>
               <value class="SampleSaveConfiguration">
-                <time>true</time>
-                <latency>true</latency>
+                <time>false</time>
+                <latency>false</latency>
                 <timestamp>true</timestamp>
                 <success>true</success>
                 <label>true</label>
                 <code>true</code>
                 <message>true</message>
-                <threadName>true</threadName>
+                <threadName>false</threadName>
                 <dataType>true</dataType>
                 <encoding>false</encoding>
                 <assertions>true</assertions>
                 <subresults>true</subresults>
-                <responseData>false</responseData>
-                <samplerData>false</samplerData>
-                <xml>false</xml>
+                <responseData>true</responseData>
+                <samplerData>true</samplerData>
+                <xml>true</xml>
                 <fieldNames>true</fieldNames>
-                <responseHeaders>false</responseHeaders>
+                <responseHeaders>true</responseHeaders>
                 <requestHeaders>true</requestHeaders>
                 <responseDataOnError>false</responseDataOnError>
                 <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
                 <assertionsResultsToSave>0</assertionsResultsToSave>
                 <bytes>true</bytes>
-                <sentBytes>true</sentBytes>
                 <url>true</url>
-                <threadCounts>true</threadCounts>
-                <idleTime>true</idleTime>
+                <hostname>true</hostname>
+                <sampleCount>true</sampleCount>
                 <connectTime>true</connectTime>
               </value>
             </objProp>
-            <stringProp name="filename"></stringProp>
+            <stringProp name="filename">user_create_result.txt</stringProp>
+            <boolProp name="ResultCollector.success_only_logging">true</boolProp>
           </ResultCollector>
-          <hashTree/>
-          <ResultSaver guiclass="ResultSaverGui" testclass="ResultSaver" testname="Save Responses to a file" enabled="true">
-            <stringProp name="FileSaver.filename"></stringProp>
-            <boolProp name="FileSaver.errorsonly">false</boolProp>
-            <boolProp name="FileSaver.successonly">true</boolProp>
-            <boolProp name="FileSaver.skipsuffix">false</boolProp>
-            <boolProp name="FileSaver.skipautonumber">false</boolProp>
-            <boolProp name="FileSaver.ignoreTC">false</boolProp>
-          </ResultSaver>
           <hashTree/>
         </hashTree>
         <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time_fixed1s" enabled="true">
@@ -189,8 +180,8 @@
         </TestAction>
         <hashTree>
           <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-            <stringProp name="ConstantTimer.delay">2000</stringProp>
-            <stringProp name="RandomTimer.range">1000</stringProp>
+            <stringProp name="ConstantTimer.delay">4000</stringProp>
+            <stringProp name="RandomTimer.range">3000</stringProp>
           </UniformRandomTimer>
           <hashTree/>
         </hashTree>
@@ -257,11 +248,11 @@
                 <encoding>false</encoding>
                 <assertions>true</assertions>
                 <subresults>true</subresults>
-                <responseData>false</responseData>
+                <responseData>true</responseData>
                 <samplerData>false</samplerData>
                 <xml>true</xml>
                 <fieldNames>true</fieldNames>
-                <responseHeaders>false</responseHeaders>
+                <responseHeaders>true</responseHeaders>
                 <requestHeaders>true</requestHeaders>
                 <responseDataOnError>false</responseDataOnError>
                 <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
@@ -269,12 +260,14 @@
                 <bytes>true</bytes>
                 <sentBytes>true</sentBytes>
                 <url>true</url>
+                <hostname>true</hostname>
                 <threadCounts>true</threadCounts>
                 <idleTime>true</idleTime>
                 <connectTime>true</connectTime>
               </value>
             </objProp>
-            <stringProp name="filename"></stringProp>
+            <stringProp name="filename">token_result.txt</stringProp>
+            <boolProp name="ResultCollector.success_only_logging">true</boolProp>
           </ResultCollector>
           <hashTree/>
         </hashTree>
@@ -328,12 +321,12 @@
           </HeaderManager>
           <hashTree/>
           <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
-            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <boolProp name="ResultCollector.error_logging">true</boolProp>
             <objProp>
               <name>saveConfig</name>
               <value class="SampleSaveConfiguration">
                 <time>true</time>
-                <latency>true</latency>
+                <latency>false</latency>
                 <timestamp>true</timestamp>
                 <success>true</success>
                 <label>true</label>
@@ -344,24 +337,20 @@
                 <encoding>false</encoding>
                 <assertions>true</assertions>
                 <subresults>true</subresults>
-                <responseData>false</responseData>
+                <responseData>true</responseData>
                 <samplerData>false</samplerData>
-                <xml>false</xml>
+                <xml>true</xml>
                 <fieldNames>true</fieldNames>
                 <responseHeaders>false</responseHeaders>
                 <requestHeaders>true</requestHeaders>
                 <responseDataOnError>false</responseDataOnError>
                 <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
                 <assertionsResultsToSave>0</assertionsResultsToSave>
-                <bytes>true</bytes>
                 <sentBytes>true</sentBytes>
                 <url>true</url>
-                <threadCounts>true</threadCounts>
-                <idleTime>true</idleTime>
-                <connectTime>true</connectTime>
               </value>
             </objProp>
-            <stringProp name="filename"></stringProp>
+            <stringProp name="filename">course_batch_result.txt</stringProp>
           </ResultCollector>
           <hashTree/>
         </hashTree>
