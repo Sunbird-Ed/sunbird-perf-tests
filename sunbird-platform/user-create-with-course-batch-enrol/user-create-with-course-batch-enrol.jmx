@@ -168,7 +168,7 @@
                 <connectTime>true</connectTime>
               </value>
             </objProp>
-            <stringProp name="filename">user_create_result.txt</stringProp>
+            <stringProp name="filename">user_create_result.csv</stringProp>
             <boolProp name="ResultCollector.success_only_logging">true</boolProp>
           </ResultCollector>
           <hashTree/>
@@ -266,7 +266,7 @@
                 <connectTime>true</connectTime>
               </value>
             </objProp>
-            <stringProp name="filename">token_result.txt</stringProp>
+            <stringProp name="filename">token_result.csv</stringProp>
             <boolProp name="ResultCollector.success_only_logging">true</boolProp>
           </ResultCollector>
           <hashTree/>
@@ -350,7 +350,7 @@
                 <url>true</url>
               </value>
             </objProp>
-            <stringProp name="filename">course_batch_result.txt</stringProp>
+            <stringProp name="filename">course_batch_result.csv</stringProp>
           </ResultCollector>
           <hashTree/>
         </hashTree>
@@ -380,7 +380,7 @@
       </CSVDataSet>
       <hashTree/>
       <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
-        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <boolProp name="ResultCollector.error_logging">true</boolProp>
         <objProp>
           <name>saveConfig</name>
           <value class="SampleSaveConfiguration">
@@ -413,7 +413,7 @@
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename"></stringProp>
+        <stringProp name="filename">TEST_RESULT.csv</stringProp>
       </ResultCollector>
       <hashTree/>
     </hashTree>
