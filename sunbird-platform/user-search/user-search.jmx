@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jmeterTestPlan version="1.2" properties="5.0" jmeter="5.1.1 r1855137">
   <hashTree>
-    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Org_Search" enabled="true">
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="USER_SEARCH" enabled="true">
       <stringProp name="TestPlan.comments"></stringProp>
       <boolProp name="TestPlan.functional_mode">false</boolProp>
       <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
@@ -38,37 +38,12 @@
             <stringProp name="Argument.value">CSV_FILE</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
-          <elementProp name="csvFileHost" elementType="Argument">
-            <stringProp name="Argument.name">csvFileHost</stringProp>
-            <stringProp name="Argument.value">DOMAIN_FILE</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="port" elementType="Argument">
-            <stringProp name="Argument.name">port</stringProp>
-            <stringProp name="Argument.value">PORT</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="host" elementType="Argument">
-            <stringProp name="Argument.name">host</stringProp>
-            <stringProp name="Argument.value">HOST</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="protocol" elementType="Argument">
-            <stringProp name="Argument.name">protocol</stringProp>
-            <stringProp name="Argument.value">PROTOCOL</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="pathPrefix" elementType="Argument">
-            <stringProp name="Argument.name">pathPrefix</stringProp>
-            <stringProp name="Argument.value">PATH_PREFIX</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
         </collectionProp>
       </elementProp>
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
     <hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Org_Search_API" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="USER_SEARCH_API" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -106,7 +81,7 @@
           </collectionProp>
         </HeaderManager>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Org_Search_API_Request" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="USER_Search_API_Request" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
             <collectionProp name="Arguments.arguments">
@@ -116,9 +91,7 @@
 {&#xd;
     &quot;request&quot;: {&#xd;
         &quot;filters&quot;: {&#xd;
-        	&quot;slug&quot;:[&quot;${slug}&quot;],&#xd;
-        	&quot;identifier&quot;:[&quot;${identifier}&quot;],&#xd;
-        	&quot;isRootOrg&quot;:[${isRootOrg}]&#xd;
+        	&quot;userName&quot;:${userName}&#xd;
         	}&#xd;
     }&#xd;
 }</stringProp>
@@ -126,11 +99,11 @@
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">${host}</stringProp>
-          <stringProp name="HTTPSampler.port">${port}</stringProp>
-          <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+          <stringProp name="HTTPSampler.domain">loadtest.ntp.net.in</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">${pathPrefix}</stringProp>
+          <stringProp name="HTTPSampler.path">/api/user/v1/search</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -150,19 +123,7 @@
           <boolProp name="recycle">true</boolProp>
           <stringProp name="shareMode">shareMode.all</stringProp>
           <boolProp name="stopThread">false</boolProp>
-          <stringProp name="variableNames">slug,identifier,isRootOrg</stringProp>
-        </CSVDataSet>
-        <hashTree/>
-        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-          <stringProp name="filename">${csvFileHost}</stringProp>
-          <stringProp name="fileEncoding">UTF-8</stringProp>
-          <stringProp name="variableNames">protocol,host,port</stringProp>
-          <boolProp name="ignoreFirstLine">true</boolProp>
-          <stringProp name="delimiter">,</stringProp>
-          <boolProp name="quotedData">false</boolProp>
-          <boolProp name="recycle">true</boolProp>
-          <boolProp name="stopThread">false</boolProp>
-          <stringProp name="shareMode">shareMode.all</stringProp>
+          <stringProp name="variableNames">name,userName,email</stringProp>
         </CSVDataSet>
         <hashTree/>
       </hashTree>
@@ -203,10 +164,10 @@
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename">/Users/anmolgupta/Documents/orgsearch.csv</stringProp>
+        <stringProp name="filename">TEST_RESULT_USER_SEARCH.csv</stringProp>
       </ResultCollector>
       <hashTree/>
-      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="false">
+      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -239,7 +200,7 @@
             <connectTime>true</connectTime>
           </value>
         </objProp>
-        <stringProp name="filename"></stringProp>
+        <stringProp name="filename">TEST_SUMMARY_USER_SEARCH.csv</stringProp>
       </ResultCollector>
       <hashTree/>
     </hashTree>
