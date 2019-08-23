@@ -87,12 +87,11 @@
             <collectionProp name="Arguments.arguments">
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">&#xd;
-{&#xd;
+                <stringProp name="Argument.value">{&#xd;
     &quot;request&quot;: {&#xd;
         &quot;filters&quot;: {&#xd;
-        	&quot;userName&quot;:${userName}&#xd;
-        	}&#xd;
+            &quot;userName&quot;: &quot;2400&quot;&#xd;
+        }&#xd;
     }&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
@@ -123,7 +122,7 @@
           <boolProp name="recycle">true</boolProp>
           <stringProp name="shareMode">shareMode.all</stringProp>
           <boolProp name="stopThread">false</boolProp>
-          <stringProp name="variableNames">name,userName,email</stringProp>
+          <stringProp name="variableNames">firstName,userName,email</stringProp>
         </CSVDataSet>
         <hashTree/>
       </hashTree>
