@@ -7,7 +7,7 @@ generateUserData(){
 	while [ $counter -le $nonCustodianOrgUserCount ]
 	do
 		local orgId=schososl-$((((RANDOM%$rootOrgCount))+1))-$((((RANDOM%$subOrgCount))+1))
-		local name=$startTime-${counter}Test
+		local name=$startTime-${counter}tests
 		local email=$name@yopmail.com
 		echo $name,$name,$email >> user-create-test-data.csv
 		counter=`expr $counter + 1`
