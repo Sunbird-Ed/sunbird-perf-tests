@@ -162,7 +162,7 @@
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename">org-search-result.csv</stringProp>
+          <stringProp name="filename">user-create-result.csv</stringProp>
         </ResultCollector>
         <hashTree/>
         <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
@@ -211,7 +211,7 @@
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename">org-search-summary.csv</stringProp>
+          <stringProp name="filename">user-create-summary.csv</stringProp>
         </ResultCollector>
         <hashTree/>
         <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
