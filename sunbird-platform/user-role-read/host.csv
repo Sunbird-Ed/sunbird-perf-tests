@@ -1,2 +1,5 @@
 protocol,host,port
-https,preprod.ntp.net.in,443
+https,28.0.0.59,31390
+https,28.0.0.13,31390
+https,28.0.0.55,31390
+https,28.0.0.56,31390
