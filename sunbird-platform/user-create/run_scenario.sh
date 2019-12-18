@@ -8,12 +8,15 @@ numThreads=$5
 rampupTime=$6
 ctrlLoops=$7
 apiKey=$8
-csvFile=$9
+csvFileHost=$9
+csvFileRequest=${10}
+userCreateApi=${11}
 
 JMETER_HOME=/mnt/data/benchmark/apache-jmeter-4.0
 JMETER_HOME=${jmeterHome}
 
 SCENARIO_LOGS=~/sunbird-perf-tests/sunbird-platform/logs/$scenario_name
+
 JMETER_CLUSTER_IPS=$ips
 
 echo "Executing $scenario_id"
@@ -40,8 +43,10 @@ echo "numThreads = " ${numThreads}
 echo "rampupTime = " ${rampupTime}
 echo "ctrlLoops = " ${ctrlLoops}
 echo "apiKey = " ${apiKey}
-echo "accessToken = " ${accessToken}
-echo "csvFile = " ${csvFile}
+echo "csvFileHost = " ${csvFileHost}
+echo "csvFileRequest = " ${csvFileRequest}
+echo "userCreateApi = " ${userCreateApi}
+
 
 sed "s/THREADS_COUNT/${numThreads}/g" $JMX_FILE_PATH > jmx.tmp
 mv jmx.tmp $JMX_FILE_PATH
@@ -59,11 +64,15 @@ mv jmx.tmp $JMX_FILE_PATH
 sed "s/API_KEY/${apiKey}/g" $JMX_FILE_PATH > jmx.tmp
 mv jmx.tmp $JMX_FILE_PATH
 
-sed "s#CSV_FILE#${csvFile}#g" $JMX_FILE_PATH > jmx.tmp
+
+sed "s#DOMAIN_FILE#${csvFileHost}#g" $JMX_FILE_PATH > jmx.tmp
 mv jmx.tmp $JMX_FILE_PATH
 
+sed "s#CSV_FILE#${csvFileRequest}#g" $JMX_FILE_PATH > jmx.tmp
+mv jmx.tmp $JMX_FILE_PATH
 
-
+sed "s#PATH_PREFIX#${userCreateApi}#g" $JMX_FILE_PATH > jmx.tmp
+mv jmx.tmp $JMX_FILE_PATH
 
 
 
