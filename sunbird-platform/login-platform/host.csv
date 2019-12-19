@@ -1,0 +1,2 @@
+protocol,host,port,portal
+https,loadtest.ntp.net.in,443,loadtest.diksha.portal
