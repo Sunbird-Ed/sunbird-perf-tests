@@ -1,2 +1,2 @@
 protocol,host,port,portal
-https,preprod.ntp.net.in,443,preprod.diksha.portal
+https,loadtest.ntp.net.in,443,loadtest.diksha.portal
