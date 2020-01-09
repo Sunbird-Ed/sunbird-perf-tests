@@ -520,8 +520,7 @@ Below is an example on how to run this scenario from your **jmeter_installation_
 
 `./run_scenario.sh DeviceRegister 10 5 30 http 443 DeviceRegister.jmx`
 
-** User Service, Org Test Results **
-
+##  Learner Service Test Results 
 
 **Benchmarking Details:**
    * These were captured after optimizations were applied to the individual APIs.
@@ -539,7 +538,7 @@ Below is an example on how to run this scenario from your **jmeter_installation_
 - 8 Player Service Replicas
   
   
-#### 1. User SignUp API:
+### 1. User SignUp API:
 
 | API         | URL used in Test   | Thread Count | Ramp-up Period(in Seconds) | Loop Count | Throughput/sec | Avg (ms) | 95th pct | 99th pct | 
 |-------------|--------------------|--------------|----------------------------|------------|----------------|----------|----------|----------| 
