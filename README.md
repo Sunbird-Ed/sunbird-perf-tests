@@ -521,8 +521,25 @@ Below is an example on how to run this scenario from your **jmeter_installation_
 `./run_scenario.sh DeviceRegister 10 5 30 http 443 DeviceRegister.jmx`
 
 ** User Service, Org Test Results **
-1. User signup API benchmark
 
+
+**Benchmarking Details:**
+   * These were captured after optimizations were applied to the individual APIs.
+   * Each API is tested with 20000 hashing – This is a feature in Keycloak for "Password Policy" where keycloak hashes the password 20,000 times before saving in the database.
+   * Each API was invoked directly on domain url
+   * Each API test was run for at least 15 mins
+   * Infrastructure used in this run:
+- 3 Cassandra Nodes (4 vcpus, 16 GiB memory) 
+- 3 Application Elasticsearch Nodes (8 vcpus, 32 GiB memory)
+- 4 Keyclaok Nodes (4 vcpus, 8 GiB memory)
+- Postgres - 4 vCPU 
+- 6 Learner Service Replicas
+- 12 Proxy Replicas
+- 6 Kong Replicas
+- 8 Player Service Replicas
+  
+  
+#### 1. User SignUp API:
 
 | API         | URL used in Test   | Thread Count | Ramp-up Period(in Seconds) | Loop Count | Throughput/sec | Avg (ms) | 95th pct | 99th pct | 
 |-------------|--------------------|--------------|----------------------------|------------|----------------|----------|----------|----------| 
@@ -532,8 +549,11 @@ Below is an example on how to run this scenario from your **jmeter_installation_
 | Create User | api/user/v1/signup | 160          | 30                         | 100        | 114.8          | 1318     | 3030     | 5251.84  | 
 | Create User | api/user/v1/signup | 160          | 30                         | 300        | 102.2          | 1499     | 4150     | 5981.91  | 
 
+Takeaway -
+100 users can signup every second with the above infrastructure post optimizations
 
-2. Login APIs benchmark
+
+### 2. Login API:
 
 | API            | URL used in Test | Thread Count | Ramp-up Period(in Seconds) | Loop Count | Throughput/sec | Avg (ms) | 95th pct | 99th pct | 
 |----------------|------------------|--------------|----------------------------|------------|----------------|----------|----------|----------| 
@@ -542,8 +562,48 @@ Below is an example on how to run this scenario from your **jmeter_installation_
 | Login Scenerio | All 4 APIs       | 160          | 30                         | 100        | 474.6          | 315      | 1159     | 3082     | 
 | Login Scenerio | All 4 APIs       | 160          | 30                         | 500        | 451.6          | 324      | 411      | 2413.83  | 
 
+**Below are the APIs invoked: **
+- /resources/
+- /auth/realms/sunbird/protocol/openid-connect/auth
+- /auth/realms/sunbird/login-actions/authenticate
+- /resources
+    
+Takeaway -
+100 users can login every second with the above infrastructure post optimizations
 
-3. Learner service APIs being invoked with 2 keycloak nodes
+##### Optimizations / Infra Changes:
+-    Keycloak node increased from 2 vcpus, 8GB to 4 vcpus, 8GB
+-    Keycloak Heap size increased from default 512MB to 6GB
+-    Elasticsearch node increased from 2 vcpus, 14GB to 8 vcpus, 32GB
+-    Increased Elasticsearch heap size from 2GB to 16GB
+-    Updated Cassandra write time out from default 2 seconds to 5 seconds
+-    Updated Cassandra heap size to 4GB
+-    Updated learner service env value to use 3 Elasticsearch IP instead of 1
+-    Created new API endpoint for user signup - api/user/v1/signup
+-    Created new API endpoint for checking if user exists using email id – api/user/v1/exists/email
+-    Created the following new indexes in Keycloak database
+   *    Index on column "type" on table fed_user_credential
+   *   Index on column "user_id" on table fed_user_credential
+   *   Index on column "user_id" on table FED_USER_ATTRIBUTE
+   *   Index on column "realm_id" on table FED_USER_ATTRIBUTE
+        
+        
+
+### 3. Learner service APIs being invoked with 2 keycloak nodes:
+
+   * These were captured after optimizations were applied to the individual APIs.
+   * Each API is tested with 1 hashing 
+   * Each API was invoked directly on domain url
+   * Each API test was run for at least 15 mins
+   * Infrastructure used in this run:
+- 3 Cassandra Nodes (4 vcpus, 16 GiB memory) 
+- 3 Application Elasticsearch Nodes (8 vcpus, 32 GiB memory)
+- 2 Keyclaok Nodes (2 vcpus, 8 GiB memory)
+- Postgres - 4 vCPU 
+- 8 Learner Service Replicas
+- 12 Proxy Replicas
+- 6 Kong Replicas
+- 8 Player Service Replicas
 
 | API                               | URL used in Test                                   | Thread Count | Ramp-up Period(in Seconds) | Loop Count | Throughput/sec | Avg (ms) | 
 |-----------------------------------|----------------------------------------------------|--------------|----------------------------|------------|----------------|----------| 
@@ -559,7 +619,21 @@ Below is an example on how to run this scenario from your **jmeter_installation_
 | Login Scenerio                    | 4 APIs                                             | 100          | 30                         | 750        | 358.8          | 213      | 
 
 
-4. Learner service APIs being invoked with 4 keycloak nodes:
+### 4. Learner service APIs being invoked with 4 keycloak nodes:
+
+   * These were captured after optimizations were applied to the individual APIs.
+   * Each API is tested with 1 hashing 
+   * Each API was invoked directly on domain url
+   * Each API test was run for at least 15 mins
+   * Infrastructure used in this run:
+- 3 Cassandra Nodes (4 vcpus, 16 GiB memory) 
+- 3 Application Elasticsearch Nodes (8 vcpus, 32 GiB memory)
+- 4 Keyclaok Nodes (2 vcpus, 8 GiB memory)
+- Postgres - 4 vCPU 
+- 8 Learner Service Replicas
+- 12 Proxy Replicas
+- 6 Kong Replicas
+- 8 Player Service Replicas
 
 | API                               | URL used in Test                                   | Thread Count | Ramp-up Period(in Seconds) | Loop Count | Throughput/sec | Avg | 
 |-----------------------------------|----------------------------------------------------|--------------|----------------------------|------------|----------------|-----| 
@@ -576,7 +650,7 @@ Below is an example on how to run this scenario from your **jmeter_installation_
 | Login Scenerio                    | All 4 APIs                                         | 100          | 30                         | 750        | 491.2          | 183 | 
 
 
-5. Tests with kong 9
+### 5. Learner service APIs being invoked with KONG 9:
 
 | _                                                            | 2+2 containers  | _          | _              | _        | 3+3 containers  | _        |  4+4 containers  | _        | 
 |--------------------------------------------------------------|-----------------|------------|----------------|----------|-----------------|----------|------------------|----------| 
@@ -588,7 +662,7 @@ Below is an example on how to run this scenario from your **jmeter_installation_
 | (user/v2/read/{userId}?fields=organisations,roles,locations) | 400             | 60         | 178.9          | 1979     | 120.9           | 2787     | 150.8            | 2188     | 
 
 
-6. Before/After optimizations
+### 6. Learner service APIs Reoprt Before/After optimizations:
 
 | _                          | _                                                            | Before optimizations | _                          | _          | _              | After optimizations | _                          | _          | _              | _        | 
 |----------------------------|--------------------------------------------------------------|----------------------|----------------------------|------------|----------------|---------------------|----------------------------|------------|----------------|----------| 
@@ -605,7 +679,7 @@ Below is an example on how to run this scenario from your **jmeter_installation_
 
 
 
-7. With out kong
+### 7. Learner service APIs being invoked Without KONG
 
 | _                          | 4 (2+2) containers  | _          | _              | _    |  6 (3+3) containers  | _          | _              | _    | 8(4+4) containers  | _          | _              | _    | 
 |----------------------------|---------------------|------------|----------------|------|----------------------|------------|----------------|------|--------------------|------------|----------------|------| 
