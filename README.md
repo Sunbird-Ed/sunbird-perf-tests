@@ -519,3 +519,102 @@ For this scenario, we need to enter the IP of the docker agents or swarm load ba
 Below is an example on how to run this scenario from your **jmeter_installation_path/scripts**
 
 `./run_scenario.sh DeviceRegister 10 5 30 http 443 DeviceRegister.jmx`
+
+** User Service, Org Test Results **
+1. User signup API benchmark
+
+
+| API         | URL used in Test   | Thread Count | Ramp-up Period(in Seconds) | Loop Count | Throughput/sec | Avg (ms) | 95th pct | 99th pct | 
+|-------------|--------------------|--------------|----------------------------|------------|----------------|----------|----------|----------| 
+|             |                    |              |                            |            |                |          |          |          | 
+| Create User | api/user/v1/signup | 80           | 30                         | 100        | 111.1          | 636      | 1216.95  | 2777.98  | 
+| Create User | api/user/v1/signup | 120          | 30                         | 100        | 107.2          | 1039     | 2220     | 4846     | 
+| Create User | api/user/v1/signup | 160          | 30                         | 100        | 114.8          | 1318     | 3030     | 5251.84  | 
+| Create User | api/user/v1/signup | 160          | 30                         | 300        | 102.2          | 1499     | 4150     | 5981.91  | 
+
+
+2. Login APIs benchmark
+
+| API            | URL used in Test | Thread Count | Ramp-up Period(in Seconds) | Loop Count | Throughput/sec | Avg (ms) | 95th pct | 99th pct | 
+|----------------|------------------|--------------|----------------------------|------------|----------------|----------|----------|----------| 
+| Login Scenerio | All 4 APIs       | 100          | 30                         | 100        | 363.7          | 101      | 356      | 599      | 
+| Login Scenerio | All 4 APIs       | 100          | 30                         | 500        | 363.9          | 261      | 586      | 984.97   | 
+| Login Scenerio | All 4 APIs       | 160          | 30                         | 100        | 474.6          | 315      | 1159     | 3082     | 
+| Login Scenerio | All 4 APIs       | 160          | 30                         | 500        | 451.6          | 324      | 411      | 2413.83  | 
+
+
+3. Learner service APIs being invoked with 2 keycloak nodes
+
+| API                               | URL used in Test                                   | Thread Count | Ramp-up Period(in Seconds) | Loop Count | Throughput/sec | Avg (ms) | 
+|-----------------------------------|----------------------------------------------------|--------------|----------------------------|------------|----------------|----------| 
+| Create User (Password Enabled)    | /api/user/v3/create                                | 100          | 30                         | 500        | 94.3           | 1008     | 
+| User Profile Read                 | /api/user/v2/read                                  | 100          | 30                         | 1500       | 241.9          | 403      | 
+| System Settings Read              | /api/data/v1/system/settings/get                   | 100          | 30                         | 2000       | 709.2          | 120      | 
+| Get User by Email or Phone number | /api/user/v1/get/email                             | 100          | 30                         | 1000       | 1424.5         | 65       | 
+| Role Read                         | /api/data/v1/role/read                             | 100          | 30                         | 1000       | 674.4          | 142      | 
+| Generate Token                    | /auth/realms/sunbird/protocol/openid-connect/token | 100          | 30                         | 3000       | 386.9          | 254      | 
+| Org Search                        | /api/org/v1/search                                 | 100          | 30                         | 5000       | 660.7          | 148      | 
+| OTP Generate                      | /api/otp/v1/generate                               | 100          | 30                         | 1000       | 675.9          | 141      | 
+| User-existence                    | /v1/user/exists/email                              | 100          | 30                         | 10000      | 1445.1         | 66       | 
+| Login Scenerio                    | 4 APIs                                             | 100          | 30                         | 750        | 358.8          | 213      | 
+
+
+4. Learner service APIs being invoked with 4 keycloak nodes:
+
+| API                               | URL used in Test                                   | Thread Count | Ramp-up Period(in Seconds) | Loop Count | Throughput/sec | Avg | 
+|-----------------------------------|----------------------------------------------------|--------------|----------------------------|------------|----------------|-----| 
+| Create User (Password Enabled)    | /api/user/v3/create                                | 100          | 30                         | 500        | 99.6           | 963 | 
+| User Profile Read                 | /api/user/v2/read                                  | 100          | 30                         | 1500       | 219.4          | 444 | 
+| System Settings Read              | /api/data/v1/system/settings/get                   | 100          | 30                         | 2000       | 708.6          | 122 | 
+| Get User by Email or Phone number | /api/user/v1/get/email                             | 100          | 30                         | 1000       | 555.8          | 173 | 
+| Role Read                         | /api/data/v1/role/read                             | 100          | 30                         | 5000       | 667.2          | 145 | 
+| Generate Token                    | /auth/realms/sunbird/protocol/openid-connect/token | 100          | 30                         | 3000       | 678.4          | 144 | 
+| Org Search                        | /api/org/v1/search                                 | 100          | 30                         | 5000       | 665.2          | 146 | 
+| OTP Generate                      | /api/otp/v1/generate                               | 100          | 30                         | 200        | 750.1          | 122 | 
+| User-existence                    | /v1/user/exists/email                              | 100          | 30                         | 10000      | 1395.1         | 69  | 
+| Verify OTP                        | /api/otp/v1/verify                                 | 100          | 30                         | 200        | 923.2          | 100 | 
+| Login Scenerio                    | All 4 APIs                                         | 100          | 30                         | 750        | 491.2          | 183 | 
+
+
+5. Tests with kong 9
+
+| _                                                            | 2+2 containers  | _          | _              | _        | 3+3 containers  | _        |  4+4 containers  | _        | 
+|--------------------------------------------------------------|-----------------|------------|----------------|----------|-----------------|----------|------------------|----------| 
+| URL                                                          | Thread Count    | Loop Count | Throughput/sec | Avg (ms) | Throughput/sec  | Avg (ms) | Throughput/sec   | Avg (ms) | 
+| /api/data/v1/system/settings/get                             | 400             | 100        | 702.8          | 286      | 666.7           | 325      | 750.4            | 249      | 
+| /user/v1/get/email/email                                     | 400             | 20         | 295.8          | 1221     | 267.2           | 1149     | 267.8            | 1369     | 
+| /data/v1/role/read                                           | 400             | 20         | 476.1          | 476      | 294.8           | 1055     | 574.5            | 514      | 
+| /auth/realms/sunbird/protocol/openid-connect/token           | 400             | 20         | 348.3          | 983      | 343.4           | 1051     | 360.2            | 991      | 
+| (user/v2/read/{userId}?fields=organisations,roles,locations) | 400             | 60         | 178.9          | 1979     | 120.9           | 2787     | 150.8            | 2188     | 
+
+
+6. Before/After optimizations
+
+| _                          | _                                                            | Before optimizations | _                          | _          | _              | After optimizations | _                          | _          | _              | _        | 
+|----------------------------|--------------------------------------------------------------|----------------------|----------------------------|------------|----------------|---------------------|----------------------------|------------|----------------|----------| 
+| API                        | URL used in test                                             | Thread Count         | Ramp-up Period(in Seconds) | Loop Count | Throughput/sec | Thread Count        | Ramp-up Period(in Seconds) | Loop Count | Throughput/sec | Avg (ms) | 
+| system settings read       | /api/data/v1/system/settings/get                             | 100                  | 30                         | 100        | 1122           | 400                 | 30                         | 300        | 2175.5         | 106      | 
+| get user by email or phone | /user/v1/get/email/email                                     | 100                  | 30                         | 20         | 66             | 100                 | 30                         | 1000       | 1424.5         | 65       | 
+| role read                  | /data/v1/role/read                                           | 250                  | 10                         | 120        | Prev:40        | 400                 | 30                         | 300        | 1219.9         | 305      | 
+| generate token             | /auth/realms/sunbird/protocol/openid-connect/token           | 150                  | 10                         | 100        | 211            | 100                 | 30                         | 3000       | 678.4          | 144      | 
+| user Profile read          | (user/v2/read/{userId}?fields=organisations,roles,locations) | 100                  | 10                         | 40         | 142            | 400                 | 30                         | 300        | 286.6          | 1267     | 
+| org search                 | org/v1/search                                                | 100                  | 30                         | 20         | 455            | 400                 | 30                         | 300        | 1130.8         | 333      | 
+| otp generate               | /v1/otp/generate                                             | 200                  | 10                         | 60         | 563            | 400                 | 30                         | 100        | 1314           | 265      | 
+| Create user                | api/user/v1/signup                                           | 100                  | 30                         | 20         | 24             | 80                  | 30                         | 100        | 111.1          | 636      | 
+| Login                      | Login scenerio (4 Apis)                                      | _                    | _                          | _          | _              | 160                 | 30                         | 100        | 474.6          | 315      | 
+
+
+
+7. With out kong
+
+| _                          | 4 (2+2) containers  | _          | _              | _    |  6 (3+3) containers  | _          | _              | _    | 8(4+4) containers  | _          | _              | _    | 
+|----------------------------|---------------------|------------|----------------|------|----------------------|------------|----------------|------|--------------------|------------|----------------|------| 
+| API                        | Thread Count        | Loop Count | Throughput/sec | Avg  | Thread Count         | Loop Count | Throughput/sec | Avg  | Thread Count       | Loop Count | Throughput/sec | Avg  | 
+| system settings read       | 100                 | 300        | 1584.8         | 145  | 100                  | 300        | 1591.2         | 160  | 100                | 300        | 2175.5         | 106  | 
+| get user by email or phone | 100                 | 100        | 237.6          | 1518 | 100                  | 300        | 581            | 620  | 100                | 300        | 820.6          | 461  | 
+| user Profile read          | 100                 | 100        | 114.6          | 2926 | 100                  | 100        | 193.4          | 1666 | 100                | 100        | 278.7          | 1196 | 
+| role read                  | 100                 | 200        | 218.9          | 1754 | 100                  | 200        | 839.2          | 416  | 100                | 300        | 1219.9         | 305  | 
+| org search                 | 100                 | 100        | 253.7          | 1188 | 100                  | 300        | 925.1          | 406  | 100                | 300        | 1130.8         | 333  | 
+| otp generate               | 100                 | 100        | 1314           | 265  | 100                  | 100        | 1298.3         | 269  | 100                | 100        | 1268.1         | 271  | 
+| User-existence             | 100                 | 100        | 224.4          | 1682 | 100                  | 200        | 940.7          | 367  | 100                | 300        | 1176           | 285  | 
+| Verify OTP                 | 100                 | 60         | 582.6          | 547  | 100                  | 50         | 998.3          | 374  | 100                | 60         | 1402           | 230  | 
