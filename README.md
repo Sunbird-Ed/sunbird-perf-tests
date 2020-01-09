@@ -691,3 +691,46 @@ Takeaway -
 | otp generate               | 100                 | 100        | 1314           | 265  | 100                  | 100        | 1298.3         | 269  | 100                | 100        | 1268.1         | 271  | 
 | User-existence             | 100                 | 100        | 224.4          | 1682 | 100                  | 200        | 940.7          | 367  | 100                | 300        | 1176           | 285  | 
 | Verify OTP                 | 100                 | 60         | 582.6          | 547  | 100                  | 50         | 998.3          | 374  | 100                | 60         | 1402           | 230  | 
+
+
+
+
+### Running the scenarios
+####1. user-create.jmx
+This scenario file contains the following API's which will be invoked as part of the run
+
+**user-create :** api/user/v1/signup
+
+This scenario uses the following csv files:
+- user-create-test-data.csv
+- host.csv
+
+Below is an example on how to run this scenario:
+CD to Folder path:- ~/sunbird-perf-tests/sunbird-platform/user-create
+
+This script takes 11 arguments. The order and the list of parameters required for this script are as below:
+  * Jmeter Home
+  * Jmeter Slave ips
+  * Scenario_name
+  * Scenario ID - This will be directory name where the log files will be saved
+  * Number of threads
+  * Ramp up time
+  * Number of loops
+  *  bearer apiKey 
+  * Host file path
+  * Test data file path
+  * API url
+
+**Execution command:-**
+./run_scenario.sh /mount/data/benchmark/apache-jmeter-4.0/ 'JmeterSlave1IP,JmeterSlave2IP,JmeterSlave3IP' user-create user-create-R1 THREAD_SIZE  RAMPUP LOOPCOUNT bearerAPIKey ~/sunbird-perf-tests/sunbird-platform/user-create/host.csv ~/sunbird-perf-tests/sunbird-platform/user-create/user-create-test-data.csv api/user/v1/signup
+ 
+ 
+ Here is the command to generate test data required to create user:-
+ command:- ./generate-test-data.sh 60 60 60 0 
+ (This will create 60 users inside user-create-test-data.csv)
+ 
+ 
+ 
+ 
+ 
+ 
