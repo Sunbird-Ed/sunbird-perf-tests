@@ -696,7 +696,8 @@ Takeaway -
 
 
 ### Running the scenarios
-####1. user-create.jmx
+#### 1. user-create.jmx
+
 This scenario file contains the following API's which will be invoked as part of the run
 
 **user-create :** api/user/v1/signup
@@ -706,7 +707,7 @@ This scenario uses the following csv files:
 - host.csv
 
 Below is an example on how to run this scenario:
-CD to Folder path:- ~/sunbird-perf-tests/sunbird-platform/user-create
+CD to Folder path: ~/sunbird-perf-tests/sunbird-platform/user-create
 
 This script takes 11 arguments. The order and the list of parameters required for this script are as below:
   * Jmeter Home
@@ -723,11 +724,11 @@ This script takes 11 arguments. The order and the list of parameters required fo
 
 **Execution command:-**
 ./run_scenario.sh /mount/data/benchmark/apache-jmeter-4.0/ 'JmeterSlave1IP,JmeterSlave2IP,JmeterSlave3IP' user-create user-create-R1 THREAD_SIZE  RAMPUP LOOPCOUNT bearerAPIKey ~/sunbird-perf-tests/sunbird-platform/user-create/host.csv ~/sunbird-perf-tests/sunbird-platform/user-create/user-create-test-data.csv api/user/v1/signup
- 
- 
- Here is the command to generate test data required to create user:-
- command:- ./generate-test-data.sh 60 60 60 0 
- (This will create 60 users inside user-create-test-data.csv)
+
+
+Here is the command to generate test data required to create user:
+command: ./generate-test-data.sh 60 60 60 0
+(This will create test data with 60 users with file name user-create-test-data.csv)
  
  
  
