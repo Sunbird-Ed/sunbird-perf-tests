@@ -586,9 +586,29 @@ Takeaway -
    *   Index on column "user_id" on table FED_USER_ATTRIBUTE
    *   Index on column "realm_id" on table FED_USER_ATTRIBUTE
         
-        
+### 3. SignUp API being invoked with 2 keycloak nodes:        
+   * These were captured after optimizations were applied to the individual APIs.
+   * Each API is tested with 1 hashing 
+   * Each API was invoked directly on domain url
+   * Each API test was run for at least 15 mins
+   * Infrastructure used in this run:
+- 3 Cassandra Nodes (4 vcpus, 16 GiB memory) 
+- 3 Application Elasticsearch Nodes (8 vcpus, 32 GiB memory)
+- 2 Keyclaok Nodes (4 vcpus, 8 GiB memory)
+- Postgres - 4 vCPU 
+- 8 Learner Service Replicas
+- 12 Proxy Replicas
+- 6 Kong Replicas
+- 8 Player Service Replicas
 
-### 3. Learner service APIs being invoked with 2 keycloak nodes:
+| API         | URL used  in Test  | Thread Count | Ramp-up Period(in Seconds) | Loop Count | Throughput/sec | Avg (ms) | 95th pct | 99th pct | 
+|-------------|--------------------|--------------|----------------------------|------------|----------------|----------|----------|----------| 
+| Create User | api/user/v1/signup | 20           | 30                         | 100        | 55.2           | 1278     | 3403.8   | 5101.92  | 
+| Create User | api/user/v1/signup | 30           | 30                         | 100        | 61.4           | 1736     | 4000     | 6143.65  | 
+| Create User | api/user/v1/signup | 40           | 30                         | 100        | 67.4           | 2118     | 5195.95  | 7436.96  | 
+
+
+### 5. Learner service APIs being invoked with 2 keycloak nodes:
 
    * These were captured after optimizations were applied to the individual APIs.
    * Each API is tested with 1 hashing 
@@ -618,7 +638,7 @@ Takeaway -
 | Login Scenerio                    | 4 APIs                                             | 100          | 30                         | 750        | 358.8          | 213      | 
 
 
-### 4. Learner service APIs being invoked with 4 keycloak nodes:
+### 6. Learner service APIs being invoked with 4 keycloak nodes:
 
    * These were captured after optimizations were applied to the individual APIs.
    * Each API is tested with 1 hashing 
@@ -649,7 +669,7 @@ Takeaway -
 | Login Scenerio                    | All 4 APIs                                         | 100          | 30                         | 750        | 491.2          | 183 | 
 
 
-### 5. Learner service APIs being invoked with KONG 9:
+### 7. Learner service APIs being invoked with KONG 9:
 
 | _                                                            | 2+2 containers  | _          | _              | _        | 3+3 containers  | _        |  4+4 containers  | _        | 
 |--------------------------------------------------------------|-----------------|------------|----------------|----------|-----------------|----------|------------------|----------| 
@@ -661,7 +681,7 @@ Takeaway -
 | (user/v2/read/{userId}?fields=organisations,roles,locations) | 400             | 60         | 178.9          | 1979     | 120.9           | 2787     | 150.8            | 2188     | 
 
 
-### 6. Learner service APIs Reoprt Before/After optimizations:
+### 8. Learner service APIs Reoprt Before/After optimizations:
 
 | _                          | _                                                            | Before optimizations | _                          | _          | _              | After optimizations | _                          | _          | _              | _        | 
 |----------------------------|--------------------------------------------------------------|----------------------|----------------------------|------------|----------------|---------------------|----------------------------|------------|----------------|----------| 
@@ -678,7 +698,7 @@ Takeaway -
 
 
 
-### 7. Learner service APIs being invoked Without KONG
+### 9. Learner service APIs being invoked Without KONG
 
 | _                          | 4 (2+2) containers  | _          | _              | _    |  6 (3+3) containers  | _          | _              | _    | 8(4+4) containers  | _          | _              | _    | 
 |----------------------------|---------------------|------------|----------------|------|----------------------|------------|----------------|------|--------------------|------------|----------------|------| 
