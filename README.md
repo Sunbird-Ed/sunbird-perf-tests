@@ -588,7 +588,7 @@ Takeaway -
         
 ### 3. SignUp API being invoked with 2 keycloak nodes:        
    * These were captured after optimizations were applied to the individual APIs.
-   * Each API is tested with 1 hashing 
+   * Each API is tested with 20,000 hashing 
    * Each API was invoked directly on domain url
    * Each API test was run for at least 15 mins
    * Infrastructure used in this run:
@@ -607,6 +607,34 @@ Takeaway -
 | Create User | api/user/v1/signup | 30           | 30                         | 100        | 61.4           | 1736     | 4000     | 6143.65  | 
 | Create User | api/user/v1/signup | 40           | 30                         | 100        | 67.4           | 2118     | 5195.95  | 7436.96  | 
 
+
+### 4. Login API being invoked with 2 keycloak nodes: 
+   * These were captured after optimizations were applied to the individual APIs.
+   * Each API is tested with 20,000 hashing 
+   * Each API was invoked directly on domain url
+   * Each API test was run for at least 15 mins
+   * Infrastructure used in this run:
+- 3 Cassandra Nodes (4 vcpus, 16 GiB memory) 
+- 3 Application Elasticsearch Nodes (8 vcpus, 32 GiB memory)
+- 2 Keyclaok Nodes (4 vcpus, 8 GiB memory)
+- Postgres - 4 vCPU 
+- 8 Learner Service Replicas
+- 12 Proxy Replicas
+- 6 Kong Replicas
+- 8 Player Service Replicas
+
+| API            | URL used in Test | Thread Count | Ramp-up Period(in Seconds) | Loop Count | Throughput/sec | Avg | 95th pct | 99th pct | 
+|----------------|------------------|--------------|----------------------------|------------|----------------|-----|----------|----------| 
+| Login Scenerio | All 4 APIs       | 25           | 30                         | 100        | 234.4          | 389 | 2109.85  | 4164.9   | 
+| Login Scenerio | All 4 APIs       | 25           | 30                         | 500        | 243.2          | 400 | 1553.95  | 3035.93  | 
+| Login Scenerio | All 4 APIs       | 40           | 30                         | 100        | 196.1          | 763 | 1891.95  | 3593     | 
+| Login Scenerio | All 4 APIs       | 40           | 30                         | 500        | 261.6          | 598 | 1627     | 1971     | 
+
+**Below are the APIs invoked: **
+- /resources/
+- /auth/realms/sunbird/protocol/openid-connect/auth
+- /auth/realms/sunbird/login-actions/authenticate
+- /resources
 
 ### 5. Learner service APIs being invoked with 2 keycloak nodes:
 
