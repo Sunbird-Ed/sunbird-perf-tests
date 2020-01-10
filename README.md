@@ -916,4 +916,122 @@ This script takes 10 arguments. The order and the list of parameters required fo
 
 
  
+#### 8. org-search.jmx
+
+This scenario file contains the following API's which will be invoked as part of the run
+
+**Org Search:** /api/org/v1/search
+
+This scenario uses the following csv files:
+- host.csv
+- org-search-request.csv
+
+Below is an example on how to run this scenario:
+CD to Folder path: ~/sunbird-perf-tests/sunbird-platform/org-search
+
+This script takes 11 arguments. The order and the list of parameters required for this script are as below:
+  * Jmeter Home
+  * Jmeter Slave ips
+  * Scenario_name  - This will be directory name
+  * Scenario ID - This will be directory name where the log files will be saved
+  * Number of threads
+  * Ramp up time
+  * Number of loops
+  * bearer apiKey
+  * Host file path
+  * Test data file path
+  * API url
+
+**Execution command:-**
+./run_scenario.sh /mount/data/benchmark/apache-jmeter-4.0/ 'JmeterSlave1IP,JmeterSlave2IP,JmeterSlave3IP' org-search org-search-Run1 THREAD_SIZE RAMPUP LOOPCOUNT bearerAPIKey ~/sunbird-perf-tests/sunbird-platform/host.csv /api/org/v1/search ~/sunbird-perf-tests/sunbird-platform/org-search/org-search-request.csv
+
+
+#### 9. generate-otp.jmx
+
+This scenario file contains the following API's which will be invoked as part of the run
+
+**OTP Generate:** /api/otp/v1/generate
+
+This scenario uses the following csv files:
+- host.csv
+- user-data.csv
+
+Below is an example on how to run this scenario:
+CD to Folder path: ~/sunbird-perf-tests/sunbird-platform/generate-otp
+
+This script takes 11 arguments. The order and the list of parameters required for this script are as below:
+  * Jmeter Home
+  * Jmeter Slave ips
+  * Scenario_name  - This will be directory name
+  * Scenario ID - This will be directory name where the log files will be saved
+  * Number of threads
+  * Ramp up time
+  * Number of loops
+  * bearer apiKey
+  * Host file path
+  * Test data file path
+  * API url
+
+**Execution command:-**
+./run_scenario.sh /mount/data/benchmark/apache-jmeter-4.0/ 'JmeterSlave1IP,JmeterSlave2IP,JmeterSlave3IP' generate-otp generate-otp-Run1 THREAD_SIZE RAMPUP LOOPCOUNT bearerAPIKey ~/sunbird-perf-tests/sunbird-platform/host.csv ~/sunbird-perf-tests/sunbird-platform/user-create/user-data.csv  /api/otp/v1/generate
+
+
+#### 10. verify-otp.jmx
+
+This scenario file contains the following API's which will be invoked as part of the run
+
+**Verify OTP:** /api/otp/v1/verify
+
+This scenario uses the following csv files:
+- host.csv
+- user-data.csv
+
+Below is an example on how to run this scenario:
+CD to Folder path: ~/sunbird-perf-tests/sunbird-platform/verify-otp
+
+This script takes 11 arguments. The order and the list of parameters required for this script are as below:
+  * Jmeter Home
+  * Jmeter Slave ips
+  * Scenario_name  - This will be directory name
+  * Scenario ID - This will be directory name where the log files will be saved
+  * Number of threads
+  * Ramp up time
+  * Number of loops
+  *  bearer apiKey
+  * Host file path
+  * Test data file path
+  * API url
+
+**Execution command:-**
+./run_scenario.sh /mount/data/benchmark/apache-jmeter-4.0/ 'JmeterSlave1IP,JmeterSlave2IP,JmeterSlave3IP' verify-otp verify-otp-Run1 THREAD_SIZE RAMPUP LOOPCOUNT bearerAPIKey ~/sunbird-perf-tests/sunbird-platform/host.csv  ~/sunbird-perf-tests/sunbird-platform/verify-otp/user-data.csv  /api/otp/v1/verify
  
+
+#### 11. user-existence.jmx
+
+This scenario file contains the following API's which will be invoked as part of the run
+
+**User Exist:** /v1/user/exists/email
+
+This scenario uses the following csv files:
+- host.csv
+- user-data.csv
+
+Below is an example on how to run this scenario:
+CD to Folder path: ~/sunbird-perf-tests/sunbird-platform/user-existence
+
+This script takes 11 arguments. The order and the list of parameters required for this script are as below:
+  * Jmeter Home
+  * Jmeter Slave ips
+  * Scenario_name  - This will be directory name
+  * Scenario ID - This will be directory name where the log files will be saved
+  * Number of threads
+  * Ramp up time
+  * Number of loops
+  *  bearer apiKey
+  * User Name - used to generate authenticated-user-token
+  * Host file path
+  * Test data file path
+  * API url
+
+**Execution command:-**
+./run_scenario.sh /mount/data/benchmark/apache-jmeter-4.0/ 'JmeterSlave1IP,JmeterSlave2IP,JmeterSlave3IP' user-existence user-existence-Run1 THREAD_SIZE RAMPUP LOOPCOUNT bearerAPIKey username ~/sunbird-perf-tests/sunbird-platform/host.csv ~/sunbird-perf-tests/sunbird-platform/user-existence/user-data.csv /v1/user/exists/email
