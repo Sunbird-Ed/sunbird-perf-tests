@@ -699,6 +699,11 @@ Takeaway -
 
 ### 7. Learner service APIs being invoked with KONG 9:
 
+   * These were captured before optimizations were applied to the individual APIs.
+   * Each API is tested with 20,000 hashing 
+   * Each API was invoked with kong
+   * All times are in millisecond
+
 | _                                                            | 2+2 containers  | _          | _              | _        | 3+3 containers  | _        |  4+4 containers  | _        | 
 |--------------------------------------------------------------|-----------------|------------|----------------|----------|-----------------|----------|------------------|----------| 
 | URL                                                          | Thread Count    | Loop Count | Throughput/sec | Avg (ms) | Throughput/sec  | Avg (ms) | Throughput/sec   | Avg (ms) | 
@@ -711,12 +716,15 @@ Takeaway -
 
 ### 8. Learner service APIs Reoprt Before/After optimizations:
 
+   * These were captured before and after optimizations were applied to the individual APIs.
+   * All times are in millisecond
+
 | _                          | _                                                            | Before optimizations | _                          | _          | _              | After optimizations | _                          | _          | _              | _        | 
 |----------------------------|--------------------------------------------------------------|----------------------|----------------------------|------------|----------------|---------------------|----------------------------|------------|----------------|----------| 
 | API                        | URL used in test                                             | Thread Count         | Ramp-up Period(in Seconds) | Loop Count | Throughput/sec | Thread Count        | Ramp-up Period(in Seconds) | Loop Count | Throughput/sec | Avg (ms) | 
 | system settings read       | /api/data/v1/system/settings/get                             | 100                  | 30                         | 100        | 1122           | 400                 | 30                         | 300        | 2175.5         | 106      | 
 | get user by email or phone | /user/v1/get/email/email                                     | 100                  | 30                         | 20         | 66             | 100                 | 30                         | 1000       | 1424.5         | 65       | 
-| role read                  | /data/v1/role/read                                           | 250                  | 10                         | 120        | Prev:40        | 400                 | 30                         | 300        | 1219.9         | 305      | 
+| role read                  | /data/v1/role/read                                           | 250                  | 10                         | 120        | 40        | 400                 | 30                         | 300        | 1219.9         | 305      | 
 | generate token             | /auth/realms/sunbird/protocol/openid-connect/token           | 150                  | 10                         | 100        | 211            | 100                 | 30                         | 3000       | 678.4          | 144      | 
 | user Profile read          | (user/v2/read/{userId}?fields=organisations,roles,locations) | 100                  | 10                         | 40         | 142            | 400                 | 30                         | 300        | 286.6          | 1267     | 
 | org search                 | org/v1/search                                                | 100                  | 30                         | 20         | 455            | 400                 | 30                         | 300        | 1130.8         | 333      | 
@@ -727,6 +735,11 @@ Takeaway -
 
 
 ### 9. Learner service APIs being invoked Without KONG
+
+   * These were captured before optimizations were applied to the individual APIs.
+   * Each API is tested with 20,000 hashing 
+   * Each API was invoked with out kong
+   * All times are in millisecond
 
 | _                          | 4 (2+2) containers  | _          | _              | _    |  6 (3+3) containers  | _          | _              | _    | 8(4+4) containers  | _          | _              | _    | 
 |----------------------------|---------------------|------------|----------------|------|----------------------|------------|----------------|------|--------------------|------------|----------------|------| 
