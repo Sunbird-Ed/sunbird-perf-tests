@@ -524,7 +524,7 @@ Below is an example on how to run this scenario from your **jmeter_installation_
 
 **Benchmarking Details:**
 * These were captured after optimizations were applied to the individual APIs.
-* Each API is tested with 20000 hashing – This is a feature in Keycloak for "Password Policy" where keycloak hashes the password 20,000 times before saving in the database.
+* Each API is tested with 20000 hashing – This is a feature in Keycloak for "Password Policy" where keycloak hashes the password 20,000 times before saving in the database
 * Each API was invoked directly on domain url
 * Infrastructure used in this run:
   - 3 Cassandra Nodes (4 vcpus, 16 GiB memory) 
@@ -535,9 +535,9 @@ Below is an example on how to run this scenario from your **jmeter_installation_
   - 12 Proxy Replicas
   - 6 Kong Replicas
   - 8 Player Service Replicas
-  
-  
-### 1. User Signup API:
+
+
+### 1. User Signup API
 
 | API         | URL used in Test   | Thread Count | Ramp-up Period(in Seconds) | Loop Count | Throughput/sec | Avg (ms) | 95th pct | 99th pct | 
 |-------------|--------------------|--------------|----------------------------|------------|----------------|----------|----------|----------| 
@@ -548,7 +548,15 @@ Below is an example on how to run this scenario from your **jmeter_installation_
 | Create User | api/user/v1/signup | 160          | 30                         | 300        | 102.2          | 1499     | 4150     | 5981.91  | 
 
 
-### 2. Login API:
+### 2. Login API
+
+**Below are the APIs invoked:**
+
+- /resources/
+- /auth/realms/sunbird/protocol/openid-connect/auth
+- /auth/realms/sunbird/login-actions/authenticate
+- /resources
+
 
 | API            | URL used in Test | Thread Count | Ramp-up Period(in Seconds) | Loop Count | Throughput/sec | Avg (ms) | 95th pct | 99th pct | 
 |----------------|------------------|--------------|----------------------------|------------|----------------|----------|----------|----------| 
@@ -557,18 +565,13 @@ Below is an example on how to run this scenario from your **jmeter_installation_
 | Login Scenerio | All 4 APIs       | 160          | 30                         | 100        | 474.6          | 315      | 1159     | 3082     | 
 | Login Scenerio | All 4 APIs       | 160          | 30                         | 500        | 451.6          | 324      | 411      | 2413.83  | 
 
-
-**Below are the APIs invoked:**
-- /resources/
-- /auth/realms/sunbird/protocol/openid-connect/auth
-- /auth/realms/sunbird/login-actions/authenticate
-- /resources
     
 **Takeaway**
 
 100+ users can signup / login every second with the above infrastructure post optimizations.
 
 #### Optimizations / Infra changes done to achive this result
+
 * Keycloak node increased from 2 vcpus, 8GB to 4 vcpus, 8GB
 * Keycloak Heap size increased from default 512MB to 6GB
 * Elasticsearch node increased from 2 vcpus, 14GB to 8 vcpus, 32GB
@@ -583,20 +586,15 @@ Below is an example on how to run this scenario from your **jmeter_installation_
   - Index on column "user_id" on table fed_user_credential
   - Index on column "user_id" on table FED_USER_ATTRIBUTE
   - Index on column "realm_id" on table FED_USER_ATTRIBUTE
-        
-### 3. SignUp API invoked with 2 keycloak nodes:
+
+
+### 3. Signup API invoked with 2 keycloak nodes
+
 * These were captured after optimizations were applied to the individual APIs
 * Each API is tested with 20,000 hashing
-* Each API was invoked directly using domain
-* Infrastructure used in this run:
-  - 3 Cassandra Nodes (4 vcpus, 16 GiB memory) 
-  - 3 Application Elasticsearch Nodes (8 vcpus, 32 GiB memory)
+* Each API was invoked directly using domain url
+* Infrastructure changes done in this run:
   - 2 Keyclaok Nodes (4 vcpus, 8 GiB memory)
-  - Postgres - 4 vCPU 
-  - 8 Learner Service Replicas
-  - 12 Proxy Replicas
-  - 6 Kong Replicas
-  - 8 Player Service Replicas
 
 | API         | URL used  in Test  | Thread Count | Ramp-up Period(in Seconds) | Loop Count | Throughput/sec | Avg (ms) | 95th pct | 99th pct | 
 |-------------|--------------------|--------------|----------------------------|------------|----------------|----------|----------|----------| 
@@ -605,20 +603,15 @@ Below is an example on how to run this scenario from your **jmeter_installation_
 | Create User | api/user/v1/signup | 40           | 30                         | 100        | 67.4           | 2118     | 5195.95  | 7436.96  | 
 
 
-### 4. Login API being invoked with 2 keycloak nodes: 
-   * These were captured after optimizations were applied to the individual APIs.
-   * Each API is tested with 20,000 hashing 
-   * Each API was invoked directly on domain url
-   * Each API test was run for at least 15 mins
-   * Infrastructure used in this run:
-- 3 Cassandra Nodes (4 vcpus, 16 GiB memory) 
-- 3 Application Elasticsearch Nodes (8 vcpus, 32 GiB memory)
-- 2 Keyclaok Nodes (4 vcpus, 8 GiB memory)
-- Postgres - 4 vCPU 
-- 8 Learner Service Replicas
-- 12 Proxy Replicas
-- 6 Kong Replicas
-- 8 Player Service Replicas
+### 4. Login API invoked with 2 Keycloak nodes
+
+**Below are the APIs invoked:**
+
+- /resources/
+- /auth/realms/sunbird/protocol/openid-connect/auth
+- /auth/realms/sunbird/login-actions/authenticate
+- /resources
+
 
 | API            | URL used in Test | Thread Count | Ramp-up Period(in Seconds) | Loop Count | Throughput/sec | Avg | 95th pct | 99th pct | 
 |----------------|------------------|--------------|----------------------------|------------|----------------|-----|----------|----------| 
@@ -627,27 +620,19 @@ Below is an example on how to run this scenario from your **jmeter_installation_
 | Login Scenerio | All 4 APIs       | 40           | 30                         | 100        | 196.1          | 763 | 1891.95  | 3593     | 
 | Login Scenerio | All 4 APIs       | 40           | 30                         | 500        | 261.6          | 598 | 1627     | 1971     | 
 
-**Below are the APIs invoked: **
-- /resources/
-- /auth/realms/sunbird/protocol/openid-connect/auth
-- /auth/realms/sunbird/login-actions/authenticate
-- /resources
 
-### 5. Learner service APIs being invoked with 2 keycloak nodes:
+**Takeaway**
 
-   * These were captured after optimizations were applied to the individual APIs.
-   * Each API is tested with 1 hashing 
-   * Each API was invoked directly on domain url
-   * Each API test was run for at least 15 mins
-   * Infrastructure used in this run:
-- 3 Cassandra Nodes (4 vcpus, 16 GiB memory) 
-- 3 Application Elasticsearch Nodes (8 vcpus, 32 GiB memory)
-- 2 Keyclaok Nodes (2 vcpus, 8 GiB memory)
-- Postgres - 4 vCPU 
-- 8 Learner Service Replicas
-- 12 Proxy Replicas
-- 6 Kong Replicas
-- 8 Player Service Replicas
+50+ users can signup / login every second with 2 Keycloak nodes. A 50% drop as compared to 4 Keyclaok nodes.
+
+
+### 5. Few more apis invoked with 2 Keycloak nodes
+
+* These were captured after optimizations were applied to the individual APIs
+* Each API is tested with 1 hashing 
+* Each API was invoked directly on domain url
+* Infrastructure changes done in this run:
+  - 2 Keycloak Nodes (2 vcpus, 8 GiB memory)
 
 | API                               | URL used in Test                                   | Thread Count | Ramp-up Period(in Seconds) | Loop Count | Throughput/sec | Avg (ms) | 
 |-----------------------------------|----------------------------------------------------|--------------|----------------------------|------------|----------------|----------| 
@@ -663,21 +648,14 @@ Below is an example on how to run this scenario from your **jmeter_installation_
 | Login Scenerio                    | 4 APIs                                             | 100          | 30                         | 750        | 358.8          | 213      | 
 
 
-### 6. Learner service APIs being invoked with 4 keycloak nodes:
+### 6. Few more apis invoked with 4 Keycloak nodes
 
-   * These were captured after optimizations were applied to the individual APIs.
-   * Each API is tested with 1 hashing 
-   * Each API was invoked directly on domain url
-   * Each API test was run for at least 15 mins
-   * Infrastructure used in this run:
-- 3 Cassandra Nodes (4 vcpus, 16 GiB memory) 
-- 3 Application Elasticsearch Nodes (8 vcpus, 32 GiB memory)
-- 4 Keyclaok Nodes (2 vcpus, 8 GiB memory)
-- Postgres - 4 vCPU 
-- 8 Learner Service Replicas
-- 12 Proxy Replicas
-- 6 Kong Replicas
-- 8 Player Service Replicas
+* These were captured after optimizations were applied to the individual APIs
+* Each API is tested with 1 hashing 
+* Each API was invoked directly on domain url
+* Infrastructure changes done in this run:
+  - 2 Keycloak Nodes (2 vcpus, 8 GiB memory)
+
 
 | API                               | URL used in Test                                   | Thread Count | Ramp-up Period(in Seconds) | Loop Count | Throughput/sec | Avg | 
 |-----------------------------------|----------------------------------------------------|--------------|----------------------------|------------|----------------|-----| 
