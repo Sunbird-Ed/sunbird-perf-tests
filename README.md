@@ -519,3 +519,580 @@ For this scenario, we need to enter the IP of the docker agents or swarm load ba
 Below is an example on how to run this scenario from your **jmeter_installation_path/scripts**
 
 `./run_scenario.sh DeviceRegister 10 5 30 http 443 DeviceRegister.jmx`
+
+##  Learner Service Test Results 
+
+**Benchmarking Details:**
+   * These were captured after optimizations were applied to the individual APIs.
+   * Each API is tested with 20000 hashing – This is a feature in Keycloak for "Password Policy" where keycloak hashes the password 20,000 times before saving in the database.
+   * Each API was invoked directly on domain url
+   * Each API test was run for at least 15 mins
+   * Infrastructure used in this run:
+- 3 Cassandra Nodes (4 vcpus, 16 GiB memory) 
+- 3 Application Elasticsearch Nodes (8 vcpus, 32 GiB memory)
+- 4 Keyclaok Nodes (4 vcpus, 8 GiB memory)
+- Postgres - 4 vCPU 
+- 6 Learner Service Replicas
+- 12 Proxy Replicas
+- 6 Kong Replicas
+- 8 Player Service Replicas
+  
+  
+### 1. User SignUp API:
+
+| API         | URL used in Test   | Thread Count | Ramp-up Period(in Seconds) | Loop Count | Throughput/sec | Avg (ms) | 95th pct | 99th pct | 
+|-------------|--------------------|--------------|----------------------------|------------|----------------|----------|----------|----------| 
+|             |                    |              |                            |            |                |          |          |          | 
+| Create User | api/user/v1/signup | 80           | 30                         | 100        | 111.1          | 636      | 1216.95  | 2777.98  | 
+| Create User | api/user/v1/signup | 120          | 30                         | 100        | 107.2          | 1039     | 2220     | 4846     | 
+| Create User | api/user/v1/signup | 160          | 30                         | 100        | 114.8          | 1318     | 3030     | 5251.84  | 
+| Create User | api/user/v1/signup | 160          | 30                         | 300        | 102.2          | 1499     | 4150     | 5981.91  | 
+
+Takeaway -
+100 users can signup every second with the above infrastructure post optimizations
+
+
+### 2. Login API:
+
+| API            | URL used in Test | Thread Count | Ramp-up Period(in Seconds) | Loop Count | Throughput/sec | Avg (ms) | 95th pct | 99th pct | 
+|----------------|------------------|--------------|----------------------------|------------|----------------|----------|----------|----------| 
+| Login Scenerio | All 4 APIs       | 100          | 30                         | 100        | 363.7          | 101      | 356      | 599      | 
+| Login Scenerio | All 4 APIs       | 100          | 30                         | 500        | 363.9          | 261      | 586      | 984.97   | 
+| Login Scenerio | All 4 APIs       | 160          | 30                         | 100        | 474.6          | 315      | 1159     | 3082     | 
+| Login Scenerio | All 4 APIs       | 160          | 30                         | 500        | 451.6          | 324      | 411      | 2413.83  | 
+
+**Below are the APIs invoked: **
+- /resources/
+- /auth/realms/sunbird/protocol/openid-connect/auth
+- /auth/realms/sunbird/login-actions/authenticate
+- /resources
+    
+Takeaway -
+100 users can login every second with the above infrastructure post optimizations
+
+##### Optimizations / Infra Changes:
+-    Keycloak node increased from 2 vcpus, 8GB to 4 vcpus, 8GB
+-    Keycloak Heap size increased from default 512MB to 6GB
+-    Elasticsearch node increased from 2 vcpus, 14GB to 8 vcpus, 32GB
+-    Increased Elasticsearch heap size from 2GB to 16GB
+-    Updated Cassandra write time out from default 2 seconds to 5 seconds
+-    Updated Cassandra heap size to 4GB
+-    Updated learner service env value to use 3 Elasticsearch IP instead of 1
+-    Created new API endpoint for user signup - api/user/v1/signup
+-    Created new API endpoint for checking if user exists using email id – api/user/v1/exists/email
+-    Created the following new indexes in Keycloak database
+   *    Index on column "type" on table fed_user_credential
+   *   Index on column "user_id" on table fed_user_credential
+   *   Index on column "user_id" on table FED_USER_ATTRIBUTE
+   *   Index on column "realm_id" on table FED_USER_ATTRIBUTE
+        
+### 3. SignUp API being invoked with 2 keycloak nodes:        
+   * These were captured after optimizations were applied to the individual APIs.
+   * Each API is tested with 20,000 hashing 
+   * Each API was invoked directly on domain url
+   * Each API test was run for at least 15 mins
+   * Infrastructure used in this run:
+- 3 Cassandra Nodes (4 vcpus, 16 GiB memory) 
+- 3 Application Elasticsearch Nodes (8 vcpus, 32 GiB memory)
+- 2 Keyclaok Nodes (4 vcpus, 8 GiB memory)
+- Postgres - 4 vCPU 
+- 8 Learner Service Replicas
+- 12 Proxy Replicas
+- 6 Kong Replicas
+- 8 Player Service Replicas
+
+| API         | URL used  in Test  | Thread Count | Ramp-up Period(in Seconds) | Loop Count | Throughput/sec | Avg (ms) | 95th pct | 99th pct | 
+|-------------|--------------------|--------------|----------------------------|------------|----------------|----------|----------|----------| 
+| Create User | api/user/v1/signup | 20           | 30                         | 100        | 55.2           | 1278     | 3403.8   | 5101.92  | 
+| Create User | api/user/v1/signup | 30           | 30                         | 100        | 61.4           | 1736     | 4000     | 6143.65  | 
+| Create User | api/user/v1/signup | 40           | 30                         | 100        | 67.4           | 2118     | 5195.95  | 7436.96  | 
+
+
+### 4. Login API being invoked with 2 keycloak nodes: 
+   * These were captured after optimizations were applied to the individual APIs.
+   * Each API is tested with 20,000 hashing 
+   * Each API was invoked directly on domain url
+   * Each API test was run for at least 15 mins
+   * Infrastructure used in this run:
+- 3 Cassandra Nodes (4 vcpus, 16 GiB memory) 
+- 3 Application Elasticsearch Nodes (8 vcpus, 32 GiB memory)
+- 2 Keyclaok Nodes (4 vcpus, 8 GiB memory)
+- Postgres - 4 vCPU 
+- 8 Learner Service Replicas
+- 12 Proxy Replicas
+- 6 Kong Replicas
+- 8 Player Service Replicas
+
+| API            | URL used in Test | Thread Count | Ramp-up Period(in Seconds) | Loop Count | Throughput/sec | Avg | 95th pct | 99th pct | 
+|----------------|------------------|--------------|----------------------------|------------|----------------|-----|----------|----------| 
+| Login Scenerio | All 4 APIs       | 25           | 30                         | 100        | 234.4          | 389 | 2109.85  | 4164.9   | 
+| Login Scenerio | All 4 APIs       | 25           | 30                         | 500        | 243.2          | 400 | 1553.95  | 3035.93  | 
+| Login Scenerio | All 4 APIs       | 40           | 30                         | 100        | 196.1          | 763 | 1891.95  | 3593     | 
+| Login Scenerio | All 4 APIs       | 40           | 30                         | 500        | 261.6          | 598 | 1627     | 1971     | 
+
+**Below are the APIs invoked: **
+- /resources/
+- /auth/realms/sunbird/protocol/openid-connect/auth
+- /auth/realms/sunbird/login-actions/authenticate
+- /resources
+
+### 5. Learner service APIs being invoked with 2 keycloak nodes:
+
+   * These were captured after optimizations were applied to the individual APIs.
+   * Each API is tested with 1 hashing 
+   * Each API was invoked directly on domain url
+   * Each API test was run for at least 15 mins
+   * Infrastructure used in this run:
+- 3 Cassandra Nodes (4 vcpus, 16 GiB memory) 
+- 3 Application Elasticsearch Nodes (8 vcpus, 32 GiB memory)
+- 2 Keyclaok Nodes (2 vcpus, 8 GiB memory)
+- Postgres - 4 vCPU 
+- 8 Learner Service Replicas
+- 12 Proxy Replicas
+- 6 Kong Replicas
+- 8 Player Service Replicas
+
+| API                               | URL used in Test                                   | Thread Count | Ramp-up Period(in Seconds) | Loop Count | Throughput/sec | Avg (ms) | 
+|-----------------------------------|----------------------------------------------------|--------------|----------------------------|------------|----------------|----------| 
+| Create User (Password Enabled)    | /api/user/v3/create                                | 100          | 30                         | 500        | 94.3           | 1008     | 
+| User Profile Read                 | /api/user/v2/read                                  | 100          | 30                         | 1500       | 241.9          | 403      | 
+| System Settings Read              | /api/data/v1/system/settings/get                   | 100          | 30                         | 2000       | 709.2          | 120      | 
+| Get User by Email or Phone number | /api/user/v1/get/email                             | 100          | 30                         | 1000       | 1424.5         | 65       | 
+| Role Read                         | /api/data/v1/role/read                             | 100          | 30                         | 1000       | 674.4          | 142      | 
+| Generate Token                    | /auth/realms/sunbird/protocol/openid-connect/token | 100          | 30                         | 3000       | 386.9          | 254      | 
+| Org Search                        | /api/org/v1/search                                 | 100          | 30                         | 5000       | 660.7          | 148      | 
+| OTP Generate                      | /api/otp/v1/generate                               | 100          | 30                         | 1000       | 675.9          | 141      | 
+| User-existence                    | /v1/user/exists/email                              | 100          | 30                         | 10000      | 1445.1         | 66       | 
+| Login Scenerio                    | 4 APIs                                             | 100          | 30                         | 750        | 358.8          | 213      | 
+
+
+### 6. Learner service APIs being invoked with 4 keycloak nodes:
+
+   * These were captured after optimizations were applied to the individual APIs.
+   * Each API is tested with 1 hashing 
+   * Each API was invoked directly on domain url
+   * Each API test was run for at least 15 mins
+   * Infrastructure used in this run:
+- 3 Cassandra Nodes (4 vcpus, 16 GiB memory) 
+- 3 Application Elasticsearch Nodes (8 vcpus, 32 GiB memory)
+- 4 Keyclaok Nodes (2 vcpus, 8 GiB memory)
+- Postgres - 4 vCPU 
+- 8 Learner Service Replicas
+- 12 Proxy Replicas
+- 6 Kong Replicas
+- 8 Player Service Replicas
+
+| API                               | URL used in Test                                   | Thread Count | Ramp-up Period(in Seconds) | Loop Count | Throughput/sec | Avg | 
+|-----------------------------------|----------------------------------------------------|--------------|----------------------------|------------|----------------|-----| 
+| Create User (Password Enabled)    | /api/user/v3/create                                | 100          | 30                         | 500        | 99.6           | 963 | 
+| User Profile Read                 | /api/user/v2/read                                  | 100          | 30                         | 1500       | 219.4          | 444 | 
+| System Settings Read              | /api/data/v1/system/settings/get                   | 100          | 30                         | 2000       | 708.6          | 122 | 
+| Get User by Email or Phone number | /api/user/v1/get/email                             | 100          | 30                         | 1000       | 555.8          | 173 | 
+| Role Read                         | /api/data/v1/role/read                             | 100          | 30                         | 5000       | 667.2          | 145 | 
+| Generate Token                    | /auth/realms/sunbird/protocol/openid-connect/token | 100          | 30                         | 3000       | 678.4          | 144 | 
+| Org Search                        | /api/org/v1/search                                 | 100          | 30                         | 5000       | 665.2          | 146 | 
+| OTP Generate                      | /api/otp/v1/generate                               | 100          | 30                         | 200        | 750.1          | 122 | 
+| User-existence                    | /v1/user/exists/email                              | 100          | 30                         | 10000      | 1395.1         | 69  | 
+| Verify OTP                        | /api/otp/v1/verify                                 | 100          | 30                         | 200        | 923.2          | 100 | 
+| Login Scenerio                    | All 4 APIs                                         | 100          | 30                         | 750        | 491.2          | 183 | 
+
+
+### 7. Learner service APIs being invoked with KONG 9:
+
+   * These were captured before optimizations were applied to the individual APIs.
+   * Each API is tested with 20,000 hashing 
+   * Each API was invoked with kong
+   * All times are in millisecond
+
+| _                                                            | 2+2 containers  | _          | _              | _        | 3+3 containers  | _        |  4+4 containers  | _        | 
+|--------------------------------------------------------------|-----------------|------------|----------------|----------|-----------------|----------|------------------|----------| 
+| URL                                                          | Thread Count    | Loop Count | Throughput/sec | Avg (ms) | Throughput/sec  | Avg (ms) | Throughput/sec   | Avg (ms) | 
+| /api/data/v1/system/settings/get                             | 400             | 100        | 702.8          | 286      | 666.7           | 325      | 750.4            | 249      | 
+| /user/v1/get/email/email                                     | 400             | 20         | 295.8          | 1221     | 267.2           | 1149     | 267.8            | 1369     | 
+| /data/v1/role/read                                           | 400             | 20         | 476.1          | 476      | 294.8           | 1055     | 574.5            | 514      | 
+| /auth/realms/sunbird/protocol/openid-connect/token           | 400             | 20         | 348.3          | 983      | 343.4           | 1051     | 360.2            | 991      | 
+| (user/v2/read/{userId}?fields=organisations,roles,locations) | 400             | 60         | 178.9          | 1979     | 120.9           | 2787     | 150.8            | 2188     | 
+
+
+### 8. Learner service APIs Reoprt Before/After optimizations:
+
+   * These were captured before and after optimizations were applied to the individual APIs.
+   * All times are in millisecond
+
+| _                          | _                                                            | Before optimizations | _                          | _          | _              | After optimizations | _                          | _          | _              | _        | 
+|----------------------------|--------------------------------------------------------------|----------------------|----------------------------|------------|----------------|---------------------|----------------------------|------------|----------------|----------| 
+| API                        | URL used in test                                             | Thread Count         | Ramp-up Period(in Seconds) | Loop Count | Throughput/sec | Thread Count        | Ramp-up Period(in Seconds) | Loop Count | Throughput/sec | Avg (ms) | 
+| system settings read       | /api/data/v1/system/settings/get                             | 100                  | 30                         | 100        | 1122           | 400                 | 30                         | 300        | 2175.5         | 106      | 
+| get user by email or phone | /user/v1/get/email/email                                     | 100                  | 30                         | 20         | 66             | 100                 | 30                         | 1000       | 1424.5         | 65       | 
+| role read                  | /data/v1/role/read                                           | 250                  | 10                         | 120        | 40        | 400                 | 30                         | 300        | 1219.9         | 305      | 
+| generate token             | /auth/realms/sunbird/protocol/openid-connect/token           | 150                  | 10                         | 100        | 211            | 100                 | 30                         | 3000       | 678.4          | 144      | 
+| user Profile read          | (user/v2/read/{userId}?fields=organisations,roles,locations) | 100                  | 10                         | 40         | 142            | 400                 | 30                         | 300        | 286.6          | 1267     | 
+| org search                 | org/v1/search                                                | 100                  | 30                         | 20         | 455            | 400                 | 30                         | 300        | 1130.8         | 333      | 
+| otp generate               | /v1/otp/generate                                             | 200                  | 10                         | 60         | 563            | 400                 | 30                         | 100        | 1314           | 265      | 
+| Create user                | api/user/v1/signup                                           | 100                  | 30                         | 20         | 24             | 80                  | 30                         | 100        | 111.1          | 636      | 
+| Login                      | Login scenerio (4 Apis)                                      | _                    | _                          | _          | _              | 160                 | 30                         | 100        | 474.6          | 315      | 
+
+
+
+### 9. Learner service APIs being invoked Without KONG
+
+   * These were captured before optimizations were applied to the individual APIs.
+   * Each API is tested with 20,000 hashing 
+   * Each API was invoked with out kong
+   * All times are in millisecond
+
+| _                          | 4 (2+2) containers  | _          | _              | _    |  6 (3+3) containers  | _          | _              | _    | 8(4+4) containers  | _          | _              | _    | 
+|----------------------------|---------------------|------------|----------------|------|----------------------|------------|----------------|------|--------------------|------------|----------------|------| 
+| API                        | Thread Count        | Loop Count | Throughput/sec | Avg  | Thread Count         | Loop Count | Throughput/sec | Avg  | Thread Count       | Loop Count | Throughput/sec | Avg  | 
+| system settings read       | 100                 | 300        | 1584.8         | 145  | 100                  | 300        | 1591.2         | 160  | 100                | 300        | 2175.5         | 106  | 
+| get user by email or phone | 100                 | 100        | 237.6          | 1518 | 100                  | 300        | 581            | 620  | 100                | 300        | 820.6          | 461  | 
+| user Profile read          | 100                 | 100        | 114.6          | 2926 | 100                  | 100        | 193.4          | 1666 | 100                | 100        | 278.7          | 1196 | 
+| role read                  | 100                 | 200        | 218.9          | 1754 | 100                  | 200        | 839.2          | 416  | 100                | 300        | 1219.9         | 305  | 
+| org search                 | 100                 | 100        | 253.7          | 1188 | 100                  | 300        | 925.1          | 406  | 100                | 300        | 1130.8         | 333  | 
+| otp generate               | 100                 | 100        | 1314           | 265  | 100                  | 100        | 1298.3         | 269  | 100                | 100        | 1268.1         | 271  | 
+| User-existence             | 100                 | 100        | 224.4          | 1682 | 100                  | 200        | 940.7          | 367  | 100                | 300        | 1176           | 285  | 
+| Verify OTP                 | 100                 | 60         | 582.6          | 547  | 100                  | 50         | 998.3          | 374  | 100                | 60         | 1402           | 230  | 
+
+
+
+
+### Running the scenarios
+#### 1. user-create.jmx
+
+This scenario file contains the following API's which will be invoked as part of the run
+
+**user-create :** api/user/v1/signup
+
+This scenario uses the following csv files:
+- user-create-test-data.csv
+- host.csv
+
+Below is an example on how to run this scenario:
+CD to Folder path: ~/sunbird-perf-tests/sunbird-platform/user-create
+
+This script takes 11 arguments. The order and the list of parameters required for this script are as below:
+  * Jmeter Home
+  * Jmeter Slave ips
+  * Scenario_name
+  * Scenario ID - This will be directory name where the log files will be saved
+  * Number of threads
+  * Ramp up time
+  * Number of loops
+  *  bearer apiKey 
+  * Host file path
+  * Test data file path
+  * API url
+
+**Execution command:-**
+./run_scenario.sh /mount/data/benchmark/apache-jmeter-4.0/ 'JmeterSlave1IP,JmeterSlave2IP,JmeterSlave3IP' user-create user-create-R1 THREAD_SIZE  RAMPUP LOOPCOUNT bearerAPIKey ~/sunbird-perf-tests/sunbird-platform/user-create/host.csv ~/sunbird-perf-tests/sunbird-platform/user-create/user-create-test-data.csv api/user/v1/signup
+
+
+Here is the command to generate test data required to create user:
+command: ./generate-test-data.sh 60 60 60 0
+(This will create test data with 60 users with file name user-create-test-data.csv)
+ 
+
+#### 2. login.jmx
+
+This scenario file contains the following API's which will be invoked as part of the run
+
+**Login APIs:** 
+/resources/
+/auth/realms/sunbird/protocol/openid-connect/auth
+/auth/realms/sunbird/login-actions/authenticate
+/resources
+
+This scenario uses the following csv files:
+- user-data.csv
+- host.csv
+
+Below is an example on how to run this scenario:
+CD to Folder path: ~/sunbird-perf-tests/sunbird-platform/login
+
+This script takes 9 arguments. The order and the list of parameters required for this script are as below:
+  * Jmeter Home
+  * Jmeter Slave ips
+  * Scenario_name  - This will be directory name
+  * Scenario ID - This will be directory name where the log files will be saved
+  * Number of threads
+  * Ramp up time
+  * Number of loops
+  * Host file path
+  * Test data file path
+
+**Execution command:-**
+./run_scenario.sh /mount/data/benchmark/apache-jmeter-4.0/ 'JmeterSlave1IP,JmeterSlave2IP,JmeterSlave3IP' login login-Run1 THREAD_SIZE RAMPUP LOOPCOUNT  ~/sunbird-perf-tests/sunbird-platform/host.csv  ~/sunbird-perf-tests/sunbird-platform/login/user-data.csv
+
+
+
+#### 3. system-settings.jmx
+
+This scenario file contains the following API's which will be invoked as part of the run
+
+**System Settings Read:** /api/data/v1/system/settings/get
+
+This scenario uses the following csv files:
+- system-settings.csv
+- host.csv
+
+Below is an example on how to run this scenario:
+CD to Folder path: ~/sunbird-perf-tests/sunbird-platform/system-settings
+
+This script takes 11 arguments. The order and the list of parameters required for this script are as below:
+  * Jmeter Home
+  * Jmeter Slave ips
+  * Scenario_name  - This will be directory name
+  * Scenario ID - This will be directory name where the log files will be saved
+  * Number of threads
+  * Ramp up time
+  * Number of loops
+  * bearer apiKey
+  * Host file path
+  * Test data file path
+  * API url
+
+**Execution command:-**
+./run_scenario.sh /mount/data/benchmark/apache-jmeter-4.0/ 'JmeterSlave1IP,JmeterSlave2IP,JmeterSlave3IP' system-settings system-settings-Run1 THREAD_SIZE RAMPUP LOOPCOUNT  bearerAPIKey ~/sunbird-perf-tests/sunbird-platform/system-settings/system-settings.csv ~/sunbird-perf-tests/sunbird-platform/host.csv /api/data/v1/system/settings/get
+ 
+ 
+#### 4. user-get.jmx
+
+This scenario file contains the following API's which will be invoked as part of the run
+
+**Get User by Email or Phone:** /api/user/v1/get/email
+
+This scenario uses the following csv files:
+- user-get.csv
+- host.csv
+
+Below is an example on how to run this scenario:
+CD to Folder path: ~/sunbird-perf-tests/sunbird-platform/user-get
+
+This script takes 11 arguments. The order and the list of parameters required for this script are as below:
+  * Jmeter Home
+  * Jmeter Slave ips
+  * Scenario_name  - This will be directory name
+  * Scenario ID - This will be directory name where the log files will be saved
+  * Number of threads
+  * Ramp up time
+  * Number of loops
+  * bearer apiKey
+  * Host file path
+  * Test data file path
+  * API url
+
+**Execution command:-**
+ ./run_scenario.sh /mount/data/benchmark/apache-jmeter-4.0/ 'JmeterSlave1IP,JmeterSlave2IP,JmeterSlave3IP'  user-get user-get-Run1 THREAD_SIZE RAMPUP LOOPCOUNT bearerAPIKey ~/sunbird-perf-tests/sunbird-platform/host.csv ~/sunbird-perf-tests/sunbird-platform/user-get/user-get.csv /api/user/v1/get/email
+ 
+ 
+#### 5. user-read.jmx
+
+This scenario file contains the following API's which will be invoked as part of the run
+
+**User Profile Read:** /api/user/v2/read
+
+This scenario uses the following csv files:
+- userId.csv
+- host.csv
+
+Below is an example on how to run this scenario:
+CD to Folder path: ~/sunbird-perf-tests/sunbird-platform/user-read
+
+This script takes 12 arguments. The order and the list of parameters required for this script are as below:
+  * Jmeter Home
+  * Jmeter Slave ips
+  * Scenario_name  - This will be directory name
+  * Scenario ID - This will be directory name where the log files will be saved
+  * Number of threads
+  * Ramp up time
+  * Number of loops
+  * bearer apiKey
+  * User Name - used to generate authenticated-user-token
+  * Host file path
+  * Test data file path
+  * API url
+
+**Execution command:-**
+ ./run_scenario.sh /mount/data/benchmark/apache-jmeter-4.0/ 'JmeterSlave1IP,JmeterSlave2IP,JmeterSlave3IP' user-read user-read-Run1 THREAD_SIZE RAMPUP LOOPCOUNT  bearerAPIKey username ~/sunbird-perf-tests/sunbird-platform/host.csv ~/sunbird-perf-tests/sunbird-platform/user-read/userId.csv /api/user/v2/read
+
+
+#### 6. user-role-read.jmx
+
+This scenario file contains the following API's which will be invoked as part of the run
+
+**Role Read:** /api/data/v1/role/read
+
+This scenario uses the following csv files:
+- host.csv
+
+Below is an example on how to run this scenario:
+CD to Folder path: ~/sunbird-perf-tests/sunbird-platform/user-role-read
+
+This script takes 12 arguments. The order and the list of parameters required for this script are as below:
+  * Jmeter Home
+  * Jmeter Slave ips
+  * Scenario_name  - This will be directory name
+  * Scenario ID - This will be directory name where the log files will be saved
+  * Number of threads
+  * Ramp up time
+  * Number of loops
+  * bearer apiKey
+  * Access Token Url  - example: loadtest.ntp.net.in
+  * User Name - used to generate authenticated-user-token
+  * Host file path
+  * API url
+
+**Execution command:-**
+./run_scenario.sh /mount/data/benchmark/apache-jmeter-4.0/ 'JmeterSlave1IP,JmeterSlave2IP,JmeterSlave3IP' user-role-read user-role-read-run1 THREAD_SIZE RAMPUP LOOPCOUNT  bearerAPIKey  accessTokenUrl username ~/sunbird-perf-tests/sunbird-platform/host.csv /api/data/v1/role/read
+
+
+
+#### 7. generate-token.jmx
+
+This scenario file contains the following API's which will be invoked as part of the run
+
+**Generate Token:** /auth/realms/sunbird/protocol/openid-connect/token
+
+This scenario uses the following csv files:
+- host.csv
+- user-data.csv
+
+Below is an example on how to run this scenario:
+CD to Folder path: ~/sunbird-perf-tests/sunbird-platform/generate-token
+
+This script takes 10 arguments. The order and the list of parameters required for this script are as below:
+  * Jmeter Home
+  * Jmeter Slave ips
+  * Scenario_name  - This will be directory name
+  * Scenario ID - This will be directory name where the log files will be saved
+  * Number of threads
+  * Ramp up time
+  * Number of loops
+  * Host file path
+  * Test data file path
+  * API url
+
+**Execution command:-**
+./run_scenario.sh /mount/data/benchmark/apache-jmeter-4.0/ 'JmeterSlave1IP,JmeterSlave2IP,JmeterSlave3IP' generate-token generate-token-Run1 THREAD_SIZE RAMPUP LOOPCOUNT ~/sunbird-perf-tests/sunbird-platform/host.csv ~/sunbird-perf-tests/sunbird-platform/generate-token/user-data.csv /auth/realms/sunbird/protocol/openid-connect/token
+
+
+ 
+#### 8. org-search.jmx
+
+This scenario file contains the following API's which will be invoked as part of the run
+
+**Org Search:** /api/org/v1/search
+
+This scenario uses the following csv files:
+- host.csv
+- org-search-request.csv
+
+Below is an example on how to run this scenario:
+CD to Folder path: ~/sunbird-perf-tests/sunbird-platform/org-search
+
+This script takes 11 arguments. The order and the list of parameters required for this script are as below:
+  * Jmeter Home
+  * Jmeter Slave ips
+  * Scenario_name  - This will be directory name
+  * Scenario ID - This will be directory name where the log files will be saved
+  * Number of threads
+  * Ramp up time
+  * Number of loops
+  * bearer apiKey
+  * Host file path
+  * Test data file path
+  * API url
+
+**Execution command:-**
+./run_scenario.sh /mount/data/benchmark/apache-jmeter-4.0/ 'JmeterSlave1IP,JmeterSlave2IP,JmeterSlave3IP' org-search org-search-Run1 THREAD_SIZE RAMPUP LOOPCOUNT bearerAPIKey ~/sunbird-perf-tests/sunbird-platform/host.csv /api/org/v1/search ~/sunbird-perf-tests/sunbird-platform/org-search/org-search-request.csv
+
+
+#### 9. generate-otp.jmx
+
+This scenario file contains the following API's which will be invoked as part of the run
+
+**OTP Generate:** /api/otp/v1/generate
+
+This scenario uses the following csv files:
+- host.csv
+- user-data.csv
+
+Below is an example on how to run this scenario:
+CD to Folder path: ~/sunbird-perf-tests/sunbird-platform/generate-otp
+
+This script takes 11 arguments. The order and the list of parameters required for this script are as below:
+  * Jmeter Home
+  * Jmeter Slave ips
+  * Scenario_name  - This will be directory name
+  * Scenario ID - This will be directory name where the log files will be saved
+  * Number of threads
+  * Ramp up time
+  * Number of loops
+  * bearer apiKey
+  * Host file path
+  * Test data file path
+  * API url
+
+**Execution command:-**
+./run_scenario.sh /mount/data/benchmark/apache-jmeter-4.0/ 'JmeterSlave1IP,JmeterSlave2IP,JmeterSlave3IP' generate-otp generate-otp-Run1 THREAD_SIZE RAMPUP LOOPCOUNT bearerAPIKey ~/sunbird-perf-tests/sunbird-platform/host.csv ~/sunbird-perf-tests/sunbird-platform/user-create/user-data.csv  /api/otp/v1/generate
+
+
+#### 10. verify-otp.jmx
+
+This scenario file contains the following API's which will be invoked as part of the run
+
+**Verify OTP:** /api/otp/v1/verify
+
+This scenario uses the following csv files:
+- host.csv
+- user-data.csv
+
+Below is an example on how to run this scenario:
+CD to Folder path: ~/sunbird-perf-tests/sunbird-platform/verify-otp
+
+This script takes 11 arguments. The order and the list of parameters required for this script are as below:
+  * Jmeter Home
+  * Jmeter Slave ips
+  * Scenario_name  - This will be directory name
+  * Scenario ID - This will be directory name where the log files will be saved
+  * Number of threads
+  * Ramp up time
+  * Number of loops
+  *  bearer apiKey
+  * Host file path
+  * Test data file path
+  * API url
+
+**Execution command:-**
+./run_scenario.sh /mount/data/benchmark/apache-jmeter-4.0/ 'JmeterSlave1IP,JmeterSlave2IP,JmeterSlave3IP' verify-otp verify-otp-Run1 THREAD_SIZE RAMPUP LOOPCOUNT bearerAPIKey ~/sunbird-perf-tests/sunbird-platform/host.csv  ~/sunbird-perf-tests/sunbird-platform/verify-otp/user-data.csv  /api/otp/v1/verify
+ 
+
+#### 11. user-existence.jmx
+
+This scenario file contains the following API's which will be invoked as part of the run
+
+**User Exist:** /v1/user/exists/email
+
+This scenario uses the following csv files:
+- host.csv
+- user-data.csv
+
+Below is an example on how to run this scenario:
+CD to Folder path: ~/sunbird-perf-tests/sunbird-platform/user-existence
+
+This script takes 11 arguments. The order and the list of parameters required for this script are as below:
+  * Jmeter Home
+  * Jmeter Slave ips
+  * Scenario_name  - This will be directory name
+  * Scenario ID - This will be directory name where the log files will be saved
+  * Number of threads
+  * Ramp up time
+  * Number of loops
+  *  bearer apiKey
+  * User Name - used to generate authenticated-user-token
+  * Host file path
+  * Test data file path
+  * API url
+
+**Execution command:-**
+./run_scenario.sh /mount/data/benchmark/apache-jmeter-4.0/ 'JmeterSlave1IP,JmeterSlave2IP,JmeterSlave3IP' user-existence user-existence-Run1 THREAD_SIZE RAMPUP LOOPCOUNT bearerAPIKey username ~/sunbird-perf-tests/sunbird-platform/host.csv ~/sunbird-perf-tests/sunbird-platform/user-existence/user-data.csv /v1/user/exists/email
