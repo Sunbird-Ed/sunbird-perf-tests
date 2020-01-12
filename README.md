@@ -678,7 +678,7 @@ Below is an example on how to run this scenario from your **jmeter_installation_
 * Each API is tested with 20,000 hashing 
 * Each API was invoked directly on domain url
 
-| _                                                            | 2+2 containers  | _          | _              | _        | 3+3 containers  | _        |  4+4 containers  | _        | 
+|                                                              | 2+2 containers  |            |                |          | 3+3 containers  |          |  4+4 containers  |          | 
 |--------------------------------------------------------------|-----------------|------------|----------------|----------|-----------------|----------|------------------|----------| 
 | URL                                                          | Thread Count    | Loop Count | Throughput/sec | Avg (ms) | Throughput/sec  | Avg (ms) | Throughput/sec   | Avg (ms) | 
 | /api/data/v1/system/settings/get                             | 400             | 100        | 702.8          | 286      | 666.7           | 325      | 750.4            | 249      | 
@@ -696,7 +696,7 @@ Below is an example on how to run this scenario from your **jmeter_installation_
 * Each API is tested with 20,000 hashing
 
 
-| _                          | _                                                            | Before optimizations | _                          | _          | _              | After optimizations | _                          | _          | _              | _        | 
+|                             |                                                               | Before optimizations |                             |             |                 | After optimizations |                           |           |               |         | 
 |----------------------------|--------------------------------------------------------------|----------------------|----------------------------|------------|----------------|---------------------|----------------------------|------------|----------------|----------| 
 | API                        | URL used in test                                             | Thread Count         | Ramp-up Period(in Seconds) | Loop Count | Throughput/sec | Thread Count        | Ramp-up Period(in Seconds) | Loop Count | Throughput/sec | Avg (ms) | 
 | system settings read       | /api/data/v1/system/settings/get                             | 100                  | 30                         | 100        | 1122           | 400                 | 30                         | 300        | 2175.5         | 106      | 
@@ -719,7 +719,7 @@ Below is an example on how to run this scenario from your **jmeter_installation_
 * Each API is tested with 20,000 hashing 
 
 
-| _                          | 4 (2+2) containers  | _          | _              | _    |  6 (3+3) containers  | _          | _              | _    | 8(4+4) containers  | _          | _              | _    | 
+|                            | 4 (2+2) containers  |            |                |      |  6 (3+3) containers  |            |                |      | 8(4+4) containers  |            |                |      | 
 |----------------------------|---------------------|------------|----------------|------|----------------------|------------|----------------|------|--------------------|------------|----------------|------| 
 | API                        | Thread Count        | Loop Count | Throughput/sec | Avg  | Thread Count         | Loop Count | Throughput/sec | Avg  | Thread Count       | Loop Count | Throughput/sec | Avg  | 
 | system settings read       | 100                 | 300        | 1584.8         | 145  | 100                  | 300        | 1591.2         | 160  | 100                | 300        | 2175.5         | 106  | 
