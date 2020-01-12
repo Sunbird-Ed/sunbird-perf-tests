@@ -626,7 +626,7 @@ Below is an example on how to run this scenario from your **jmeter_installation_
 50+ users can signup / login every second with 2 Keycloak nodes. A 50% drop as compared to 4 Keyclaok nodes.
 
 
-### 5. Few more apis invoked with 2 Keycloak nodes
+### 5. Few Learner Service APIs invoked with 2 Keycloak nodes
 
 * These were captured after optimizations were applied to the individual APIs
 * Each API is tested with 1 hashing 
@@ -648,7 +648,7 @@ Below is an example on how to run this scenario from your **jmeter_installation_
 | Login Scenerio                    | 4 APIs                                             | 100          | 30                         | 750        | 358.8          | 213      | 
 
 
-### 6. Few more apis invoked with 4 Keycloak nodes
+### 6. Few Learner Service APIs invoked with 4 Keycloak nodes
 
 * These were captured after optimizations were applied to the individual APIs
 * Each API is tested with 1 hashing 
@@ -672,12 +672,11 @@ Below is an example on how to run this scenario from your **jmeter_installation_
 | Login Scenerio                    | All 4 APIs                                         | 100          | 30                         | 750        | 491.2          | 183 | 
 
 
-### 7. Learner service APIs being invoked with KONG 9:
+### 7. Few Learner Service APIs invoked before optimizations
 
-   * These were captured before optimizations were applied to the individual APIs.
-   * Each API is tested with 20,000 hashing 
-   * Each API was invoked with kong
-   * All times are in millisecond
+* These were captured before *optimizations* were applied to the individual APIs
+* Each API is tested with 20,000 hashing 
+* Each API was invoked directly on domain url
 
 | _                                                            | 2+2 containers  | _          | _              | _        | 3+3 containers  | _        |  4+4 containers  | _        | 
 |--------------------------------------------------------------|-----------------|------------|----------------|----------|-----------------|----------|------------------|----------| 
@@ -689,10 +688,13 @@ Below is an example on how to run this scenario from your **jmeter_installation_
 | (user/v2/read/{userId}?fields=organisations,roles,locations) | 400             | 60         | 178.9          | 1979     | 120.9           | 2787     | 150.8            | 2188     | 
 
 
-### 8. Learner service APIs Reoprt Before/After optimizations:
+### 8. Few Learner Service APIs invoked on Port 9000 - Before / After optimizations
 
-   * These were captured before and after optimizations were applied to the individual APIs.
-   * All times are in millisecond
+* This run did not go through the regular flow which includes proxy and kong
+* These APIs were invoked directly against learner service on port 9000
+* The table shows the TPS of each API before and after the optimizations
+* Each API is tested with 20,000 hashing
+
 
 | _                          | _                                                            | Before optimizations | _                          | _          | _              | After optimizations | _                          | _          | _              | _        | 
 |----------------------------|--------------------------------------------------------------|----------------------|----------------------------|------------|----------------|---------------------|----------------------------|------------|----------------|----------| 
@@ -709,12 +711,13 @@ Below is an example on how to run this scenario from your **jmeter_installation_
 
 
 
-### 9. Learner service APIs being invoked Without KONG
+### 9. Learner Service APIs being invoked on Port 9000 - Variying the replica count
 
-   * These were captured before optimizations were applied to the individual APIs.
-   * Each API is tested with 20,000 hashing 
-   * Each API was invoked with out kong
-   * All times are in millisecond
+* These were captured before *optimizations* were applied to the individual APIs.
+* This run did not go through the regular flow which includes proxy and kong
+* These APIs were invoked directly against learner service on port 9000
+* Each API is tested with 20,000 hashing 
+
 
 | _                          | 4 (2+2) containers  | _          | _              | _    |  6 (3+3) containers  | _          | _              | _    | 8(4+4) containers  | _          | _              | _    | 
 |----------------------------|---------------------|------------|----------------|------|----------------------|------------|----------------|------|--------------------|------------|----------------|------| 
