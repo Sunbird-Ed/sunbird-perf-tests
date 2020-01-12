@@ -737,13 +737,13 @@ Below is an example on how to run this scenario from your **jmeter_installation_
 
 * Clone this repository and in your `$HOME` directory. If you have cloned this into some other directory, then in all the sample execution commands which are shown below, change `~/sunbird-perf-tests/sunbird-platform/`  to the cloned directory
 
-* In all the sample execution commands which are shown below, `/mount/data/benchmark/apache-jmeter-4.0/` is the Jmeter home directory. This needs to be changed according to your local setup. If you have used this [Installation Details](#installation-details, then use `~/benchmark/apache-jmeter-4.0/` in your execution.
+* In all the sample execution commands which are shown below, `/mount/data/benchmark/apache-jmeter-4.0/` is the Jmeter home directory. This needs to be changed according to your local setup. If you have used this [Installation Details](#installation-details), then use `~/benchmark/apache-jmeter-4.0/` in your execution.
 
 * All CSV files required for exection have dummy data in them. Remove the dummy data and update the CSV file with valid data. The format of data / contents required are explained within the CSV file.
 
-* In all the sample execution commands shown below, `JmeterSlave1IP,JmeterSlave2IP,JmeterSlave3IP` is a comma separated list of Jmeter IP's. If you are using only 1 Jmeter machine (master + slave), provide just 1 IP here.
+* In all the sample execution commands shown below, `JmeterSlave1IP,JmeterSlave2IP,JmeterSlave3IP` is a comma separated list of Jmeter slave IP's. If you are using only one Jmeter machine (master + slave), provide just one IP here.
 
-* In all our tests, we did not use the master Jmeter server to run any actual tests (only orchestrate and generate reports). Our setup included 4 slaves and 1 master. You are free to customize this as per your need.
+* In all our tests, we did not use the master Jmeter server to run any actual tests (only orchestrate and generate reports). Our setup included four slaves and one master. You are free to customize this as per your need.
 
 
 #### 1. user-create.jmx
