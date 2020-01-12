@@ -733,8 +733,19 @@ Below is an example on how to run this scenario from your **jmeter_installation_
 
 
 
-
 ### Running the scenarios
+
+* Clone this repository and in your $HOME directory. If you have cloned this into some other directory, then in all the sample execution commands which are shown below, change *~/sunbird-perf-tests/sunbird-platform/*  to the cloned directory
+
+* In all the sample execution commands which are shown below, */mount/data/benchmark/apache-jmeter-4.0/* is the Jmeter home directory. This needs to be chnaged according to your local setup. If you have used the installation script to install Jmeter (steps above), use *~/benchmark/apache-jmeter-4.0/*
+
+* All CSV files required for exection have dummy data in them. Remove the dummy data and update the CSV file with correct data. The format of data / contents required are explained within the CSV file.
+
+* In all the same execution commands shown below, *JmeterSlave1IP,JmeterSlave2IP,JmeterSlave3IP* is a comma separated list of Jmeter IP's. If you are using only 1 Jmeter machine (master + slave), provide just 1 IP here.
+
+* In all our tests, we did not use the master Jmeter server to run any actual tests (only orchestrate and create reports). So our setup included 4 slaves and 1 Jmeter master. You are free to customize this as per your need.
+
+
 #### 1. user-create.jmx
 
 This scenario file contains the following API's which will be invoked as part of the run
@@ -763,6 +774,7 @@ This script takes 11 arguments. The order and the list of parameters required fo
   * API url
 
 **Execution command:-**
+
 ```./run_scenario.sh /mount/data/benchmark/apache-jmeter-4.0/ 'JmeterSlave1IP,JmeterSlave2IP,JmeterSlave3IP' user-create user-create-R1 THREAD_SIZE  RAMPUP LOOPCOUNT bearerAPIKey ~/sunbird-perf-tests/sunbird-platform/user-create/host.csv ~/sunbird-perf-tests/sunbird-platform/user-create/user-create-test-data.csv api/user/v1/signup```
 
 
@@ -777,7 +789,6 @@ This will create test data with 60 users with file name user-create-test-data.cs
 
 This scenario file contains the following API's which will be invoked as part of the run
 
-**Login APIs:** 
 * */resources/*
 * */auth/realms/sunbird/protocol/openid-connect/auth*
 * */auth/realms/sunbird/login-actions/authenticate*
@@ -803,6 +814,7 @@ This script takes 9 arguments. The order and the list of parameters required for
   * Test data file path
 
 **Execution command:-**
+
 ```./run_scenario.sh /mount/data/benchmark/apache-jmeter-4.0/ 'JmeterSlave1IP,JmeterSlave2IP,JmeterSlave3IP' login login-Run1 THREAD_SIZE RAMPUP LOOPCOUNT  ~/sunbird-perf-tests/sunbird-platform/host.csv  ~/sunbird-perf-tests/sunbird-platform/login/user-data.csv```
 
 
@@ -835,6 +847,7 @@ This script takes 11 arguments. The order and the list of parameters required fo
   * API url
 
 **Execution command:-**
+
 ```./run_scenario.sh /mount/data/benchmark/apache-jmeter-4.0/ 'JmeterSlave1IP,JmeterSlave2IP,JmeterSlave3IP' system-settings system-settings-Run1 THREAD_SIZE RAMPUP LOOPCOUNT  bearerAPIKey ~/sunbird-perf-tests/sunbird-platform/system-settings/system-settings.csv ~/sunbird-perf-tests/sunbird-platform/host.csv /api/data/v1/system/settings/get```
  
  
@@ -866,6 +879,7 @@ This script takes 11 arguments. The order and the list of parameters required fo
   * API url
 
 **Execution command:-**
+
 ```./run_scenario.sh /mount/data/benchmark/apache-jmeter-4.0/ 'JmeterSlave1IP,JmeterSlave2IP,JmeterSlave3IP'  user-get user-get-Run1 THREAD_SIZE RAMPUP LOOPCOUNT bearerAPIKey ~/sunbird-perf-tests/sunbird-platform/host.csv ~/sunbird-perf-tests/sunbird-platform/user-get/user-get.csv /api/user/v1/get/email```
  
  
@@ -898,6 +912,7 @@ This script takes 12 arguments. The order and the list of parameters required fo
   * API url
 
 **Execution command:-**
+
 ``` ./run_scenario.sh /mount/data/benchmark/apache-jmeter-4.0/ 'JmeterSlave1IP,JmeterSlave2IP,JmeterSlave3IP' user-read user-read-Run1 THREAD_SIZE RAMPUP LOOPCOUNT  bearerAPIKey username ~/sunbird-perf-tests/sunbird-platform/host.csv ~/sunbird-perf-tests/sunbird-platform/user-read/userId.csv /api/user/v2/read```
 
 
@@ -929,8 +944,8 @@ This script takes 12 arguments. The order and the list of parameters required fo
   * API url
 
 **Execution command:-**
-```./run_scenario.sh /mount/data/benchmark/apache-jmeter-4.0/ 'JmeterSlave1IP,JmeterSlave2IP,JmeterSlave3IP' user-role-read user-role-read-run1 THREAD_SIZE RAMPUP LOOPCOUNT  bearerAPIKey  accessTokenUrl username ~/sunbird-perf-tests/sunbird-platform/host.csv /api/data/v1/role/read```
 
+```./run_scenario.sh /mount/data/benchmark/apache-jmeter-4.0/ 'JmeterSlave1IP,JmeterSlave2IP,JmeterSlave3IP' user-role-read user-role-read-run1 THREAD_SIZE RAMPUP LOOPCOUNT  bearerAPIKey  accessTokenUrl username ~/sunbird-perf-tests/sunbird-platform/host.csv /api/data/v1/role/read```
 
 
 #### 7. generate-token.jmx
@@ -960,6 +975,7 @@ This script takes 10 arguments. The order and the list of parameters required fo
   * API url
 
 **Execution command:-**
+
 ```./run_scenario.sh /mount/data/benchmark/apache-jmeter-4.0/ 'JmeterSlave1IP,JmeterSlave2IP,JmeterSlave3IP' generate-token generate-token-Run1 THREAD_SIZE RAMPUP LOOPCOUNT ~/sunbird-perf-tests/sunbird-platform/host.csv ~/sunbird-perf-tests/sunbird-platform/generate-token/user-data.csv /auth/realms/sunbird/protocol/openid-connect/token```
 
 
@@ -992,6 +1008,7 @@ This script takes 11 arguments. The order and the list of parameters required fo
   * API url
 
 **Execution command:-**
+
 ```./run_scenario.sh /mount/data/benchmark/apache-jmeter-4.0/ 'JmeterSlave1IP,JmeterSlave2IP,JmeterSlave3IP' org-search org-search-Run1 THREAD_SIZE RAMPUP LOOPCOUNT bearerAPIKey ~/sunbird-perf-tests/sunbird-platform/host.csv /api/org/v1/search ~/sunbird-perf-tests/sunbird-platform/org-search/org-search-request.csv```
 
 
@@ -1023,6 +1040,7 @@ This script takes 11 arguments. The order and the list of parameters required fo
   * API url
 
 **Execution command:-**
+
 ```./run_scenario.sh /mount/data/benchmark/apache-jmeter-4.0/ 'JmeterSlave1IP,JmeterSlave2IP,JmeterSlave3IP' generate-otp generate-otp-Run1 THREAD_SIZE RAMPUP LOOPCOUNT bearerAPIKey ~/sunbird-perf-tests/sunbird-platform/host.csv ~/sunbird-perf-tests/sunbird-platform/user-create/user-data.csv  /api/otp/v1/generate```
 
 
@@ -1054,6 +1072,7 @@ This script takes 11 arguments. The order and the list of parameters required fo
   * API url
 
 **Execution command:-**
+
 ```./run_scenario.sh /mount/data/benchmark/apache-jmeter-4.0/ 'JmeterSlave1IP,JmeterSlave2IP,JmeterSlave3IP' verify-otp verify-otp-Run1 THREAD_SIZE RAMPUP LOOPCOUNT bearerAPIKey ~/sunbird-perf-tests/sunbird-platform/host.csv  ~/sunbird-perf-tests/sunbird-platform/verify-otp/user-data.csv  /api/otp/v1/verify```
  
 
@@ -1086,4 +1105,5 @@ This script takes 11 arguments. The order and the list of parameters required fo
   * API url
 
 **Execution command:-**
+
 ```./run_scenario.sh /mount/data/benchmark/apache-jmeter-4.0/ 'JmeterSlave1IP,JmeterSlave2IP,JmeterSlave3IP' user-existence user-existence-Run1 THREAD_SIZE RAMPUP LOOPCOUNT bearerAPIKey username ~/sunbird-perf-tests/sunbird-platform/host.csv ~/sunbird-perf-tests/sunbird-platform/user-existence/user-data.csv /v1/user/exists/email```
