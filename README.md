@@ -520,25 +520,24 @@ Below is an example on how to run this scenario from your **jmeter_installation_
 
 `./run_scenario.sh DeviceRegister 10 5 30 http 443 DeviceRegister.jmx`
 
-##  Learner Service Test Results 
+##  User / Org API's Load Test Results
 
 **Benchmarking Details:**
-   * These were captured after optimizations were applied to the individual APIs.
-   * Each API is tested with 20000 hashing – This is a feature in Keycloak for "Password Policy" where keycloak hashes the password 20,000 times before saving in the database.
-   * Each API was invoked directly on domain url
-   * Each API test was run for at least 15 mins
-   * Infrastructure used in this run:
-- 3 Cassandra Nodes (4 vcpus, 16 GiB memory) 
-- 3 Application Elasticsearch Nodes (8 vcpus, 32 GiB memory)
-- 4 Keyclaok Nodes (4 vcpus, 8 GiB memory)
-- Postgres - 4 vCPU 
-- 6 Learner Service Replicas
-- 12 Proxy Replicas
-- 6 Kong Replicas
-- 8 Player Service Replicas
+* These were captured after optimizations were applied to the individual APIs.
+* Each API is tested with 20000 hashing – This is a feature in Keycloak for "Password Policy" where keycloak hashes the password 20,000 times before saving in the database.
+* Each API was invoked directly on domain url
+* Infrastructure used in this run:
+  - 3 Cassandra Nodes (4 vcpus, 16 GiB memory) 
+  - 3 Application Elasticsearch Nodes (8 vcpus, 32 GiB memory)
+  - 4 Keycloak Nodes (4 vcpus, 8 GiB memory)
+  - Postgres (4 vcps )
+  - 6 Learner Service Replicas
+  - 12 Proxy Replicas
+  - 6 Kong Replicas
+  - 8 Player Service Replicas
   
   
-### 1. User SignUp API:
+### 1. User Signup API:
 
 | API         | URL used in Test   | Thread Count | Ramp-up Period(in Seconds) | Loop Count | Throughput/sec | Avg (ms) | 95th pct | 99th pct | 
 |-------------|--------------------|--------------|----------------------------|------------|----------------|----------|----------|----------| 
@@ -547,9 +546,6 @@ Below is an example on how to run this scenario from your **jmeter_installation_
 | Create User | api/user/v1/signup | 120          | 30                         | 100        | 107.2          | 1039     | 2220     | 4846     | 
 | Create User | api/user/v1/signup | 160          | 30                         | 100        | 114.8          | 1318     | 3030     | 5251.84  | 
 | Create User | api/user/v1/signup | 160          | 30                         | 300        | 102.2          | 1499     | 4150     | 5981.91  | 
-
-Takeaway -
-100 users can signup every second with the above infrastructure post optimizations
 
 
 ### 2. Login API:
@@ -561,45 +557,46 @@ Takeaway -
 | Login Scenerio | All 4 APIs       | 160          | 30                         | 100        | 474.6          | 315      | 1159     | 3082     | 
 | Login Scenerio | All 4 APIs       | 160          | 30                         | 500        | 451.6          | 324      | 411      | 2413.83  | 
 
-**Below are the APIs invoked: **
+
+**Below are the APIs invoked:**
 - /resources/
 - /auth/realms/sunbird/protocol/openid-connect/auth
 - /auth/realms/sunbird/login-actions/authenticate
 - /resources
     
-Takeaway -
-100 users can login every second with the above infrastructure post optimizations
+**Takeaway**
 
-##### Optimizations / Infra Changes:
--    Keycloak node increased from 2 vcpus, 8GB to 4 vcpus, 8GB
--    Keycloak Heap size increased from default 512MB to 6GB
--    Elasticsearch node increased from 2 vcpus, 14GB to 8 vcpus, 32GB
--    Increased Elasticsearch heap size from 2GB to 16GB
--    Updated Cassandra write time out from default 2 seconds to 5 seconds
--    Updated Cassandra heap size to 4GB
--    Updated learner service env value to use 3 Elasticsearch IP instead of 1
--    Created new API endpoint for user signup - api/user/v1/signup
--    Created new API endpoint for checking if user exists using email id – api/user/v1/exists/email
--    Created the following new indexes in Keycloak database
-   *    Index on column "type" on table fed_user_credential
-   *   Index on column "user_id" on table fed_user_credential
-   *   Index on column "user_id" on table FED_USER_ATTRIBUTE
-   *   Index on column "realm_id" on table FED_USER_ATTRIBUTE
+100+ users can signup / login every second with the above infrastructure post optimizations.
+
+#### Optimizations / Infra changes done to achive this result
+* Keycloak node increased from 2 vcpus, 8GB to 4 vcpus, 8GB
+* Keycloak Heap size increased from default 512MB to 6GB
+* Elasticsearch node increased from 2 vcpus, 14GB to 8 vcpus, 32GB
+* Increased Elasticsearch heap size from 2GB to 16GB
+* Updated Cassandra write time out from default 2 seconds to 5 seconds
+* Updated Cassandra heap size to 4GB
+* Updated learner service env value to use 3 Elasticsearch IP instead of 1
+* Created a new optimised API endpoint for user signup - *api/user/v1/signup*
+* Created a new optimized API endpoint for checking if user exists using email id – *api/user/v1/exists/email*
+* Created the following new indexes in Keycloak database:
+  - Index on column "type" on table fed_user_credential
+  - Index on column "user_id" on table fed_user_credential
+  - Index on column "user_id" on table FED_USER_ATTRIBUTE
+  - Index on column "realm_id" on table FED_USER_ATTRIBUTE
         
-### 3. SignUp API being invoked with 2 keycloak nodes:        
-   * These were captured after optimizations were applied to the individual APIs.
-   * Each API is tested with 20,000 hashing 
-   * Each API was invoked directly on domain url
-   * Each API test was run for at least 15 mins
-   * Infrastructure used in this run:
-- 3 Cassandra Nodes (4 vcpus, 16 GiB memory) 
-- 3 Application Elasticsearch Nodes (8 vcpus, 32 GiB memory)
-- 2 Keyclaok Nodes (4 vcpus, 8 GiB memory)
-- Postgres - 4 vCPU 
-- 8 Learner Service Replicas
-- 12 Proxy Replicas
-- 6 Kong Replicas
-- 8 Player Service Replicas
+### 3. SignUp API invoked with 2 keycloak nodes:
+* These were captured after optimizations were applied to the individual APIs
+* Each API is tested with 20,000 hashing
+* Each API was invoked directly using domain
+* Infrastructure used in this run:
+  - 3 Cassandra Nodes (4 vcpus, 16 GiB memory) 
+  - 3 Application Elasticsearch Nodes (8 vcpus, 32 GiB memory)
+  - 2 Keyclaok Nodes (4 vcpus, 8 GiB memory)
+  - Postgres - 4 vCPU 
+  - 8 Learner Service Replicas
+  - 12 Proxy Replicas
+  - 6 Kong Replicas
+  - 8 Player Service Replicas
 
 | API         | URL used  in Test  | Thread Count | Ramp-up Period(in Seconds) | Loop Count | Throughput/sec | Avg (ms) | 95th pct | 99th pct | 
 |-------------|--------------------|--------------|----------------------------|------------|----------------|----------|----------|----------| 
