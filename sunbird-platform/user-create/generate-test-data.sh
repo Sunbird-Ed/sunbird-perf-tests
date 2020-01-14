@@ -1,15 +1,14 @@
 #!/bin/sh
 generateUserData(){
 	rm user-create-test-data.csv
-	echo "firstName,userName,email,organisationId" >> user-create-test-data.csv
+	echo "firstName,userName,email" >> user-create-test-data.csv
 	
 	local counter=1
 	while [ $counter -le $nonCustodianOrgUserCount ]
 	do
-		local orgId=school-$((((RANDOM%$rootOrgCount))+1))-$((((RANDOM%$subOrgCount))+1))
 		local name=$startTime-$counter
 		local email=$name@yopmail.com
-		echo $name,$name,$email,$orgId >> user-create-test-data.csv
+		echo $name,$name,$email >> user-create-test-data.csv
 		counter=`expr $counter + 1`
 	done
 	echo $(($counter-1)) non-custodian users data generated
