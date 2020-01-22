@@ -17,7 +17,7 @@
 | Otp generate               | 800          | 48000   | 46      | 563            | 
 
 >#### Result Analysis & findings
-
+>
 >* Create user API was performing multiple verification checks and it was not a async call which would block the requests
 >* Postgresql queries were taking a long time
 >* Cassandra was timing out during replication across nodes
@@ -42,29 +42,29 @@
 | OTP generate               | 400          | 40000   | 0           | 265      | 1314           | 
 
 
-#### Optimizations / Infra changes done to achive this result
-
-* Created a new async API end point (Sign Up API) which will create users in the custodian org
-* Changed Get user by email / phone API as an async call
-* Changes Get system settings API as an async call
-* Changes Role read and Get system settings to store data in memory with a TTL for 4 hours instead of fetching data from database always
-* Created a new API end point (User exists) which returns a boolean value to the client
-* Few APIs were made as async calls to not block the request
-* Few APIs were changed to store data in memory cache for a certain TTL instead of fetching data from database always
-* Keycloak node increased from 2 vcpus, 8GB to 4 vcpus, 8GB
-* Keycloak Heap size increased from default 512MB to 6GB
-* Elasticsearch node increased from 2 vcpus, 14GB to 8 vcpus, 32GB
-* Increased Elasticsearch heap size from 2GB to 16GB
-* Updated Cassandra write time out from default 2 seconds to 5 seconds
-* Updated Cassandra heap size to 4GB
-* Updated learner service env value to use 3 Elasticsearch IP instead of 1
-* Created a new optimised API endpoint for user signup - *api/user/v1/signup*
-* Created a new optimized API endpoint for checking if user exists using email id – *api/user/v1/exists/email*
-* Created the following new indexes in Keycloak database:
-  - Index on column "type" on table fed_user_credential
-  - Index on column "user_id" on table fed_user_credential
-  - Index on column "user_id" on table FED_USER_ATTRIBUTE
-  - Index on column "realm_id" on table FED_USER_ATTRIBUTE
+>#### Optimizations / Infra changes done to achive this result
+>
+>* Created a new async API end point (Sign Up API) which will create users in the custodian org
+>* Changed Get user by email / phone API as an async call
+>* Changes Get system settings API as an async call
+>* Changes Role read and Get system settings to store data in memory with a TTL for 4 hours instead of fetching data from database always
+>* Created a new API end point (User exists) which returns a boolean value to the client
+>* Few APIs were made as async calls to not block the request
+>* Few APIs were changed to store data in memory cache for a certain TTL instead of fetching data from database always
+>* Keycloak node increased from 2 vcpus, 8GB to 4 vcpus, 8GB
+>* Keycloak Heap size increased from default 512MB to 6GB
+>* Elasticsearch node increased from 2 vcpus, 14GB to 8 vcpus, 32GB
+>* Increased Elasticsearch heap size from 2GB to 16GB
+>* Updated Cassandra write time out from default 2 seconds to 5 seconds
+>* Updated Cassandra heap size to 4GB
+>* Updated learner service env value to use 3 Elasticsearch IP instead of 1
+>* Created a new optimised API endpoint for user signup - *api/user/v1/signup*
+>* Created a new optimized API endpoint for checking if user exists using email id – *api/user/v1/exists/email*
+>* Created the following new indexes in Keycloak database:
+>     - Index on column "type" on table fed_user_credential
+>     - Index on column "user_id" on table fed_user_credential
+>     - Index on column "user_id" on table FED_USER_ATTRIBUTE
+>     - Index on column "realm_id" on table FED_USER_ATTRIBUTE
   
   
 ### 2. APIs being invoked via Proxy & API Manager 
