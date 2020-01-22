@@ -1,4 +1,8 @@
 ##  User Management APIs Benchmarking
+
+#### Jmeter Cluster
+For benchmarking the APIs, three Jmeter clusters (1 master + 4 slaves in each cluster) were setup to perform API testing and verifying improvements in parallel.
+
 ### 1. Invoking APIs by directly calling the service
 #### APIs being invoked before optimizations
 * These APIs were invoked directly against the service without going through proxy/api manager
