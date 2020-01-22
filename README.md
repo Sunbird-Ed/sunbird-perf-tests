@@ -1,8 +1,6 @@
 # sunbird-perf-tests
 Data preparation scripts, JMX files, JMeter scripts for performance testing
 
-Please refer this section on [Installation Details](#installation-details). This will give you details on how to setup jmeter on your machines and run the benchmarking scenarios against your infrastructure.
-
 # Perf testing summary
 
 ### **Environment Details**
