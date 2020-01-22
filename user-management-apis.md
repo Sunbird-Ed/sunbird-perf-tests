@@ -155,11 +155,11 @@
 
 | API                               | Thread Count | No of Samples | Error Count | Avg | Throughput/sec |
 |-----------------------------------|--------------|---------------|-------------|-----|----------------| 
-| User profile read                 | 100          | 150000        | 73          | 403      | 241.9          | 
 | System settings read              | 100          | 200000        | 0           | 120      | 709.2          | 
 | Get User by email or phone number | 100          | 100000        | 0           | 65       | 1424.5         | 
 | Role read                         | 100          | 100000        | 0           | 142      | 674.4          | 
 | Generate token                    | 100          | 300000        | 0           | 254      | 386.9          | 
+| User profile read                 | 100          | 150000        | 73          | 403      | 241.9          | 
 | Org search                        | 100          | 500000        | 0           | 148      | 660.7          | 
 | OTP generate                      | 100          | 100000        | 0           | 141      | 675.9          | 
 | User-existence                    | 100          | 1000000       | 0           | 66       | 1445.1         | 
