@@ -18,11 +18,11 @@
 
 >#### Result Analysis & findings
 >
->* Create user API was performing multiple verification checks and it was not a async call which would block the requests
+>* Create user API was performing multiple verification checks and it was not an async call which would block the requests
 >* Postgresql queries were taking a long time
 >* Cassandra was timing out during replication across nodes
->* Heap size in Keycloak, Cassandra and Elasticsearch were incorrect
->* Keycloak memeory was reaching max during password hashing
+>* Heap sizes in Keycloak, Cassandra and Elasticsearch were incorrect
+>* Keycloak CPU was reaching max during password hashing
 >* User role and Get system setting APIs were fetching data always from database
 >* Get user by email / phone API was returning too much data back to the client
 
