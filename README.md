@@ -11,7 +11,6 @@ A new environment was created for this test. Here are the VMs and their configur
 
 
 ### Benchmarking Details
-For benchmarking the APIs, three Jmeter clusters (1 master + 4 slaves in each cluster) were setup to perform API testing and verifying improvements in parallel.
 
 Please click on the below links to get details on the benchmark results
 1. [Consumption APIs](consumption-api.md)
