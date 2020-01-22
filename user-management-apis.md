@@ -1,9 +1,10 @@
 ##  User Management APIs Benchmarking
 ### 1. Invoking APIs by directly calling the service
 #### APIs being invoked before optimizations
-* These APIs were invoked directly against the service
+* These APIs were invoked directly against the service without going through proxy/api manager
 * The table shows the TPS of each API before the optimizations
-* Each API is tested with 20,000 hashing
+* Each API is tested with 20,000 password hashing iterations in Keycloak. 
+[More details on password hashing](https://www.keycloak.org/docs/6.0/server_admin/#password-policy-types)
 
 | Api                        | Thread Count | Samples | Error % | Throughput/sec | 
 |----------------------------|--------------|---------|---------|----------------| 
@@ -21,9 +22,9 @@
 >* Create user API was performing multiple verification checks and it was not an async call which would block the requests
 >* Postgresql queries were taking a long time
 >* Cassandra was timing out during replication across nodes
->* Heap sizes in Keycloak, Cassandra and Elasticsearch were incorrect
->* Keycloak CPU was reaching max during password hashing
->* User role and Get system setting APIs were fetching data always from database
+>* Heap sizes in Keycloak, Cassandra and Elasticsearch were too low in comparison to the amount of physical memory available.
+>* Keycloak CPU was reaching max during password hashing (due to the number of iterations)
+>* User role and Get system setting APIs were fetching static data always from database
 >* Get user by email / phone API was returning too much data back to the client
 
 
@@ -48,7 +49,7 @@
 >* Created a new async API end point (Sign Up API) which will create users in the custodian org
 >* Changed Get user by email / phone API as an async call
 >* Changed Get system settings API as an async call
->* Changed Role read and Get system settings API to store data in memory with a TTL for 4 hours instead of fetching data from database always
+>* Changed Role read and Get system settings API to store static data in memory with a TTL for 4 hours instead of fetching data from database always
 >* Created a new API end point (User exists) which returns a boolean value to the client
 >* Keycloak node increased from 2 vcpus, 8GB to 4 vcpus, 8GB
 >* Keycloak Heap size increased from default 512MB to 6GB
@@ -71,7 +72,7 @@
  **Benchmarking Details:**
 ###### The number of users in the database is 5 million for all the below tests.
 * These were captured after optimizations were applied to the individual APIs.
-* Each API is tested with 20000 hashing – This is a feature in Keycloak for "Password Policy" where keycloak hashes the password 20,000 times before saving in the database
+* Each API is tested with 20000 password hashing iterations – This is a feature in Keycloak for "Password Policy" where keycloak hashes the password 20,000 times before saving in the database
 * Each API was invoked directly on domain url
 * Infrastructure used in this run:
   - 3 Cassandra Nodes (4 vcpus, 16 GiB memory) 
