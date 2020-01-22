@@ -28,11 +28,11 @@
 
 
 #### APIs being invoked after optimizations
+> Note: The login scenario includes 4 API calls
 
 | API                        | Thread Count | Samples | Error Count | Avg (ms) | Throughput/sec | 
 |----------------------------|--------------|---------|-------------|----------|----------------| 
 | User signup                | 80           | 8000    | 0           | 636      | 111.1          | 
-| Login                      | 160          | 64000   | 58          | 315      | 474.6          | 
 | System settings read       | 400          | 120000  | 0           | 106      | 2175.5         | 
 | Get user by email or phone | 100          | 100000  | 0           | 65       | 1424.5         | 
 | Role read                  | 400          | 120000  | 0           | 305      | 1219.9         | 
@@ -40,6 +40,7 @@
 | User profile read          | 400          | 120000  | 71          | 1267     | 286.6          | 
 | Org search                 | 400          | 120000  | 0           | 333      | 1130.8         | 
 | OTP generate               | 400          | 40000   | 0           | 265      | 1314           | 
+| Login                      | 160          | 64000   | 58          | 315      | 474.6          | 
 
 
 >#### Optimizations / Infra changes done to achive this result
@@ -70,7 +71,7 @@
 ### 2. APIs being invoked via Proxy & API Manager 
 
  **Benchmarking Details:**
-* Number of users available before starting test:  5 million
+###### The number of users in the database is 5 million for all the below tests.
 * These were captured after optimizations were applied to the individual APIs.
 * Each API is tested with 20000 hashing – This is a feature in Keycloak for "Password Policy" where keycloak hashes the password 20,000 times before saving in the database
 * Each API was invoked directly on domain url
@@ -95,7 +96,6 @@
 
 
 #### Login API invoked with 4 keycloak nodes
-
   
 | API            | Thread Count | No of Samples | Error Count  | Avg (ms) | 95th pct | 99th pct | Throughput/sec | 
 |----------------|--------------|---------------|--------------|----------|----------|----------|----------------| 
@@ -104,9 +104,9 @@
 | Login          | 160          | 64000         | 58           | 315      | 1159     | 3082     | 474.6          | 
 | Login          | 160          | 320000        | 275          | 324      | 411      | 2413.83  | 451.6          | 
 
-**Takeaway**
-
-100+ users can signup / login every second with the above infrastructure post optimizations.  
+>**Takeaway**
+>
+>100+ users can signup / login every second with the above infrastructure post optimizations.  
   
 #### User Signup API invoked with 2 keycloak nodes
 
@@ -130,9 +130,39 @@
 | Login          | 160          | 64000         | 137         | 763 | 1891.95  | 3593     | 196.1          | 
 | Login          | 160          | 320000        | 291         | 598 | 1627     | 1971     | 261.6          | 
 
-**Takeaway**
+>**Takeaway**
+>
+>50+ users can signup / login every second with 2 Keycloak nodes. A 50% drop as compared to 4 Keyclaok nodes.
 
-50+ users can signup / login every second with 2 Keycloak nodes. A 50% drop as compared to 4 Keyclaok nodes.
+#### Other APIs
+* Infrastructure changes done in this run:
+  - 4 Keycloak Nodes (2 vcpus, 8 GiB memory)
+
+| API                               | Thread Count | No of Samples | Error Count | Avg | Throughput/sec | 
+|-----------------------------------|--------------|---------------|-------------|-----|----------------| 
+| System Settings Read              | 100          | 200000        | 0           | 122 | 708.6          | 
+| Get user by email or phone number | 100          | 100000        | 0           | 173 | 555.8          | 
+| Role read                         | 100          | 500000        | 2           | 145 | 667.2          | 
+| Generate token                    | 100          | 300000        | 0           | 144 | 678.4          | 
+| User profile read                 | 100          | 150000        | 66          | 444 | 219.4          | 
+| Org search                        | 100          | 500000        | 0           | 146 | 665.2          | 
+| OTP generate                      | 100          | 20000         | 0           | 122 | 750.1          | 
+| User- existence                   | 100          | 1000000       | 0           | 69  | 1395.1         | 
+| Verify OTP                        | 100          | 20000         | 0           | 100 | 923.2          | 
+
+* Infrastructure changes done in this run:
+  - 2 Keycloak Nodes (2 vcpus, 8 GiB memory)
+
+| API                               | Thread Count | No of Samples | Error Count | Avg | Throughput/sec |
+|-----------------------------------|--------------|---------------|-------------|-----|----------------| 
+| User profile read                 | 100          | 150000        | 73          | 403      | 241.9          | 
+| System settings read              | 100          | 200000        | 0           | 120      | 709.2          | 
+| Get User by email or phone number | 100          | 100000        | 0           | 65       | 1424.5         | 
+| Role read                         | 100          | 100000        | 0           | 142      | 674.4          | 
+| Generate token                    | 100          | 300000        | 0           | 254      | 386.9          | 
+| Org search                        | 100          | 500000        | 0           | 148      | 660.7          | 
+| OTP generate                      | 100          | 100000        | 0           | 141      | 675.9          | 
+| User-existence                    | 100          | 1000000       | 0           | 66       | 1445.1         | 
 
 
 ### 3. APIs being invoked via proxy and API Manager using 1 hashing
@@ -146,15 +176,6 @@
 |-----------------------------------|--------------|---------------|-------------|-----|----------------| 
 | User signup                       | 100          | 50000         | 0           | 963 | 99.6           | 
 | Login                             | 100          | 173346        | 100         | 183 | 491.2          | 
-| User profile read                 | 100          | 150000        | 66          | 444 | 219.4          | 
-| System Settings Read              | 100          | 200000        | 0           | 122 | 708.6          | 
-| Get user by email or phone number | 100          | 100000        | 0           | 173 | 555.8          | 
-| Role read                         | 100          | 500000        | 2           | 145 | 667.2          | 
-| Generate token                    | 100          | 300000        | 0           | 144 | 678.4          | 
-| Org search                        | 100          | 500000        | 0           | 146 | 665.2          | 
-| OTP generate                      | 100          | 20000         | 0           | 122 | 750.1          | 
-| User- existence                    | 100          | 1000000       | 0           | 69  | 1395.1         | 
-| Verify OTP                        | 100          | 20000         | 0           | 100 | 923.2          | 
 
 
 #### APIs invoked with 2 Keycloak nodes
@@ -166,11 +187,3 @@
 |-----------------------------------|--------------|---------------|-------------|----------|----------------| 
 | User signup                       | 100          | 50000         | 0           | 1008     | 94.3           | 
 | Login                             | 100          | 234994        | 27          | 213      | 358.8          | 
-| User profile read                 | 100          | 150000        | 73          | 403      | 241.9          | 
-| System settings read              | 100          | 200000        | 0           | 120      | 709.2          | 
-| Get User by email or phone number | 100          | 100000        | 0           | 65       | 1424.5         | 
-| Role read                         | 100          | 100000        | 0           | 142      | 674.4          | 
-| Generate token                    | 100          | 300000        | 0           | 254      | 386.9          | 
-| Org search                        | 100          | 500000        | 0           | 148      | 660.7          | 
-| OTP generate                      | 100          | 100000        | 0           | 141      | 675.9          | 
-| User-existence                    | 100          | 1000000       | 0           | 66       | 1445.1         | 
