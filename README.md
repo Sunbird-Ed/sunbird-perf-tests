@@ -9,10 +9,10 @@ A new environment was created for this test. Here are the VMs and their configur
 
 ![Infra View](https://github.com/Sunbird-Ed/sunbird-perf-tests/blob/master/images/LoadTestInfra.jpg)
 
-3 Jmeter clusters (1 master + 4 slaves in each cluster) were setup to perform API testing and verifying improvements in parallel.
-
 
 ### Benchmarking Details
+`3 Jmeter clusters (1 master + 4 slaves in each cluster) were setup to perform API testing and verifying improvements in parallel.`
+
 Please click on the below links to get details on the benchmark results
 1. [Consumption APIs](consumption-api.md)
 2. [User Management APIs](user-management-apis.md)
