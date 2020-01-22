@@ -50,7 +50,11 @@ For benchmarking the APIs, three Jmeter clusters (1 master + 4 slaves in each cl
 
 
 #### APIs being invoked after optimizations
-> Note: The login scenario includes 4 API calls
+Note: The login scenario includes 4 API calls
+   - /resources/
+   - /auth/realms/sunbird/protocol/openid-connect/auth
+   - /auth/realms/sunbird/login-actions/authenticate
+   - /resources
 
 | API                        | Thread Count | Samples | Error Count | Avg (ms) | Throughput/sec | 
 |----------------------------|--------------|---------|-------------|----------|----------------| 
@@ -62,7 +66,7 @@ For benchmarking the APIs, three Jmeter clusters (1 master + 4 slaves in each cl
 | User profile read          | 400          | 120000  | 71          | 1267     | 286.6          | 
 | Org search                 | 400          | 120000  | 0           | 333      | 1130.8         | 
 | OTP generate               | 400          | 40000   | 0           | 265      | 1314           | 
-| Login                      | 160          | 64000   | 58          | 315      | 474.6          | 
+| Login (4 API calls)        | 160          | 64000   | 58          | 315      | 474.6          | 
 
 
 >#### Optimizations / Infra changes done to achive this result
@@ -119,10 +123,10 @@ For benchmarking the APIs, three Jmeter clusters (1 master + 4 slaves in each cl
   
 | API            | Thread Count | No of Samples | Error Count  | Avg (ms) | 95th pct | 99th pct | Throughput/sec | 
 |----------------|--------------|---------------|--------------|----------|----------|----------|----------------| 
-| Login          | 100          | 40000         | 58           | 101      | 356      | 599      | 363.7          | 
-| Login          | 100          | 200000        | 179          | 261      | 586      | 984.97   | 363.9          | 
-| Login          | 160          | 64000         | 58           | 315      | 1159     | 3082     | 474.6          | 
-| Login          | 160          | 320000        | 275          | 324      | 411      | 2413.83  | 451.6          | 
+| Login (4 API calls)| 100          | 40000         | 58           | 101      | 356      | 599      | 363.7          | 
+| Login (4 API calls)| 100          | 200000        | 179          | 261      | 586      | 984.97   | 363.9          | 
+| Login (4 API calls)| 160          | 64000         | 58           | 315      | 1159     | 3082     | 474.6          | 
+| Login (4 API calls)| 160          | 320000        | 275          | 324      | 411      | 2413.83  | 451.6          | 
 
 >**Takeaway**
 >
@@ -145,10 +149,10 @@ For benchmarking the APIs, three Jmeter clusters (1 master + 4 slaves in each cl
 
 | API            | Thread Count | No of Samples | Error Count | Avg | 95th pct | 99th pct | Throughput/sec | 
 |----------------|--------------|---------------|-------------|-----|----------|----------|----------------| 
-| Login          | 100          | 40000         | 58          | 389 | 2109.85  | 4164.9   | 234.4          | 
-| Login          | 100          | 200000        | 177         | 400 | 1553.95  | 3035.93  | 243.2          | 
-| Login          | 160          | 64000         | 137         | 763 | 1891.95  | 3593     | 196.1          | 
-| Login          | 160          | 320000        | 291         | 598 | 1627     | 1971     | 261.6          | 
+| Login (4 API calls)| 100          | 40000         | 58          | 389 | 2109.85  | 4164.9   | 234.4          | 
+| Login (4 API calls)| 100          | 200000        | 177         | 400 | 1553.95  | 3035.93  | 243.2          | 
+| Login (4 API calls)| 160          | 64000         | 137         | 763 | 1891.95  | 3593     | 196.1          | 
+| Login (4 API calls)| 160          | 320000        | 291         | 598 | 1627     | 1971     | 261.6          | 
 
 >**Takeaway**
 >
@@ -195,7 +199,7 @@ For benchmarking the APIs, three Jmeter clusters (1 master + 4 slaves in each cl
 | API                               | Thread Count | No of Samples | Error Count | Avg | Throughput/sec | 
 |-----------------------------------|--------------|---------------|-------------|-----|----------------| 
 | User signup                       | 100          | 50000         | 0           | 963 | 99.6           | 
-| Login                             | 100          | 173346        | 100         | 183 | 491.2          | 
+| Login (4 API calls)               | 100          | 173346        | 100         | 183 | 491.2          | 
 
 
 #### APIs invoked with 2 Keycloak nodes
@@ -206,4 +210,4 @@ For benchmarking the APIs, three Jmeter clusters (1 master + 4 slaves in each cl
 | API                               | Thread Count | No of Samples | Error Count | Avg (ms) | Throughput/sec | 
 |-----------------------------------|--------------|---------------|-------------|----------|----------------| 
 | User signup                       | 100          | 50000         | 0           | 1008     | 94.3           | 
-| Login                             | 100          | 234994        | 27          | 213      | 358.8          | 
+| Login (4 API calls)               | 100          | 234994        | 27          | 213      | 358.8          | 
