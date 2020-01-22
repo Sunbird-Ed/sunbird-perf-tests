@@ -525,7 +525,7 @@ Below is an example on how to run this scenario from your **jmeter_installation_
 ##  User Onboarding and Login Load Test Results
 ### 1. Individual API benchmarking by calling service directly
 #### APIs being invoked before optimizations
-* These APIs were invoked directly against learner service
+* These APIs were invoked directly against the service
 * The table shows the TPS of each API before the optimizations
 * Each API is tested with 20,000 hashing
 
@@ -542,13 +542,10 @@ Below is an example on how to run this scenario from your **jmeter_installation_
 
 #### Result Analysis & findings
 
-
+TODO
 
 
 #### APIs being invoked after optimizations
-* These APIs were invoked directly against learner service
-* The table shows the TPS of each API after the optimizations
-* Each API is tested with 20,000 hashing
 
 | API                        | Thread Count | Samples | Error Count | Avg (ms) | Throughput/sec | 
 |----------------------------|--------------|---------|-------------|----------|----------------| 
@@ -610,12 +607,6 @@ Below is an example on how to run this scenario from your **jmeter_installation_
 
 #### Login API invoked with 4 keycloak nodes
 
-**Below are the APIs invoked:**
-
-- /resources/
-- /auth/realms/sunbird/protocol/openid-connect/auth
-- /auth/realms/sunbird/login-actions/authenticate
-- /resources  
   
 | API            | Thread Count | No of Samples | Error Count  | Avg (ms) | 95th pct | 99th pct | Throughput/sec | 
 |----------------|--------------|---------------|--------------|----------|----------|----------|----------------| 
@@ -628,12 +619,8 @@ Below is an example on how to run this scenario from your **jmeter_installation_
 
 100+ users can signup / login every second with the above infrastructure post optimizations.  
   
-#### Signup API invoked with 2 keycloak nodes
+#### User Signup API invoked with 2 keycloak nodes
 
-* Number of users available before starting test:  5 million
-* These were captured after optimizations were applied to the individual APIs
-* Each API is tested with 20,000 hashing
-* Each API was invoked directly using domain url
 * Infrastructure changes done in this run:
   - 2 Keyclaok Nodes (4 vcpus, 8 GiB memory)  
   
@@ -646,12 +633,6 @@ Below is an example on how to run this scenario from your **jmeter_installation_
 
 #### Login API invoked with 2 Keycloak nodes
 
-**Below are the APIs invoked:**
-
-- /resources/
-- /auth/realms/sunbird/protocol/openid-connect/auth
-- /auth/realms/sunbird/login-actions/authenticate
-- /resources
 
 | API            | Thread Count | No of Samples | Error Count | Avg | 95th pct | 99th pct | Throughput/sec | 
 |----------------|--------------|---------------|-------------|-----|----------|----------|----------------| 
@@ -666,8 +647,7 @@ Below is an example on how to run this scenario from your **jmeter_installation_
 
 
 ### 3. APIs being invoked via proxy and API Manager using 1 hashing
-#### Few APIs invoked with 4 Keycloak nodes
-* These were captured after optimizations were applied to the individual APIs
+#### APIs invoked with 4 Keycloak nodes
 * Each API is tested with 1 hashing 
 * Each API was invoked directly on domain url
 * Infrastructure changes done in this run:
@@ -688,11 +668,8 @@ Below is an example on how to run this scenario from your **jmeter_installation_
 | Verify OTP                        | 100          | 20000         | 0           | 100 | 923.2          | 
 
 
-#### Few APIs invoked with 2 Keycloak nodes
+#### APIs invoked with 2 Keycloak nodes
 
-* These were captured after optimizations were applied to the individual APIs
-* Each API is tested with 1 hashing 
-* Each API was invoked directly on domain url
 * Infrastructure changes done in this run:
   - 2 Keycloak Nodes (2 vcpus, 8 GiB memory)
 
