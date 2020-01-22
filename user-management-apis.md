@@ -158,7 +158,7 @@ Note: The login scenario includes 4 API calls
 >
 >50+ users can signup / login every second with 2 Keycloak nodes. A 50% drop as compared to 4 Keyclaok nodes.
 
-#### Other APIs
+#### Rerun of individual APIs via Proxy and API Manager
 * Infrastructure changes done in this run:
   - 4 Keycloak Nodes (2 vcpus, 8 GiB memory)
 
