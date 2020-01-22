@@ -531,18 +531,24 @@ Below is an example on how to run this scenario from your **jmeter_installation_
 
 | Api                        | Thread Count | Samples | Error % | Throughput/sec | 
 |----------------------------|--------------|---------|---------|----------------| 
-| User Signup                | 400          | 8000    | 11.39   | 24             | 
-| system settings read       | 400          | 40000   | 0       | 1122           | 
-| get user by email or phone | 400          | 8000    | 0       | 66             | 
-| role read                  | 1000         | 120000  | 0       | 40             | 
-| generate token             | 600          | 60000   | 5       | 211            | 
-| user Profile read          | 400          | 16000   | 6       | 142            | 
-| org search                 | 400          | 8000    | 0       | 455            | 
-| otp generate               | 800          | 48000   | 46      | 563            | 
+| User signup                | 400          | 8000    | 11.39   | 24             | 
+| System settings read       | 400          | 40000   | 0       | 1122           | 
+| Get user by email or phone | 400          | 8000    | 0       | 66             | 
+| Role read                  | 1000         | 120000  | 0       | 40             | 
+| Generate token             | 600          | 60000   | 5       | 211            | 
+| User Profile read          | 400          | 16000   | 6       | 142            | 
+| Org search                 | 400          | 8000    | 0       | 455            | 
+| Otp generate               | 800          | 48000   | 46      | 563            | 
 
 #### Result Analysis & findings
 
-TODO
+* Create user API was performing multiple verification checks and it was not a async call which would block the requests
+* Postgresql queries were taking a long time
+* Cassandra was timing out during replication across nodes
+* Heap size in Keycloak, Cassandra and Elasticsearch were incorrect
+* Keycloak memeory was reaching max during password hashing
+* User role and Get system setting APIs were fetching data always from database
+* Get user by email / phone API was returning too much data back to the client
 
 
 #### APIs being invoked after optimizations
@@ -550,18 +556,25 @@ TODO
 | API                        | Thread Count | Samples | Error Count | Avg (ms) | Throughput/sec | 
 |----------------------------|--------------|---------|-------------|----------|----------------| 
 | User signup                | 80           | 8000    | 0           | 636      | 111.1          | 
-| Login (4 APIs)             | 160          | 64000   | 58          | 315      | 474.6          | 
-| system settings read       | 400          | 120000  | 0           | 106      | 2175.5         | 
-| get user by email or phone | 100          | 100000  | 0           | 65       | 1424.5         | 
-| role read                  | 400          | 120000  | 0           | 305      | 1219.9         | 
-| generate token             | 100          | 300000  | 0           | 144      | 678.4          | 
-| user Profile read          | 400          | 120000  | 71          | 1267     | 286.6          | 
-| org search                 | 400          | 120000  | 0           | 333      | 1130.8         | 
-| otp generate               | 400          | 40000   | 0           | 265      | 1314           | 
+| Login                      | 160          | 64000   | 58          | 315      | 474.6          | 
+| System settings read       | 400          | 120000  | 0           | 106      | 2175.5         | 
+| Get user by email or phone | 100          | 100000  | 0           | 65       | 1424.5         | 
+| Role read                  | 400          | 120000  | 0           | 305      | 1219.9         | 
+| Generate token             | 100          | 300000  | 0           | 144      | 678.4          | 
+| User profile read          | 400          | 120000  | 71          | 1267     | 286.6          | 
+| Org search                 | 400          | 120000  | 0           | 333      | 1130.8         | 
+| OTP generate               | 400          | 40000   | 0           | 265      | 1314           | 
 
 
 #### Optimizations / Infra changes done to achive this result
 
+* Created a new async API end point (Sign Up API) which will create users in the custodian org
+* Changed Get user by email / phone API as an async call
+* Changes Get system settings API as an async call
+* Changes Role read and Get system settings to store data in memory with a TTL for 4 hours instead of fetching data from database always
+* Created a new API end point (User exists) which returns a boolean value to the client
+* Few APIs were made as async calls to not block the request
+* Few APIs were changed to store data in memory cache for a certain TTL instead of fetching data from database always
 * Keycloak node increased from 2 vcpus, 8GB to 4 vcpus, 8GB
 * Keycloak Heap size increased from default 512MB to 6GB
 * Elasticsearch node increased from 2 vcpus, 14GB to 8 vcpus, 32GB
@@ -610,10 +623,10 @@ TODO
   
 | API            | Thread Count | No of Samples | Error Count  | Avg (ms) | 95th pct | 99th pct | Throughput/sec | 
 |----------------|--------------|---------------|--------------|----------|----------|----------|----------------| 
-| Login Scenerio | 100          | 40000         | 58           | 101      | 356      | 599      | 363.7          | 
-| Login Scenerio | 100          | 200000        | 179          | 261      | 586      | 984.97   | 363.9          | 
-| Login Scenerio | 160          | 64000         | 58           | 315      | 1159     | 3082     | 474.6          | 
-| Login Scenerio | 160          | 320000        | 275          | 324      | 411      | 2413.83  | 451.6          | 
+| Login          | 100          | 40000         | 58           | 101      | 356      | 599      | 363.7          | 
+| Login          | 100          | 200000        | 179          | 261      | 586      | 984.97   | 363.9          | 
+| Login          | 160          | 64000         | 58           | 315      | 1159     | 3082     | 474.6          | 
+| Login          | 160          | 320000        | 275          | 324      | 411      | 2413.83  | 451.6          | 
 
 **Takeaway**
 
@@ -636,10 +649,10 @@ TODO
 
 | API            | Thread Count | No of Samples | Error Count | Avg | 95th pct | 99th pct | Throughput/sec | 
 |----------------|--------------|---------------|-------------|-----|----------|----------|----------------| 
-| Login Scenerio | 100          | 40000         | 58          | 389 | 2109.85  | 4164.9   | 234.4          | 
-| Login Scenerio | 100          | 200000        | 177         | 400 | 1553.95  | 3035.93  | 243.2          | 
-| Login Scenerio | 160          | 64000         | 137         | 763 | 1891.95  | 3593     | 196.1          | 
-| Login Scenerio | 160          | 320000        | 291         | 598 | 1627     | 1971     | 261.6          | 
+| Login          | 100          | 40000         | 58          | 389 | 2109.85  | 4164.9   | 234.4          | 
+| Login          | 100          | 200000        | 177         | 400 | 1553.95  | 3035.93  | 243.2          | 
+| Login          | 160          | 64000         | 137         | 763 | 1891.95  | 3593     | 196.1          | 
+| Login          | 160          | 320000        | 291         | 598 | 1627     | 1971     | 261.6          | 
 
 **Takeaway**
 
@@ -656,15 +669,15 @@ TODO
 | API                               | Thread Count | No of Samples | Error Count | Avg | Throughput/sec | 
 |-----------------------------------|--------------|---------------|-------------|-----|----------------| 
 | User signup                       | 100          | 50000         | 0           | 963 | 99.6           | 
-| Login Scenerio                    | 100          | 173346        | 100         | 183 | 491.2          | 
-| User Profile Read                 | 100          | 150000        | 66          | 444 | 219.4          | 
+| Login                             | 100          | 173346        | 100         | 183 | 491.2          | 
+| User profile read                 | 100          | 150000        | 66          | 444 | 219.4          | 
 | System Settings Read              | 100          | 200000        | 0           | 122 | 708.6          | 
-| Get User by Email or Phone number | 100          | 100000        | 0           | 173 | 555.8          | 
-| Role Read                         | 100          | 500000        | 2           | 145 | 667.2          | 
-| Generate Token                    | 100          | 300000        | 0           | 144 | 678.4          | 
-| Org Search                        | 100          | 500000        | 0           | 146 | 665.2          | 
-| OTP Generate                      | 100          | 20000         | 0           | 122 | 750.1          | 
-| User-existence                    | 100          | 1000000       | 0           | 69  | 1395.1         | 
+| Get user by email or phone number | 100          | 100000        | 0           | 173 | 555.8          | 
+| Role read                         | 100          | 500000        | 2           | 145 | 667.2          | 
+| Generate token                    | 100          | 300000        | 0           | 144 | 678.4          | 
+| Org search                        | 100          | 500000        | 0           | 146 | 665.2          | 
+| OTP generate                      | 100          | 20000         | 0           | 122 | 750.1          | 
+| User- existence                    | 100          | 1000000       | 0           | 69  | 1395.1         | 
 | Verify OTP                        | 100          | 20000         | 0           | 100 | 923.2          | 
 
 
@@ -675,15 +688,15 @@ TODO
 
 | API                               | Thread Count | No of Samples | Error Count | Avg (ms) | Throughput/sec | 
 |-----------------------------------|--------------|---------------|-------------|----------|----------------| 
-| Create User (Password Enabled)    | 100          | 50000         | 0           | 1008     | 94.3           | 
-| Login Scenerio                    | 100          | 234994        | 27          | 213      | 358.8          | 
-| User Profile Read                 | 100          | 150000        | 73          | 403      | 241.9          | 
-| System Settings Read              | 100          | 200000        | 0           | 120      | 709.2          | 
-| Get User by Email or Phone number | 100          | 100000        | 0           | 65       | 1424.5         | 
-| Role Read                         | 100          | 100000        | 0           | 142      | 674.4          | 
-| Generate Token                    | 100          | 300000        | 0           | 254      | 386.9          | 
-| Org Search                        | 100          | 500000        | 0           | 148      | 660.7          | 
-| OTP Generate                      | 100          | 100000        | 0           | 141      | 675.9          | 
+| User signup                       | 100          | 50000         | 0           | 1008     | 94.3           | 
+| Login                             | 100          | 234994        | 27          | 213      | 358.8          | 
+| User profile read                 | 100          | 150000        | 73          | 403      | 241.9          | 
+| System settings read              | 100          | 200000        | 0           | 120      | 709.2          | 
+| Get User by email or phone number | 100          | 100000        | 0           | 65       | 1424.5         | 
+| Role read                         | 100          | 100000        | 0           | 142      | 674.4          | 
+| Generate token                    | 100          | 300000        | 0           | 254      | 386.9          | 
+| Org search                        | 100          | 500000        | 0           | 148      | 660.7          | 
+| OTP generate                      | 100          | 100000        | 0           | 141      | 675.9          | 
 | User-existence                    | 100          | 1000000       | 0           | 66       | 1445.1         | 
 
 
