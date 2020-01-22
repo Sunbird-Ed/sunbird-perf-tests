@@ -522,8 +522,8 @@ Below is an example on how to run this scenario from your **jmeter_installation_
 
 
 
-##  User Onboarding and Login Load Test Results
-### 1. Individual API benchmarking by calling service directly
+##  User Management APIs Benchmarking
+### 1. Invoking APIs by directly calling the service
 #### APIs being invoked before optimizations
 * These APIs were invoked directly against the service
 * The table shows the TPS of each API before the optimizations
