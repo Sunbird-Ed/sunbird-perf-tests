@@ -47,8 +47,8 @@
 >
 >* Created a new async API end point (Sign Up API) which will create users in the custodian org
 >* Changed Get user by email / phone API as an async call
->* Changes Get system settings API as an async call
->* Changes Role read and Get system settings to store data in memory with a TTL for 4 hours instead of fetching data from database always
+>* Changed Get system settings API as an async call
+>* Changed Role read and Get system settings to store data in memory with a TTL for 4 hours instead of fetching data from database always
 >* Created a new API end point (User exists) which returns a boolean value to the client
 >* Few APIs were made as async calls to not block the request
 >* Few APIs were changed to store data in memory cache for a certain TTL instead of fetching data from database always
