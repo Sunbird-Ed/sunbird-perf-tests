@@ -135,9 +135,9 @@ Note: The login scenario includes 4 API calls
 
 
 #### Long Running Test for User Signup API and Login APIs
-*The user sign up was run for a during of 3 hours and 40 minutes. The test created 1000000 users.*
+*The user sign up was run for a duration of 3 hours and 40 minutes. The test created 1000000 users.*
 
-*The login scenario was run for a duration of 3 hours and 55 minutes. During this test, the database had 5 million+ users.*
+*The login scenario was run for a duration of 3 hours and 55 minutes. The database had 5 million+ users.*
 
 | API                 | Thread Count | No of Samples | Error Count | Avg  | Throughput/sec | Duration of run (HH:MM:SS) |
 |---------------------|--------------|---------------|-------------|------|----------------|-------------------------|
