@@ -1,5 +1,3 @@
-### **Test Results**
-
 #### Jmeter Cluster
 For benchmarking the APIs, three Jmeter clusters (1 master + 8 slaves in each cluster) were setup to perform API testing and verifying improvements in parallel.
 
