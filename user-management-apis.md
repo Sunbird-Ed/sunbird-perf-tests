@@ -68,7 +68,7 @@ Note: The login scenario includes 4 API calls
 | OTP generate               | 400          | 40000   | 0           | 265      | 1314           | 
 | Login (4 API calls)        | 160          | 64000   | 58          | 315      | 474.6          | 
 
-***To view the benchamrking details of the above APIs via Proxy and API manager, click [here](#rerun-of-individual-apis-via-proxy-and-api-manager)***
+***To view the benchmarking details of the above APIs via Proxy and API manager, click [here](#rerun-of-individual-apis-via-proxy-and-api-manager)***
 
 >#### Optimizations / Infra changes done to achive this result
 >
@@ -139,11 +139,10 @@ Note: The login scenario includes 4 API calls
 
 *The login scenario was run for a duration of 3 hours and 55 minutes. The database had 5 million+ users.*
 
-| API                 | Thread Count | No of Samples | Error Count | Avg  | Throughput/sec | Duration of run (HH:MM:SS) |
-|---------------------|--------------|---------------|-------------|------|----------------|-------------------------|
-| User signup         | 100          | 1000000       | 103         | 1317 | 75.5           | 3:40:52                 |
-| Login (4 API calls) | 160          | 6400000       | 2957        | 352  | 453            | 3:55:51                 |
-
+| API                 | Thread Count | No of Samples | Error Count | Avg  | Throughput/sec | Duration of run (HH:MM:SS)| Comments                                     |
+|---------------------|--------------|---------------|-------------|------|----------------|---------------------------|----------------------------------------------|
+| User signup         | 100          | 1000000       | 103         | 1317 | 75.5           | 3:40:52                   | This implies that 1 million users signed up  |
+| Login (4 API calls) | 160          | 6400000       | 2957        | 352  | 453            | 3:55:51                   | This implies that 1.6 million users logged in|
   
 #### User Signup API invoked with 2 keycloak nodes
 
@@ -186,7 +185,7 @@ Note: The login scenario includes 4 API calls
 | Verify OTP                        | 100          | 20000         | 0           | 100 | 923.2          | 
 
 
-***To view the benchamrking details of the above APIs by invoking the service directly, click [here](#apis-being-invoked-after-optimizations)***
+***To view the benchmarking details of the above APIs by invoking the service directly, click [here](#apis-being-invoked-after-optimizations)***
 
 
 ### 3. APIs being invoked via proxy and API Manager using 1 hashing
