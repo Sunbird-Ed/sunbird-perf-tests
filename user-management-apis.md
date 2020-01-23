@@ -120,7 +120,7 @@ Note: The login scenario includes 4 API calls
 | User signup | 160          | 48000         | 0           | 1499     | 4150     | 5981.91  | 102.2          | 
 
 
-#### Login API invoked with 4 keycloak nodes
+#### Login APIs invoked with 4 keycloak nodes
   
 | API            | Thread Count | No of Samples | Error Count  | Avg (ms) | 95th pct | 99th pct | Throughput/sec | 
 |----------------|--------------|---------------|--------------|----------|----------|----------|----------------| 
@@ -131,7 +131,19 @@ Note: The login scenario includes 4 API calls
 
 >**Takeaway**
 >
->100+ users can signup / login every second with the above infrastructure post optimizations.  
+>100+ users can signup / login every second with the above infrastructure post optimizations.
+
+
+#### Long Running Test for Login APIs and User Signup API
+*The user sign up was run for a during of 3 hours and 40 minutes. The test created 1000000 users.*
+
+*The login scenario was run for a duration of 3 hours and 55 minutes. During this test, the database had 5 million+ users.*
+
+| API                 | Thread Count | No of Samples | Error Count | Avg  | Throughput/sec | Duration of run (HH:MM:SS) |
+|---------------------|--------------|---------------|-------------|------|----------------|-------------------------|
+| User signup         | 100          | 1000000       | 103         | 1317 | 75.5           | 3:40:52                 |
+| Login (4 API calls) | 160          | 6400000       | 2957        | 352  | 453            | 3:55:51                 |
+
   
 #### User Signup API invoked with 2 keycloak nodes
 
@@ -145,7 +157,7 @@ Note: The login scenario includes 4 API calls
 | User signup | 160          | 16000         | 0            | 2118 | 5195.95  | 7436.96  | 67.4           | 
 
 
-#### Login API invoked with 2 Keycloak nodes
+#### Login APIs invoked with 2 Keycloak nodes
 
 
 | API            | Thread Count | No of Samples | Error Count | Avg | 95th pct | 99th pct | Throughput/sec | 
