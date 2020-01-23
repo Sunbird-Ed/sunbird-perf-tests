@@ -1,24 +1,24 @@
 ##  User Management APIs Benchmarking
 
 #### Jmeter Cluster
-For benchmarking the APIs, three Jmeter clusters (1 master + 4 slaves in each cluster) were setup to perform API testing and verifying improvements in parallel.
+For benchmarking the APIs, a Jmeter cluster (1 master + 4 slaves in cluster) was setup to perform API testing and verifying improvements in parallel.
 
 #### APIs Invoked in this benchmarking
 | API Name                          | API path                                           | Description                                                                                                                                                                                        |
 |-----------------------------------|----------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| User signup                       | /api/user/v1/signup                                 | POST Async API will create user with very minimum attribute (firstName, email/phone, password, emailVerified/phoneVerified). All user created by this end point will be linked with custodian org. |
-| System settings read              | /api/data/v1/system/settings/get                   | GET API is used to read the system setting specific value. will get the value from in-memory cache , with refresh-interval of every 4 hours.                                                       |
-| Get user by email or phone number | /api/user/v1/get/email                             | GET API(async) is used for searching a specific user, the user search is based on the email/phone of the user.                                                                                     |
-| Role Read                         | /api/data/v1/role/read                             | GET API is used to read all the user availaible roles in the system, read from db for the first time and cache the data for seconde request with refresh-interval of every 4 hours.                |
-| Generate Token                    | /auth/realms/sunbird/protocol/openid-connect/token | POST API is used to genetate Keycloak token                                                                                                                                                        |
+| User signup                       | /api/user/v1/signup                                 | POST API to create user with very signup attributes (firstName, email/phone, password, emailVerified/phoneVerified). All users created by this end point will be linked with custodian org. This API invokes the updatePassword keycloak API to register the credentials in Keycloak |
+| System settings read              | /api/data/v1/system/settings/get                   | GET API is used to read the system setting specific value. will get the value from in-memory cache with a ttl of 4 hours.                                                       |
+| Get user by email or phone number | /api/user/v1/get/email                             | GET API for searching a specific user, the user search is based on the email/phone of the user.                                                                                     |
+| Role Read                         | /api/data/v1/role/read                             | GET API is used to read all the user availaible roles in the system, read from db for the first time and caches the data with a ttl of 4 hours.                |
+| Generate Token                    | /auth/realms/sunbird/protocol/openid-connect/token | POST API (Keycloak) is used to generate Keycloak token                                                                                                                                                        |
 | User profile read                 | /api/user/v2/read                                  | GET API is used to read user on the basis of unique identifier.                                                                                                                                    |
-| Org Search                        | /api/org/v1/search                                 | POST API(async) is used to search the Organisations based on provided filters.                                                                                                                     |
+| Org Search                        | /api/org/v1/search                                 | POST API is used to search the Organisations based on provided filters.                                                                                                                     |
 | OTP Generate                      | /api/otp/v1/generate                               | POST API is associated with sending OTP to user. with expiry time of 30 mins.                                                                                                                      |
-| User-existence                    | /v1/user/exists/email                              | GET API(async) is used for check wheather user exists or not, return true/false depende upon user existence in the system.                                                                         |
+| User-existence                    | /v1/user/exists/email                              | GET API is used for check whether user exists.                                                                         |
 | Login Scenerio - 1st API          | /resources/                                        | GET API call of Portal which will take user to login page                                                                                                                                                 |
-| Login Scenerio - 2nd API          | /auth/realms/sunbird/protocol/openid-connect/auth  | GET API call of Keycloak before authentication                                                                                                                                                                    |
-| Login Scenerio - 3rd API          | /auth/realms/sunbird/login-actions/authenticate    | POST API call of Keycloak during authentication                                                                                                                                                                   |
-| Login Scenerio - 4th API          | /resources                                         | GET API call of Portal which will redirect the user to resources page post authentication                                                                                                                         |
+| Login Scenerio - 2nd API          | /auth/realms/sunbird/protocol/openid-connect/auth  | GET call to Keycloak to fetch the login page                                                                                                                                                                    |
+| Login Scenerio - 3rd API          | /auth/realms/sunbird/login-actions/authenticate    | POST API call of Keycloak during authentication. This API accepts credentials in the post body.                                                                                                                                                                  |
+| Login Scenerio - 4th API          | /resources                                         | GET API call of Portal which will redirect the user to resources page post authentication. This calls internally invokes the GenerateToken API of keycloak.                                                                                                                         |
 
 ### 1. Invoking APIs by directly calling the service
 #### APIs being invoked before optimizations
@@ -66,18 +66,18 @@ Note: The login scenario includes 4 API calls
 | User profile read          | 400          | 120000  | 71          | 1267     | 286.6          | 
 | Org search                 | 400          | 120000  | 0           | 333      | 1130.8         | 
 | OTP generate               | 400          | 40000   | 0           | 265      | 1314           | 
-| Login (4 API calls)        | 160          | 64000   | 58          | 315      | 474.6          | 
+| Login Workflow (4 API calls)        | 160          | 64000   | 58          | 315      | 474.6          | 
 
 ***To view the benchmarking details of the above APIs via Proxy and API manager, click [here](#rerun-of-individual-apis-via-proxy-and-api-manager)***
 
 >#### Optimizations / Infra changes done to achive this result
 >
->* Created a new async API end point (Sign Up API) which will create users in the custodian org
->* Changed Get user by email / phone API as an async call
->* Changed Get system settings API as an async call
+>* Created a new API end point (Sign Up API, non blocking code) which will create users in the custodian org
+>* Changed Get user by email / phone API to use non blocking code
+>* Changed Get system settings API to use non blocking code
 >* Changed Role read and Get system settings API to store static data in memory with a TTL for 4 hours instead of fetching data from database always
 >* Created a new API end point (User exists) which returns a boolean value to the client
->* Keycloak node increased from 2 vcpus, 8GB to 4 vcpus, 8GB
+>* Keycloak node increased from 2 vcpus, 8GB to 4 vcpus, 8GB. The increase in CPU is to support 20000 hashing iterations which is the best practice.
 >* Keycloak Heap size increased from default 512MB to 6GB
 >* Elasticsearch node increased from 2 vcpus, 14GB to 8 vcpus, 32GB
 >* Increased Elasticsearch heap size from 2GB to 16GB
@@ -96,19 +96,19 @@ Note: The login scenario includes 4 API calls
 ### 2. APIs being invoked via Proxy & API Manager 
 
  **Benchmarking Details:**
-###### The number of users in the database is 5 million for all the below tests.
+###### The below tests were done after creating 5 million users.
 * These were captured after optimizations were applied to the individual APIs.
 * Each API is tested with 20000 password hashing iterations – This is a feature in Keycloak for "Password Policy" where keycloak hashes the password 20,000 times before saving in the database
-* Each API was invoked directly on domain url
+* Each API was invoked directly on domain url (loadtest.ntp.net.in)
 * Infrastructure used in this run:
   - 3 Cassandra Nodes (4 vcpus, 16 GiB memory) 
   - 3 Application Elasticsearch Nodes (8 vcpus, 32 GiB memory)
   - 4 Keycloak Nodes (4 vcpus, 8 GiB memory)
-  - Postgres (4 vcps )
-  - 6 Learner Service Replicas
-  - 12 Proxy Replicas
-  - 6 Kong Replicas
-  - 8 Player Service Replicas 
+  - 1 Postgres instance (4 vcps )
+  - 6 Learner Service Replicas (Running in the swarm)
+  - 12 Proxy Replicas (Running in the swarm)
+  - 6 Kong Replicas (Running in the swarm)
+  - 8 Player Service Replicas (Running in the swarm)
   
 #### User Signup API invoked with 4 keycloak nodes
   
@@ -120,21 +120,21 @@ Note: The login scenario includes 4 API calls
 | User signup | 160          | 48000         | 0           | 1499     | 4150     | 5981.91  | 102.2          | 
 
 
-#### Login APIs invoked with 4 keycloak nodes
-  
+#### Login Workflows invoked with 4 keycloak nodes
+
 | API            | Thread Count | No of Samples | Error Count  | Avg (ms) | 95th pct | 99th pct | Throughput/sec | 
 |----------------|--------------|---------------|--------------|----------|----------|----------|----------------| 
-| Login (4 API calls)| 100          | 40000         | 58           | 101      | 356      | 599      | 363.7          | 
-| Login (4 API calls)| 100          | 200000        | 179          | 261      | 586      | 984.97   | 363.9          | 
-| Login (4 API calls)| 160          | 64000         | 58           | 315      | 1159     | 3082     | 474.6          | 
-| Login (4 API calls)| 160          | 320000        | 275          | 324      | 411      | 2413.83  | 451.6          | 
+| Login Workflow (4 API calls)| 100          | 40000         | 58           | 101      | 356      | 599      | 363.7          | 
+| Login Workflow (4 API calls)| 100          | 200000        | 179          | 261      | 586      | 984.97   | 363.9          | 
+| Login Workflow (4 API calls)| 160          | 64000         | 58           | 315      | 1159     | 3082     | 474.6          | 
+| Login Workflow (4 API calls)| 160          | 320000        | 275          | 324      | 411      | 2413.83  | 451.6          | 
 
 >**Takeaway**
 >
->100+ users can signup / login every second with the above infrastructure post optimizations.
+>100+ users can signup & login every second with the above infrastructure post optimizations. The throughput for Login workflow of 400 implies 100 logins as each login has 4 network calls.
 
 
-#### Long Running Test for User Signup API and Login APIs
+#### Long Running Test for User Signup API and Login Workflows
 *The user sign up was run for a duration of 3 hours and 40 minutes. The test created 1 million users.*
 
 *The login scenario was run for a duration of 3 hours and 55 minutes. The database had 5 million+ users.*
@@ -142,7 +142,7 @@ Note: The login scenario includes 4 API calls
 | API                 | Thread Count | No of Samples | Error Count | Avg  | Throughput/sec | Duration of run (HH:MM:SS)| Comments                                     |
 |---------------------|--------------|---------------|-------------|------|----------------|---------------------------|----------------------------------------------|
 | User signup         | 100          | 1000000       | 103         | 1317 | 75.5           | 3:40:52                   | This implies that 1 million users signed up  |
-| Login (4 API calls) | 160          | 6400000       | 2957        | 352  | 453            | 3:55:51                   | This implies that 1.6 million users logged in|
+| Login Workflow (4 API calls) | 160          | 6400000       | 2957        | 352  | 453            | 3:55:51                   | This implies that 1.6 million users logged in|
   
 #### User Signup API invoked with 2 keycloak nodes
 
@@ -156,15 +156,15 @@ Note: The login scenario includes 4 API calls
 | User signup | 160          | 16000         | 0            | 2118 | 5195.95  | 7436.96  | 67.4           | 
 
 
-#### Login APIs invoked with 2 Keycloak nodes
+#### Login Workflow invoked with 2 Keycloak nodes
 
 
 | API            | Thread Count | No of Samples | Error Count | Avg | 95th pct | 99th pct | Throughput/sec | 
 |----------------|--------------|---------------|-------------|-----|----------|----------|----------------| 
-| Login (4 API calls)| 100          | 40000         | 58          | 389 | 2109.85  | 4164.9   | 234.4          | 
-| Login (4 API calls)| 100          | 200000        | 177         | 400 | 1553.95  | 3035.93  | 243.2          | 
-| Login (4 API calls)| 160          | 64000         | 137         | 763 | 1891.95  | 3593     | 196.1          | 
-| Login (4 API calls)| 160          | 320000        | 291         | 598 | 1627     | 1971     | 261.6          | 
+| Login Workflow (4 API calls)| 100          | 40000         | 58          | 389 | 2109.85  | 4164.9   | 234.4          | 
+| Login Workflow (4 API calls)| 100          | 200000        | 177         | 400 | 1553.95  | 3035.93  | 243.2          | 
+| Login Workflow (4 API calls)| 160          | 64000         | 137         | 763 | 1891.95  | 3593     | 196.1          | 
+| Login Workflow (4 API calls)| 160          | 320000        | 291         | 598 | 1627     | 1971     | 261.6          | 
 
 >**Takeaway**
 >
@@ -188,9 +188,11 @@ Note: The login scenario includes 4 API calls
 ***To view the benchmarking details of the above APIs by invoking the service directly, click [here](#apis-being-invoked-after-optimizations)***
 
 
-### 3. APIs being invoked via proxy and API Manager using 1 hashing
+### 3. APIs being invoked via proxy and API Manager using 1 hashing iteration
+The below tests indicate that we can get much higher throughput on lesser keycloak cores by reducing the number of iterations.
+
 #### APIs invoked with 4 Keycloak nodes
-* Each API is tested with 1 hashing 
+* Each API is tested with 1 hashing iteration
 * Each API was invoked directly on domain url
 * Infrastructure changes done in this run:
   - 4 Keycloak Nodes (2 vcpus, 8 GiB memory)
