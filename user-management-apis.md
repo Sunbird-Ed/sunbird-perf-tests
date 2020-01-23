@@ -68,6 +68,7 @@ Note: The login scenario includes 4 API calls
 | OTP generate               | 400          | 40000   | 0           | 265      | 1314           | 
 | Login (4 API calls)        | 160          | 64000   | 58          | 315      | 474.6          | 
 
+***To view the benchamrking details of the above APIs via Proxy and API manager, click [here](#rerun-of-individual-apis-via-proxy-and-api-manager)***
 
 >#### Optimizations / Infra changes done to achive this result
 >
@@ -159,34 +160,21 @@ Note: The login scenario includes 4 API calls
 >50+ users can signup / login every second with 2 Keycloak nodes. A 50% drop as compared to 4 Keyclaok nodes.
 
 #### Rerun of individual APIs via Proxy and API Manager
-* Infrastructure changes done in this run:
-  - 4 Keycloak Nodes (2 vcpus, 8 GiB memory)
-
-| API                               | Thread Count | No of Samples | Error Count | Avg | Throughput/sec | 
-|-----------------------------------|--------------|---------------|-------------|-----|----------------| 
-| System Settings Read              | 100          | 200000        | 0           | 122 | 708.6          | 
-| Get user by email or phone number | 100          | 100000        | 0           | 173 | 555.8          | 
-| Role read                         | 100          | 500000        | 2           | 145 | 667.2          | 
-| Generate token                    | 100          | 300000        | 0           | 144 | 678.4          | 
-| User profile read                 | 100          | 150000        | 66          | 444 | 219.4          | 
-| Org search                        | 100          | 500000        | 0           | 146 | 665.2          | 
-| OTP generate                      | 100          | 20000         | 0           | 122 | 750.1          | 
-| User- existence                   | 100          | 1000000       | 0           | 69  | 1395.1         | 
-| Verify OTP                        | 100          | 20000         | 0           | 100 | 923.2          | 
-
-* Infrastructure changes done in this run:
-  - 2 Keycloak Nodes (2 vcpus, 8 GiB memory)
 
 | API                               | Thread Count | No of Samples | Error Count | Avg | Throughput/sec |
 |-----------------------------------|--------------|---------------|-------------|-----|----------------| 
-| System settings read              | 100          | 200000        | 0           | 120      | 709.2          | 
-| Get User by email or phone number | 100          | 100000        | 0           | 65       | 1424.5         | 
-| Role read                         | 100          | 100000        | 0           | 142      | 674.4          | 
-| Generate token                    | 100          | 300000        | 0           | 254      | 386.9          | 
-| User profile read                 | 100          | 150000        | 73          | 403      | 241.9          | 
-| Org search                        | 100          | 500000        | 0           | 148      | 660.7          | 
-| OTP generate                      | 100          | 100000        | 0           | 141      | 675.9          | 
-| User-existence                    | 100          | 1000000       | 0           | 66       | 1445.1         | 
+| System settings read              | 100          | 200000        | 0           | 120 | 709.2          | 
+| Get User by email or phone number | 100          | 100000        | 0           | 65  | 1424.5         | 
+| Role read                         | 100          | 100000        | 0           | 142 | 674.4          | 
+| Generate token                    | 100          | 300000        | 0           | 144 | 678.4          | 
+| User profile read                 | 100          | 150000        | 73          | 40  | 241.9          | 
+| Org search                        | 100          | 500000        | 0           | 146 | 665.2          | 
+| OTP generate                      | 100          | 20000         | 0           | 122 | 750.1          | 
+| User-existence                    | 100          | 1000000       | 0           | 66  | 1445.1         |
+| Verify OTP                        | 100          | 20000         | 0           | 100 | 923.2          | 
+
+
+***To view the benchamrking details of the above APIs by invoking the service directly, click [here](#apis-being-invoked-after-optimizations)***
 
 
 ### 3. APIs being invoked via proxy and API Manager using 1 hashing
