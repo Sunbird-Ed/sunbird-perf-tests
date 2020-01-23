@@ -134,7 +134,7 @@ Note: The login scenario includes 4 API calls
 >100+ users can signup / login every second with the above infrastructure post optimizations.
 
 
-#### Long Running Test for Login APIs and User Signup API
+#### Long Running Test for User Signup API and Login APIs
 *The user sign up was run for a during of 3 hours and 40 minutes. The test created 1000000 users.*
 
 *The login scenario was run for a duration of 3 hours and 55 minutes. During this test, the database had 5 million+ users.*
