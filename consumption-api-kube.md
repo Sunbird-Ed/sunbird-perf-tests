@@ -5,8 +5,18 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 
 ### APIs Invoked in this benchmarking
 
-| TR1 | TR2 | TR3 |
-|-----|-----|-----|
+| API Name          | API path                   | Description | 
+|-------------------|----------------------------|-------------| 
+| Content Read      | /api/content/v1/read       |             | 
+| Org Search        | /api/org/v1/search         |             | 
+| Send Telemetry    | /api/org/v1/search         |             | 
+| Content Hierarchy | /api/course/v1/hierarchy   |             | 
+| Dial Search       | /api/content/v1/search     |             | 
+| Form Read         | /api/data/v1/form/read     |             | 
+| Tenant Info       | /v1/tenant/info            |             | 
+| Page Assemble     | /api/data/v1/page/assemble |             | 
+| Device Register   | /api/v3/device/register    |             | 
+
 
 ### Infrastructure and Container details
 * Exact same infrastructre, container replicas, container cpu and memory limits were setup for Kubernetes and Docker
@@ -29,12 +39,23 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 * The services were setup to run as NodePort in kubernetes
 
 *Kubernetes*
-| TR1 | TR2 | TR3 |
-|-----|-----|-----|
+
+| API            | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time| Throughput (req/sec) | 
+|----------------|--------------|---------------|-------------|----------|----------|----------|----------------------| 
+| Content Read   | 600          | 9000000       | 0           | 107      | 65       | 110      | 5419                 | 
+| Org Search     | 400          | 2400000       | 0           | 344      | 328      | 454      | 1146.8               | 
+| Send Telemetry | 400          | 1200000       | 0           | 618      | 994.95   | 1298.97  | 641.6                | 
+
 
 *Docker*
-| TR1 | TR2 | TR3 |
-|-----|-----|-----|
+
+| API            | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time | Throughput (req/sec) | 
+|----------------|--------------|---------------|-------------|----------|-----------------------------|-----------------------------|----------------------| 
+| Content Read   | 600          | 9000000       | 0           | 131      | 46                          | 1023                        | 4447.2               | 
+| Org Search     | 400          | 2400000       | 0           | 390      | 519                         | 843.97                      | 1015.9               | 
+| Send Telemetry | 400          | 1200000       | 1           | 692      | 1067                        | 1337                        | 573.3                | 
+
+
 
 **2. Individual API benchmarking via Proxy and API Manager**
 * Proxy was setup to run as NodePort in kubernetes
@@ -42,42 +63,91 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 * Separate database was created with FQDN of internal service names for API Manager
 
 *Kubernetes*
-| TR1 | TR2 | TR3 |
-|-----|-----|-----|
+
+| API            | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time | Throughput (req/sec) | 
+|----------------|--------------|---------------|-------------|----------|-----------------------------|-----------------------------|----------------------| 
+| Content Read   | 600          | 4500000       | 0           | 228      | 283                         | 378.99                      | 2582.1               | 
+| Org Search     | 400          | 2400000       | 0           | 252      | 364                         | 458                         | 1571.7               | 
+| Send Telemetry | 400          | 400000        | 0           | 602      | 859.95                      | 1023.97                     | 657.1                | 
+
 
 *Docker*
-| TR1 | TR2 | TR3 |
-|-----|-----|-----|
+
+| API            | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time | Throughput (req/sec) | 
+|----------------|--------------|---------------|-------------|----------|-----------------------------|-----------------------------|----------------------| 
+| Content Read   | 600          | 4500000       | 0           | 280      | 248                         | 330                         | 2116.9               | 
+| Org Search     | 400          | 1200000       | 0           | 559      | 842                         | 1098                        | 705.2                | 
+| Send Telemetry | 400          | 1200000       | 0           | 676      | 1560                        | 1847                        | 581.9                | 
+
 
 **3. Benchmarking 8 commonly used API's during consumption via Proxy and API Manager**
+
+>* Note: The soak test scenario includes 8 API calls
+>* Content Read
+>* Org Search
+>* Send Telemetry
+>* Content Hierarchy
+>* Dial Search
+>* Form Read
+>* Tenant Info
+>* Device Register
+
 * Number of threads - 600
 
 *Kubernetes*
-| TR1 | TR2 | TR3 |
-|-----|-----|-----|
+
+| API                     | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time | Throughput (req/sec) | 
+|-------------------------|--------------|---------------|-------------|----------|-----------------------------|-----------------------------|----------------------| 
+| Soak Test (8 API calls) | 600          | 2400000       | 0           | 159.12   | 395                         | 718.97                      | 3543.49              | 
+| Soak Test (8 API calls) | 600          | 4800000       | 0           | 168      | 373                         | 960                         | 3409.2               | 
+
 
 *Docker*
-| TR1 | TR2 | TR3 |
-|-----|-----|-----|
+
+| API                     | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time | Throughput (req/sec) | 
+|-------------------------|--------------|---------------|-------------|----------|-----------------------------|-----------------------------|----------------------| 
+| Soak Test (8 API calls) | 600          | 2400000       | 0           | 264.39   | 671                         | 1725.98                     | 2148.98              | 
+| Soak Test (8 API calls) | 600          | 4800000       | 1           | 264      | 445                         | 784                         | 2200.7               | 
 
 
 **4. Benchmarking 9 commonly used API's during consumption via Proxy and API Manager**
 
+>* Note: The soak test scenario includes 9 API calls
+>* Content Read
+>* Org Search
+>* Send Telemetry
+>* Content Hierarchy
+>* Dial Search
+>* Form Read
+>* Tenant Info
+>* Device Register
+>* Page Assemble 
+
+
 *Kubernetes*
-| TR1 | TR2 | TR3 |
-|-----|-----|-----|
+
+| API                     | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time | Throughput (req/sec) | 
+|-------------------------|--------------|---------------|-------------|----------|-----------------------------|-----------------------------|----------------------| 
+| Soak Test (9 API calls) | 600          | 5400000       | 0           | 186      | 413                         | 1052                        | 3119.4               | 
+
 
 *Docker*
-| TR1 | TR2 | TR3 |
-|-----|-----|-----|
+
+| API                     | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time | Throughput (req/sec) | 
+|-------------------------|--------------|---------------|-------------|----------|-----------------------------|-----------------------------|----------------------| 
+| Soak Test (9 API calls) | 600          | 5400000       | 499         | 274      | 397                         | 631                         | 2125.6               | 
 
 
-**5. Benchmarking 9 commonly used API's during consumption via Proxy and API Manager (Long Running Test)**
+
+**5. Benchmarking 8 commonly used API's during consumption via Proxy and API Manager (Long Running Test)**
 * Duration of run - 2h 10m
 
 *Kubernetes*
-| TR1 | TR2 | TR3 |
-|-----|-----|-----|
+
+| API                     | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time | Throughput (req/sec) | 
+|-------------------------|--------------|---------------|-------------|----------|-----------------------------|-----------------------------|----------------------| 
+| Soak Test (8 API calls) | 600          | 24000000      | 1           | 191      | 240                         | 2311.88                     | 3071.9               | 
+
 
 
 **6. API reponse times of the 9 commonly used API's during consumption**
