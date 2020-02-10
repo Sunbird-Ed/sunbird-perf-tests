@@ -24,7 +24,7 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
   * Telemetry 6 (cpu limit - 1.5 core, memory limit - 1GB)
 
 
-### 1. Individual API benchmarking
+**1. Individual API benchmarking**
 * The API's were invoked by directly accessing the service
 * The services were setup to run as NodePort in kubernetes
 
@@ -36,7 +36,7 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 | TR1 | TR2 | TR3 |
 |-----|-----|-----|
 
-### 2. Individual API benchmarking via Proxy and API Manager
+**2. Individual API benchmarking via Proxy and API Manager**
 * Proxy was setup to run as NodePort in kubernetes
 * API manager was setup to run as ClusterIP
 * Separate database was created with FQDN of internal service names for API Manager
@@ -49,7 +49,7 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 | TR1 | TR2 | TR3 |
 |-----|-----|-----|
 
-### 3. Benchmarking 8 commonly used API's during consumption via Proxy and API Manager
+**3. Benchmarking 8 commonly used API's during consumption via Proxy and API Manager**
 * Number of threads - 600
 
 #### Kubernetes
@@ -61,7 +61,7 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 |-----|-----|-----|
 
 
-### 4. Benchmarking 9 commonly used API's during consumption via Proxy and API Manager
+**4. Benchmarking 9 commonly used API's during consumption via Proxy and API Manager**
 
 #### Kubernetes
 | TR1 | TR2 | TR3 |
@@ -72,7 +72,7 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 |-----|-----|-----|
 
 
-### 5. Benchmarking 9 commonly used API's during consumption via Proxy and API Manager (Long Running Test)
+**5. Benchmarking 9 commonly used API's during consumption via Proxy and API Manager (Long Running Test)**
 * Duration of run - 2h 10m
 
 #### Kubernetes
@@ -80,7 +80,7 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 |-----|-----|-----|
 
 
-### 6. API reponse times of the 9 commonly used API's during consumption
+**6. API reponse times of the 9 commonly used API's during consumption**
 * All response times are in milliseconds
 
 #### Kubernetes
