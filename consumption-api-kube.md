@@ -28,11 +28,11 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 * The API's were invoked by directly accessing the service
 * The services were setup to run as NodePort in kubernetes
 
-#### Kubernetes
+*Kubernetes*
 | TR1 | TR2 | TR3 |
 |-----|-----|-----|
 
-#### Docker
+*Docker*
 | TR1 | TR2 | TR3 |
 |-----|-----|-----|
 
@@ -41,33 +41,33 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 * API manager was setup to run as ClusterIP
 * Separate database was created with FQDN of internal service names for API Manager
 
-#### Kubernetes
+*Kubernetes*
 | TR1 | TR2 | TR3 |
 |-----|-----|-----|
 
-#### Docker
+*Docker*
 | TR1 | TR2 | TR3 |
 |-----|-----|-----|
 
 **3. Benchmarking 8 commonly used API's during consumption via Proxy and API Manager**
 * Number of threads - 600
 
-#### Kubernetes
+*Kubernetes*
 | TR1 | TR2 | TR3 |
 |-----|-----|-----|
 
-#### Docker
+*Docker*
 | TR1 | TR2 | TR3 |
 |-----|-----|-----|
 
 
 **4. Benchmarking 9 commonly used API's during consumption via Proxy and API Manager**
 
-#### Kubernetes
+*Kubernetes*
 | TR1 | TR2 | TR3 |
 |-----|-----|-----|
 
-#### Docker
+*Docker*
 | TR1 | TR2 | TR3 |
 |-----|-----|-----|
 
@@ -75,7 +75,7 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 **5. Benchmarking 9 commonly used API's during consumption via Proxy and API Manager (Long Running Test)**
 * Duration of run - 2h 10m
 
-#### Kubernetes
+*Kubernetes*
 | TR1 | TR2 | TR3 |
 |-----|-----|-----|
 
@@ -83,10 +83,10 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 **6. API reponse times of the 9 commonly used API's during consumption**
 * All response times are in milliseconds
 
-#### Kubernetes
+*Kubernetes*
 | TR1 | TR2 | TR3 |
 |-----|-----|-----|
 
-#### Docker
+*Docker*
 | TR1 | TR2 | TR3 |
 |-----|-----|-----|
