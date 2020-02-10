@@ -18,3 +18,4 @@ Please click on the below links to get details on the benchmark results
 3. [Jmeter Installation](jmeter-installtion.md)
 4. [Running the Consumption APIs](run-consumption-api.md)
 5. [Running the User Management APIs](run-user-mgm-api.md)
+6. [Consumption APIs in Kubernetes - 2020](run-user-mgm-api.md)
