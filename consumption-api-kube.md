@@ -10,12 +10,12 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 | Content Read      | /api/content/v1/read       | GET API call used to read a content based on do id's| 
 | Org Search        | /api/org/v1/search         | POST API call used to read a organisation based on channel id| 
 | Send Telemetry    | /api/org/v1/search         | POST API call which sends telemetry data with compressed payload| 
-| Content Hierarchy | /api/course/v1/hierarchy   | GET API call used to read content hierarchy| 
-| Dial Search       | /api/content/v1/search     | POST API call used to search dial codes| 
+| Content Hierarchy | /api/course/v1/hierarchy   | GET API call used to read course hierarchy based on do id's| 
+| Dial Search       | /api/content/v1/search     | POST API call used to search dial codes based on QR code| 
 | Form Read         | /api/data/v1/form/read     | POST API call used to read forms| 
-| Tenant Info       | /v1/tenant/info            | GET API call used to read tenants| 
-| Page Assemble     | /api/data/v1/page/assemble | POST API call used to dispaly explore page and relavent contents| 
-| Device Register   | /api/v3/device/register    | POST API call used to send the device id| 
+| Tenant Info       | /v1/tenant/info            | GET API call used to read tenants based on tenant id| 
+| Page Assemble     | /api/data/v1/page/assemble | POST API call used to dispaly relavent contents on explore page or post login page| 
+| Device Register   | /api/v3/device/register    | POST API call used to send the device id|
 
 
 ### Infrastructure and Container details
