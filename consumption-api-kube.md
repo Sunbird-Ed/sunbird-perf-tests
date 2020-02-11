@@ -82,16 +82,6 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 
 **3. Benchmarking 8 commonly used API's during consumption via Proxy and API Manager**
 
->* Note: The soak test scenario includes 8 API calls
->* Content Read
->* Org Search
->* Send Telemetry
->* Content Hierarchy
->* Dial Search
->* Form Read
->* Tenant Info
->* Device Register
-
 >**Kubernetes**
 
 | API                     | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time | Throughput (req/sec) | 
@@ -109,18 +99,6 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 
 
 **4. Benchmarking 9 commonly used API's during consumption via Proxy and API Manager**
-
->* Note: The soak test scenario includes 9 API calls
->* Content Read
->* Org Search
->* Send Telemetry
->* Content Hierarchy
->* Dial Search
->* Form Read
->* Tenant Info
->* Device Register
->* Page Assemble 
-
 
 >**Kubernetes**
 
