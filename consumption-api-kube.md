@@ -113,10 +113,18 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 
 *Docker*
 
-| API                     | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time | Throughput (req/sec) | 
-|-------------------------|--------------|---------------|-------------|----------|-----------------------------|-----------------------------|----------------------| 
-| Soak Test (8 API calls) | 600          | 2400000       | 0           | 264.39   | 671                         | 1725.98                     | 2148.98              | 
-| Soak Test (8 API calls) | 600          | 4800000       | 1           | 264      | 445                         | 784                         | 2200.7               | 
+| API               | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time | Throughput (req/sec) | 
+|-------------------|--------------|---------------|-------------|----------|-----------------------------|-----------------------------|----------------------| 
+| Total             |              | 4800000       | 0           | 264.93   | 445                         | 784                         | 2200.91              | 
+| Content Hierarchy | 600          | 600000        | 0           | 388.31   | 1238                        | 1977                        | 275.12               | 
+| Content Read      | 600          | 600000        | 0           | 252.06   | 850                         | 1433.98                     | 275.14               | 
+| Device Register   | 600          | 600000        | 0           | 35.2     | 73                          | 110                         | 275.14               | 
+| Dial Search       | 600          | 600000        | 0           | 201.14   | 671                         | 1114.99                     | 275.14               | 
+| Form Read         | 600          | 600000        | 0           | 89.11    | 183                         | 330.99                      | 275.14               | 
+| Org Search        | 600          | 600000        | 0           | 312.9    | 1388.9                      | 2102.98                     | 275.13               | 
+| Send Telemetry    | 600          | 600000        | 0           | 750.22   | 2098.95                     | 2598                        | 275.14               | 
+| Tenant Info       | 600          | 600000        | 0           | 90.54    | 170                         | 294                         | 275.14               | 
+
 
 
 **4. Benchmarking 9 commonly used API's during consumption via Proxy and API Manager**
