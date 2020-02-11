@@ -127,12 +127,35 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 
 
 **6. API reponse times of the 9 commonly used API's during consumption**
+* All API calls were via Proxy and Kong
 * All response times are in milliseconds
+* This data is captured from Kong using statsd plugin
+* This table tells us the max response time that the particular API has taken
 
 >**Kubernetes**
-| TR1 | TR2 | TR3 |
-|-----|-----|-----|
+
+| API Name          | API Name in Kong   | max (milliseconds) |
+|-------------------|--------------------|--------------------|
+| Content Hierarchy | getCourseHierarchy | 94                 |
+| Content Read      | readContent        | 93                 |
+| Device Register   | deviceRegister     | 93                 |
+| Dial Search       | searchContent      | 93                 |
+| Form Read         | readForm           | 92                 |
+| Org Search        | searchOrg          | 92                 |
+| Page Assemble     | assemblePage       | 81                 |
+| Send Telemetry    | telemetry          | 93                 |
+| Tenant Info       | getTenantInfo      | 90                 |
 
 >**Docker**
-| TR1 | TR2 | TR3 |
-|-----|-----|-----|
+
+| API Name          | API Name in Kong   | max (milliseconds) |
+|-------------------|--------------------|--------------------|
+| Content Hierarchy | getCourseHierarchy | 297                |
+| Content Read      | readContent        | 297                |
+| Device Register   | deviceRegister     | 298                |
+| Dial Search       | searchContent      | 297                |
+| Form Read         | readForm           | 297                |
+| Org Search        | searchOrg          | 298                |
+| Page Assemble     | assemblePage       | 257                |
+| Send Telemetry    | telemetry          | 296                |
+| Tenant Info       | getTenantInfo      | 296                |
