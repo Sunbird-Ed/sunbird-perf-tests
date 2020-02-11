@@ -96,10 +96,19 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 
 *Kubernetes*
 
-| API                     | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time | Throughput (req/sec) | 
-|-------------------------|--------------|---------------|-------------|----------|-----------------------------|-----------------------------|----------------------| 
-| Soak Test (8 API calls) | 600          | 2400000       | 0           | 159.12   | 395                         | 718.97                      | 3543.49              | 
-| Soak Test (8 API calls) | 600          | 4800000       | 0           | 168      | 373                         | 960                         | 3409.2               | 
+
+| API               | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time | Throughput (req/sec) | 
+|-------------------|--------------|---------------|-------------|----------|-----------------------------|-----------------------------|----------------------| 
+| Total             |              | 2400000       | 0           | 159.12   | 395                         | 718.97                      | 3543.49              | 
+| Content Hierarchy | 600          | 300000        | 0           | 262.74   | 896.85                      | 1433.98                     | 443                  | 
+| Content Read      | 600          | 300000        | 0           | 165.05   | 626                         | 1083.99                     | 443.05               | 
+| Device Register   | 600          | 300000        | 0           | 63.06    | 104                         | 144                         | 443.05               | 
+| Dial Search       | 600          | 300000        | 0           | 129.51   | 508                         | 833.98                      | 443.05               | 
+| Form Read         | 600          | 300000        | 0           | 79.39    | 297                         | 458                         | 443.05               | 
+| Org Search        | 600          | 300000        | 0           | 231.01   | 859                         | 1276.99                     | 443.05               | 
+| Send Telemetry    | 600          | 300000        | 0           | 270.63   | 716                         | 1287.99                     | 443.03               | 
+| Tenant Info       | 600          | 300000        | 0           | 71.61    | 261                         | 393.99                      | 443.04               | 
+
 
 
 *Docker*
