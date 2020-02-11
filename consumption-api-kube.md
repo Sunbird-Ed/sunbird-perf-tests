@@ -7,15 +7,15 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 
 | API Name          | API path                   | Description | 
 |-------------------|----------------------------|-------------| 
-| Content Read      | /api/content/v1/read       |             | 
-| Org Search        | /api/org/v1/search         |             | 
-| Send Telemetry    | /api/org/v1/search         |             | 
-| Content Hierarchy | /api/course/v1/hierarchy   |             | 
-| Dial Search       | /api/content/v1/search     |             | 
-| Form Read         | /api/data/v1/form/read     |             | 
-| Tenant Info       | /v1/tenant/info            |             | 
-| Page Assemble     | /api/data/v1/page/assemble |             | 
-| Device Register   | /api/v3/device/register    |             | 
+| Content Read      | /api/content/v1/read       | GET API call used to read a content based on do id's| 
+| Org Search        | /api/org/v1/search         | POST API call used to read a organisation based on channel id| 
+| Send Telemetry    | /api/org/v1/search         | POST API call which sends telemetry data with compressed payload| 
+| Content Hierarchy | /api/course/v1/hierarchy   | GET API call used to read content hierarchy| 
+| Dial Search       | /api/content/v1/search     | POST API call used to search dial codes| 
+| Form Read         | /api/data/v1/form/read     | POST API call used to read forms| 
+| Tenant Info       | /v1/tenant/info            | GET API call used to read tenants| 
+| Page Assemble     | /api/data/v1/page/assemble | POST API call used to dispaly explore page and relavent contents| 
+| Device Register   | /api/v3/device/register    | POST API call used to send the device id| 
 
 
 ### Infrastructure and Container details
@@ -38,7 +38,7 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 * The API's were invoked by directly accessing the service
 * The services were setup to run as NodePort in kubernetes
 
-*Kubernetes*
+>**Kubernetes**
 
 | API            | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time| Throughput (req/sec) | 
 |----------------|--------------|---------------|-------------|----------|----------|----------|----------------------| 
@@ -47,7 +47,7 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 | Send Telemetry | 400          | 1200000       | 0           | 618      | 994.95   | 1298.97  | 641.6                | 
 
 
-*Docker*
+>**Docker**
 
 | API            | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time | Throughput (req/sec) | 
 |----------------|--------------|---------------|-------------|----------|-----------------------------|-----------------------------|----------------------| 
@@ -62,7 +62,7 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 * API manager was setup to run as ClusterIP
 * Separate database was created with FQDN of internal service names for API Manager
 
-*Kubernetes*
+>**Kubernetes**
 
 | API            | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time | Throughput (req/sec) | 
 |----------------|--------------|---------------|-------------|----------|-----------------------------|-----------------------------|----------------------| 
@@ -71,7 +71,7 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 | Send Telemetry | 400          | 400000        | 0           | 602      | 859.95                      | 1023.97                     | 657.1                | 
 
 
-*Docker*
+>**Docker**
 
 | API            | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time | Throughput (req/sec) | 
 |----------------|--------------|---------------|-------------|----------|-----------------------------|-----------------------------|----------------------| 
@@ -92,9 +92,7 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 >* Tenant Info
 >* Device Register
 
-* Number of threads - 600
-
-*Kubernetes*
+>**Kubernetes**
 
 | API                     | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time | Throughput (req/sec) | 
 |-------------------------|--------------|---------------|-------------|----------|-----------------------------|-----------------------------|----------------------| 
@@ -102,7 +100,7 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 | Soak Test (8 API calls) | 600          | 4800000       | 0           | 168      | 373                         | 960                         | 3409.2               | 
 
 
-*Docker*
+>**Docker**
 
 | API                     | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time | Throughput (req/sec) | 
 |-------------------------|--------------|---------------|-------------|----------|-----------------------------|-----------------------------|----------------------| 
@@ -124,14 +122,14 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 >* Page Assemble 
 
 
-*Kubernetes*
+>**Kubernetes**
 
 | API                     | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time | Throughput (req/sec) | 
 |-------------------------|--------------|---------------|-------------|----------|-----------------------------|-----------------------------|----------------------| 
 | Soak Test (9 API calls) | 600          | 5400000       | 0           | 186      | 413                         | 1052                        | 3119.4               | 
 
 
-*Docker*
+>**Docker**
 
 | API                     | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time | Throughput (req/sec) | 
 |-------------------------|--------------|---------------|-------------|----------|-----------------------------|-----------------------------|----------------------| 
@@ -142,7 +140,7 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 **5. Benchmarking 8 commonly used API's during consumption via Proxy and API Manager (Long Running Test)**
 * Duration of run - 2h 10m
 
-*Kubernetes*
+>**Kubernetes**
 
 | API                     | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time | Throughput (req/sec) | 
 |-------------------------|--------------|---------------|-------------|----------|-----------------------------|-----------------------------|----------------------| 
@@ -153,10 +151,10 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 **6. API reponse times of the 9 commonly used API's during consumption**
 * All response times are in milliseconds
 
-*Kubernetes*
+>**Kubernetes**
 | TR1 | TR2 | TR3 |
 |-----|-----|-----|
 
-*Docker*
+>**Docker**
 | TR1 | TR2 | TR3 |
 |-----|-----|-----|
