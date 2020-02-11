@@ -179,10 +179,17 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 
 *Kubernetes*
 
-| API                     | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time | Throughput (req/sec) | 
-|-------------------------|--------------|---------------|-------------|----------|-----------------------------|-----------------------------|----------------------| 
-| Soak Test (8 API calls) | 600          | 24000000      | 1           | 191      | 240                         | 2311.88                     | 3071.9               | 
-
+| API               | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time | Throughput (req/sec) | 
+|-------------------|--------------|---------------|-------------|----------|-----------------------------|-----------------------------|----------------------| 
+| Total             |              | 24000000      | 0           | 191.72   | 240                         | 2311.88                     | 3071.93              | 
+| Content Hierarchy | 600          | 3000000       | 0           | 264.07   | 794                         | 1205.98                     | 383.99               | 
+| Content Read      | 600          | 3000000       | 0           | 174.72   | 542.95                      | 879                         | 384                  | 
+| Device Register   | 600          | 3000000       | 0           | 128.24   | 71                          | 92                          | 384                  | 
+| Dial Search       | 600          | 3000000       | 0           | 127.43   | 466                         | 667                         | 384                  | 
+| Form Read         | 600          | 3000000       | 0           | 24.28    | 33                          | 121.97                      | 384                  | 
+| Org Search        | 600          | 3000000       | 0           | 461.01   | 3526                        | 4223                        | 384                  | 
+| Send Telemetry    | 600          | 3000000       | 0           | 333.29   | 204.95                      | 508.97                      | 384                  | 
+| Tenant Info       | 600          | 3000000       | 0           | 20.74    | 18                          | 84.99                       | 384                  | 
 
 
 **6. API reponse times of the 9 commonly used API's during consumption**
