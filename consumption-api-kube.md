@@ -84,34 +84,69 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 
 >**Kubernetes**
 
-| API                     | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time | Throughput (req/sec) | 
-|-------------------------|--------------|---------------|-------------|----------|-----------------------------|-----------------------------|----------------------| 
-| Soak Test (8 API calls) | 600          | 2400000       | 0           | 159.12   | 395                         | 718.97                      | 3543.49              | 
-| Soak Test (8 API calls) | 600          | 4800000       | 0           | 168      | 373                         | 960                         | 3409.2               | 
+
+| API               | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time | Throughput (req/sec) | 
+|-------------------|--------------|---------------|-------------|----------|-----------------------------|-----------------------------|----------------------| 
+| Total             |              | 2400000       | 0           | 159.12   | 395                         | 718.97                      | 3543.49              | 
+| Content Hierarchy | 600          | 300000        | 0           | 262.74   | 896.85                      | 1433.98                     | 443                  | 
+| Content Read      | 600          | 300000        | 0           | 165.05   | 626                         | 1083.99                     | 443.05               | 
+| Device Register   | 600          | 300000        | 0           | 63.06    | 104                         | 144                         | 443.05               | 
+| Dial Search       | 600          | 300000        | 0           | 129.51   | 508                         | 833.98                      | 443.05               | 
+| Form Read         | 600          | 300000        | 0           | 79.39    | 297                         | 458                         | 443.05               | 
+| Org Search        | 600          | 300000        | 0           | 231.01   | 859                         | 1276.99                     | 443.05               | 
+| Send Telemetry    | 600          | 300000        | 0           | 270.63   | 716                         | 1287.99                     | 443.03               | 
+| Tenant Info       | 600          | 300000        | 0           | 71.61    | 261                         | 393.99                      | 443.04               | 
+
 
 
 >**Docker**
 
-| API                     | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time | Throughput (req/sec) | 
-|-------------------------|--------------|---------------|-------------|----------|-----------------------------|-----------------------------|----------------------| 
-| Soak Test (8 API calls) | 600          | 2400000       | 0           | 264.39   | 671                         | 1725.98                     | 2148.98              | 
-| Soak Test (8 API calls) | 600          | 4800000       | 1           | 264      | 445                         | 784                         | 2200.7               | 
+| API               | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time | Throughput (req/sec) | 
+|-------------------|--------------|---------------|-------------|----------|-----------------------------|-----------------------------|----------------------| 
+| Total             |              | 4800000       | 0           | 264.93   | 445                         | 784                         | 2200.91              | 
+| Content Hierarchy | 600          | 600000        | 0           | 388.31   | 1238                        | 1977                        | 275.12               | 
+| Content Read      | 600          | 600000        | 0           | 252.06   | 850                         | 1433.98                     | 275.14               | 
+| Device Register   | 600          | 600000        | 0           | 35.2     | 73                          | 110                         | 275.14               | 
+| Dial Search       | 600          | 600000        | 0           | 201.14   | 671                         | 1114.99                     | 275.14               | 
+| Form Read         | 600          | 600000        | 0           | 89.11    | 183                         | 330.99                      | 275.14               | 
+| Org Search        | 600          | 600000        | 0           | 312.9    | 1388.9                      | 2102.98                     | 275.13               | 
+| Send Telemetry    | 600          | 600000        | 0           | 750.22   | 2098.95                     | 2598                        | 275.14               | 
+| Tenant Info       | 600          | 600000        | 0           | 90.54    | 170                         | 294                         | 275.14               | 
+
 
 
 **4. Benchmarking 9 commonly used API's during consumption via Proxy and API Manager**
 
 >**Kubernetes**
 
-| API                     | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time | Throughput (req/sec) | 
-|-------------------------|--------------|---------------|-------------|----------|-----------------------------|-----------------------------|----------------------| 
-| Soak Test (9 API calls) | 600          | 5400000       | 0           | 186      | 413                         | 1052                        | 3119.4               | 
+| API               | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time | Throughput (req/sec) | 
+|-------------------|--------------|---------------|-------------|----------|-----------------------------|-----------------------------|----------------------| 
+| Total             |              | 5400000       | 0           | 186.34   | 413                         | 1052                        | 3119.74              | 
+| Content Hierarchy | 600          | 600000        | 0           | 214.76   | 556.95                      | 901.99                      | 346.66               | 
+| Content Read      | 600          | 600000        | 0           | 124.38   | 368                         | 711.99                      | 346.68               | 
+| Device Register   | 600          | 600000        | 0           | 49.26    | 78                          | 150.99                      | 346.68               | 
+| Dial Search       | 600          | 600000        | 0           | 144.91   | 341                         | 591                         | 346.68               | 
+| Form Read         | 600          | 600000        | 0           | 45.25    | 180                         | 344.99                      | 346.69               | 
+| Org Search        | 600          | 600000        | 0           | 93.89    | 184                         | 363.99                      | 346.68               | 
+| Page Assemble     | 600          | 600000        | 0           | 469.44   | 1236                        | 1971.98                     | 346.68               | 
+| Send Telemetry    | 600          | 600000        | 0           | 486.49   | 2585                        | 3119                        | 346.68               | 
+| Tenant Info       | 600          | 600000        | 0           | 48.65    | 163                         | 309.99                      | 346.69               | 
 
 
 >**Docker**
 
-| API                     | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time | Throughput (req/sec) | 
-|-------------------------|--------------|---------------|-------------|----------|-----------------------------|-----------------------------|----------------------| 
-| Soak Test (9 API calls) | 600          | 5400000       | 499         | 274      | 397                         | 631                         | 2125.6               | 
+| API               | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time | Throughput (req/sec) | 
+|-------------------|--------------|---------------|-------------|----------|-----------------------------|-----------------------------|----------------------| 
+| Total             |              | 5400000       | 1           | 274.96   | 397                         | 631                         | 2125.75              | 
+| Content Hierarchy | 600          | 600000        | 0           | 422.3    | 1235.95                     | 1931                        | 236.2                | 
+| Content Read      | 600          | 600000        | 0           | 274.5    | 821.95                      | 1318.99                     | 236.26               | 
+| Device Register   | 600          | 600000        | 0           | 32.24    | 77                          | 135                         | 236.45               | 
+| Dial Search       | 600          | 600000        | 0           | 232.83   | 717.95                      | 1188.98                     | 236.37               | 
+| Form Read         | 600          | 600000        | 0           | 67.72    | 207                         | 393.99                      | 236.38               | 
+| Org Search        | 600          | 600000        | 0           | 190.72   | 1669.95                     | 2300.98                     | 236.44               | 
+| Page Assemble     | 600          | 600000        | 1           | 379.03   | 766.95                      | 1247.99                     | 236.48               | 
+| Send Telemetry    | 600          | 600000        | 0           | 812.44   | 1553.95                     | 2087.99                     | 236.45               | 
+| Tenant Info       | 600          | 600000        | 0           | 62.87    | 180                         | 349                         | 236.55               | 
 
 
 
@@ -120,10 +155,17 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 
 >**Kubernetes**
 
-| API                     | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time | Throughput (req/sec) | 
-|-------------------------|--------------|---------------|-------------|----------|-----------------------------|-----------------------------|----------------------| 
-| Soak Test (8 API calls) | 600          | 24000000      | 1           | 191      | 240                         | 2311.88                     | 3071.9               | 
-
+| API               | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time | Throughput (req/sec) | 
+|-------------------|--------------|---------------|-------------|----------|-----------------------------|-----------------------------|----------------------| 
+| Total             |              | 24000000      | 0           | 191.72   | 240                         | 2311.88                     | 3071.93              | 
+| Content Hierarchy | 600          | 3000000       | 0           | 264.07   | 794                         | 1205.98                     | 383.99               | 
+| Content Read      | 600          | 3000000       | 0           | 174.72   | 542.95                      | 879                         | 384                  | 
+| Device Register   | 600          | 3000000       | 0           | 128.24   | 71                          | 92                          | 384                  | 
+| Dial Search       | 600          | 3000000       | 0           | 127.43   | 466                         | 667                         | 384                  | 
+| Form Read         | 600          | 3000000       | 0           | 24.28    | 33                          | 121.97                      | 384                  | 
+| Org Search        | 600          | 3000000       | 0           | 461.01   | 3526                        | 4223                        | 384                  | 
+| Send Telemetry    | 600          | 3000000       | 0           | 333.29   | 204.95                      | 508.97                      | 384                  | 
+| Tenant Info       | 600          | 3000000       | 0           | 20.74    | 18                          | 84.99                       | 384                  | 
 
 
 **6. API reponse times of the 9 commonly used API's during consumption**
