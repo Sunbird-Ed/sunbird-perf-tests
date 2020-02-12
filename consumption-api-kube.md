@@ -178,26 +178,8 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 
 | API Name          | API Name in Kong   | max (milliseconds) |
 |-------------------|--------------------|--------------------|
-| Content Hierarchy | getCourseHierarchy | 94                 |
-| Content Read      | readContent        | 93                 |
-| Device Register   | deviceRegister     | 93                 |
-| Dial Search       | searchContent      | 93                 |
-| Form Read         | readForm           | 92                 |
-| Org Search        | searchOrg          | 92                 |
-| Page Assemble     | assemblePage       | 81                 |
-| Send Telemetry    | telemetry          | 93                 |
-| Tenant Info       | getTenantInfo      | 90                 |
 
 >**Docker**
 
 | API Name          | API Name in Kong   | max (milliseconds) |
 |-------------------|--------------------|--------------------|
-| Content Hierarchy | getCourseHierarchy | 297                |
-| Content Read      | readContent        | 297                |
-| Device Register   | deviceRegister     | 298                |
-| Dial Search       | searchContent      | 297                |
-| Form Read         | readForm           | 297                |
-| Org Search        | searchOrg          | 298                |
-| Page Assemble     | assemblePage       | 257                |
-| Send Telemetry    | telemetry          | 296                |
-| Tenant Info       | getTenantInfo      | 296                |
