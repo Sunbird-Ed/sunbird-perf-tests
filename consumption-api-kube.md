@@ -27,7 +27,7 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
   * In Azure CNI, every pod gets a IP directly from the subnet
   * There is no NAT between Kubernetes pods and nodes (Kubernetes nodes / External nodes)
   * You will be able to directly connect to the pod using the pod ip
-  * If you inspect the traffic to / from pods, you will see the IP of the pod as source / destination and not the node in which it is running (because there is no NAT)
+  * If you inspect the traffic to / from pods, you will see the IP of the pod as source / destination and not the node in which it is running (because there is no NAT between the pod and node)
   * For more information on Azure CNI, please visit - https://docs.microsoft.com/en-us/azure/aks/configure-azure-cni
 * All the 12 nodes were used to invoke the service from Jmeter in round robin
 * Container repilcas -
