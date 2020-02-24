@@ -133,7 +133,7 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 | Tenant Info       | 600          | 3000000       | 0           | 20.74    | 18                          | 84.99                       | 384                  | 
 
 
-**5. Reponse times of the above descrbed API's **
+**5. Reponse times of the above descrbed API's**
 * All API calls were via Proxy and Kong
 * All response times are in milliseconds
 * This data is captured from Kong using statsd plugin
