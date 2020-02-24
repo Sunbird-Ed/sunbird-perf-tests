@@ -23,11 +23,11 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 * Docker and Kubernetes were setup with 12 Nodes - Standard D4s v3 (4 vcpus, 16 GiB memory) on Azure
 * Kubernetes was setup in AKS
   * In AKS, Azure CNI networking was used
-  * A subnet with a CIDR /22 under the VNET was created to use in the AKS cluster
-  * Every pod gets a IP directly from the subnet
+  * A subnet with a CIDR /22 in the VNET was created for AKS cluster
+  * In Azure CNI, every pod gets a IP directly from the subnet
   * There is no NAT between Kubernetes pods and nodes (Kubernetes nodes / External nodes)
   * You will be able to directly connect to the pod using the pod ip
-  * If you inspect the traffic from / to pods, you will see the IP of the pod and not the node in which it is running
+  * If you inspect the traffic from / to pods, you will see the IP of the pod as source / destination and not the node in which it is running
   * For more information on Azure CNI, please visit - https://docs.microsoft.com/en-us/azure/aks/configure-azure-cni
 * All the 12 nodes were used to invoke the service from Jmeter in round robin
 * Container repilcas -
