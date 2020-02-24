@@ -115,42 +115,7 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 
 
 
-**4. Benchmarking 9 commonly used API's during consumption via Proxy and API Manager**
-
->**Kubernetes**
-
-| API               | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time | Throughput (req/sec) | 
-|-------------------|--------------|---------------|-------------|----------|-----------------------------|-----------------------------|----------------------| 
-| Total             |              | 5400000       | 0           | 186.34   | 413                         | 1052                        | 3119.74              | 
-| Content Hierarchy | 600          | 600000        | 0           | 214.76   | 556.95                      | 901.99                      | 346.66               | 
-| Content Read      | 600          | 600000        | 0           | 124.38   | 368                         | 711.99                      | 346.68               | 
-| Device Register   | 600          | 600000        | 0           | 49.26    | 78                          | 150.99                      | 346.68               | 
-| Dial Search       | 600          | 600000        | 0           | 144.91   | 341                         | 591                         | 346.68               | 
-| Form Read         | 600          | 600000        | 0           | 45.25    | 180                         | 344.99                      | 346.69               | 
-| Org Search        | 600          | 600000        | 0           | 93.89    | 184                         | 363.99                      | 346.68               | 
-| Page Assemble     | 600          | 600000        | 0           | 469.44   | 1236                        | 1971.98                     | 346.68               | 
-| Send Telemetry    | 600          | 600000        | 0           | 486.49   | 2585                        | 3119                        | 346.68               | 
-| Tenant Info       | 600          | 600000        | 0           | 48.65    | 163                         | 309.99                      | 346.69               | 
-
-
->**Docker**
-
-| API               | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time | Throughput (req/sec) | 
-|-------------------|--------------|---------------|-------------|----------|-----------------------------|-----------------------------|----------------------| 
-| Total             |              | 5400000       | 1           | 274.96   | 397                         | 631                         | 2125.75              | 
-| Content Hierarchy | 600          | 600000        | 0           | 422.3    | 1235.95                     | 1931                        | 236.2                | 
-| Content Read      | 600          | 600000        | 0           | 274.5    | 821.95                      | 1318.99                     | 236.26               | 
-| Device Register   | 600          | 600000        | 0           | 32.24    | 77                          | 135                         | 236.45               | 
-| Dial Search       | 600          | 600000        | 0           | 232.83   | 717.95                      | 1188.98                     | 236.37               | 
-| Form Read         | 600          | 600000        | 0           | 67.72    | 207                         | 393.99                      | 236.38               | 
-| Org Search        | 600          | 600000        | 0           | 190.72   | 1669.95                     | 2300.98                     | 236.44               | 
-| Page Assemble     | 600          | 600000        | 1           | 379.03   | 766.95                      | 1247.99                     | 236.48               | 
-| Send Telemetry    | 600          | 600000        | 0           | 812.44   | 1553.95                     | 2087.99                     | 236.45               | 
-| Tenant Info       | 600          | 600000        | 0           | 62.87    | 180                         | 349                         | 236.55               | 
-
-
-
-**5. Benchmarking 8 commonly used API's during consumption via Proxy and API Manager (Long Running Test)**
+**4. Benchmarking 8 commonly used API's during consumption via Proxy and API Manager (Long Running Test)**
 * Duration of run - 2h 10m
 
 >**Kubernetes**
@@ -168,7 +133,7 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 | Tenant Info       | 600          | 3000000       | 0           | 20.74    | 18                          | 84.99                       | 384                  | 
 
 
-**6. API reponse times of the 9 commonly used API's during consumption**
+**5. Reponse times of the above descrbed API's **
 * All API calls were via Proxy and Kong
 * All response times are in milliseconds
 * This data is captured from Kong using statsd plugin
