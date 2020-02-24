@@ -22,6 +22,13 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 * Exact same infrastructre, container replicas, container cpu and memory limits were setup for Kubernetes and Docker
 * Docker and Kubernetes were setup with 12 Nodes - Standard D4s v3 (4 vcpus, 16 GiB memory) on Azure
 * Kubernetes was setup in AKS
+  * In AKS, Azure CNI networking was used
+  * A subnet with a CIDR /22 under the VNET was created to use in the AKS cluster
+  * Every pod gets a IP directly from the subnet
+  * There is no NAT between Kubernetes pods and nodes (Kubernetes nodes / External nodes)
+  * You will be able to directly connect to the pod using the pod ip
+  * If you inspect the traffic from / to pods, you will see the IP of the pod and not the node in which it is running
+  * For more information on Azure CNI, please visit - https://docs.microsoft.com/en-us/azure/aks/configure-azure-cni
 * All the 12 nodes were used to invoke the service from Jmeter in round robin
 * Container repilcas -
   * Proxy - 12 (cpu limit - 1 core, memory limit - 1GB)
@@ -61,6 +68,13 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 * Proxy was setup to run as NodePort in kubernetes
 * API manager was setup to run as ClusterIP
 * Separate database was created with FQDN of internal service names for API Manager
+  * In docker we onboard API's by using the docker service names.
+  * Kong can directly access the upstream services by using the docker service names. 
+  * This is possible because in docker swarm, the service name itself is the FQDN.
+  * In kubernetes, the service name is an alias for which a dns search must be performed in order to get the FQDN. 
+  * Due to a limitation in Kong 10 which cannot do a DNS search using the resolv.conf and ndots, using the service names results in a host not found error.
+  * Hence we have to onboard the API's using FQDN in kubernetes
+  * A FQDN service name in kubernetes looks like - ***service-name.namespace.svc.cluster.local***
 
 >**Kubernetes**
 
