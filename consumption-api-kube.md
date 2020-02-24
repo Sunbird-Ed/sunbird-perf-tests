@@ -27,7 +27,7 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
   * In Azure CNI, every pod gets a IP directly from the subnet
   * There is no NAT between Kubernetes pods and nodes (Kubernetes nodes / External nodes)
   * You will be able to directly connect to the pod using the pod ip
-  * If you inspect the traffic to / from pods, you will see the IP of the pod as source / destination and not the node in which it is running (because there is no NAT between the pod and node)
+  * If you inspect the traffic to / from pods, you will see the IP of the pod as source / destination and not the node in which it is running (there is no NAT between pod and node)
   * For more information on Azure CNI, please visit - https://docs.microsoft.com/en-us/azure/aks/configure-azure-cni
 * All the 12 nodes were used to invoke the service from Jmeter in round robin
 * Container repilcas -
@@ -68,11 +68,10 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 * Proxy was setup to run as NodePort in kubernetes
 * API manager was setup to run as ClusterIP
 * Separate database was created with FQDN of internal service names for API Manager
-  * In docker we onboard API's by using the docker service names.
-  * Kong can directly access the upstream services by using the docker service names. 
-  * This is possible because in docker swarm, the service name itself is the FQDN.
-  * In kubernetes, the service name is an alias for which a dns search must be performed in order to get the FQDN. 
-  * Due to a limitation in Kong 10 which cannot do a DNS search using the resolv.conf and ndots, using the service names results in a host not found error.
+  * In docker we onboard API's by using the docker service names
+  * As the docker service name is nothing but the FQDN, kong can directly access the upstream services by using the service names
+  * In kubernetes, the service name is an alias for which a dns search must be performed in order to get the FQDN
+  * Due to a limitation in Kong 10 which cannot do a DNS search using the resolv.conf and ndots, using the service names results in a host not found error
   * Hence we have to onboard the API's using FQDN in kubernetes
   * A FQDN service name in kubernetes looks like - ***service-name.namespace.svc.cluster.local***
 
