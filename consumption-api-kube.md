@@ -71,7 +71,8 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
   * In docker we onboard API's by using the docker service names
   * As the docker service name is nothing but the FQDN, kong can directly access the upstream services by using the service names
   * In kubernetes, the service name is an alias for which a dns search must be performed in order to get the FQDN
-  * Due to a limitation in Kong 10 which cannot do a DNS search using the resolv.conf and ndots, using the service names results in a host not found error
+  * Due to limitations in Kong 10, a DNS search using the resolv.conf and ndots is not possible.
+  * If we use the service names directly in kong, it results in a host not found error
   * Hence we have to onboard the API's using FQDN in kubernetes
   * A FQDN service name in kubernetes looks like - ***service-name.namespace.svc.cluster.local***
 
