@@ -75,6 +75,7 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
   * If we use the service names directly in kong, it results in a host not found error
   * Hence we have to onboard the API's using its FQDN in kubernetes
   * A kubernetes service with its expanded FQDN looks like - ***service-name.namespace.svc.cluster.local***
+  * **Examples** - *player.dev.svc.cluster.local, telemetry.staging.svc.cluster.local*
 
 >**Kubernetes**
 
