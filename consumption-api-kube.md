@@ -131,20 +131,3 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 | Org Search        | 600          | 3000000       | 0           | 461.01   | 3526                        | 4223                        | 384                  | 
 | Send Telemetry    | 600          | 3000000       | 0           | 333.29   | 204.95                      | 508.97                      | 384                  | 
 | Tenant Info       | 600          | 3000000       | 0           | 20.74    | 18                          | 84.99                       | 384                  | 
-
-
-**5. Reponse times of the above descrbed API's**
-* All API calls were via Proxy and Kong
-* All response times are in milliseconds
-* This data is captured from Kong using statsd plugin
-* This table tells us the max response time that the particular API has taken
-
->**Kubernetes**
-
-| API Name          | API Name in Kong   | max (milliseconds) |
-|-------------------|--------------------|--------------------|
-
->**Docker**
-
-| API Name          | API Name in Kong   | max (milliseconds) |
-|-------------------|--------------------|--------------------|
