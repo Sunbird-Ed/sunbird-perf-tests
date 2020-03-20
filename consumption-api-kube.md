@@ -9,7 +9,7 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 8 slaves in) were setu
 |-------------------|----------------------------|-------------| 
 | Content Read      | /api/content/v1/read       | GET API call used to read a content based on do id's| 
 | Org Search        | /api/org/v1/search         | POST API call used to read a organisation based on channel id| 
-| Send Telemetry    | /api/org/v1/search         | POST API call which sends telemetry data with compressed payload| 
+| Send Telemetry    | /api/data/v1/telemetry     | POST API call which sends telemetry data with compressed payload| 
 | Content Hierarchy | /api/course/v1/hierarchy   | GET API call used to read course hierarchy based on do id's| 
 | Dial Search       | /api/content/v1/search     | POST API call used to search dial codes based on QR code| 
 | Form Read         | /api/data/v1/form/read     | POST API call used to read forms| 
