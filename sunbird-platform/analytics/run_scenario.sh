@@ -7,8 +7,9 @@ scenario_id=$4
 numThreads=$5
 rampupTime=$6
 ctrlLoops=$7
-csvFileHost=$8
-csvFileRequest=$9
+apiKey=$8
+csvFileHost=$9
+csvFileRequest=${10}
 
 
 JMETER_HOME=/mnt/data/benchmark/apache-jmeter-4.0
@@ -41,9 +42,9 @@ echo "scenario_id = " ${scenario_id}
 echo "numThreads = " ${numThreads}
 echo "rampupTime = " ${rampupTime}
 echo "ctrlLoops = " ${ctrlLoops}
+echo "apiKey = " ${apiKey}
 echo "csvFileHost = " ${csvFileHost}
 echo "csvFileRequest = " ${csvFileRequest}
-
 
 
 sed "s/THREADS_COUNT/${numThreads}/g" $JMX_FILE_PATH > jmx.tmp
@@ -55,6 +56,8 @@ mv jmx.tmp $JMX_FILE_PATH
 sed "s/CTRL_LOOPS/${ctrlLoops}/g" $JMX_FILE_PATH > jmx.tmp
 mv jmx.tmp $JMX_FILE_PATH
 
+sed "s/API_KEY/${apiKey}/g" $JMX_FILE_PATH > jmx.tmp
+mv jmx.tmp $JMX_FILE_PATH
 
 sed "s#DOMAIN_FILE#${csvFileHost}#g" $JMX_FILE_PATH > jmx.tmp
 mv jmx.tmp $JMX_FILE_PATH
@@ -62,11 +65,7 @@ mv jmx.tmp $JMX_FILE_PATH
 sed "s#CSV_FILE#${csvFileRequest}#g" $JMX_FILE_PATH > jmx.tmp
 mv jmx.tmp $JMX_FILE_PATH
 
-
-
-
-
-## Copy JMX File to Logs dir ###
+###Copy JMX File to Logs dir ###
 cp $JMX_FILE_PATH $SCENARIO_LOGS/$scenario_id/logs
 
 echo "Running ... "
