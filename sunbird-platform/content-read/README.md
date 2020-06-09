@@ -1,5 +1,6 @@
 How to run?
 
+```
 Run load test scenario script with necessary arguments:
 sh run_scenario.sh <JMETER_HOME> <JMETER_IP_LIST> <SCENARIO_NAME> <SCENARIO_ID> <THREADS_COUNT> <RAMPUP_TIME> <CTRL_LOOPS> <API_KEY>  <DOMAIN_FILE> <CONTENT_FILE> <pathPrefix>
 
