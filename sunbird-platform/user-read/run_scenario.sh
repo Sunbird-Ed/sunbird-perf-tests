@@ -8,20 +8,23 @@ numThreads=$5
 rampupTime=$6
 ctrlLoops=$7
 apiKey=$8
-username=$9
-csvFileHost=${10}
-csvFileRequest=${11}
-userReadApi=${12}
+accessTokenUrl=$9
+userName=${10}
+csvFileHost=${11}
+csvFileRequest=${12}
+userReadApi=${13}
 
 # Generating x-authenticated-token
-accessToken=$(curl -s -X POST https://loadtest.ntp.net.in/auth/realms/sunbird/protocol/openid-connect/token  -H 'content-type: application/x-www-form-urlencoded'  --data "client_id=admin-cli&username=${username}&password=password&grant_type=password" | jq -r '.access_token') # X-AUTHENTICATED-TOKEN
+accessToken=$(curl -s -X POST https://${accessTokenUrl}/auth/realms/sunbird/protocol/openid-connect/token  -H 'content-type: application/x-www-form-urlencoded'  --data "client_id=admin-cli&username=${userName}&password=password&grant_type=password" | jq -r '.access_token') # X-AUTHENTICATED-TOKEN
 
+echo "accessTokenUrl = " ${accessTokenUrl}
+echo "userName = " ${userName}
 echo "accessToken = " ${accessToken}
 
 JMETER_HOME=/mnt/data/benchmark/apache-jmeter-4.0
 JMETER_HOME=${jmeterHome}
 
-SCENARIO_LOGS=~/sunbird-perf-tests/sunbird-platform/logs/$scenario_name
+SCENARIO_LOGS=/mount/data/benchmark/sunbird-perf-tests/sunbird-platform/logs/$scenario_name
 
 JMETER_CLUSTER_IPS=$ips
 
@@ -40,7 +43,7 @@ mkdir $SCENARIO_LOGS/$scenario_id/logs
 mkdir $SCENARIO_LOGS/$scenario_id/server/
 
 rm ~/current_scenario/*.jmx
-cp ~/sunbird-perf-tests/sunbird-platform/$scenario_name/$scenario_name.jmx $JMX_FILE_PATH
+cp /mount/data/benchmark/sunbird-perf-tests/sunbird-platform/$scenario_name/$scenario_name.jmx $JMX_FILE_PATH
 
 echo "ip = " ${ips}
 echo "scenario_name = " ${scenario_name}
@@ -49,6 +52,8 @@ echo "numThreads = " ${numThreads}
 echo "rampupTime = " ${rampupTime}
 echo "ctrlLoops = " ${ctrlLoops}
 echo "apiKey = " ${apiKey}
+echo "accessTokenUrl = " ${accessTokenUrl}
+echo "userName = " ${userName}
 echo "accessToken = " ${accessToken}
 echo "csvFileHost = " ${csvFileHost}
 echo "csvFileRequest = " ${csvFileRequest}
@@ -91,3 +96,5 @@ echo "Log file ..."
 echo "$SCENARIO_LOGS/$scenario_id/logs/scenario.log"
 
 echo "Execution of $scenario_id Complete."
+
+tail -f $SCENARIO_LOGS/$scenario_id/logs/scenario.log
