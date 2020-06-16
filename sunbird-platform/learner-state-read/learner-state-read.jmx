@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jmeterTestPlan version="1.2" properties="5.0" jmeter="5.1.1 r1855137">
   <hashTree>
-    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="course-batch-enrol" enabled="true">
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="learner-state-read" enabled="true">
       <stringProp name="TestPlan.comments"></stringProp>
       <boolProp name="TestPlan.functional_mode">false</boolProp>
       <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
@@ -53,8 +53,8 @@
             <stringProp name="Argument.value">CSV_FILE</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
-          <elementProp name="courseEnrollApi" elementType="Argument">
-            <stringProp name="Argument.name">courseEnrollApi</stringProp>
+          <elementProp name="learnerStateReadApi" elementType="Argument">
+            <stringProp name="Argument.name">learnerStateReadApi</stringProp>
             <stringProp name="Argument.value">PATH_PREFIX</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
@@ -63,7 +63,7 @@
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
     <hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="course-batch-enrol" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="learner-state-read" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -108,10 +108,6 @@
                 <stringProp name="Header.name">Content-Type</stringProp>
                 <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
               </elementProp>
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">Host</stringProp>
-                <stringProp name="Header.value">loadtest.ntp.net.in</stringProp>
-              </elementProp>
             </collectionProp>
           </HeaderManager>
           <hashTree/>
@@ -124,23 +120,21 @@
             <stringProp name="RegexExtractor.match_number">1</stringProp>
           </RegexExtractor>
           <hashTree/>
-          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-            <stringProp name="ConstantTimer.delay">1000</stringProp>
-          </ConstantTimer>
-          <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="course-batch-enrol" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="learner-state-read" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
             <collectionProp name="Arguments.arguments">
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-  &quot;request&quot;:{&#xd;
-    &quot;userId&quot;:&quot;${userId}&quot;,&#xd;
-    &quot;courseId&quot;:&quot;do_313015967573196800189936&quot;,&#xd;
-    &quot;batchId&quot;:&quot;0130159715398778880&quot;&#xd;
-  }&#xd;
+    &quot;request&quot;: {&#xd;
+        &quot;userId&quot;: &quot;${userId}&quot;,&#xd;
+        &quot;courseId&quot;: &quot;do_31251458177472102425191&quot;,&#xd;
+        &quot;contentIds&quot;: [&quot;do_31251825250018918429391&quot;, &quot;do_31251681216889651228304&quot;, &quot;do_-18446744073709551615&quot;, &quot;do_31251459453671833615208&quot;, &quot;do_31251467391406080015348&quot;, &quot;do_31251470240602521625376&quot;, &quot;do_31251470360807833615409&quot;, &quot;do_31251471501275136025399&quot;, &quot;do_31251471258944307215430&quot;, &quot;do_31251471766446080015439&quot;, &quot;do_31251472343491379215463&quot;, &quot;do_3123348532419952641447&quot;, &quot;do_31251681565999923218236&quot;],&#xd;
+        &quot;batchId&quot;: &quot;0129691030774988802&quot;&#xd;
+        &#xd;
+    }&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
@@ -150,7 +144,7 @@
           <stringProp name="HTTPSampler.port">${port}</stringProp>
           <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">${courseEnrollApi}</stringProp>
+          <stringProp name="HTTPSampler.path">${learnerStateReadApi}</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -209,7 +203,7 @@
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename">course-batch-enrol-result.csv</stringProp>
+          <stringProp name="filename">learner-state-read-result.csv</stringProp>
         </ResultCollector>
         <hashTree/>
         <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
@@ -246,7 +240,7 @@
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename">course-batch-enrol-summary.csv</stringProp>
+          <stringProp name="filename">learner-state-read-summary.csv</stringProp>
         </ResultCollector>
         <hashTree/>
         <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">

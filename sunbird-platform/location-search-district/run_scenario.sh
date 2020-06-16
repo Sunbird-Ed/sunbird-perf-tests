@@ -8,18 +8,10 @@ numThreads=$5
 rampupTime=$6
 ctrlLoops=$7
 apiKey=$8
-accessTokenUrl=$9
-userName=${10}
-csvFileHost=${11}
-csvFileRequest=${12}
-userReadApi=${13}
+csvFileHost=${9}
+csvFileRequest=${10}
+locationSearchStateApi=${11}
 
-# Generating x-authenticated-token
-accessToken=$(curl -s -X POST https://${accessTokenUrl}/auth/realms/sunbird/protocol/openid-connect/token  -H 'content-type: application/x-www-form-urlencoded'  --data "client_id=admin-cli&username=${userName}&password=password&grant_type=password" | jq -r '.access_token') # X-AUTHENTICATED-TOKEN
-
-echo "accessTokenUrl = " ${accessTokenUrl}
-echo "userName = " ${userName}
-echo "accessToken = " ${accessToken}
 
 JMETER_HOME=/mnt/data/benchmark/apache-jmeter-4.0
 JMETER_HOME=${jmeterHome}
@@ -52,12 +44,9 @@ echo "numThreads = " ${numThreads}
 echo "rampupTime = " ${rampupTime}
 echo "ctrlLoops = " ${ctrlLoops}
 echo "apiKey = " ${apiKey}
-echo "accessTokenUrl = " ${accessTokenUrl}
-echo "userName = " ${userName}
-echo "accessToken = " ${accessToken}
 echo "csvFileHost = " ${csvFileHost}
 echo "csvFileRequest = " ${csvFileRequest}
-echo "userReadApi = " ${userReadApi}
+echo "locationSearchStateApi = " ${locationSearchStateApi}
 
 
 sed "s/THREADS_COUNT/${numThreads}/g" $JMX_FILE_PATH > jmx.tmp
@@ -73,24 +62,23 @@ mv jmx.tmp $JMX_FILE_PATH
 sed "s/API_KEY/${apiKey}/g" $JMX_FILE_PATH > jmx.tmp
 mv jmx.tmp $JMX_FILE_PATH
 
-sed "s/ACCESS_TOKEN/${accessToken}/g" $JMX_FILE_PATH > jmx.tmp
-mv jmx.tmp $JMX_FILE_PATH
-
 sed "s#DOMAIN_FILE#${csvFileHost}#g" $JMX_FILE_PATH > jmx.tmp
 mv jmx.tmp $JMX_FILE_PATH
 
 sed "s#CSV_FILE#${csvFileRequest}#g" $JMX_FILE_PATH > jmx.tmp
 mv jmx.tmp $JMX_FILE_PATH
 
-sed "s#PATH_PREFIX#${userReadApi}#g" $JMX_FILE_PATH > jmx.tmp
+sed "s#PATH_PREFIX#${locationSearchStateApi}#g" $JMX_FILE_PATH > jmx.tmp
 mv jmx.tmp $JMX_FILE_PATH
 
-
+###Copy JMX File to Logs dir ###
+cp $JMX_FILE_PATH $SCENARIO_LOGS/$scenario_id/logs
 
 echo "Running ... "
 echo "$JMETER_HOME/bin/jmeter.sh -n -t $JMX_FILE_PATH -R ${ips} -l $SCENARIO_LOGS/$scenario_id/logs/output.xml -j $SCENARIO_LOGS/$scenario_id/logs/jmeter.log > $SCENARIO_LOGS/$scenario_id/logs/scenario.log"
 
-nohup $JMETER_HOME/bin/jmeter.sh -n -t $JMX_FILE_PATH -R ${ips} -l $SCENARIO_LOGS/$scenario_id/logs/output.xml -j $SCENARIO_LOGS/$scenario_id/logs/jmeter.log > $SCENARIO_LOGS/$scenario_id/logs/scenario.log 2>&1 &
+### Create HTML reports for every run ###
+nohup $JMETER_HOME/bin/jmeter.sh -n -t $JMX_FILE_PATH -R ${ips} -l $SCENARIO_LOGS/$scenario_id/logs/output.xml -e -o $SCENARIO_LOGS/$scenario_id/logs/summary -j $SCENARIO_LOGS/$scenario_id/logs/jmeter.log > $SCENARIO_LOGS/$scenario_id/logs/scenario.log 2>&1 &
 
 echo "Log file ..."
 echo "$SCENARIO_LOGS/$scenario_id/logs/scenario.log"
