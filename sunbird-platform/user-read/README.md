@@ -9,7 +9,7 @@ e.g.
 ```
 
 
-**Note:-
+**Note:**
 
 1. Need to generate user authentication token and update x-authenticated-user-token field in jmx file before running.
 2. Need to pass unique user id, which are saved in a csv file during user signup api execution.
