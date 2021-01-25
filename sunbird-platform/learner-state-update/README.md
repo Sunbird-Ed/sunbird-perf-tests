@@ -5,3 +5,7 @@ How to run ?
 e.g.
 
 ```./run_scenario.sh /mount/data/benchmark/apache-jmeter-5.3/ 'Jmeter_Slave1_IP,Jmeter_Slave2_IP,Jmeter_Slave3_IP,Jmeter_Slave4_IP' learner-state-update learner-state-update-Id1 5 1 5 "ABCDEFabcdef012345" ~/sunbird-perf-tests/sunbird-platform/testdata/host.csv ~k/sunbird-perf-tests/sunbird-platform/testdata/userToken.csv /api/course/v1/content/state/update```
+
+
+**Note**
+- Before executing learner-state-update jmx file need to update with correct courseId, bactchId and contentId
