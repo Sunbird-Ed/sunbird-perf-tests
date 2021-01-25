@@ -7,3 +7,7 @@ e.g
 ```
 ./run_scenario.sh /mount/data/benchmark/apache-jmeter-5.3/ 'Jmeter_Slave1_IP,Jmeter_Slave2_IP,Jmeter_Slave3_IP,Jmeter_Slave4_IP' user-migrate user-migrate 5 1 5 "ABCDEFabcdef012345" ~/sunbird-perf-tests/sunbird-platform/testdata/host.csv ~/sunbird-perf-tests/sunbird-platform/testdata/userData.csv /private/user/v1/migrate
 ```
+
+**Note**
+- userData.csv file should contain custodian user's userId
+- Once provided users are migrarted to state users, same set of users can be used again for the user-migrate api test
