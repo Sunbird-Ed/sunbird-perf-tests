@@ -8,4 +8,4 @@ e.g.
 
 
 **Note**
-- Before executing learner-state-update jmx file need to update with correct courseId, bactchId and contentId
+- Before executing learner-state-update.jmx file need to update with correct courseId, bactchId and contentId
