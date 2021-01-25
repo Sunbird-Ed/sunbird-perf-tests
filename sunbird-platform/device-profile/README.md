@@ -9,4 +9,4 @@ e.g.
 ```
 
 **Note**
-- API Key need to update in jmx file
+- API Key need to update in jmx file (HTTP Header Manager)
