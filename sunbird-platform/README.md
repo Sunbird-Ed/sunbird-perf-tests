@@ -2,7 +2,7 @@ The purpose of this document is to describe the steps required to perform a sunb
 
 ### Pre-requisites
 * Clone this repo (`sunbird-perf-tests`) in home directory
-* Setup Apache JMeter 5.1.1 (`apache-jmeter-5.1.1`) in home directory
+* Setup Apache JMeter 5.3 (`apache-jmeter-5.3`) in home directory
 * Update Apache JMeter configuration properties (`jmeter.properties`)
 
 ```
@@ -12,7 +12,7 @@ jmeter.save.saveservice.requestHeaders=true
 ```
 * Run Apache JMeter
 ```
-nohup ~/apache-jmeter-5.1.1/bin/jmeter-server &
+nohup ~/apache-jmeter-5.3/bin/jmeter-server &
 ```
 * Create necessary folders for running scenario script in home directory
 ```
@@ -30,7 +30,7 @@ sh run_scenario.sh <JMETER_HOME> <JMETER_IP_LIST> <HOST> <SCENARIO_NAME> <SCENAR
 e.g.
 
 ```
-sh run_scenario.sh ~/apache-jmeter-5.1.1 "28.0.0.18,28.0.0.19,28.0.0.20" "dev.sunbirded.org" system-settings r1_system-settings_t5 5 1 1 "ABCDEFabcdef012345" "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz" "/tmp/data.csv /tmp/sunbird-perf-tests/sunbird-platform/common/config/domain-end-point.csv" "/api"
+sh run_scenario.sh ~/apache-jmeter-5.3 "28.0.0.18,28.0.0.19,28.0.0.20" "dev.sunbirded.org" system-settings r1_system-settings_t5 5 1 1 "ABCDEFabcdef012345" "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz" "/tmp/data.csv /tmp/sunbird-perf-tests/sunbird-platform/common/config/domain-end-point.csv" "/api"
 ```
 
 ### How to verify?
