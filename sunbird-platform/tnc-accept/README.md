@@ -8,3 +8,6 @@ e.g.
 ```
 ./run_scenario.sh /mount/data/benchmark/apache-jmeter-5.3/ 'Jmeter_Slave1_IP,Jmeter_Slave2_IP,Jmeter_Slave3_IP,Jmeter_Slave4_IP' tnc-accept tnc-accept_Run1 5 1 5 "ABCDEFabcdef012345" ~/sunbird-perf-tests/sunbird-platform/testdata/host.csv ~/sunbird-perf-tests/sunbird-platform/testdata/ext-user-data/userToken.csv /api/user/v1/tnc/accept
 ```
+**Note**
+1. tnc version which is there in jmx should match with the tnc version in Cassandra database
+2. Valid user token should be passed via userToken.csv
