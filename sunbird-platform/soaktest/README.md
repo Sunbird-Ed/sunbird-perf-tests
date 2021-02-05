@@ -1,1 +1,1 @@
-**Cluster wise scripts are available:
+- Cluster wise scripts are available:
