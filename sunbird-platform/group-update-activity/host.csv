@@ -1,2 +1,2 @@
 protocol,host,port
-https,loadtest.ntp.net.in,443
+https,yourDomain.com,443
