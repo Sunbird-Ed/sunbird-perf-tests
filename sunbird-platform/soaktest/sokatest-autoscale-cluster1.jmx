@@ -120,7 +120,7 @@
               </elementProp>
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">Authorization</stringProp>
-                <stringProp name="Header.value">Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMb2FkVGVzdERldmljZUEyLTI1MzQifQ.oO0cTTtWrLzElk-8KBag_T7-KX3lywGMrl5xyqeCSYw</stringProp>
+                <stringProp name="Header.value">Bearer ${apiKey}</stringProp>
               </elementProp>
             </collectionProp>
           </HeaderManager>
@@ -224,7 +224,7 @@
               </elementProp>
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">Authorization</stringProp>
-                <stringProp name="Header.value">Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJMb2FkVGVzdERldmljZUEyLTI1MzQifQ.oO0cTTtWrLzElk-8KBag_T7-KX3lywGMrl5xyqeCSYw</stringProp>
+                <stringProp name="Header.value">Bearer ${apiKey}</stringProp>
               </elementProp>
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">X-Requested-With</stringProp>
