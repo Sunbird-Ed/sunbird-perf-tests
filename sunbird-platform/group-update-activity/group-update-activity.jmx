@@ -188,7 +188,7 @@
               </elementProp>
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">x-authenticated-user-token</stringProp>
-                <stringProp name="Header.value">eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJOdHpmQVhtOVpvUVQwZUZoXzRZNmpJX2wycjNFS1k2ckJRcklMYzNPMjZnIn0.eyJqdGkiOiJlMWE5ZmI2Yy02ZWE5LTRjODktOTA4ZC1hMTkzZmJlNmQ3NDMiLCJleHAiOjE1OTgxNjMzMTksIm5iZiI6MCwiaWF0IjoxNTk1NTcxMzE5LCJpc3MiOiJodHRwczovL2xvYWR0ZXN0Lm50cC5uZXQuaW4vYXV0aC9yZWFsbXMvc3VuYmlyZCIsImF1ZCI6ImFkbWluLWNsaSIsInN1YiI6ImY6NTBmOTY3ZDQtYjlkYi00NTI4LTk1MGMtYjlmMDMzMmU2M2JhOmViZTU0ZjJiLTJmMDQtNGRlOS1hOGY1LWExNWRkODEyYzIyMCIsInR5cCI6IkJlYXJlciIsImF6cCI6ImFkbWluLWNsaSIsImF1dGhfdGltZSI6MCwic2Vzc2lvbl9zdGF0ZSI6ImE0MTAxNmE0LTA4YWYtNGU1My1hNmM4LWMzNTFlNzlhZGExZCIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOltdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6e30sIm5hbWUiOiIxNTc4MzEwMDE0LTMxNzAiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiIxNTc4MzEwMDE0LTMxNzBfeGQzbCIsImdpdmVuX25hbWUiOiIxNTc4MzEwMDE0LTMxNzAiLCJlbWFpbCI6IjE1KioqKioqKioqKioqKkB5b3BtYWlsLmNvbSJ9.H7sdlDwA0ShcMmVXrTFcKoqgobZV0AuvDGuKcp6wMhCxR56Cg4mq7m0zoj8CUqRPa-nO1pu9vvcS9UlCti4Y3qww84Gneb-KG9bQD4mv8v0JSHP0tddDiH8ywOEksJB_te7X8lOtRTOKji6BADOKTP5A2rHn2yyxYP2od-QHjpx6vyJtmxdcNw-eASkH4L1-LEhJQz6T_8UCfnPIEZpNMGWbMUAEJ6olxCh-CJ6rLxMJRALKcAoBI98lwS68JaJ288lHnnOBKjWjwU9Xw4hHMgOLC9pnxbmXHYuW7MM1_P0R0CurrR2OhNzcleeFaG0rH69MNpShpKLgUs1EgVAyLQ</stringProp>
+                <stringProp name="Header.value">${token}</stringProp>
               </elementProp>
             </collectionProp>
           </HeaderManager>
