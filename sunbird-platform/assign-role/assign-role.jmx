@@ -129,7 +129,7 @@
               </elementProp>
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">x-authenticated-user-token</stringProp>
-                <stringProp name="Header.value">eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJOdHpmQVhtOVpvUVQwZUZoXzRZNmpJX2wycjNFS1k2ckJRcklMYzNPMjZnIn0.eyJqdGkiOiIxZGEzYjlkMC04Mjk0LTQxZDQtYTI2MC01NTk1M2VkMDU2YjMiLCJleHAiOjE2MDQ2NDcyNDYsIm5iZiI6MCwiaWF0IjoxNjAyMDU1MjQ2LCJpc3MiOiJodHRwczovL2xvYWR0ZXN0Lm50cC5uZXQuaW4vYXV0aC9yZWFsbXMvc3VuYmlyZCIsImF1ZCI6Imdvb2dsZS1hdXRoIiwic3ViIjoiZjo1MGY5NjdkNC1iOWRiLTQ1MjgtOTUwYy1iOWYwMzMyZTYzYmE6MjQxZGE0NjgtMzc4NS00MTI0LTgzZDUtY2IwOGQyNjE5MmNkIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiZ29vZ2xlLWF1dGgiLCJhdXRoX3RpbWUiOjAsInNlc3Npb25fc3RhdGUiOiI2NzQzNmExMy00NGI3LTRjMjQtYmYzYi02ZmJhNWU0MzkxOWIiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwibmFtZSI6IjE2MDAyMzM2MDctMTggdXNlciIsInByZWZlcnJlZF91c2VybmFtZSI6IjE2MDAyMzM2MDcxOHVzZXIyODQ2IiwiZ2l2ZW5fbmFtZSI6IjE2MDAyMzM2MDctMTgiLCJmYW1pbHlfbmFtZSI6InVzZXIiLCJlbWFpbCI6IjE2KioqKioqKioqKipAeW9wbWFpbC5jb20ifQ.GusyVO10VtnLJ5S3su5GZ7ILjlr7hjE_X7ixT5A-6mAXF2-SAKxhhiqGTI_op1Vri2mk-NRef54GYWwK7fADcXo8x5jRcURYpmXDdKtN7-I43J9ABdouNiQT3rfApf5P8SqqvXz64TIvywP2xOaD9guazTfsmciB3CSe8iWXzMt1S9Nn3Urr2GIhPCZq2pZHxd4Za-BmRX0NSXZJYpyZn7camU08FKqAAEfvjbWSYFrSECRj3RGR8sLQTXNNftvZB9wRxaWkks8ytmVkMIq-EYvNce3PREYPLeGdmTKDHWCO78SyZ6n4CgSuHYtznjxSQKvz59TAVQaCWOh9wrZrJg</stringProp>
+                <stringProp name="Header.value">${user-token}</stringProp>
               </elementProp>
             </collectionProp>
           </HeaderManager>
@@ -166,7 +166,7 @@ er = vars.get(&quot;error&quot;);
 
 
 
-FileWriter fstream = new FileWriter(&quot;/mount/data/benchmark/sunbird-perf-tests/sunbird-platform/user-create/ext-user-data/error4.csv&quot;,true);
+FileWriter fstream = new FileWriter(&quot;~/user-create/ext-user-data/error.csv&quot;,true);
 fstream.write(userid+&quot;,&quot;+er+&quot;\n&quot;);
 // Close File(s)
 fstream.close();</stringProp>
