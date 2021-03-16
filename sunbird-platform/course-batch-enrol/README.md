@@ -9,3 +9,13 @@ e.g.
 
 **Note**
 - course-batch-enrol.jmx file request body needs to be updated with valid courseId and batchId data.
+
+**Test Scenario:**
+
+Checking the Course Batch Enroll api scalability
+
+**Test Result**
+
+| API                 | Thread Count  | Samples  | Errors%   | Throughput/sec  |
+| ------------------- | ------------- | -------- | --------- | --------------- |
+| Course Batch Enroll | 300           | 1500000  | 0 (0.00%) | 4248.8          |
