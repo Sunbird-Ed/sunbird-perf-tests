@@ -12,7 +12,7 @@ e.g.
 
 **Test Scenario:**
 
-Checking the Course Batch Enroll api scalability
+Verify the Course Batch Enroll api scalability
 
 **Test Result**
 
