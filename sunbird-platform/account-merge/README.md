@@ -17,5 +17,5 @@ e.g.
 
 | API           | Thread Count  | Samples  | Errors%   | Throughput/sec  |
 | ------------- | ------------- | -------- | --------- | --------------- |
-| Account Merge | 200           | 100000   | 0 (0.00%) | 401            |
+| Account Merge | 200           | 100000   | 0 (0.00%) | 401.7           |
  
