@@ -12,8 +12,11 @@ e.g.
 - fromAccounts.csv : Custodian users account details. These are the accounts which are going to be megred with state tenant user accounts.
 
 
-**Test Result**
+**Test Scenario:**
 
+Checking the merge account api scalability
+
+**Test Result**
 
 | API           | Thread Count  | Samples  | Errors%   | Throughput/sec  |
 | ------------- | ------------- | -------- | --------- | --------------- |
