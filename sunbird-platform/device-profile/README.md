@@ -10,3 +10,14 @@ e.g.
 
 **Note**
 - API Key need to update in jmx file (HTTP Header Manager)
+
+
+**Test Scenario:**
+
+Checking the Device Profile api scalability
+
+**Test Result**
+
+| API           | Thread Count | Samples  | Errors%   | Throughput/sec  |
+| ------------- | -------------| -------- | --------- | --------------- |
+| Device Profile| 200          | 2000000  | 0 (0.00%) | 8403.4          |
