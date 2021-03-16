@@ -13,8 +13,3 @@ e.g.
 
 verify Ext User Create api's scalability
 
-**Test Result**
-
-| API               | Thread Count  | Samples  | Errors%   | Throughput/sec  | Avg Resp Time  | 95pct | 99pct |
-| ----------------- | ------------- | -------- | --------- | --------------- | -------------- |------ | ------|
-| Ext User Create   | 200           | 100000   | 0 (0.00%) | 401.7           |
