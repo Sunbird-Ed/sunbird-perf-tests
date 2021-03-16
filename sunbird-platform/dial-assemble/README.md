@@ -5,3 +5,15 @@ How to run ?
 e.g.
 
 ```./run_scenario.sh /mount/data/benchmark/apache-jmeter-5.3/ 'Jmeter_Slave1_IP,Jmeter_Slave2_IP,Jmeter_Slave3_IP,Jmeter_Slave4_IP' dial-assemble dial-assemble-Id1 5 1 5 "ABCDEFabcdef012345" ~/sunbird-perf-tests/sunbird-platform/testdata/host.csv ~/sunbird-perf-tests/sunbird-platform/testdata/dialcodes.csv /api/data/v1/dial/assemble```
+
+
+
+**Test Scenario:**
+
+Verify Dial Assemble api scalability
+
+**Test Result**
+
+| API           | Thread Count  | Samples  | Errors%   | Throughput/sec  |
+| ------------- | ------------- | -------- | --------- | --------------- |
+| Dial Assemble | 600           | 600000   | 0 (0.00%) | 1133.2          |
