@@ -11,3 +11,13 @@ e.g.
 
 **Note:**
 1. Need to pass the user's email id and the this script will save the email id,userId and x-authenticated-user-tokens into a csv file
+
+**Test Scenario:**
+
+Checking auth token generation api scalability
+
+**Test Result**
+
+| API           | Thread Count  | Samples  | Errors%   | Throughput/sec  |
+| ------------- | ------------- | -------- | --------- | --------------- |
+| Generate Auth Token| 200      | 200000   | 0 (0.00%) | 1805            |
