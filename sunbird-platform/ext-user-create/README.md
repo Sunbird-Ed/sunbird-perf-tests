@@ -11,5 +11,10 @@ e.g.
 
 **Test Scenario:**
 
-verify Ext User Create api's scalability
+verify Ext User Create api scalability
 
+**Test Result**
+
+| API             | Thread Count  | Samples  | Errors%   | Throughput/sec  | Avg Resp Time |   95th pct  |  99th pct   |
+| ----------------| ------------- | -------- | --------- | --------------- | --------------|-------------|-------------|
+| Ext User Create | 200           | 400000   | 6 (0.00%) | 61.4            | 647           |    2470     |   4443.96   |
