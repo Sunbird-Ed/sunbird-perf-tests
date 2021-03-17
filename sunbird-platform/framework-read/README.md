@@ -15,5 +15,5 @@ Verify Framework Read Create api scalability
 
 | API                               | Thread Count | Samples  | Errors%   | Throughput/sec | Avg Resp Time |   95th pct  |  99th pct   |
 | ----------------------------------| ------------ | -------- | --------- | -------------- | --------------|-------------|-------------|
-| Framework Read - with category    | 200          | 400000   | 0 (0.00%) | 1221.2         | 135           |    368.95   |   855.99    |
-| Framework Read - without category | 200          | 7200000  | 0 (0.00%) | 6159           | 24            |    33       |   235.98    |
+| Framework Read - without category | 200          | 400000   | 0 (0.00%) | 1221.2         | 135           |    368.95   |   855.99    |
+| Framework Read - witho category   | 200          | 7200000  | 0 (0.00%) | 6159           | 24            |    33       |   235.98    |
