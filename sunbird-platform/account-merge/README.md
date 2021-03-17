@@ -18,6 +18,6 @@ Checking the merge account api scalability
 
 **Test Result**
 
-| API           | Thread Count  | Samples  | Errors%   | Throughput/sec  | test456       |
-| ------------- | ------------- | -------- | --------- | --------------- |---------------|
-| Account Merge | 200           | 100000   | 0 (0.00%) | 401.7           | test          |  
+| API           | Thread Count  | Samples  | Errors%   | Throughput/sec  | Avg Resp Time |   95th pct  |  99th pct   |
+| ------------- | ------------- | -------- | --------- | --------------- |---------------|-------------|-------------|
+| Account Merge | 200           | 100000   | 0 (0.00%) | 401.7           | 429           |    1040     |   1686.94   |
