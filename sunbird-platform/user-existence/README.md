@@ -6,3 +6,14 @@ How to run ?
 e.g.
 
 ```./run_scenario.sh /mount/data/benchmark/apache-jmeter-5.3/ 'Jmeter_Slave1_IP,Jmeter_Slave2_IP,Jmeter_Slave3_IP,Jmeter_Slave4_IP' user-existence user-existence_Run1 5 1 5 "ABCDEFabcdef012345" email01@yopmail.com ~/sunbird-perf-tests/sunbird-platform/testdata/host.csv ~/sunbird-perf-tests/sunbird-platform/account-merge/userData.csv /api/user/v1/exists/email```
+
+
+**Test Scenario:**
+
+Verify User Existence api scalability
+
+**Test Result**
+
+|API                |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
+|-------------------|------------|--------|---------| -------------|--------------|---------|--------|
+|User Existence     |400         |4000000 |0(0.00%) | 8010.3       | 49           |  65     |88      |
