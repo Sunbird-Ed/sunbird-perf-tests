@@ -13,6 +13,6 @@ Checking the channel read api scalability. This API is cached at proxy.
 
 **Test Result** 
 
-| API           | Thread Count  | Samples  | Errors%   | Throughput/sec  |
-| ------------- | ------------- | -------- | --------- | --------------- |
-| Channel Read  | 200           | 2000000  | 0 (0.00%) | 42334.3         |
+| API           | Thread Count  | Samples  | Errors%   | Throughput/sec  |Avg Resp Time |   95th pct  |  99th pct   |
+| ------------- | ------------- | -------- | --------- | --------------- |--------------|-------------|-------------|
+| Channel Read  | 200           | 2000000  | 0 (0.00%) | 42334.3         |1             |1            |46           |
