@@ -9,3 +9,13 @@ e.g.
 
 **Note**
 - Before executing learner-state-update.jmx file need to update with correct courseId, bactchId and contentId
+
+**Test Scenario:**
+
+Verify Learner State Update api scalability
+
+**Test Result**
+
+|API                 |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
+|--------------------|------------|--------|---------| -------------|--------------|---------|--------|
+|Learner State Update|400         |2000000 |0(0.00%) |3500.4        | 113          |  185    |240     |
