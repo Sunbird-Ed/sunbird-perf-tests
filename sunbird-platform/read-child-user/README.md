@@ -8,3 +8,13 @@ e.g.
 
 **Note**
 - authenticatedUserToken,authenticatedFor - 2 different tokens are required for this api.
+
+**Test Scenario:**
+
+Verify Read Managed User api scalability
+
+**Test Result**
+
+|API              |Thread Count|Samples |Errors%    |Throughput/sec|Avg Resp Time |95th pct |99th pct|
+|-----------------|------------|--------|-----------| -------------|--------------|---------|--------|
+|Read Managed User|200         |16000000 |13(0.00%) | 5346         | 36           |  60     |70      |
