@@ -6,3 +6,14 @@ How to run ?
 e.g.
 
 ```./run_scenario.sh /mount/data/benchmark/apache-jmeter-5.3/ 'Jmeter_Slave1_IP,Jmeter_Slave2_IP,Jmeter_Slave3_IP,Jmeter_Slave4_IP' user-bmgs-update user-bmgs-update_Id1 5 1 5 "ABCDEFabcdef012345" ~/sunbird-perf-tests/sunbird-platform/testdata/host.csv  ~/sunbird-perf-tests/sunbird-platform/testdata/userData.csv /api/user/v1/update```
+
+
+**Test Scenario:**
+
+Verify BMGS Update api scalability
+
+**Test Result**
+
+|API          |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
+|-------------|------------|--------|---------| -------------|--------------|---------|--------|
+|BMGS Update  |200         |500000  |0(0.00%) | 1832.3       | 91           |  583    |1380.95 |
