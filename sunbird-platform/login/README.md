@@ -15,4 +15,4 @@ Verify the login scenario scalability
 
 |API                |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
 |-------------------|------------|--------|---------| -------------|--------------|---------|--------|
-|Login Scenario     |40          |2740475 |30(0.00%)| 255.88       | 104.81       | 110.00  |134.00  |
+|Login (4 API Calls)|40          |2740475 |30(0.00%)| 255.88       | 104.81       | 110.00  |134.00  |
