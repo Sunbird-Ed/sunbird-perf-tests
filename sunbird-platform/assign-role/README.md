@@ -11,6 +11,6 @@ e.g.
 **Test Result**
 
 
-| API           | Thread Count  | Samples  | Errors%   | Throughput/sec  |
-| ------------- | ------------- | -------- | --------- | --------------- |
-| Assign Role   | 400           | 200000   | 0 (0.00%) | 3736.4          |
+| API           | Thread Count  | Samples  | Errors%   | Throughput/sec  |Avg Resp Time  |   95th pct  |  99th pct   |
+| ------------- | ------------- | -------- | --------- | --------------- |---------------|-------------|-------------|
+| Assign Role   | 400           | 200000   | 0 (0.00%) | 3736.4          |   103         |      159    |   226       |
