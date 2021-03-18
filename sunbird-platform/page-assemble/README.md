@@ -5,3 +5,13 @@ How to run ?
 e.g.
 
 ```./run_scenario.sh /mount/data/benchmark/apache-jmeter-5.3/ 'Jmeter_Slave1_IP,Jmeter_Slave2_IP,Jmeter_Slave3_IP,Jmeter_Slave4_IP' page-assemble page-assemble-Id1 5 1 5 "ABCDEFabcdef012345" ~/sunbird-perf-tests/sunbird-platform/testdata/host.csv ~/sunbird-perf-tests/sunbird-platform/testdata/dialcodes.csv /api/data/v1/page/assemble```
+
+**Test Scenario:**
+
+Verify the scalability of Page Assemble API with "?orgdetails=orgName,email" params 
+
+**Test Result**
+
+|API           |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
+|--------------|------------|--------|---------| -------------|--------------|---------|--------|
+|Page Assemble |600         |600000  |0(0.00%))| 445          | 1280         |  3303   |4353.97 |
