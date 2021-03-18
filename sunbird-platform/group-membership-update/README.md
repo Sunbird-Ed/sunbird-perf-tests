@@ -18,4 +18,4 @@ Verify Group Membership Update api scalability
 
 | API             |Thread Count| Samples  | Errors%   |Throughput/sec| Avg Resp Time |95th pct |99th pct|
 | ----------------|------------| -------- | --------- | -------------| --------------|---------|--------|
-| Ext User Create |200         | 1000000  | 0 (0.00%) | 5479.4       | 31            |  37     |52.99   |
+| Group Membership Update |200         | 1000000  | 0 (0.00%) | 5479.4       | 31            |  37     |52.99   |
