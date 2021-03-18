@@ -10,3 +10,14 @@ e.g.
 **Note**
 
 - Before executing learner-state-read.jmx file need to update with correct courseId, bactchId and contentId
+
+
+**Test Scenario:**
+
+Verify Learner State Read api scalability
+
+**Test Result**
+
+|API                |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
+|-------------------|------------|--------|---------| -------------|--------------|---------|--------|
+|Learner State Read |400         |6000000 |0(0.00%) |5140.5        | 77           |  73     |103.99  |
