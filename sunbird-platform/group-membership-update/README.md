@@ -10,12 +10,3 @@ e.g.
 ./run_scenario.sh /mount/data/benchmark/apache-jmeter-5.3/ 'Jmeter_Slave1_IP,Jmeter_Slave2_IP,Jmeter_Slave3_IP,Jmeter_Slave4_IP' group-membership-update group-membership-update-ID01 5 1 5 "ABCDEFabcdef012345" ~/sunbird-platform/group-delete/host.csv ~/sunbird-platform/group-membership-update/userData.csv /api/group/membership/v1/update
 ```
 
-**Test Scenario:**
-
-Verify Group Membership Update api scalability
-
-**Test Result**
-
-|API                     |Thread Count|Samples |Errors%  |Throughput/sec| Avg Resp Time |95th pct |99th pct|
-|------------------------|------------|--------|---------| -------------| --------------|---------|--------|
-|Group Membership Update |200         |1000000 |0 (0.00%)| 5479.4       | 31            |  37     |52.99   |
