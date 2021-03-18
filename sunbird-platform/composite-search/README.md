@@ -14,6 +14,6 @@ Verify the Comoposite Search api scalability.
 
 **Test Result**
 
-| API               | Thread Count  | Samples  | Errors%   | Throughput/sec  |
-| ------------------| ------------- | -------- | --------- | --------------- |
-| Comoposite Search | 200           | 3000000  | 0 (0.00%) | 1185.1          |
+| API               | Thread Count  | Samples  | Errors%   | Throughput/sec  |Avg Resp Time |   95th pct |  99th pct   |
+| ------------------| ------------- | -------- | --------- | --------------- |--------------|------------|-------------|
+| Comoposite Search | 200           | 3000000  | 0 (0.00%) | 1185.1          |165           | 198        |213          |
