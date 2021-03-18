@@ -13,6 +13,6 @@ Checking the search content api scalability
 
 **Test Result**
 
-| API             | Thread Count  | Errors%   | Throughput/sec  |
-| --------------- | ------------- | --------- | --------------- |
-| Search Content  | 200           | 0 (0.00%) | 5745.9          |
+| API             | Thread Count  | Errors%   | Throughput/sec  |Avg Resp Time |   95th pct  |  99th pct   |
+| --------------- | ------------- | --------- | --------------- |--------------|-------------|-------------|
+| Search Content  | 200           | 0 (0.00%) | 5745.9          |67            |19           | 47          |
