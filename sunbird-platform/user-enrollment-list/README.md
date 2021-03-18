@@ -5,3 +5,14 @@ How to run ?
 e.g.
 
 ```./run_scenario.sh /mount/data/benchmark/apache-jmeter-5.3/ 'Jmeter_Slave1_IP,Jmeter_Slave2_IP,Jmeter_Slave3_IP,Jmeter_Slave4_IP' user-enrollment-read user-enrollment-read_Run1 5 1 5 "ABCDEFabcdef012345" ~/sunbird-perf-tests/sunbird-platform/testdata/host.csv ~/sunbird-perf-tests/sunbird-platform/testdata/userData.csv /api/course/v1/user/enrollment/list```
+
+
+**Test Scenario:**
+
+Verify User Enrollment List api scalability
+
+**Test Result**
+
+|API                 |Thread Count|Samples |Errors%  |Throughput/sec|
+|--------------------|------------|--------|---------| -------------|
+|User Enrollment List|200         |1750000 |0 (0.00%)| 1263.41      | 
