@@ -2,10 +2,12 @@
 
 Benchmarking Merge Account API.
 
+
 **Test Environment Details:**
 1. No of AKS node -24
-2. No of replica - 8
+2. No of replicas - 8
 3. Release version - NA
+
 
 **API End Point:** 
 `/api/user/v1/account/merge`
