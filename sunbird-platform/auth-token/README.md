@@ -26,9 +26,6 @@ e.g.
 - Update `host.csv` file data with correct host details before running the test. It can be domain details / Kubernetes Node IPs/ LB IPs/ Direct Service IPs with port details.
 - Update `userData.csv` file with valid user details (FirstName, userName, Email,	userId)
 
-**Test Scenario:**
-
-Checking auth token generation api scalability
 
 ### Test Result
 
