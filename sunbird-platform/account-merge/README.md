@@ -17,8 +17,9 @@ e.g.
 
 
 **Note**
-- toAccounts.csv : State tenant users account details. Custodian users accounts will be merged to these accounts.
-- fromAccounts.csv : Custodian users account details. These are the accounts which are going to be megred with state tenant user accounts.
+- `toAccounts.csv` : State tenant users account details. Custodian users accounts will be merged to these accounts.
+- `fromAccounts.csv` : Custodian users account details. These are the accounts which are going to be megred with state tenant user accounts.
+- Update `host.csv` file data with correct host details before running the test. It can be domain details / Kubernetes Node IPs/ LB IPs/ Direct Service IPs with port details.
 
 
 
