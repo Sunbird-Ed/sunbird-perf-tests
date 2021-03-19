@@ -1,8 +1,8 @@
-**Test Scenario:**
+### Test Scenario:**
 
 Benchmarking Merge Account API.
 
-**Test Environment Details:**
+### Test Environment Details:
 1. No of AKS node - `24`
 2. No of replica - `8`
 3. Release version - `Release 3.4.0`
@@ -11,7 +11,7 @@ Benchmarking Merge Account API.
 `/api/user/v1/role/assign`
 
 
-*Executing the test scenario using JMeter:*
+**Executing the test scenario using JMeter:**
 
 ```./run_scenario.sh <JMETER_HOME> <JMETER_IP_LIST> <SCENARIO_NAME> <SCENARIO_ID> <THREADS_COUNT> <RAMPUP_TIME> <CTRL_LOOPS> <API_KEY> <DOMAIN_NAME> <USER_EMAIL_ID> <DOMAIN_FILE> <CSV_FILE> <pathPrefix> ```
 
@@ -25,7 +25,7 @@ e.g.
 - `username@yopmail.com` provide valid user account email. This is used to generate the user token.
 - Update `userData.csv` with valid user details.
 
-**Test Result**
+### Test Result:
 
 
 | API           | Thread Count  | Samples  | Errors%   | Throughput/sec  |Avg Resp Time  |   95th pct  |  99th pct   |
