@@ -15,7 +15,7 @@ e.g.
 Note: 
 1. `host.csv` file data with correct host details before running the test.
 2. `framework.csv` file data with correct host details before running the test.
-3. In place `ABCDEFabcdef012345` provide api bearer key. 
+3. In place of `ABCDEFabcdef012345` provide api bearer key. 
 
 **Test Result**
 
