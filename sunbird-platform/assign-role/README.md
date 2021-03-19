@@ -1,6 +1,6 @@
-### Test Scenario:**
+### Test Scenario:
 
-Benchmarking Merge Account API.
+Benchmarking Assign Role API.
 
 ### Test Environment Details:
 1. No of AKS node - 24
