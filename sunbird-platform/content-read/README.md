@@ -13,6 +13,6 @@ Verify the content read api scalability
 
 **Test Result**
 
-| API           | Thread Count  | Samples  | Errors %      | Throughput/sec |
-| ------------- | ------------- | -------- | -------------| ---------------|
-| Content Read  | 400           | 8000000  | 3681 (0.05%) | 10906          |
+| API           | Thread Count  | Samples  | Errors %     | Throughput/sec |Avg Resp Time|95th pct| 99th pct |
+| ------------- | ------------- | -------- | -------------| ---------------|-------------|--------|----------|
+| Content Read  | 400           | 8000000  | 3681 (0.05%) | 10906          |    34       |    16  |    28    |
