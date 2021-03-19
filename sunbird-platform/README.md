@@ -34,7 +34,7 @@ This folder consists of following APIs:
 |learner-state-update        |/api/course/v1/content/state/update           |
 |location-search-district    |/api/data/v1/location/search                  |
 |location-search             |/api/data/v1/location/search                  |
-|login                       |                                              |
+|login                       | 4 APIs calls                                 |
 |org-search                  |/api/org/v1/search                            |
 |page-assemble               |/api/data/v1/page/assemble                    |
 |read-child-user             |/api/user/v2/read/${userId}?withTokens=true   |
