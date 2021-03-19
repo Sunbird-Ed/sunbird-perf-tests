@@ -1,4 +1,12 @@
-How to run ?
+**Test Scenario:**
+
+Benchmarking Merge Account API.
+
+**API End Point**
+/api/user/v1/account/merge
+
+
+*Executing the test scenario using JMeter:*
 
 ```./run_scenario.sh <JMETER_HOME> <JMETER_IP_LIST> <SCENARIO_NAME> <SCENARIO_ID> <THREADS_COUNT> <RAMPUP_TIME> <CTRL_LOOPS> <API_KEY> <DOMAIN_FILE> <CSV_FILE_TO_ACCOUNT>  <CSV_FILE_FROM_ACCOUNT> <pathPrefix>```
 
@@ -12,9 +20,6 @@ e.g.
 - fromAccounts.csv : Custodian users account details. These are the accounts which are going to be megred with state tenant user accounts.
 
 
-**Test Scenario:**
-
-Checking the merge account api scalability
 
 **Test Result**
 
