@@ -5,7 +5,7 @@ Benchmarking Auth Tokene API.
 ### Test Environment Details:
 No of AKS node -24
 
-No of replicas - 8
+No of replicas - 3 KeyCloak servers
 
 Release version - NA
 
