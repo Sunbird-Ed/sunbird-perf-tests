@@ -1,6 +1,6 @@
 ### Test Scenario:
 
-Benchmarking Comoposite Search API.
+Benchmarking Composite Search API.
 
 
 ### Test Environment Details:
@@ -29,4 +29,4 @@ e.g.
 
 | API               | Thread Count  | Samples  | Errors%   | Throughput/sec  |Avg Resp Time |   95th pct |  99th pct   |
 | ------------------| ------------- | -------- | --------- | --------------- |--------------|------------|-------------|
-| Comoposite Search | 400           | 4000000  |  0(0.00%) | 3515.4          |103          | 78          |104          |
+| Composite Search | 400           | 4000000  |  0(0.00%) | 3515.4          |103          | 78          |104          |
