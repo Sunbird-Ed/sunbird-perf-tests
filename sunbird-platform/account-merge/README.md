@@ -2,8 +2,7 @@
 
 Benchmarking Merge Account API.
 
-**API End Point**
-/api/user/v1/account/merge
+**API End Point:** `/api/user/v1/account/merge`
 
 
 *Executing the test scenario using JMeter:*
