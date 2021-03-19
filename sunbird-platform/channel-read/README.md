@@ -6,7 +6,7 @@ Benchmarking Channel Read API.
 ### Test Environment Details:
 1. No of AKS node -24
 2. No of replicas - 8
-3. Release version - NA
+3. Release version - Release 2.10.0
 
 
 **API End Point:** `/api/channel/v1/read`
