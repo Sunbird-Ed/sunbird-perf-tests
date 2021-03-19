@@ -3,7 +3,7 @@
 Benchmarking Merge Account API.
 
 
-### Test Environment Details:**
+### Test Environment Details:
 1. No of AKS node -24
 2. No of replicas - 8
 3. Release version - NA
@@ -14,7 +14,7 @@ Benchmarking Merge Account API.
 
 
 
-## Executing the test scenario using JMeter:
+**Executing the test scenario using JMeter:**
 
 ```./run_scenario.sh <JMETER_HOME> <JMETER_IP_LIST> <SCENARIO_NAME> <SCENARIO_ID> <THREADS_COUNT> <RAMPUP_TIME> <CTRL_LOOPS> <API_KEY> <DOMAIN_FILE> <CSV_FILE_TO_ACCOUNT>  <CSV_FILE_FROM_ACCOUNT> <pathPrefix>```
 
@@ -30,7 +30,7 @@ e.g.
 
 
 
-**Test Result**
+### Test Result
 
 | API           | Thread Count  | Samples  | Errors%   | Throughput/sec  | Avg Resp Time |   95th pct  |  99th pct   |
 | ------------- | ------------- | -------- | --------- | --------------- |---------------|-------------|-------------|
