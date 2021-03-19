@@ -13,9 +13,9 @@ e.g.
 
 
 Note: 
-1. Update `host.csv` file data with correct host details before running the test.
-2. Update `framework.csv` file data with correct framework Ids before running the test.
-3. In place of `ABCDEFabcdef012345` provide api bearer key. 
+- Update `host.csv` file data with correct host details before running the test. It can be domain details / Kubernetes Node IPs/ LB IPs/ Direct Service IPs with port details.
+- Update `framework.csv` file data with correct framework Ids before running the test.
+- In place of `ABCDEFabcdef012345` provide api bearer key. 
 
 **Test Result**
 
