@@ -2,8 +2,8 @@ The purpose of this document is to describe the steps required to perform a sunb
 This folder consists of following APIs:
 
 
-|         Folder Name        |             API End Point                    | 
-|----------------------------|----------------------------------------------|
+|         Folder Name        |             API End Point                    | Description |
+|----------------------------|----------------------------------------------|-------------|
 |     account-merge          |  /api/user/v1/account/merge                  |  
 |     assign-role            |  /api/user/v1/role/assign                    |
 |     auth-token             | /auth/realms/sunbird/protocol/openid-connect/token|
@@ -11,42 +11,48 @@ This folder consists of following APIs:
 |  cert-service-svg          | /api/cert/v2/certs/generate                  |
 |  cert-service              | /api/cert/v1/certs/generate                  |
 | channel-read               | /api/channel/v1/read                         |
-|composite-search            | /api/composite/v1/search                       |
-|  content-hierarchy                          |   /api/course/v1/hierarchy                                           |
-| content-read                           | /api/content/v1/read                                             |
-|content-search                            |  /api/content/v1/search                                            |
-|course-batch-enrol                            | /api/course/v1/enrol                                            |
-| device-profile                           |/api/v3/device/profile                                              |
-| device-register                           |/api/v3/device/register                                             |
-| dial-assemble                           |/api/data/v1/dial/assemble                                             |
-|email-notification                            |/api/user/v1/notification/email                                              |
-|ext-user-create                            | /api/user/v3/create                                             |
-| ext-user-read                           |/private/user/v1/read                                              |
-|                            |                                              |
-|                            |                                              |
-|                            |                                              |
-|                            |                                              |
-|                            |                                              |
-|                            |                                              |
-|                            |                                              |
-|                            |                                              |
-|                            |                                              |
-|                            |                                              |
-|                            |                                              |
-|                            |                                              |
-|                            |                                              |
-|                            |                                              |
-|                            |                                              |
-|                            |                                              |
-|                            |                                              |
-|                            |                                              |
-|                            |                                              |
-|                            |                                              |
-|                            |                                              |
-|                            |                                              |
-|                            |                                              |
-|                            |                                              |
-|                            |                                              |
+|composite-search            | /api/composite/v1/search                     |
+|  content-hierarchy         |   /api/course/v1/hierarchy                   |
+| content-read               | /api/content/v1/read                         |
+|content-search              |  /api/content/v1/search                      |
+|course-batch-enrol          | /api/course/v1/enrol                         |
+| device-profile             |/api/v3/device/profile                        |
+| device-register            |/api/v3/device/register                       |
+| dial-assemble              |/api/data/v1/dial/assemble                    |
+|email-notification          |/api/user/v1/notification/email               |
+|ext-user-create             | /api/user/v3/create                          |
+| ext-user-read              |/private/user/v1/read                         |
+| framework-read             |/api/framework/v1/read                        |
+| group-create               |/api/group/v1/create                          |
+| group-delete               |/api/group/v1/delete                          |
+| group-list                 | /api/group/v1/list                           |
+|group-membership-update     |/api/group/membership/v1/update               |
+|group-read                  |  /api/group/v1/read                          |
+| group-update-activity      |/api/group/v1/update                          |
+| group-update-member        |/api/group/v1/update                          |
+| learner-state-read         |/api/course/v1/content/state/read             |
+|learner-state-update        |/api/course/v1/content/state/update           |
+|location-search-district    |/api/data/v1/location/search                  |
+|location-search             |/api/data/v1/location/search                  |
+|login                       |                                              |
+|org-search                  |/api/org/v1/search                            |
+|page-assemble               |/api/data/v1/page/assemble                    |
+|read-child-user             |/api/user/v2/read/${userId}?withTokens=true   |
+|send-telemetry              |/api/data/v1/telemetry                        |
+|system-settings             |/api/data/v1/system/settings/get              |
+|   tnc-accept               |/api/user/v1/tnc/accept                       |
+|user-bmgs-update            |/api/user/v1/update                           |
+|user-create-with-course-batch-enrol|/api/user/v1/create, /api/course/v1/enrol|
+| user-create                |/api/user/v1/create                           |
+| user-enrollment-list       |/api/course/v1/user/enrollment/list           |
+| user-existence             | /api/user/v1/exists/email                    |
+| user-get                   | /api/user/v1/get/email                       |
+| user-identifier-freeup     |/private/user/v1/identifier/freeup            |
+| user-migrate               |/private/user/v1/migrate                      |
+| user-notification          |/api/user/v2/notification                     |
+| user-read                  |/api/user/v3/read                             |
+|user-search-email           |/api/user/v1/search                           |
+|user-self-declaration        |/api/user/v1/declarations                    |
 
 
 
