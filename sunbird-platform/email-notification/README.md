@@ -15,6 +15,6 @@ Verify Email Notification api scalability
 
 **Test Result**
 
-| API                | Thread Count  | Samples  | Errors%   | Throughput/sec  |
-| ------------------ | ------------- | -------- | --------- | --------------- |
-| Email Notification | 100           | 20000    | 0 (0.00%) | 100.7           |
+| API                | Thread Count  | Samples  | Errors%   |Throughput/sec|Avg Resp Time| 95th pct| 99th pct |
+| ------------------ | ------------- | -------- | --------- |--------------|-------------|---------|----------|
+| Email Notification | 100           | 20000    | 0(0.00%)  | 100.7        | 779         | 3132.9  | 3677     |
