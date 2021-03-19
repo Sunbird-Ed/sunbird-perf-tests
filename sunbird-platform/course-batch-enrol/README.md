@@ -16,6 +16,6 @@ Verify the Course Batch Enroll api scalability
 
 **Test Result**
 
-| API                 | Thread Count  | Samples  | Errors%   | Throughput/sec  |
-| ------------------- | ------------- | -------- | --------- | --------------- |
-| Course Batch Enroll | 300           | 1500000  | 0 (0.00%) | 4248.8          |
+| API                 | Thread Count  | Samples  | Errors%   | Throughput/sec  |Avg Resp Time|  95th pct | 99th pct |
+| ------------------- | ------------- | -------- | --------- | --------------- |-------------|-----------|----------|
+| Course Batch Enroll | 300           | 1500000  | 0 (0.00%) | 4248.8          |       69    |     110   |   130    |
