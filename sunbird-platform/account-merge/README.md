@@ -5,6 +5,7 @@ Benchmarking Merge Account API.
 **API End Point:** `/api/user/v1/account/merge`
 
 
+
 *Executing the test scenario using JMeter:*
 
 ```./run_scenario.sh <JMETER_HOME> <JMETER_IP_LIST> <SCENARIO_NAME> <SCENARIO_ID> <THREADS_COUNT> <RAMPUP_TIME> <CTRL_LOOPS> <API_KEY> <DOMAIN_FILE> <CSV_FILE_TO_ACCOUNT>  <CSV_FILE_FROM_ACCOUNT> <pathPrefix>```
