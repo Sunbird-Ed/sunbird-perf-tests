@@ -5,7 +5,7 @@ Benchmarking Composite Search API.
 
 ### Test Environment Details:
 1. No of AKS node -24
-2. No of replicas - 6
+2. No of search service replicas - 6
 3. Release version - NA
 
 
