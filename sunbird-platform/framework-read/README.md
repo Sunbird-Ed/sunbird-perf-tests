@@ -13,8 +13,8 @@ e.g.
 
 
 Note: 
-1. `host.csv` file data with correct host details before running the test.
-2. `framework.csv` file data with correct host details before running the test.
+1. Update `host.csv` file data with correct host details before running the test.
+2. Update `framework.csv` file data with correct framework Ids before running the test.
 3. In place of `ABCDEFabcdef012345` provide api bearer key. 
 
 **Test Result**
