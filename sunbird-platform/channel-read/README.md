@@ -5,7 +5,7 @@ Benchmarking Channel Read API.
 
 ### Test Environment Details:
 1. No of AKS node -24
-2. No of replicas - 8
+2. No of learner service replicas - 8
 3. Release version - Release 2.10.0
 
 
