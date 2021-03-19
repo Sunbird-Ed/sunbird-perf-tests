@@ -4,7 +4,7 @@ Benchmarking Assign Role API.
 
 ### Test Environment Details:
 1. No of AKS node - 24
-2. No of replica - 8
+2. No of learner service replica - 8
 3. Release version - Release 3.4.0
 
 **API End Point:** 
