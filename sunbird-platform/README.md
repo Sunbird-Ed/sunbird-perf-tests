@@ -1,5 +1,5 @@
 The purpose of this document is to describe the steps required to perform a sunbird platform load test.
-This folder consists of following APIs:
+This folder consists of following APIs loadtest scripts.
 
 
 |         Folder Name        |             API End Point                    | Description |
