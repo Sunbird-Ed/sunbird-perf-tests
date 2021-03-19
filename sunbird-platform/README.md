@@ -1,4 +1,56 @@
-The purpose of this document is to describe the steps required to perform a sunbird platform (learner service) load test.
+The purpose of this document is to describe the steps required to perform a sunbird platform load test.
+This folder consists of following APIs:
+
+
+|         Folder Name        |             API End Point                    | 
+|----------------------------|----------------------------------------------|
+|     account-merge          |  /api/user/v1/account/merge                  |  
+|     assign-role            |  /api/user/v1/role/assign                    |
+|     auth-token             | /auth/realms/sunbird/protocol/openid-connect/token|
+|  cert-service-pdf-download | /api/certreg/v1/certs/download               |
+|  cert-service-svg          | /api/cert/v2/certs/generate                  |
+|  cert-service              | /api/cert/v1/certs/generate                  |
+| channel-read               | /api/channel/v1/read                         |
+|composite-search            | /api/composite/v1/search                       |
+|  content-hierarchy                          |   /api/course/v1/hierarchy                                           |
+| content-read                           | /api/content/v1/read                                             |
+|content-search                            |  /api/content/v1/search                                            |
+|course-batch-enrol                            | /api/course/v1/enrol                                            |
+| device-profile                           |/api/v3/device/profile                                              |
+| device-register                           |/api/v3/device/register                                             |
+| dial-assemble                           |/api/data/v1/dial/assemble                                             |
+|email-notification                            |/api/user/v1/notification/email                                              |
+|ext-user-create                            | /api/user/v3/create                                             |
+| ext-user-read                           |/private/user/v1/read                                              |
+|                            |                                              |
+|                            |                                              |
+|                            |                                              |
+|                            |                                              |
+|                            |                                              |
+|                            |                                              |
+|                            |                                              |
+|                            |                                              |
+|                            |                                              |
+|                            |                                              |
+|                            |                                              |
+|                            |                                              |
+|                            |                                              |
+|                            |                                              |
+|                            |                                              |
+|                            |                                              |
+|                            |                                              |
+|                            |                                              |
+|                            |                                              |
+|                            |                                              |
+|                            |                                              |
+|                            |                                              |
+|                            |                                              |
+|                            |                                              |
+|                            |                                              |
+
+
+
+
 
 ### Pre-requisites
 * Clone this repo (`sunbird-perf-tests`) in home directory
