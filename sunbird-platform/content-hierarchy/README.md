@@ -6,7 +6,7 @@ Benchmarking Content Hierarchy API.
 ### Test Environment Details:
 
 1. No of AKS node -24
-2. No of replicas - 8
+2. No of content service replica - 8
 3. Release version - NA
 
 
