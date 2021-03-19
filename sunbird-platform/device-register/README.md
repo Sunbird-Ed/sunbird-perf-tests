@@ -13,6 +13,6 @@ Verify Device Register api scalability
 
 **Test Result**
 
-| API             | Thread Count  | Samples  | Errors%   | Throughput/sec  |
-| ----------------| ------------- | -------- | --------- | --------------- |
-| Device Register | 200           | 4000000  | 0 (0.00%) | 5396.5         |
+| API             | Thread Count| Samples  | Errors% |Throughput/sec|Avg Resp Time|95th pct| 99th pct |
+| ----------------| ------------| -------- | --------| -------------|-------------|--------|----------|
+| Device Register | 200         | 4000000  | 0(0.00%)| 5396.5       |    63       |  80    |     113  |
