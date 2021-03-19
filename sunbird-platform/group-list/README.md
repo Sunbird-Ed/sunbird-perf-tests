@@ -17,4 +17,4 @@ Verify Group List api scalability
 
 | API                            | Thread Count | Samples  | Errors%   | Throughput/sec  | Avg Resp Time |   95th pct  |  99th pct   |
 | -------------------------------| -------------| -------- | --------- | --------------- | --------------|-------------|-------------|
-| Group List (with 20 Activities)| 200          | 1000000  | 0 (0.00%) | 10458.5         | 12            |    20       |   36        |
+| Group List (with 20 Activities)| 200          | 1000000  | 0(0.00%) | 10458.5         | 12            |    20       |   36        |
