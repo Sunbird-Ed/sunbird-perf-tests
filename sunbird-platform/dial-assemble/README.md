@@ -14,6 +14,6 @@ Verify Dial Assemble api scalability
 
 **Test Result**
 
-| API           | Thread Count  | Samples  | Errors%   | Throughput/sec  |
-| ------------- | ------------- | -------- | --------- | --------------- |
-| Dial Assemble | 600           | 600000   | 0 (0.00%) | 1133.2          |
+| API           | Thread Count  | Samples  | Errors%   | Throughput/sec|Avg Resp Time| 95th pct | 99th pct |
+| ------------- | ------------- | -------- | --------- | --------------|-------------|----------|----------|
+| Dial Assemble | 600           | 600000   | 0(0.00%)  | 1133.2        |    496      |     670  |  1196.99 |
