@@ -1,6 +1,6 @@
 ### Test Scenario:
 
-Benchmarking Merge Account API.
+Benchmarking Learner State Update API.
 
 
 ### Test Environment Details:
