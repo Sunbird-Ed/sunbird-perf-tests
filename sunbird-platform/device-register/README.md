@@ -9,7 +9,7 @@ Benchmarking Device Register  API.
 3. Release version - 
 
 
-**API End Point** 
+**API End Point:** 
 `/api/v3/device/register`
 
 
