@@ -24,7 +24,7 @@ e.g.
 **Note**
 - Update `host.csv` file data with correct host details before running the test. It can be domain details / Kubernetes Node IPs/ LB IPs/ Direct Service IPs with port details.
 - Update `deviceId.csv` with already registered device Ids. These Ids should be unique. 
--  Update `ipaddress.csv` file data with IP Address
+-  Update `ipaddress.csv` file data with IP Address.
 
 
 ### Test Result
