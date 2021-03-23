@@ -1,6 +1,6 @@
 ### Test Scenario:
 
-Benchmarking Merge Account API.
+Benchmarking Search Content API with different search queries.
 
 
 ### Test Environment Details:
