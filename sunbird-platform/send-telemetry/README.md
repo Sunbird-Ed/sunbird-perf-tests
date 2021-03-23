@@ -5,7 +5,7 @@ Benchmarking Merge Account API.
 
 ### Test Environment Details
 1. No of AKS node - 24
-2. No of learner service replicas - 
+2. No of telemetry service replicas - 
 3. Release version - 
 
 
