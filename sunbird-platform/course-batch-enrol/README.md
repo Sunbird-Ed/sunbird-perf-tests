@@ -6,7 +6,7 @@ Benchmarking Course Batch Enrol API.
 ### Test Environment Details:
 1. No of AKS node - 24
 2. No of learner service replicas - 
-3. No of LMS servicee replicas - 
+3. No of LMS service replicas - 
 4. Release version - 
 
 
