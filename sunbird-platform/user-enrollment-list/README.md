@@ -6,7 +6,8 @@ Benchmarking User Enrollment List API.
 ### Test Environment Details
 1. No of AKS node - 24
 2. No of learner service replicas - 
-3. Release version - 
+3. No of LMS service replicas - 
+4. Release version - 
 
 
 **API End Point:** 
