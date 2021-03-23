@@ -2,8 +2,8 @@ The purpose of this document is to describe the steps required to perform a sunb
 This folder consists of following APIs loadtest scripts.
 
 
-|         Folder Name        |             API End Point                    | Description |
-|----------------------------|----------------------------------------------|-------------|
+|         Folder Name        |             API End Point                    | 
+|----------------------------|----------------------------------------------|
 |     account-merge          |  /api/user/v1/account/merge                  |  
 |     assign-role            |  /api/user/v1/role/assign                    |
 |     auth-token             | /auth/realms/sunbird/protocol/openid-connect/token|
