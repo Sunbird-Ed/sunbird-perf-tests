@@ -13,6 +13,7 @@ Benchmarking User Migrate API.
 `/api/user/v1/migrate`
 
 
+
 **Executing the test scenario using JMeter**
  
  ```./run_scenario.sh <JMETER_HOME> <JMETER_IP_LIST> <SCENARIO_NAME> <SCENARIO_ID> <THREADS_COUNT> <RAMPUP_TIME> <CTRL_LOOPS> <API_KEY> <DOMAIN_FILE> <CSV_FILE> <pathPrefix>```
