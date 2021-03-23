@@ -30,7 +30,7 @@ e.g.
 - Update `userData.csv` file with external userIds.
 
 
-**Test Result**
+### Test Result
 
 | API             | Thread Count  | Samples  | Errors%   | Throughput/sec  | Avg Resp Time |   95th pct  |  99th pct   |
 | ----------------| ------------- | -------- | --------- | --------------- | --------------|-------------|-------------|
