@@ -24,7 +24,9 @@ e.g.
 
 **Note**
 - `toAccounts.csv` : State tenant users account details. Custodian users accounts will be merged to these accounts.
-- `fromAccounts.csv` : Custodian users account details. These are the accounts which are going to be megred with state tenant user accounts.
+- `fromAccounts.csv`: Custodian users account details. These are the accounts which are going to be megred with state tenant user accounts.
+- `x-authenticated-user-token` in header manager is tenant user's access token to which account of the custodian user account is going to be merged.
+- `x-source-user-token` in header manager is custodian user's access token , whose account to going to be merged.
 - Update `host.csv` file data with correct host details before running the test. It can be domain details / Kubernetes Node IPs/ LB IPs/ Direct Service IPs with port details.
 
 
