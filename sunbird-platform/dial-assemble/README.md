@@ -1,4 +1,19 @@
-How to run ?
+### Test Scenario:
+
+Benchmarking Dial Assemble API.
+
+
+### Test Environment Details:
+1. No of AKS node - 24
+2. No of search service replicas - 
+3. Release version - 
+
+
+**API End Point:** 
+`/api/data/v1/dial/assemble`
+
+
+**Executing the test scenario using JMeter:**
 
 ```./run_scenario.sh <JMETER_HOME> <JMETER_IP_LIST> <SCENARIO_NAME> <SCENARIO_ID> <THREADS_COUNT> <RAMPUP_TIME> <CTRL_LOOPS> <API_KEY> <DOMAIN_FILE> <CSV_FILE> <pathPrefix>```
 
@@ -8,9 +23,11 @@ e.g.
 
 
 
-**Test Scenario:**
+**Note**
+- Update `host.csv` file data with correct host details before running the test. It can be domain details / Kubernetes Node IPs/ LB IPs/ Direct Service IPs with port details.
+- Update `dialcodes.csv` file data with valid dialcodes.
 
-Verify Dial Assemble api scalability
+
 
 **Test Result**
 
