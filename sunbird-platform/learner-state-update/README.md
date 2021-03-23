@@ -1,4 +1,20 @@
-How to run ?
+### Test Scenario:
+
+Benchmarking Merge Account API.
+
+
+### Test Environment Details:
+1. No of AKS node - 24
+2. No of learner service replicas - 
+3. No of LMS service replicas - 
+4. Release version -
+
+
+**API End Point:** 
+`/api/course/v1/content/state/update`
+
+
+**Executing the test scenario using JMeter**
 
 ```./run_scenario.sh <JMETER_HOME> <JMETER_IP_LIST> <SCENARIO_NAME> <SCENARIO_ID> <THREADS_COUNT> <RAMPUP_TIME> <CTRL_LOOPS> <API_KEY> <DOMAIN_FILE> <CSV_FILE> <pathPrefix> ```
 
@@ -8,13 +24,12 @@ e.g.
 
 
 **Note**
-- Before executing learner-state-update.jmx file need to update with correct courseId, bactchId and contentId
+- Before executing `learner-state-update.jmx` file need to update with correct courseId, bactchId and contentId
+- Update `host.csv` file data with correct host details before running the test. It can be domain details / Kubernetes Node IPs/ LB IPs/ Direct Service IPs with port details.
+- Update `userToken.csv` file with valid user Ids and user access tokens. These user should be already enrolled to the course/batch (courseId/Batch Id - which are provded in the jmx file)
 
-**Test Scenario:**
 
-Verify Learner State Update api scalability
-
-**Test Result**
+### Test Result
 
 |API                 |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
 |--------------------|------------|--------|---------| -------------|--------------|---------|--------|
