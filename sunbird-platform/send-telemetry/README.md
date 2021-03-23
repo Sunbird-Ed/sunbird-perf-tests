@@ -24,7 +24,7 @@ e.g.
 
 **Note**
 - Update `host.csv` file data with correct host details before running the test. It can be domain details / Kubernetes Node IPs/ LB IPs/ Direct Service IPs with port details.
-- Need to add telemetry gz file in `~/sunbird-perf-tests/sunbird-platform/testdata/` location
+- Need to add telemetry gz file in (`~/sunbird-perf-tests/sunbird-platform/testdata/`) location
 
 
 
