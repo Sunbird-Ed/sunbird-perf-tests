@@ -1,9 +1,9 @@
-### Test Scenario:
+### Test Scenario
 
 Benchmarking Dial Assemble API.
 
 
-### Test Environment Details:
+### Test Environment Details
 1. No of AKS node - 24
 2. No of search service replicas - 
 3. Release version - 
@@ -29,7 +29,7 @@ e.g.
 
 
 
-**Test Result**
+### Test Result
 
 | API           | Thread Count  | Samples  | Errors%   | Throughput/sec|Avg Resp Time| 95th pct | 99th pct |
 | ------------- | ------------- | -------- | --------- | --------------|-------------|----------|----------|
