@@ -6,7 +6,7 @@ Benchmarking Search Content API with different search queries.
 ### Test Environment Details:
 1. No of AKS node - 24
 2. No of Search service replicas - 
-3. No of Content search replicas -
+3. No of Content service replicas -
 4. Release version -
 
 
