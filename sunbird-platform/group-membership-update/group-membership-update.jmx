@@ -113,7 +113,7 @@
               </elementProp>
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">x-authenticated-user-token</stringProp>
-                <stringProp name="Header.value">eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJOdHpmQVhtOVpvUVQwZUZoXzRZNmpJX2wycjNFS1k2ckJRcklMYzNPMjZnIn0.eyJqdGkiOiI5ODRiNzc0Ni0xODc5LTRhMGUtOWU2ZC0xODZjZTE5MzJmODEiLCJleHAiOjE2MDgyODA2MjMsIm5iZiI6MCwiaWF0IjoxNjA1Njg4NjIzLCJpc3MiOiJodHRwczovL2xvYWR0ZXN0Lm50cC5uZXQuaW4vYXV0aC9yZWFsbXMvc3VuYmlyZCIsImF1ZCI6Imdvb2dsZS1hdXRoIiwic3ViIjoiZjo1MGY5NjdkNC1iOWRiLTQ1MjgtOTUwYy1iOWYwMzMyZTYzYmE6YjNmMWFhNzgtNmQ5Yi00ZjNkLTlmNWItNTZhNWJlYzQwNjZiIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiZ29vZ2xlLWF1dGgiLCJhdXRoX3RpbWUiOjAsInNlc3Npb25fc3RhdGUiOiIwZTBiNzA4NC1hYmMxLTQ0MTUtYjhhNC03ZDJhZTNkZmI3ZDUiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwibmFtZSI6IjE2MDAyMzM2MDctMzIgdXNlciIsInByZWZlcnJlZF91c2VybmFtZSI6IjE2MDAyMzM2MDczMnVzZXI3NjA5IiwiZ2l2ZW5fbmFtZSI6IjE2MDAyMzM2MDctMzIiLCJmYW1pbHlfbmFtZSI6InVzZXIiLCJlbWFpbCI6IjE2KioqKioqKioqKipAeW9wbWFpbC5jb20ifQ.hXMIOMt_kyYdmS3BYw8LxmAWKHGS_vg0upTFx0ibJaWH3eoaMeoQFd8-5c7BnYXzoQTXYe7bOmv-pO0Q8ruMIVkMSHenD3fNs-7SnrdvoROJEWW2U4L3Pl8N6ipG7zTvVl_QQjFVqYuH1s9N_CoaCpJlJlRYBvWK_ivpaqTwBIJ9WxJsfcivTlYOwvU0hl24tZp2rGImqTGzMZtc65OHVdmoZYtydZLM0ScTOIclC4zT4YltHNILr9CU07bSFaU6LF8Bkn5ioxomjCKG3XSRlycNxq1eBqR-uD7asR_NavrW2drxF14i2zD0Hh0y9KvD9qgmcVZEvmRa45LiM-Wp0g</stringProp>
+                <stringProp name="Header.value">${token}</stringProp>
               </elementProp>
             </collectionProp>
           </HeaderManager>

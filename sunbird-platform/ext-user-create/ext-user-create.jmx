@@ -73,8 +73,8 @@
     &quot;lastName&quot;: &quot;user&quot;,&#xd;
     &quot;email&quot;: &quot;${emailId}&quot;,&#xd;
     &quot;emailVerified&quot;: true,&#xd;
-    &quot;password&quot;: &quot;Password@123&quot;,&#xd;
-    &quot;organisationId&quot;:&quot;0131575033215631364&quot;&#xd;
+    &quot;password&quot;: &quot;password&quot;,&#xd;
+    &quot;organisationId&quot;:&quot;01315750332156313634&quot;&#xd;
   }&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
@@ -148,7 +148,7 @@ uid = vars.get(&quot;userId&quot;);
 
 
 
-FileWriter fstream = new FileWriter(&quot;/mount/data/benchmark/sunbird-perf-tests/sunbird-platform/user-create/ext-user-data-new/ext-user-data-Nov23-2L.csv&quot;,true);
+FileWriter fstream = new FileWriter(&quot;~/ext-user-data-new/ext-user-data-Nov23-2L.csv&quot;,true);
 fstream.write(eid+&quot;,&quot;+em+&quot;,&quot;+uid+&quot;\n&quot;);
 // Close File(s)
 fstream.close();</stringProp>

@@ -81,12 +81,6 @@ echo "$JMETER_HOME/bin/jmeter.sh -n -t $JMX_FILE_PATH -R ${ips} -l $SCENARIO_LOG
 ### Create HTML reports for every run ###
 $JMETER_HOME/bin/jmeter.sh -n -t $JMX_FILE_PATH -R ${ips} -l $SCENARIO_LOGS/$scenario_id/logs/output.xml -e -o $SCENARIO_LOGS/$scenario_id/logs/summary -j $SCENARIO_LOGS/$scenario_id/logs/jmeter.log | tee $SCENARIO_LOGS/$scenario_id/logs/scenario.log
 
-
-echo  "Thread Count = " ${numThreads} >> $SCENARIO_LOGS/$scenario_id/logs/summary/index.html
-echo  " Loop Count = " ${ctrlLoops} >> $SCENARIO_LOGS/$scenario_id/logs/summary/index.html
-
-az storage blob upload-batch --account-name dikshaloadtest --sas-token "?sv=2019-10-10&ss=bfqt&srt=sco&sp=rwdlacupx&se=2021-06-25T16:54:20Z&st=2020-06-25T08:54:20Z&spr=https&sig=%2FUKHuzhyt5sPixIXkY1jtjabC7aqV8awEXmBtKTCIOY%3D" --destination jmeter-html-reports/$scenario_id --source $SCENARIO_LOGS/$scenario_id/logs/summary | grep index.html
-
 echo "Log file ..."
 echo "$SCENARIO_LOGS/$scenario_id/logs/scenario.log"
 

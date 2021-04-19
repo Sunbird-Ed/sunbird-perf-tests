@@ -56,7 +56,7 @@
           </elementProp>
           <elementProp name="" elementType="Header">
             <stringProp name="Header.name">user-id</stringProp>
-            <stringProp name="Header.value">ilimi</stringProp>
+            <stringProp name="Header.value">userId</stringProp>
           </elementProp>
           <elementProp name="" elementType="Header">
             <stringProp name="Header.name">Authorization</stringProp>
@@ -83,7 +83,7 @@
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">loadtest.ntp.net.in</stringProp>
+          <stringProp name="HTTPSampler.domain">yourDomainName</stringProp>
           <stringProp name="HTTPSampler.port">443</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
@@ -118,11 +118,11 @@
               </elementProp>
               <elementProp name="X-App-Id" elementType="Header">
                 <stringProp name="Header.name">X-App-Id</stringProp>
-                <stringProp name="Header.value">loadtest.diksha.app</stringProp>
+                <stringProp name="Header.value">yourAppName</stringProp>
               </elementProp>
               <elementProp name="X-Channel-Id" elementType="Header">
                 <stringProp name="Header.name">X-Channel-Id</stringProp>
-                <stringProp name="Header.value">505c7c48ac6dc1edc9b08f21db5a571d</stringProp>
+                <stringProp name="Header.value">505c7c48ac6dc1e</stringProp>
               </elementProp>
               <elementProp name="Content-Type" elementType="Header">
                 <stringProp name="Header.name">Content-Type</stringProp>
@@ -160,7 +160,7 @@
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">loadtest.ntp.net.in</stringProp>
+          <stringProp name="HTTPSampler.domain">yourDomanName</stringProp>
           <stringProp name="HTTPSampler.port">443</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>

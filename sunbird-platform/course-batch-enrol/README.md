@@ -1,4 +1,20 @@
-How to run ?
+### Test Scenario:
+
+Benchmarking Course Batch Enrol API.
+
+
+### Test Environment Details:
+1. No of AKS node - 24
+2. No of learner service replicas - 
+3. No of LMS service replicas - 
+4. Release version - 
+
+
+**API End Point:** 
+`/api/course/v1/enrol`
+
+
+**Executing the test scenario using JMeter:**
 
 ```./run_scenario.sh <JMETER_HOME> <JMETER_IP_LIST> <SCENARIO_NAME> <SCENARIO_ID> <THREADS_COUNT> <RAMPUP_TIME> <CTRL_LOOPS> <API_KEY> <DOMAIN_FILE> <CSV_FILE> <pathPrefix>```
 
@@ -8,4 +24,13 @@ e.g.
 
 
 **Note**
-- course-batch-enrol.jmx file request body needs to be updated with valid courseId and batchId data.
+- Update `host.csv` file data with correct host details before running the test. It can be domain details / Kubernetes Node IPs/ LB IPs/ Direct Service IPs with port details.
+- course-batch-enrol.jmx file request body needs to be updated with valid courseId and batchId details.
+- Update `userData.csv` file with valid user details. 
+
+
+### Test Result
+
+| API                 | Thread Count  | Samples  | Errors%   | Throughput/sec  |Avg Resp Time|  95th pct | 99th pct |
+| ------------------- | ------------- | -------- | --------- | --------------- |-------------|-----------|----------|
+| Course Batch Enrol  | 300           | 1500000  | 0 (0.00%) | 4248.8          |       69    |     110   |   130    |
