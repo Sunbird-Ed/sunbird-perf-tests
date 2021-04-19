@@ -4,9 +4,11 @@ Benchmarking Merge Account API.
 
 
 ### Test Environment Details:
-1. No of AKS node -24
+1. No of AKS node -24 (CPU- 8 Core & Memory- 16GB)
 2. No of learner service replicas - 8
-3. Release version - NA
+3. ES Cluster - 3 nodes; CPU- 16core ; Memory- 64GB
+4. Cassandra Cluster- 5 Nodes; CPU- 16 Core; Memory- 64GB
+5. Release version - NA
 
 
 **API End Point:** 
