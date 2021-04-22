@@ -7,6 +7,7 @@ Benchmarking Channel Read API.
 1. No of AKS node -24
 2. No of learner service replicas - 8
 3. Release version - Release 2.10.0
+4. ES Cluster - 3 Nodes; CPU - 16core ; Memory - 32 GB
 
 
 **API End Point:** `/api/channel/v1/read`
