@@ -3,11 +3,11 @@
 Benchmarking Auth Tokene API.
 
 ### Test Environment Details:
-No of AKS node -24
-
-No of replicas - 3 KeyCloak servers
-
-Release version - NA
+1. No of AKS node -24
+2. No of replicas - 3 KeyCloak servers
+3. ES Cluster - 3 nodes; CPU- 16core ; Memory- 64GB
+4. Cassandra Cluster- 5 Nodes; CPU- 16Core; Memory- 64GB
+5. Release version - NA
 
 
 **API End Point:** `/auth/realms/sunbird/protocol/openid-connect/token`
