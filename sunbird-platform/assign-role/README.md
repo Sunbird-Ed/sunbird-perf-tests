@@ -6,7 +6,7 @@ Benchmarking Assign Role API.
 1. No of AKS node - 24
 2. No of learner service replica - 8
 3. Release version - Release 3.4.0
-4. ES Cluster - 3 nodes; CPU- 16core ; Memory- 64GB
+4. ES Cluster - 3 nodes; CPU- 8core ; Memory- 32GB
 5. Cassandra Cluster- 5 Nodes; CPU- 16Core; Memory- 64GB
 
 **API End Point:** 
