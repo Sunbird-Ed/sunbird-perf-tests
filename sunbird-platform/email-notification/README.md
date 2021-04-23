@@ -6,7 +6,8 @@ Benchmarking Email Notification API.
 ### Test Environment Details
 1. No of AKS node - 24
 2. No of learner service replicas - 8
-3. Release version - NA
+3. No of notification service replicas -2 
+4. Release version - NA
 
 
 **API End Point:** 
