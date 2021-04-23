@@ -6,7 +6,7 @@ Benchmarking Group Read API.
 ### Test Environment Details
 1. No of AKS node - 24
 2. No of Group service replicas - 2
-3. Cassandra Cluster- 5 Nodes; CPU- 16Core; Memory- 64GB
+3. Cassandra Cluster- 5 Nodes; CPU- 8Core; Memory- 32GB
 4. Release version - Release 2.8.0
 
 
