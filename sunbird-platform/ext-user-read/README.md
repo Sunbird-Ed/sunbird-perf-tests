@@ -7,7 +7,7 @@ Benchmarking Ext User Read API.
 1. No of AKS node - 24
 2. No of learner service replicas - 8 (CPU- 3Core & Memory- 5GB)
 3. ES Cluster - 3 nodes; CPU- 16core ; Memory- 64GB
-4. Cassandra Cluster- 5 Nodes; CPU- 16Core; Memory- 64GB
+4. Cassandra Cluster- 5 Nodes; CPU- 8Core; Memory- 32GB
 5. Release version - NA
 
 
