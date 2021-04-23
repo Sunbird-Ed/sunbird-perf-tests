@@ -5,7 +5,7 @@ Benchmarking Auth Tokene API.
 ### Test Environment Details:
 1. No of AKS node -24
 2. No of replicas - 3 KeyCloak servers
-3. ES Cluster - 3 nodes; CPU- 16core ; Memory- 64GB
+3. ES Cluster - 3 nodes; CPU- 8core ; Memory- 32GB
 4. Cassandra Cluster- 5 Nodes; CPU- 16Core; Memory- 64GB
 5. Release version - NA
 
