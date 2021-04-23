@@ -3,7 +3,19 @@
 
 Benchmarking Framework Read API with and without category.
 
-How to run ?
+
+### Test Environment Details
+1. No of AKS node - 24
+2. No of learner service replicas - 8 (CPU- 3Core & Memory- 5GB)
+3. ES Cluster - 3 nodes; CPU- 16core ; Memory- 64GB
+4. Cassandra Cluster- 5 Nodes; CPU- 16Core; Memory- 64GB
+5. Release version - NA
+
+**API End Point:** 
+`/api/framework/v1/read`
+
+
+**Executing the test scenario using JMeter:**
 
 ```./run_scenario.sh <JMETER_HOME> <JMETER_IP_LIST> <SCENARIO_NAME> <SCENARIO_ID> <THREADS_COUNT> <RAMPUP_TIME> <CTRL_LOOPS> <API_KEY> <DOMAIN_FILE> <CSV_FILE> <pathPrefix>```
 
