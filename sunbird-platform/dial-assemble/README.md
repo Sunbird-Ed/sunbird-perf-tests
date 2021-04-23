@@ -6,8 +6,9 @@ Benchmarking Dial Assemble API.
 ### Test Environment Details
 1. No of AKS node - 24
 2. No of search service replicas - 8
-3. Release version - 2.8
-4. ES Cluster - 3 Nodes; CPU - 16core ; Memory - 32 GB
+4. ES Cluster - 3 nodes; CPU- 8core ; Memory- 32GB
+5. Cassandra Cluster- 5 Nodes; CPU- 8Core; Memory- 32GB
+6. Release version - 2.8
 
 
 **API End Point:** 
