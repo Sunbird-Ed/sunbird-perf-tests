@@ -36,8 +36,10 @@ Benchmarking User Create API.
 ### Test Environment Details
 1. No of AKS node - 24
 2. No of learner service replicas - 8
-3. No of keyCloak server - 4 
-4. Release version - Release 3.4.0
+3. Cassandra Cluster- 5 Nodes; CPU- 8Core; Memory- 32GB
+4. ES Cluster - 3 Nodes; CPU- 16core; Memory- 64GB
+5. No of keyCloak server - 4 
+6. Release version - Release 3.4.0
 
 
 **API End Point:** 

@@ -5,8 +5,10 @@ Benchmarking TNC Accept API.
 
 ### Test Environment Details
 1. No of AKS node - 24
-2. No of learner service replicas - 
-3. Release version - 
+2. No of learner service replicas - 8
+3. Cassandra Cluster- 5 Nodes; CPU- 8Core; Memory- 32GB
+4. ES Cluster - 3 nodes; CPU- 16core ; Memory- 64GB
+5. Release version - 3.2.0
 
 
 **API End Point:** 

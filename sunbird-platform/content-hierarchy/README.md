@@ -7,7 +7,9 @@ Benchmarking Content Hierarchy API.
 
 1. No of AKS node -24
 2. No of content service replica - 8
-3. Release version - NA
+3. ES Cluster - 3 nodes; CPU- 8core ; Memory- 32GB
+4. Cassandra Cluster- 5 Nodes; CPU- 16Core; Memory- 64GB
+4. Release version - NA
 
 
 **API End Point:**  `/api/course/v1/hierarchy`

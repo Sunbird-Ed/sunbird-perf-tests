@@ -5,8 +5,9 @@ Benchmarking Merge Account API.
 
 ### Test Environment Details
 1. No of AKS node - 24
-2. No of telemetry service replicas - 
-3. Release version - 
+2. No of telemetry service replicas - 8
+3. Kafka Cluster - 3 nodes; CPU - 4core and Memory - 16GB
+4. Release version - 2.8.0
 
 
 **API End Point:** 

@@ -6,7 +6,8 @@ Benchmarking Group Create API.
 ### Test Environment Details
 1. No of AKS node - 24
 2. No of group service replicas - 2
-3. Release version - Release 2.8.0
+3. Cassandra Cluster- 5 Nodes; CPU- 8Core; Memory- 32GB
+4. Release version - Release 2.8.0
 
 
 **API End Point:** 

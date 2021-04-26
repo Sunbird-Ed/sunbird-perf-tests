@@ -5,8 +5,9 @@ Benchmarking Device Register  API.
 
 ### Test Environment Details
 1. No of AKS node - 24
-2. No of analytics service replicas - 
-3. Release version - 
+2. No of analytics service replicas - 4
+3. Release version - 3.4
+4. Redis - 1 node; CPU - 32core, Memory - 128GB
 
 
 **API End Point:** 
