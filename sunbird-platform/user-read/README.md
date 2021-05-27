@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ### Test Scenario
 
 Benchmarking Get User Profile API.
@@ -30,7 +29,6 @@ e.g.
 
 - Update `UserData.csv` file with users Ids and user access token.
 - Update `host.csv` file data with correct host details before running the test. It can be domain details / Kubernetes Node IPs/ LB IPs/ Direct Service IPs with port details.
-
 
 ### Test Result
 
