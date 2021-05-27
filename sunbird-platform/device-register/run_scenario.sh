@@ -15,15 +15,14 @@ deviceRegisterApi=${11}
 JMETER_HOME=/mnt/data/benchmark/apache-jmeter-4.0
 JMETER_HOME=${jmeterHome}
 
-SCENARIO_LOGS=~/sunbird-perf-tests/sunbird-platform/logs/$scenario_name
-
+SCENARIO_LOGS=/mount/data/benchmark/sunbird-perf-tests/sunbird-platform/logs/$scenario_name
 JMETER_CLUSTER_IPS=$ips
 
 echo "Executing $scenario_id"
 
 if [ -f ~/logs/$scenario_id ]
 then
-  rm ~/logs/$scenario_id
+	rm ~/logs/$scenario_id
 fi
 
 JMX_FILE_PATH=~/current_scenario/$scenario_name.jmx
@@ -34,7 +33,7 @@ mkdir $SCENARIO_LOGS/$scenario_id/logs
 mkdir $SCENARIO_LOGS/$scenario_id/server/
 
 rm ~/current_scenario/*.jmx
-cp ~/sunbird-perf-tests/sunbird-platform/$scenario_name/$scenario_name.jmx $JMX_FILE_PATH
+cp /mount/data/benchmark/sunbird-perf-tests/sunbird-platform/$scenario_name/$scenario_name.jmx $JMX_FILE_PATH
 
 echo "ip = " ${ips}
 echo "scenario_name = " ${scenario_name}

@@ -1,4 +1,4 @@
-#!/bin/bash
+	#!/bin/bash
 
 jmeterHome=$1
 ips=$2
@@ -16,7 +16,7 @@ pageAssembleApi=${11}
 JMETER_HOME=/mnt/data/benchmark/apache-jmeter-4.0
 JMETER_HOME=${jmeterHome}
 
-SCENARIO_LOGS= /mount/data/benchmark/sunbird-perf-tests/sunbird-platform/logs/$scenario_name
+SCENARIO_LOGS=/mount/data/benchmark/sunbird-perf-tests/sunbird-platform/logs/$scenario_name
 
 JMETER_CLUSTER_IPS=$ips
 
@@ -36,17 +36,15 @@ mkdir $SCENARIO_LOGS/$scenario_id/server/
 
 rm ~/current_scenario/*.jmx
 cp  /mount/data/benchmark/sunbird-perf-tests/sunbird-platform/$scenario_name/$scenario_name.jmx $JMX_FILE_PATH
-
 echo "ip = " ${ips}
 echo "scenario_name = " ${scenario_name}
 echo "scenario_id = " ${scenario_id}
 echo "numThreads = " ${numThreads}
 echo "rampupTime = " ${rampupTime}
 echo "ctrlLoops = " ${ctrlLoops}
-echo "apiKey = " ${apiKey}
 echo "csvFileHost = " ${csvFileHost}
 echo "csvFileRequest = " ${csvFileRequest}
-echo "pageAssembleApi = " ${pageAssembleApi}
+echo "pageAssembleAPI = " ${pageAssembleAPI}
 
 
 sed "s/THREADS_COUNT/${numThreads}/g" $JMX_FILE_PATH > jmx.tmp
@@ -58,8 +56,6 @@ mv jmx.tmp $JMX_FILE_PATH
 sed "s/CTRL_LOOPS/${ctrlLoops}/g" $JMX_FILE_PATH > jmx.tmp
 mv jmx.tmp $JMX_FILE_PATH
 
-sed "s/API_KEY/${apiKey}/g" $JMX_FILE_PATH > jmx.tmp
-mv jmx.tmp $JMX_FILE_PATH
 
 sed "s#DOMAIN_FILE#${csvFileHost}#g" $JMX_FILE_PATH > jmx.tmp
 mv jmx.tmp $JMX_FILE_PATH
@@ -67,10 +63,13 @@ mv jmx.tmp $JMX_FILE_PATH
 sed "s#CSV_FILE#${csvFileRequest}#g" $JMX_FILE_PATH > jmx.tmp
 mv jmx.tmp $JMX_FILE_PATH
 
-sed "s#PATH_PREFIX#${pageAssembleApi}#g" $JMX_FILE_PATH > jmx.tmp
-mv jmx.tmp $JMX_FILE_PATH
 
 ###Copy JMX File to Logs dir ###
+sed "s#PATH_PREFIX#${pageAssembleAPI}#g" $JMX_FILE_PATH > jmx.tmp
+mv jmx.tmp $JMX_FILE_PATH
+
+
+#Copy JMX File to Logs dir ###
 cp $JMX_FILE_PATH $SCENARIO_LOGS/$scenario_id/logs
 
 echo "Running ... "

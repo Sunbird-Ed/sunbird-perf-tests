@@ -1,8 +1,39 @@
-How to run?
+<<<<<<< HEAD
+### Test Scenario
 
-```
-Run load test scenario script with necessary arguments:
-sh run_scenario.sh <JMETER_HOME> <JMETER_IP_LIST> <SCENARIO_NAME> <SCENARIO_ID> <THREADS_COUNT> <RAMPUP_TIME> <CTRL_LOOPS> <API_KEY>  <DOMAIN_URL> <USER_NAME>  <DOMAIN_FILE> <USER_ID_FILE> <pathPrefix>
+Benchmarking Get User Profile API.
+
+
+### Test Environment Details
+1. No of AKS node - 24
+2. No of learner service replicas - 8
+3. Cassandra Cluster- 5 Nodes; CPU- 8Core; Memory- 32GB
+4. ES Cluster - 3 nodes; CPU- 16core ; Memory- 64GB
+5. Release version - 3.2.0
+
+
+**API End Point:** 
+`/api/user/v3/read`
+
+
+**Executing the test scenario using JMeter**
+
+
+```./run_scenario.sh <JMETER_HOME> <JMETER_IP_LIST> <SCENARIO_NAME> <SCENARIO_ID> <THREADS_COUNT> <RAMPUP_TIME> <CTRL_LOOPS> <API_KEY> <DOMAIN_FILE> <CSV_FILE> <pathPrefix>```
 
 e.g.
-./run_scenario.sh /mount/data/benchmark/apache-jmeter-4.0/ 'Jmeter_Slave1_IP,Jmeter_Slave2_IP,Jmeter_Slave3_IP,Jmeter_Slave4_IP' user-read user-read_RUNID01 10 5 10 "ABCDEFabcdef012345" abc.com  useremailid@gmail.com /mount/data/benchmark/sunbird-perf-tests/sunbird-platform/user-read/host.csv  /mount/data/benchmark/sunbird-perf-tests/sunbird-platform/user-read/userIds.csv /api/user/v2/read
+
+```./run_scenario.sh /mount/data/benchmark/apache-jmeter-5.3/ 'Jmeter_Slave1_IP,Jmeter_Slave2_IP,Jmeter_Slave3_IP,Jmeter_Slave4_IP' user-read user-read 5 1 5 "ABCDEFabcdef012345" /mount/data/benchmark/sunbird-perf-tests/sunbird-platform/testdata/host.csv  /mount/data/benchmark/sunbird-perf-tests/sunbird-platform/testdata/userData.csv /api/user/v3/read```
+
+
+**Note**
+
+- Update `UserData.csv` file with users Ids and user access token.
+- Update `host.csv` file data with correct host details before running the test. It can be domain details / Kubernetes Node IPs/ LB IPs/ Direct Service IPs with port details.
+
+
+### Test Result
+
+|API                |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
+|-------------------|------------|--------|---------| -------------|--------------|---------|--------|
+|Get User Profile   |200         |2000000 |0(0.00%) | 2987.4       | 63           |  55     |71      |
