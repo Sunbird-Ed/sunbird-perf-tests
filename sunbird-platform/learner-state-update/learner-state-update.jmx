@@ -79,6 +79,7 @@
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
       </ThreadGroup>
       <hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="x-authenticated-user-token" enabled="false">
@@ -140,7 +141,6 @@
                 &quot;contentId&quot;: &quot;${contentId}&quot;,&#xd;
                 &quot;batchId&quot;: &quot;${batchId}&quot;,&#xd;
                 &quot;status&quot;: 2,&#xd;
-                &quot;courseId&quot;: &quot;${courseId}&quot;,&#xd;
                 &quot;lastAccessTime&quot;: &quot;2020-03-05 11:57:09:928+0000&quot;&#xd;
             }&#xd;
         ]&#xd;
@@ -182,7 +182,7 @@
             </collectionProp>
           </HeaderManager>
           <hashTree/>
-          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="false">
             <stringProp name="ConstantTimer.delay">90</stringProp>
           </ConstantTimer>
           <hashTree/>

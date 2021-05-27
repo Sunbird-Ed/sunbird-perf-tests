@@ -16,7 +16,7 @@ contentReadApi=${11}
 JMETER_HOME=/mnt/data/benchmark/apache-jmeter-4.0
 JMETER_HOME=${jmeterHome}
 
-SCENARIO_LOGS= /mount/data/benchmark/sunbird-perf-tests/sunbird-platform/logs/$scenario_name
+SCENARIO_LOGS=/mount/data/benchmark/sunbird-perf-tests/sunbird-platform/logs/$scenario_name
 
 JMETER_CLUSTER_IPS=$ips
 
@@ -35,7 +35,7 @@ mkdir $SCENARIO_LOGS/$scenario_id/logs
 mkdir $SCENARIO_LOGS/$scenario_id/server/
 
 rm ~/current_scenario/*.jmx
-cp  /mount/data/benchmark/sunbird-perf-tests/sunbird-platform/$scenario_name/$scenario_name.jmx $JMX_FILE_PATH
+cp /mount/data/benchmark/sunbird-perf-tests/sunbird-platform/$scenario_name/$scenario_name.jmx $JMX_FILE_PATH
 
 echo "ip = " ${ips}
 echo "scenario_name = " ${scenario_name}
@@ -79,6 +79,10 @@ echo "$JMETER_HOME/bin/jmeter.sh -n -t $JMX_FILE_PATH -R ${ips} -l $SCENARIO_LOG
 
 ### Create HTML reports for every run ###
 nohup $JMETER_HOME/bin/jmeter.sh -n -t $JMX_FILE_PATH -R ${ips} -l $SCENARIO_LOGS/$scenario_id/logs/output.xml -e -o $SCENARIO_LOGS/$scenario_id/logs/summary -j $SCENARIO_LOGS/$scenario_id/logs/jmeter.log > $SCENARIO_LOGS/$scenario_id/logs/scenario.log 2>&1 &
+
+
+echo  "Thread Count = " ${numThreads} >> $SCENARIO_LOGS/$scenario_id/logs/summary/index.html
+echo  " Loop Count = " ${ctrlLoops} >> $SCENARIO_LOGS/$scenario_id/logs/summary/index.html
 
 echo "Log file ..."
 echo "$SCENARIO_LOGS/$scenario_id/logs/scenario.log"

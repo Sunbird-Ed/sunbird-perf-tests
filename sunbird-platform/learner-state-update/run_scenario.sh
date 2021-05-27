@@ -18,7 +18,7 @@ learnerStateUpdateApi=${12}
 JMETER_HOME=/mnt/data/benchmark/apache-jmeter-4.0
 JMETER_HOME=${jmeterHome}
 
-SCENARIO_LOGS=~/sunbird-perf-tests/sunbird-platform/logs/$scenario_name
+SCENARIO_LOGS=/mount/data/benchmark/sunbird-perf-tests/sunbird-platform/logs/$scenario_name
 
 JMETER_CLUSTER_IPS=$ips
 
@@ -37,7 +37,7 @@ mkdir $SCENARIO_LOGS/$scenario_id/logs
 mkdir $SCENARIO_LOGS/$scenario_id/server/
 
 rm ~/current_scenario/*.jmx
-cp ~/sunbird-perf-tests/sunbird-platform/$scenario_name/$scenario_name.jmx $JMX_FILE_PATH
+cp /mount/data/benchmark/sunbird-perf-tests/sunbird-platform/$scenario_name/$scenario_name.jmx $JMX_FILE_PATH
 
 echo "ip = " ${ips}
 echo "scenario_name = " ${scenario_name}
@@ -48,7 +48,6 @@ echo "ctrlLoops = " ${ctrlLoops}
 echo "apiKey = " ${apiKey}
 echo "csvFileHost = " ${csvFileHost}
 echo "csvFileRequest = " ${csvFileRequest}
-echo "FileData = " ${FileData}
 echo "learnerStateUpdateApi = " ${learnerStateUpdateApi}
 
 
@@ -74,11 +73,9 @@ mv jmx.tmp $JMX_FILE_PATH
 sed "s#FILE_Data#${FileData}#g" $JMX_FILE_PATH > jmx.tmp
 mv jmx.tmp $JMX_FILE_PATH
 
-sed "s#PATH_PREFIX#${learnerStateUpdateApi}#g" $JMX_FILE_PATH > jmx.tmp
-mv jmx.tmp $JMX_FILE_PATH
 
 
-Copy JMX File to Logs dir ###
+#Copy JMX File to Logs dir ###
 cp $JMX_FILE_PATH $SCENARIO_LOGS/$scenario_id/logs
 
 echo "Running ... "

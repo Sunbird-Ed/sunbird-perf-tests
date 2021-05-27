@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.1.1 r1855137">
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.2.1">
   <hashTree>
     <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="learner-state-read" enabled="true">
       <stringProp name="TestPlan.comments"></stringProp>
@@ -74,8 +74,21 @@
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
       </ThreadGroup>
       <hashTree>
+        <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="User Parameters" enabled="false">
+          <collectionProp name="UserParameters.names">
+            <stringProp name="3601339">uuid</stringProp>
+          </collectionProp>
+          <collectionProp name="UserParameters.thread_values">
+            <collectionProp name="681405977">
+              <stringProp name="118040362">${__UUID()}</stringProp>
+            </collectionProp>
+          </collectionProp>
+          <boolProp name="UserParameters.per_iteration">false</boolProp>
+        </UserParameters>
+        <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="x-authenticated-user-token" enabled="false">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
@@ -121,7 +134,7 @@
           </RegexExtractor>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="learner-state-read" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="readContentState - Mobile" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
             <collectionProp name="Arguments.arguments">
@@ -131,9 +144,121 @@
     &quot;request&quot;: {&#xd;
         &quot;userId&quot;: &quot;${userId}&quot;,&#xd;
         &quot;courseId&quot;: &quot;do_31251458177472102425191&quot;,&#xd;
-        &quot;contentIds&quot;: [&quot;do_31251825250018918429391&quot;, &quot;do_31251681216889651228304&quot;, &quot;do_-18446744073709551615&quot;, &quot;do_31251459453671833615208&quot;, &quot;do_31251467391406080015348&quot;, &quot;do_31251470240602521625376&quot;, &quot;do_31251470360807833615409&quot;, &quot;do_31251471501275136025399&quot;, &quot;do_31251471258944307215430&quot;, &quot;do_31251471766446080015439&quot;, &quot;do_31251472343491379215463&quot;, &quot;do_3123348532419952641447&quot;, &quot;do_31251681565999923218236&quot;],&#xd;
-        &quot;batchId&quot;: &quot;0129691030774988802&quot;&#xd;
-        &#xd;
+        &quot;contentIds&quot;: [&#xd;
+            &quot;do_31251825250018918429391&quot;,&#xd;
+            &quot;do_31251681216889651228304&quot;,&#xd;
+            &quot;do_31251681565999923218236&quot;,&#xd;
+            &quot;do_31251824028808806419383&quot;,&#xd;
+            &quot;do_31251459453671833615208&quot;,&#xd;
+            &quot;do_31251467391406080015348&quot;,&#xd;
+            &quot;do_31251470240602521625376&quot;,&#xd;
+            &quot;do_31251470360807833615409&quot;,&#xd;
+            &quot;do_31251471501275136025399&quot;,&#xd;
+            &quot;do_31251471258944307215430&quot;,&#xd;
+            &quot;do_31251471766446080015439&quot;,&#xd;
+            &quot;do_31251472343491379215463&quot;,&#xd;
+            &quot;do_3123348586389995521449&quot;,&#xd;
+            &quot;do_3123348532419952641447&quot;,&#xd;
+            &quot;do_31251472601064243225431&quot;,&#xd;
+            &quot;do_31251472741851955215477&quot;&#xd;
+        ],&#xd;
+        &quot;batchId&quot;: &quot;0131035497370992640&quot;&#xd;
+    }&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${host}</stringProp>
+          <stringProp name="HTTPSampler.port">${port}</stringProp>
+          <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/api/course/v1/content/state/read</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${apiKey}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">x-authenticated-user-token</stringProp>
+                <stringProp name="Header.value">${token}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-Device-Id</stringProp>
+                <stringProp name="Header.value">f5db26762708c2265c99b9994cc9aed6692d02f8</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Accept-Charset</stringProp>
+                <stringProp name="Header.value">UTF-8</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Access-Control-Allow-Origin</stringProp>
+                <stringProp name="Header.value">*</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-Channel-Id</stringProp>
+                <stringProp name="Header.value">01269878797503692810</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Dalvik/2.1.0 (Linux; U; Android 6.0; XT1068 Build/MPB24.65-34-3)</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="readContentState -Portal" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;request&quot;: {&#xd;
+        &quot;userId&quot;: &quot;${userId}&quot;,&#xd;
+        &quot;courseId&quot;: &quot;do_31251458177472102425191&quot;,&#xd;
+        &quot;contentIds&quot;: [&#xd;
+            &quot;do_31251825250018918429391&quot;,&#xd;
+            &quot;do_31251681216889651228304&quot;,&#xd;
+            &quot;do_31251681565999923218236&quot;,&#xd;
+            &quot;do_31251824028808806419383&quot;,&#xd;
+            &quot;do_31251459453671833615208&quot;,&#xd;
+            &quot;do_31251467391406080015348&quot;,&#xd;
+            &quot;do_31251470240602521625376&quot;,&#xd;
+            &quot;do_31251470360807833615409&quot;,&#xd;
+            &quot;do_31251471501275136025399&quot;,&#xd;
+            &quot;do_31251471258944307215430&quot;,&#xd;
+            &quot;do_31251471766446080015439&quot;,&#xd;
+            &quot;do_31251472343491379215463&quot;,&#xd;
+            &quot;do_3123348586389995521449&quot;,&#xd;
+            &quot;do_3123348532419952641447&quot;,&#xd;
+            &quot;do_31251472601064243225431&quot;,&#xd;
+            &quot;do_31251472741851955215477&quot;&#xd;
+        ],&#xd;
+        &quot;batchId&quot;: &quot;0131035497370992640&quot;&#xd;
     }&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
@@ -165,8 +290,92 @@
                 <stringProp name="Header.name">Content-Type</stringProp>
                 <stringProp name="Header.value">application/json</stringProp>
               </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">x-authenticated-user-token</stringProp>
+                <stringProp name="Header.value">${token}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-IN,en-GB;q=0.9,en-US;q=0.8,en;q=0.7</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                <stringProp name="Header.value">empty</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                <stringProp name="Header.value">cors</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
+                <stringProp name="Header.value">same-origin</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Origin</stringProp>
+                <stringProp name="Header.value">https://loadtest.ntp.net.in</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-Request-ID</stringProp>
+                <stringProp name="Header.value">74275402-0d38-20e1-811a-6cc7c7003057</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-Device-ID</stringProp>
+                <stringProp name="Header.value">d77b375988cd476b0a5ea79308f8a0f9</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-Source</stringProp>
+                <stringProp name="Header.value">web</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-Org-code</stringProp>
+                <stringProp name="Header.value">01269878797503692810</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-msgid</stringProp>
+                <stringProp name="Header.value">74275402-0d38-20e1-811a-6cc7c7003057</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-App-Id</stringProp>
+                <stringProp name="Header.value">loadtest.diksha.portal</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-Channel-Id</stringProp>
+                <stringProp name="Header.value">01269878797503692810</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Cache-Control</stringProp>
+                <stringProp name="Header.value">no-cache</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Pragma</stringProp>
+                <stringProp name="Header.value">no-cache</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Connection</stringProp>
+                <stringProp name="Header.value">keep-alive</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://loadtest.ntp.net.in/learn/course/play/do_31251459019801395215183?batchId=0131035497370992640&amp;courseId=do_31251458177472102425191&amp;courseName=Introduction%20to%20DIKSHA&amp;selectedContent=do_31251825250018918429391</stringProp>
+              </elementProp>
             </collectionProp>
           </HeaderManager>
+          <hashTree/>
+          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="false">
+            <stringProp name="ConstantTimer.delay">15</stringProp>
+          </ConstantTimer>
           <hashTree/>
         </hashTree>
         <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
@@ -258,7 +467,7 @@
         <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
           <stringProp name="filename">${csvFileRequest}</stringProp>
           <stringProp name="fileEncoding">UTF-8</stringProp>
-          <stringProp name="variableNames">userId</stringProp>
+          <stringProp name="variableNames">email,userId,token</stringProp>
           <boolProp name="ignoreFirstLine">true</boolProp>
           <stringProp name="delimiter">,</stringProp>
           <boolProp name="quotedData">false</boolProp>
