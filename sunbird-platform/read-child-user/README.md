@@ -4,11 +4,11 @@ Benchmarking Read Managed User API.
 
 
 ### Test Environment Details
-1. No of AKS node - 24
-2. No of learner service replicas - 8
+1. No of AKS node - 16
+2. No of learner service replicas - 8 (1 Core and 1 GB)
 3. Cassandra Cluster- 5 Nodes; CPU- 8Core; Memory- 32GB
 4. ES Cluster - 3 nodes; CPU- 16core ; Memory- 64GB
-5. Release version - NA
+5. Release version - Release 3.9.0
 
 
 **API End Point:** 
@@ -35,4 +35,4 @@ e.g.
 
 |API              |Thread Count|Samples |Errors%    |Throughput/sec|Avg Resp Time |95th pct |99th pct|
 |-----------------|------------|--------|-----------| -------------|--------------|---------|--------|
-|Read Managed User|200         |16000000 |13(0.00%) | 5346         | 36           |  60     |70      |
+|Read Managed User|200         |2000000 |0(0.00%) | 592.1         | 330           |  707     |895      |
