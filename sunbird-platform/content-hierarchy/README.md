@@ -5,11 +5,11 @@ Benchmarking Content Hierarchy API.
 
 ### Test Environment Details:
 
-1. No of AKS node -24
-2. No of content service replica - 8
-3. ES Cluster - 3 nodes; CPU- 8core ; Memory- 32GB
-4. Cassandra Cluster- 5 Nodes; CPU- 16Core; Memory- 64GB
-4. Release version - NA
+1. No of AKS node - 16
+2. No of content service replica - 6 (1 Core and 3 GB)
+3. ES Cluster - 3 nodes (CPU- 8core ; Memory- 32GB)
+4. Cassandra Cluster- 5 Nodes (CPU- 16Core; Memory- 64GB)
+4. Release version - Release 3.9.0
 
 
 **API End Point:**  `/api/course/v1/hierarchy`
@@ -32,6 +32,8 @@ e.g.
 
 ### Test Result
 
-| API               | Thread Count  | Samples  | Errors%   | Throughput/sec  |
-| ----------------- | ------------- | -------- | --------- | --------------- |
-| Content Hierarchy | 200           | 1000000  | 0 (0.00%) | 1980.3          |
+| API               | Thread Count  | Samples  |Throughput | Errors%   | Avg.            |95th pct         |99th pct       |
+| ----------------- | ------------- | -------- | --------- | --------- | --------------- |--------------- |--------------- |
+| Content Hierarchy | 200           | 2000000  | 20946.8  | 0 (0.00%)  |2                |     4           |10         |
+
+*Note- This API is cached
