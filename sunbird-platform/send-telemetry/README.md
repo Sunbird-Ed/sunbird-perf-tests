@@ -1,6 +1,6 @@
 ### Test Scenario
 
-Benchmarking Merge Account API.
+Benchmarking Send Telemetry API.
 
 
 ### Test Environment Details
