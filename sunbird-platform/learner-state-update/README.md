@@ -5,7 +5,7 @@ Benchmarking Learner State Update API.
 
 ### Test Environment Details
 1. No of AKS node - 16
-2. No of lms service replicas - 16
+2. No of lms service replicas - 16 (1 Core and 1 GB)
 3. Cassandra Cluster- 5 Nodes (CPU- 8Core; Memory- 32GB)
 4. ES Cluster - 3 nodes (CPU- 16core ; Memory- 64GB)
 5. Release version - Release 3.9.0
