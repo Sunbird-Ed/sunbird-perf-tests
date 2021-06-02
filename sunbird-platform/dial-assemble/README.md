@@ -5,11 +5,11 @@ Benchmarking Dial Assemble API.
 
 
 ### Test Environment Details
-1. No of AKS node - 24
-2. No of search service replicas - 8
-4. ES Cluster - 3 nodes; CPU- 8core ; Memory- 32GB
-5. Cassandra Cluster- 5 Nodes; CPU- 8Core; Memory- 32GB
-6. Release version - 2.8
+1. No of AKS node - 16
+2. No of search service replicas - 8 (1 core and 3 GB)
+4. ES Cluster - 3 nodes (CPU- 8core ; Memory- 32GB)
+5. Cassandra Cluster- 5 Nodes (CPU- 8Core; Memory- 32GB)
+6. Release version - Release 3.9.0
 
 
 **API End Point:** 
@@ -36,4 +36,4 @@ e.g.
 
 | API           | Thread Count  | Samples  | Errors%   | Throughput/sec|Avg Resp Time| 95th pct | 99th pct |
 | ------------- | ------------- | -------- | --------- | --------------|-------------|----------|----------|
-| Dial Assemble | 600           | 600000   | 0(0.00%)  | 1133.2        |    496      |     670  |  1196.99 |
+| Dial Assemble | 200           | 500000   | 0(0.00%)  | 845.7        |    234      |     397  |  505.99 |
