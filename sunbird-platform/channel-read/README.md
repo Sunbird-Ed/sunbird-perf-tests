@@ -4,10 +4,10 @@ Benchmarking Channel Read API.
 
 
 ### Test Environment Details:
-1. No of AKS node -24
-2. No of learner service replicas - 8
-3. Release version - Release 2.10.0
-4. ES Cluster - 3 Nodes; CPU - 16core ; Memory - 32 GB
+1. No of AKS node -16
+2. No of learner, LMS service replicas - 8 (1 core and 1 GB)
+3. ES Cluster - 3 Nodes (CPU - 16core ; Memory - 32 GB)
+4. 3. Release version - Release 3.9.0
 
 
 **API End Point:** `/api/channel/v1/read`
@@ -29,4 +29,4 @@ e.g.
 
 | API           | Thread Count  | Samples  | Errors%   | Throughput/sec  |Avg Resp Time |   95th pct  |  99th pct   |
 | ------------- | ------------- | -------- | --------- | --------------- |--------------|-------------|-------------|
-| Channel Read  | 200           | 2000000  | 0 (0.00%) | 42334.3         |1             |1            |46           |
+| Channel Read  | 200           | 5000000  | 0 (0.00%) | 33999.3         |0            |1            |4           |
