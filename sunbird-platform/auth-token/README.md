@@ -3,11 +3,12 @@
 Benchmarking Auth Tokene API.
 
 ### Test Environment Details:
-1. No of AKS node -24
-2. No of replicas - 3 KeyCloak servers
-3. ES Cluster - 3 nodes; CPU- 8core ; Memory- 32GB
-4. Cassandra Cluster- 5 Nodes; CPU- 16Core; Memory- 64GB
-5. Release version - NA
+1. No of AKS node - 16
+2. No of learner service replicas - 8 (1Core and 1GB)
+3. KeyCloak - 4 KeyCloak servers
+4. ES Cluster - 3 nodes (CPU- 8core ; Memory- 32GB)
+5. Cassandra Cluster- 5 Nodes (CPU- 16Core; Memory- 64GB)
+6. Release version - Release 3.9.0
 
 
 **API End Point:** `/auth/realms/sunbird/protocol/openid-connect/token`
@@ -31,4 +32,4 @@ e.g.
 
 | API           | Thread Count  | Samples  | Errors% | Throughput/sec|Avg Resp Time|   95th pct  |  99th pct   |
 | ------------- | ------------- | -------- | --------| ---------------|------------|-------------|-------------|
-| Auth Token    | 200           | 200000   | 0(0.00%)| 1805           |    105     | 267.95      |  2112.01    |
+| Auth Token    | 200           | 1000000   | 0(0.00%)| 674.3           |    290     | 334      |  448   |
