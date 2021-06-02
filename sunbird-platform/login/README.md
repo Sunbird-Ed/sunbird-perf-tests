@@ -4,7 +4,7 @@ Benchmarking Login scenario (with 4 api calls).
 
 
 ### Test Environment Details
-1. No of AKS node - 24
+1. No of AKS node - 16
 2. No of learner service replicas - 8 (1 Core and 1 GB)
 3. KeyCloak Server - 4 servers
 4. Release version - Release 3.9.0
