@@ -4,14 +4,14 @@ Benchmarking Auth Tokene API.
 
 ### Test Environment Details:
 1. No of AKS node - 16
-2. No of learner service replicas - 8 (1Core and 1GB)
-3. KeyCloak - 4 KeyCloak servers
+2. No of Learner service replicas - 16 (1 Core and 3 GB)
+3. No of replicas - 3 KeyCloak servers
 4. ES Cluster - 3 nodes (CPU- 8core ; Memory- 32GB)
 5. Cassandra Cluster- 5 Nodes (CPU- 16Core; Memory- 64GB)
 6. Release version - Release 3.9.0
 
 
-**API End Point:** `/auth/realms/sunbird/protocol/openid-connect/token`
+**API End Point:** `/api/user/v4/create`
 
 
 **Executing the test scenario using JMeter:**
@@ -20,16 +20,19 @@ Benchmarking Auth Tokene API.
 
 e.g.
 
-```./run_scenario.sh /mount/data/benchmark/apache-jmeter-5.3/ 'Jmeter_Slave1_IP,Jmeter_Slave2_IP,Jmeter_Slave3_IP,Jmeter_Slave4_IP' auth-token auth-token 5 1 5 "ABCDEFabcdef012345" /mount/data/benchmark/sunbird-perf-tests/sunbird-platform/testdata/host.csv /mount/data/benchmark/sunbird-perf-tests/sunbird-platform/testdata/userData.csv /auth/realms/sunbird/protocol/openid-connect/token ```
+```
+./run_scenario.sh /mount/data/benchmark/apache-jmeter-5.3/ 'Jmeter_Slave1_IP,Jmeter_Slave2_IP,Jmeter_Slave3_IP,Jmeter_Slave4_IP' managed-user-creation
+ managed-user-creation 5 1 5 "ABCDEFabcdef012345" /mount/data/benchmark/sunbird-perf-tests/sunbird-platform/testdata/host.csv /mount/data/benchmark/sunbird-perf-tests/sunbird-platform/testdata/userData.csv /api/user/v4/create
+ ```
 
 **Note:**
 
 - Update `host.csv` file data with correct host details before running the test. It can be domain details / Kubernetes Node IPs/ LB IPs/ Direct Service IPs with port details.
-- Update `userData.csv` file with valid user details (FirstName, userName, Email,	userId)
+- Update `userData.csv` file with valid emailIds (FirstName, Email)
 
 
 ### Test Result
 
 | API           | Thread Count  | Samples  | Errors% | Throughput/sec|Avg Resp Time|   95th pct  |  99th pct   |
 | ------------- | ------------- | -------- | --------| ---------------|------------|-------------|-------------|
-| Auth Token    | 200           | 1000000   | 0(0.00%)| 674.3           |    290     | 334      |  448   |
+| Auth Token    | 200           | 1000000   | 0(0.00%)| 804.4           |    241    | 397  |  528   |

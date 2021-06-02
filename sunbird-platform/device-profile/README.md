@@ -4,10 +4,10 @@ Benchmarking Device Profile API.
 
 
 ### Test Environment Details:
-1. No of AKS node - 24
-2. No of analytics service replicas - 4
-3. Release version - 3.4
-4. Redis - 1 node; CPU - 32core, Memory - 128GB
+1. No of AKS node - 16
+2. No of analytics service replicas - 12
+3. Redis - 1 node (CPU - 32core, Memory - 128GB)
+4. Release version - Release 3.9.0
 
 
 **API End Point:** 
@@ -32,4 +32,4 @@ e.g.
 
 | API           | Thread Count | Samples  | Errors%   | Throughput/sec|Avg Resp Time|  95th pct | 99th pct |
 | ------------- | -------------| -------- | --------- | --------------|-------------|-----------|----------|
-| Device Profile| 200          | 2000000  | 0(0.00%)  | 8403.4        |  22         |     71    |   79     |
+| Device Profile| 200          | 2000000  | 0(0.00%)  | 9999.1       |  18         |     72    |   84     |

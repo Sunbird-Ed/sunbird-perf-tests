@@ -1,13 +1,13 @@
 ### Test Scenario
 
-Benchmarking Merge Account API.
+Benchmarking Send Telemetry API.
 
 
 ### Test Environment Details
-1. No of AKS node - 24
-2. No of telemetry service replicas - 8
-3. Kafka Cluster - 3 nodes; CPU - 4core and Memory - 16GB
-4. Release version - 2.8.0
+1. No of AKS node - 16
+2. No of telemetry service replicas - 16 (1 Core and 1 GB)
+3. Kafka Cluster - 3 nodes (CPU - 4core and Memory - 16GB)
+4. Release version - Release 3.9.0
 
 
 **API End Point:** 
@@ -33,4 +33,4 @@ e.g.
 
 |API                |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
 |-------------------|------------|--------|---------| -------------|--------------|---------|--------|
-|Send Telemetry     |800         |4000000 |0(0.00%) | 3326.5       | 233          |  483    |565     |
+|Send Telemetry     |200         |4000000 |0(0.00%) | 7914.8       | 24          |  57    |186     |

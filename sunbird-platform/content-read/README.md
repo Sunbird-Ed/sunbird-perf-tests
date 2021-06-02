@@ -4,11 +4,11 @@ Benchmarking content read API.
 
 
 ### Test Environment Details:
-1. No of AKS node - 24
-2. No of content service replica - 8
-3. ES Cluster - 3 Nodes; CPU - 16core ; Memory - 32 GB
-4. Cassandra Cluster- 5 Nodes; CPU- 8Core; Memory- 32GB
-5. Redis - 1 node; CPU- 2core; Memory - 8GB
+1. No of AKS node - 16
+2. No of content service replica - 6 (1 Core and 3 GB)
+3. ES Cluster - 3 Nodes  (CPU - 16core ; Memory - 32 GB)
+4. Cassandra Cluster- 5 Nodes (CPU- 8Core; Memory- 32GB)
+5. Redis - 1 node  (CPU- 2core; Memory - 8GB)
 6. Release version - NA
 
 
@@ -33,4 +33,4 @@ e.g.
 
 | API           | Thread Count  | Samples  | Errors %     | Throughput/sec |Avg Resp Time|95th pct| 99th pct |
 | ------------- | ------------- | -------- | -------------| ---------------|-------------|--------|----------|
-| Content Read  | 400           | 8000000  | 3681 (0.05%) | 10906          |    34       |    16  |    28    |
+| Content Read  | 200           | 20000000  | 0 (0.00%) | 15533.4          |    7       |    3  |    7    |

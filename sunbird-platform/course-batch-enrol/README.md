@@ -4,12 +4,11 @@ Benchmarking Course Batch Enrol API.
 
 
 ### Test Environment Details:
-1. No of AKS node - 24
-2. No of learner service replicas - 8
-3. No of LMS service replicas - 8
-4. ES Cluster - 3 nodes; CPU- 16core ; Memory- 64GB
-5. Cassandra Cluster- 5 Nodes; CPU- 8Core; Memory- 32GB
-6. Release version - NA
+1.  No of AKS node - 16
+2.  No of LMS service replicas - 16 (1Core and  1 GB)
+3.  ES Cluster - 3 nodes (CPU- 16core ; Memory- 64GB)
+4.  Cassandra Cluster- 5 Nodes (CPU- 8Core; Memory- 32GB)
+5.  Release version - Release 3.9.0
 
 
 **API End Point:** 
@@ -35,4 +34,4 @@ e.g.
 
 | API                 | Thread Count  | Samples  | Errors%   | Throughput/sec  |Avg Resp Time|  95th pct | 99th pct |
 | ------------------- | ------------- | -------- | --------- | --------------- |-------------|-----------|----------|
-| Course Batch Enrol  | 300           | 1500000  | 0 (0.00%) | 4248.8          |       69    |     110   |   130    |
+| Course Batch Enrol  | 200           | 1000000  | 0 (0.00%) | 4921          |       39    |    75   |   83   |

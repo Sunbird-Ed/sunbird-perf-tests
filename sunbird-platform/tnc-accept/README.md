@@ -4,11 +4,11 @@ Benchmarking TNC Accept API.
 
 
 ### Test Environment Details
-1. No of AKS node - 24
-2. No of learner service replicas - 8
-3. Cassandra Cluster- 5 Nodes; CPU- 8Core; Memory- 32GB
-4. ES Cluster - 3 nodes; CPU- 16core ; Memory- 64GB
-5. Release version - 3.2.0
+1. No of AKS node - 16
+2. No of learner service replicas - 16 (1 Core and 1 GB)
+3. Cassandra Cluster- 5 Nodes (CPU- 8Core; Memory- 32GB)
+4. ES Cluster - 3 nodes (CPU- 16core ; Memory- 64GB)
+5. Release version - Release 3.9.0
 
 
 **API End Point:** 
@@ -34,4 +34,4 @@ e.g.
 
 |API                |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
 |-------------------|------------|--------|---------| -------------|--------------|---------|--------|
-|TNC Accept         |200         |1000000 |0(0.00%)| 4005.7        | 48           |  65     |104.99  |
+|TNC Accept         |200         |1000000 |0(0.00%)| 1585.1        | 34           |  243     |457  |

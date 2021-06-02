@@ -4,9 +4,10 @@ Benchmarking Search Content API with different search queries.
 
 
 ### Test Environment Details:
-1. No of AKS node - 24
-2. ES Cluster - 3 Nodes; CPU - 16core ; Memory - 32 GB
-3. Release version - NA
+1. No of AKS node - 16
+2. No ofContent service replicas - 6 (1Core and 3GB)
+3. ES Cluster - 3 Nodes (CPU - 16core ; Memory - 32 GB)
+4. Release version - Release 3.9.0
 
 
 **API End Point:** 
@@ -30,4 +31,4 @@ e.g.
 
 | API             | Thread Count  | Errors%   | Throughput/sec  |Avg Resp Time |   95th pct  |  99th pct   |
 | --------------- | ------------- | --------- | --------------- |--------------|-------------|-------------|
-| Search Content  | 200           | 0 (0.00%) | 5745.9          |67            |19           | 47          |
+| Search Content  | 200           | 0 (0.00%) | 5009.9          |37            |56           | 99.99          |

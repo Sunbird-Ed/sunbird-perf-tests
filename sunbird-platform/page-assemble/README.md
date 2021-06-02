@@ -4,10 +4,10 @@ Benchmarking Page Assemble API with "?orgdetails=orgName,email" params.
 
 
 ### Test Environment Details
-1. No of AKS node - 24
-2. No of learner service replicas - 8
-3. Cassandra Cluster- 5 Nodes; CPU- 8Core; Memory- 32GB
-4. Release version - NA
+1. No of AKS node - 16
+2. No of learner service replicas - 8 (1 Core and 1 GB)
+3. Cassandra Cluster- 5 Nodes (CPU- 8Core; Memory- 32GB)
+4. Release version - Release 3.9.0
 
 
 **API End Point:** 
@@ -31,4 +31,4 @@ e.g.
 
 |API           |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
 |--------------|------------|--------|---------| -------------|--------------|---------|--------|
-|Page Assemble |600         |600000  |0(0.00%))| 445          | 1280         |  3303   |4353.97 |
+|Page Assemble |200         |1000000  |0(0.00%))| 608.6          | 325         |  519   |730.99 |

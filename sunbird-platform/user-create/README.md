@@ -35,11 +35,11 @@ Benchmarking User Create API.
 
 ### Test Environment Details
 1. No of AKS node - 24
-2. No of learner service replicas - 8
+2. No of learner service replicas - 8 (1Core and 1 GB)
 3. Cassandra Cluster- 5 Nodes; CPU- 8Core; Memory- 32GB
 4. ES Cluster - 3 Nodes; CPU- 16core; Memory- 64GB
 5. No of keyCloak server - 4 
-6. Release version - Release 3.4.0
+6. Release version - Release 3.9.0
 
 
 **API End Point:** 
@@ -63,4 +63,4 @@ e.g.
 
 |API         |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
 |------------|------------|--------|---------| -------------|--------------|---------|--------|
-|User Create |100         |100000  |0(0.00%) | 77.3         | 1273         |  2672   |4228.99 |
+|User Create |100         |50000  |0(0.00%) | 82.8         | 1177         |  2061   |2431 |

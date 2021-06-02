@@ -4,11 +4,11 @@ Benchmarking Learner State Read API.
 
 
 ### Test Environment Details
-1. No of AKS node - 24
-2. No of learner service replicas - 8
-3. Cassandra Cluster- 5 Nodes; CPU- 8Core; Memory- 32GB
-4. ES Cluster - 3 nodes; CPU- 16core ; Memory- 64GB
-5. Release version - NA
+1. No of AKS node - 16
+2. No of lms service replicas - 16(1 Core and 1 GB)
+3. Cassandra Cluster- 5 Nodes (CPU- 8Core; Memory- 32GB)
+4. ES Cluster - 3 nodes (CPU- 16core ; Memory- 64GB)
+5. Release version - Release 3.9.0
 
 
 **API End Point:** 
@@ -35,4 +35,4 @@ e.g.
 
 |API                |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
 |-------------------|------------|--------|---------| -------------|--------------|---------|--------|
-|Learner State Read |400         |6000000 |0(0.00%) |5140.5        | 77           |  73     |103.99  |
+|Learner State Read |200         |2000000 |0(0.00%) |4519.4        | 37           |  79     |92  |
