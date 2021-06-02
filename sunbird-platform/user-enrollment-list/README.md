@@ -4,11 +4,11 @@ Benchmarking User Enrollment List API.
 
 
 ### Test Environment Details
-1. No of AKS node - 24
-2. No of learner service replicas - 8
-3. No of LMS service replicas - 8
-4. Cassandra Cluster- 5 Nodes; CPU- 8Core; Memory- 32GB
-5. Release version - NA
+1. No of AKS node - 16
+2. No of learner service replicas - 8 (1 Core and 1 GB)
+3. No of LMS service replicas - 16 (1 Core and 1 GB)
+4. Cassandra Cluster- 5 Nodes (CPU- 8Core; Memory- 32GB)
+5. Release version - Release 3.9.0
 
 
 **API End Point:** 
@@ -31,6 +31,6 @@ e.g.
 
 ### Test Result
 
-|API                 |Thread Count|Samples |Errors%  |Throughput/sec|
-|--------------------|------------|--------|---------| -------------|
-|User Enrollment List|200         |1750000 |0 (0.00%)| 1263.41      | 
+|API                 |Thread Count|Samples |Errors%  |Throughput/sec|Avg | 95th pct | 99th pct|
+|--------------------|------------|--------|---------| -------------|-----------|-------------|---------|
+|User Enrollment List|200         |1000000 |0 (0.00%)| 2159.7      |    87       |        101     |  130       |
