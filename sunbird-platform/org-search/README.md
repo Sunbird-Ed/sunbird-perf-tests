@@ -4,8 +4,8 @@ Benchmarking Org Search API.
 
 
 ### Test Environment Details
-1. No of AKS node - 24
-2. No of learner service replicas - 8
+1. No of AKS node - 16
+2. No of learner service replicas - 8 (1 Core and 1 GB)
 3. Cassandra Cluster- 5 Nodes; CPU- 8Core; Memory- 32GB
 4. Release version - NA
 
@@ -30,4 +30,4 @@ e.g.
 
 |API       |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
 |----------|------------|--------|---------| -------------|--------------|---------|--------|
-|Org Search|400         |30000000|0(0.00%) | 6763.8       | 55           |  74     |105     |
+|Org Search|200         |10000000|0(0.00%) | 19608.1       | 2           | 4     |7    |
