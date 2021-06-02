@@ -3,11 +3,11 @@
 Benchmarking Assign Role API.
 
 ### Test Environment Details:
-1. No of AKS node - 24
-2. No of learner service replica - 8
-3. Release version - Release 3.4.0
-4. ES Cluster - 3 nodes; CPU- 8core ; Memory- 32GB
-5. Cassandra Cluster- 5 Nodes; CPU- 16Core; Memory- 64GB
+1. No of AKS node - 16
+2. No of learner service replica - 16 (1 Core and 1 GB)
+4. ES Cluster - 3 nodes (CPU- 8core ; Memory- 32GB)
+5. Cassandra Cluster- 5 Nodes (CPU- 16Core; Memory- 64GB)
+6. Release version - Release 3.9.0
 
 **API End Point:** 
 `/api/user/v1/role/assign`
@@ -32,4 +32,4 @@ e.g.
 
 | API           | Thread Count  | Samples  | Errors%   | Throughput/sec  |Avg Resp Time  |   95th pct  |  99th pct   |
 | ------------- | ------------- | -------- | --------- | --------------- |---------------|-------------|-------------|
-| Assign Role   | 400           | 200000   | 0 (0.00%) | 3736.4          |   103         |      159    |   226       |
+| Assign Role   | 200           | 2000000   | 0 (0.00%) | 2686.3         |   72         |      110    |  194       |
