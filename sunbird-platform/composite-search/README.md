@@ -4,10 +4,10 @@ Benchmarking Composite Search API.
 
 
 ### Test Environment Details:
-1. No of AKS node -24
-2. No of search service replicas - 6
+1. No of AKS node - 16
+2. No of search service replicas - 6 (1Core and 3GB)
 3. ES Cluster - 3 Nodes; CPU - 16core ; Memory - 32 GB
-4. Release version - NA
+4. Release version - Release 3.9.0
 
 
 **API End Point:** `/api/composite/v1/search`
@@ -30,4 +30,4 @@ e.g.
 
 | API               | Thread Count  | Samples  | Errors%   | Throughput/sec  |Avg Resp Time |   95th pct |  99th pct   |
 | ------------------| ------------- | -------- | --------- | --------------- |--------------|------------|-------------|
-| Composite Search | 400           | 4000000  |  0(0.00%) | 3515.4          |103          | 78          |104          |
+| Composite Search | 200           |2000000  |  0(0.00%) | 2711.6          |70          | 63             |79         |
