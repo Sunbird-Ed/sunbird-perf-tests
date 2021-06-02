@@ -4,11 +4,11 @@ Benchmarking Framework Read API with and without category.
 
 
 ### Test Environment Details
-1. No of AKS node - 24
-2. No of learner service replicas - 8 (CPU- 3Core & Memory- 5GB)
-3. ES Cluster - 3 nodes; CPU- 16core ; Memory- 64GB
-4. Cassandra Cluster- 5 Nodes; CPU- 8Core; Memory- 32GB
-5. Release version - NA
+1. No of AKS node - 16
+2. No of learner service replicas - 8 (1 Core and 1GB)
+3. ES Cluster - 3 nodes (CPU- 16core ; Memory- 64GB)
+4. Cassandra Cluster- 5 Nodes (CPU- 8Core; Memory- 32GB)
+5. Release version - Release 3.9.0
 
 **API End Point:** 
 `/api/framework/v1/read`
@@ -32,5 +32,5 @@ Note:
 
 | API                              | Thread Count| Samples  | Errors% |Throughput/sec|Avg Resp Time| 95th pct|99th pct|API Endpoint|
 | ---------------------------------| ------------| -------- | --------| -------------|-------------|---------|--------|------------|
-| Framework Read-without category  | 200         | 400000   | 0(0.00%)| 1221.2       | 135         | 368.95  |855.99  |/api/framework/v1/read|
-| Framework Read-with category     | 200         | 7200000  | 0(0.00%)| 6159         | 24          | 33      |235.98  |/api/framework/v1/read|
+| Framework Read-without category  | 200         | 1000000   | 0(0.00%)|1093.5       | 165         | 381  |1062.99  |/api/framework/v1/read|
+| Framework Read-with category     | 200         | 16000000  | 0(0.00%)|31965        | 0          | 1      |4  |/api/framework/v1/read|
