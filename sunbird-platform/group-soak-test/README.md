@@ -32,6 +32,7 @@ e.g
 Note:
 
     * Update CSV Data - GroupData config file, CSV Data - userToken, CSV Data - host file path before running the test script.
+    * Update Jmeter_Cluster_IP in the run_scenario_soak.sh
 
 Test Result:
 
