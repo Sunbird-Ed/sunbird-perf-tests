@@ -160,7 +160,7 @@
           </elementProp>
           <elementProp name="" elementType="Header">
             <stringProp name="Header.name">Authorization</stringProp>
-            <stringProp name="Header.value">Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI0YzZhNjhiMWMzNDc0YmZiYjM5NGI0MDYwODVjZjRhZiJ9.0ZRY7Ya87ZKJl8Wj7a9uIbROivP0b2KpUOjKgLwnLQE</stringProp>
+            <stringProp name="Header.value">Bearer &lt;Bearer Key&gt;</stringProp>
           </elementProp>
           <elementProp name="" elementType="Header">
             <stringProp name="Header.name">x-authenticated-user-token</stringProp>
@@ -295,7 +295,7 @@
         <hashTree/>
       </hashTree>
       <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data -Host " enabled="true">
-        <stringProp name="filename">/mount/data/benchmark/sunbird-perf-tests/sunbird-platform/testdata/host_ips_5nodes.csv</stringProp>
+        <stringProp name="filename">&lt;Host file path&gt;</stringProp>
         <stringProp name="fileEncoding">UTF-8</stringProp>
         <stringProp name="variableNames">protocol,host,port</stringProp>
         <boolProp name="ignoreFirstLine">true</boolProp>
@@ -307,7 +307,7 @@
       </CSVDataSet>
       <hashTree/>
       <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data -UserToken " enabled="true">
-        <stringProp name="filename">/mount/data/benchmark/sunbird-perf-tests/sunbird-platform/user-create/user-data-new/userdata-250K-tokens-05052021.csv</stringProp>
+        <stringProp name="filename">&lt;User Token File Path&gt;</stringProp>
         <stringProp name="fileEncoding">UTF-8</stringProp>
         <stringProp name="variableNames">email,userId,access_token</stringProp>
         <boolProp name="ignoreFirstLine">true</boolProp>
@@ -319,7 +319,7 @@
       </CSVDataSet>
       <hashTree/>
       <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data -GroupData " enabled="true">
-        <stringProp name="filename">/mount/data/benchmark/sunbird-perf-tests/sunbird-platform/testdata/groups_testdata/usertoken_groupid_mar17.csv</stringProp>
+        <stringProp name="filename">&lt;Group Data File&gt;</stringProp>
         <stringProp name="fileEncoding">UTF-8</stringProp>
         <stringProp name="variableNames">token,groupId</stringProp>
         <boolProp name="ignoreFirstLine">true</boolProp>
@@ -478,7 +478,7 @@
             </elementProp>
             <elementProp name="Authorization" elementType="Header">
               <stringProp name="Header.name">Authorization</stringProp>
-              <stringProp name="Header.value">Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI0YzZhNjhiMWMzNDc0YmZiYjM5NGI0MDYwODVjZjRhZiJ9.0ZRY7Ya87ZKJl8Wj7a9uIbROivP0b2KpUOjKgLwnLQE</stringProp>
+              <stringProp name="Header.value">Bearer &lt;Bearer Key&gt;</stringProp>
             </elementProp>
             <elementProp name="x-authenticated-user-token" elementType="Header">
               <stringProp name="Header.name">x-authenticated-user-token</stringProp>
