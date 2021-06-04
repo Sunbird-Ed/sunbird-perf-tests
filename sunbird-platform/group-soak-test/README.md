@@ -35,7 +35,7 @@ Note:
 
 Test Result:
 
-| API 	              | Concurrency Thread |    Count Samples 	   Errors% 	  Throughput/sec 	Avg Resp Time 	95th pct 	99th pct
+| API 	              | Concurrency Thread |    Count Samples  |   Errors% 	 | Throughput/sec  |Avg Resp Time  | 95th pct  |99th pct  |
 |---------------------|:------------------:|:-----------------:|:-----------:|:---------------:|:-------------:|:---------:|:--------:|
 |/api/group/v1/create | 	20% 	       |      1165540      |	  0.00%  |	   778.32	   |       232     |   	 447   |      516 |
 |                     |                    |                   |             |                 |               |           |          |
