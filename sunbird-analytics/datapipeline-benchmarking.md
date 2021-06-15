@@ -24,3 +24,6 @@
 ```/opt/kafka/bin/kafka-run-class.sh kafka.tools.GetOffsetShell --broker-list localhost:9092 --topic <output-topic> --time -1 | awk -F':' '{lag += $3} END {print lag}')```
    - Setup cron job to run above command every 5 mins and save it to a file
    - Compute throughput per 5 mins by getting difference from above command output
+
+
+#### Benchmark result: ####
