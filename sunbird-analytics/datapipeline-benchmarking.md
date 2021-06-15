@@ -4,13 +4,13 @@
 **Pre-requisites:** Data Pipeline flink jobs are dependent on following services. These services needs to be up & running before starting flink jobs.
 
 - **Kafka:**
-   - Configuration: 3 node cluster ( 4 Core , 16 GB)
+   - Configuration: 3 nodes cluster (4 Core and 16 GB)
    - Data Source & sink for most of the jobs
 - **Redis:**
-   - Configuration: 16 Core , 128 GB
+   - Configuration: 1 node (16 Core and 128 GB)
    - Used for duplicate checks & denormalisation functionality
 - **Postgres:**
-   - Configuration:
+   - Configuration: 1 node (2 Core and 54 GB)
    - Used for Device Profile Updater job only
 
 **Steps to follow:**
