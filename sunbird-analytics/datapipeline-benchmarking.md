@@ -16,7 +16,7 @@
 **Steps to follow:**
 1. Check for configurations with required kafka input & output topics
 2. Load data to input kafka topic
-3. Update flink jobs setting to read from earliest offset in the code in below class 
+3. Update flink jobs settings to read from earliest offset in the code in below class 
    - Add ``setStartFromEarliest()`` for all Kafka Consumers under ``org.sunbird.dp.core.job.FlinkKafkaConnector``
 
 4. Build & Deploy specific job using these jenkins job by selecting required job name - ```Build/DataPipeline/FlinkPipelineJobs``` & ```Deploy/loadtest/DataPipeline/FlinkPipelineJobs```
