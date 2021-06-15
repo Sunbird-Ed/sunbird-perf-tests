@@ -27,3 +27,15 @@
 
 
 #### Benchmark result: ####
+
+  - Scale up observations: on cpu usage
+         
+  |Configuration | Metrics | Before scale	| After scale up |
+  |------  |--------|----------------|------------|
+  | Configurations: Task slots(4 per TM) - from 4 to 8 (Replica - from 1 to 2)| Throughput/min| 1144523| 2290459|
+         
+  - Scale down observations: on cpu usage
+
+ |Configuration | Metrics | Before scale	| After scale up |
+ |------  |--------|----------------|------------|
+ | Configurations: Task slots(4 per TM) - from 8 to 4 (Replica - from 2 to 1)| Throughput/min| 2310938| 1141854|
