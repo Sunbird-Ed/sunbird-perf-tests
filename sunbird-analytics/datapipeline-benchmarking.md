@@ -3,13 +3,13 @@
 
 **Pre-requisites:** Data Pipeline flink jobs are dependent on following services. These services needs to be up & running before starting flink jobs.
 
-- Kafka:
+- **Kafka:**
    - Configuration:
    - Data Source & sink for most of the jobs
-- Redis:
+- **Redis:**
    - Configuration:
    - Used for duplicate checks & denormalisation functionality
-- Postgres:
+- **Postgres:**
    - Configuration:
    - Used for Device Profile Updater job only
 
