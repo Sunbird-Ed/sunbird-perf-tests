@@ -7,7 +7,7 @@
    - Configuration:
    - Data Source & sink for most of the jobs
 - **Redis:**
-   - Configuration:
+   - Configuration: 16 Core , 128 GB
    - Used for duplicate checks & denormalisation functionality
 - **Postgres:**
    - Configuration:
