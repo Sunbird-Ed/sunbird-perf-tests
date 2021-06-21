@@ -1,9 +1,10 @@
-28.0.0.1
-28.0.0.2
+10.2.1.4
+10.2.1.35
+10.2.1.66
 
 #OR
 
-mysunbird.com
+igot-bm-sunbird.idc.tarento.com
 
 #The above lines are sample. Enter the IP address of your agent (+ manager if required) nodes if you want to run jmeter tests by connecting to your agent IP's
 #You can also provide the domain name of your sunbird installation if you want to run against your domain name.
