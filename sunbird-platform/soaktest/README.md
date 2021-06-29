@@ -31,3 +31,17 @@
 - Device Register
 - Device Profile
 - Register Mobile Devicev2
+
+**NOTE:**
+
+To run these scripts following jars needs to be placed into JMeter’s lib/ext directory. Download the JMeter Plugins Manager JAR files from the given link and then put it into JMeter's lib/ext directory.
+
+1. jmeter-plugins-cmn-jmeter-0.6.jar 
+  - Download from https://repo1.maven.org/maven2/kg/apc/jmeter-plugins-cmn-jmeter/0.6/
+2. jmeter-plugins-casutg-2.9.jar
+  - Download from https://repo1.maven.org/maven2/kg/apc/jmeter-plugins-casutg/2.9/
+
+
+
+
+
