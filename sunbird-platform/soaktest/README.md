@@ -1,33 +1,33 @@
 **Soatest Scripts Deatils - Cluster wise**
 
-**sokatest-autoscale-cluster1.jmx:**
+Cluster 1 - sokatest-autoscale-cluster1.jmx
 - telemetry 
 - readContent 
 - readForm
 - readFramework
 
 
-**sokatest-autoscale-cluster2.jmx:**
+Cluster 2 - sokatest-autoscale-cluster2.jmx
 - Content V1 Search
 - OrgSearch
 - ContentHierarchy
 - TenantInfo 
 
-**sokatest-autoscale-cluster3.jmx:**
+Cluster 3 - sokatest-autoscale-cluster3.jmx
 - Get User Profile V3
 - Get User Profile V2
 - Get User Profile V1
 - Search Managed User 
 - User Feed Read
 
-**lms-apis.jmx:**
+Cluster 4 - lms-apis.jmx
 - readContentState
 - updateContentState
 - listCourseEnrollments
 - getBatch 
 - searchCourseBatches 
 
-**analytics.jmx:**
+Cluster 5 -analytics.jmx
 - Device Register
 - Device Profile
 - Register Mobile Devicev2
