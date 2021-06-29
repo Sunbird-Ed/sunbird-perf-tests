@@ -1,4 +1,4 @@
-**Cluster wise script details:**
+**Soatest Scripts Deatils - Cluster wise**
 
 **sokatest-autoscale-cluster1.jmx:**
 - telemetry 
