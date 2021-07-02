@@ -1,4 +1,4 @@
-**Soatest Scripts Deatils - Cluster wise**
+1. ## Soatest Scripts Deatils - Cluster wise ##
 
 Cluster 1 - sokatest-autoscale-cluster1.jmx
 - telemetry 
@@ -42,6 +42,35 @@ To run these scripts following jars needs to be placed into JMeter’s lib/ext d
   - Download from https://repo1.maven.org/maven2/kg/apc/jmeter-plugins-casutg/2.9/
 
 
+
+
+2. ## Sokatest with HPA Enabled ##
+
+AKS Node: Min -6 and AMx - 40 
+
+| Service Name | CPU Limit| Memory Limit | Min Pods | Max Pods |
+|--------------|----------|--------------|----------|----------|
+|Analytics    |     |     |             |           |          |
+|API Manager    |     |     |             |           |          |
+|AdminUtils    |     |     |             |           |          |
+|Content   |     |     |             |           |          |
+|Learner   |     |     |             |           |          |
+|LMS  |     |     |             |           |          |
+|Player    |     |     |             |           |          |
+|Nginx-private-ingress    |     |     |             |           |          |
+|Telemetry    |     |     |             |           |          |
+
+
+**Infra Configuration**
+| Service Name | Configuration| CPU Usage | Load AVG |
+|--------------|----------|--------------|----------|
+|Cassandra    |          |              |          |
+|ES-LMS       |          |              |          |
+|COMP-LMS     |          |              |          |
+|KAFKA        |          |              |          |
+|Redis - LP   |          |              |          |
+|Redis -DP    |          |              |          |
+|KeyCloak|    |          |              |          |
 
 
 
