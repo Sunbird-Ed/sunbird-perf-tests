@@ -355,7 +355,7 @@
               </elementProp>
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">Authorization</stringProp>
-                <stringProp name="Header.value">Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdW5iaXJkLTEuMCJ9.hupJSdO54Cz47nB3PQb0Sp0wWFF2rC_SRTWUihQLWgM</stringProp>
+                <stringProp name="Header.value">Bearer {Authorization_KEY}</stringProp>
               </elementProp>
             </collectionProp>
           </HeaderManager>
