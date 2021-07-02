@@ -12,7 +12,7 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
 
 - **AKS Node:** Min no of nodes - 6 and Max no of nodes - 40 
 - **HPA with 70% CPU Usage**
-- **TPS: 25138 (with 27 AKS nodes)**	
+- **TPS: 25138 (with 27 AKS nodes)**
 
 **Service Pods configuration & Usage:**
 | Service Name | CPU Limit| Memory Limit | Min Pods | Max Pods | Pod Usage |CPU Utilization(Max) %|
@@ -107,14 +107,14 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
 |KeyCloak     | 4 nodes (4core, 16GB)   |    |    |  |
 
 **JMX Details**
-- cluster1.jmx
+- cluster1.jmx (1 JMeter Master, 4 JMeter Slaves)
   - sendTelemetry
   - readContent 
   - searchContent
   - readForm
   - getCourseHierarchy
   - dialAssemble
-- leraner.jmx
+- leraner.jmx (1 JMeter Master, 4 JMeter Slaves)
   - getUserProfileV3
   - getUserProfileV2 
   - getUserProfile
@@ -124,17 +124,17 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
   - updateUserConsent
   - updateUser
   - searchUser
-- lms.jmx
+- lms.jmx (1 JMeter Master, 4 JMeter Slaves)
   - readContentState 
   - updateContentState
   - listCourseEnrollments
   - getBatch
   - searchCourseBatches
-- ananlytics.jmx
+- ananlytics.jmx (1 JMeter Master, 2 JMeter Slaves)
   - deviceRegister
   - deviceProfile
   - registerMobileDevicev2
-- login.jmx
+- login.jmx (1 JMeter Master)
   - login scenario
 
 
