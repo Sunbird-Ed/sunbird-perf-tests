@@ -76,7 +76,7 @@ To run these scripts following jars needs to be placed into JMeter’s lib/ext d
 |Redis -DP    | 1 node (32core, 128GB)  |    0.78%   |    0.3   |46.2 GB|
 |KeyCloak     | 4 nodes (4core, 16GB)   |   98.49%   |  11.24   | 7.520 GB |
 
-**JMX List**
+**JMX Details**
 - cluster1.jmx
   - sendTelemetry
   - readContent 
