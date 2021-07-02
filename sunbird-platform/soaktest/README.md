@@ -77,21 +77,21 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
 
 - **AKS Node:** Min no of nodes - 6 and Max no of nodes - 40 
 - **HPA with 70% CPU Usage**
-- **TPS: **	
+- **TPS: 4986**	
 
 | Service Name | CPU Limit| Memory Limit | Min Pods | Max Pods | Pod Usage |CPU Utilization(Max) %|
 |--------------|----------|--------------|----------|----------|----------|----------|
 |Analytics     |  0.5    |      1G     |     1    |     6    |3|78|
 |API Manager   |    2    |     1G    |    1   |    30    |3|77|
 |AdminUtils    |    0.5    |    1G        |    1    |   1     |6|100|
-|Content       |   0.3      |    3       |   1     |    12      |1| 48|
+|Content       |   0.3      |    3G       |   1     |    12      |1| 48|
 |Knowledgemw   |    .5    |     500M      |    1    |    10      |4|100|
-|Learner       | 0.5      |   3G        |       |        | ||
-|LMS           |       |             |        |        |||
-|Player        |        |             |       |      |||
-|Nginx-private-ingress    |     |     |     |      |||
-|Search        |        |             |        |       |||
-|Telemetry     |      |            |        |        |||
+|Learner       | 0.5      |   3G        |  1     |    40    | 24|100|
+|LMS           | 0.5      |    3G         | 1       |  30      |11|100|
+|Player        |   0.3     |   600M          |   1    |  16    |3|76|
+|Nginx-private-ingress    | 0.1    |  100M   |   1  |   6   |1|1|
+|Search        |    0.3    |    3G         |   1     |   10    |5|100|
+|Telemetry     |    0.2  |     200M       |   1     |    40    |11|99|
 
 
 **Infra Configuration**
