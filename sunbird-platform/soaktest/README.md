@@ -43,35 +43,35 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
 |KeyCloak     | 4 nodes (4core, 16GB)   |   98.49%   |  11.24   | 7.520 GB |
 
 **JMX Details**
-- cluster1.jmx
-  - sendTelemetry
-  - readContent 
-  - searchContent
-  - readForm
-  - getCourseHierarchy
-  - dialAssemble
-- leraner.jmx
-  - getUserProfileV3
-  - getUserProfileV2 
-  - getUserProfile
-  - searchManagedUser
-  - userFeed
-  - readUserConsent
-  - updateUserConsent
-  - updateUser
-  - searchUser
-- lms.jmx
-  - readContentState 
-  - updateContentState
-  - listCourseEnrollments
-  - getBatch
-  - searchCourseBatches
-- ananlytics.jmx
-  - deviceRegister
-  - deviceProfile
-  - registerMobileDevicev2
-- login.jmx
-  - login scenario
+- cluster1.jmx (1 JMeter Master, 4 JMeter Slaves)
+  - ```sendTelemetry```
+  - ```readContent```
+  - ```searchContent```
+  - ```readForm```
+  - ```getCourseHierarchy```
+  - ```dialAssemble``` 
+- leraner.jmx (1 JMeter Master, 4 JMeter Slaves)
+  - ```getUserProfileV3```
+  - ```getUserProfileV2``` 
+  - ```getUserProfile```
+  - ```searchManagedUser```
+  - ```userFeed```
+  - ```readUserConsent```
+  - ```updateUserConsent```
+  - ```updateUser```
+  - ```searchUser```
+- lms.jmx (1 JMeter Master, 4 JMeter Slaves)
+  - ```readContentState```
+  - ```updateContentState```
+  - ```istCourseEnrollments```
+  - ```getBatch```
+  - ```searchCourseBatches```
+- ananlytics.jmx (1 JMeter Master, 2 JMeter Slaves)
+  - ```deviceRegister```
+  - ```deviceProfile```
+  - ```registerMobileDevicev2```
+- login.jmx (1 JMeter Master)
+  - ```login scenario```
 --------
 2. ## Sokatest with HPA Enabled - 5K TPS ##
 
@@ -108,34 +108,34 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
 
 **JMX Details**
 - cluster1.jmx (1 JMeter Master, 4 JMeter Slaves)
-  - sendTelemetry
-  - readContent 
-  - searchContent
-  - readForm
-  - getCourseHierarchy
-  - dialAssemble
+  - ```sendTelemetry```
+  - ```readContent```
+  - ```searchContent```
+  - ```readForm```
+  - ```getCourseHierarchy```
+  - ```dialAssemble``` 
 - leraner.jmx (1 JMeter Master, 4 JMeter Slaves)
-  - getUserProfileV3
-  - getUserProfileV2 
-  - getUserProfile
-  - searchManagedUser
-  - userFeed
-  - readUserConsent
-  - updateUserConsent
-  - updateUser
-  - searchUser
+  - ```getUserProfileV3```
+  - ```getUserProfileV2``` 
+  - ```getUserProfile```
+  - ```searchManagedUser```
+  - ```userFeed```
+  - ```readUserConsent```
+  - ```updateUserConsent```
+  - ```updateUser```
+  - ```searchUser```
 - lms.jmx (1 JMeter Master, 4 JMeter Slaves)
-  - readContentState 
-  - updateContentState
-  - listCourseEnrollments
-  - getBatch
-  - searchCourseBatches
+  - ```readContentState```
+  - ```updateContentState```
+  - ```istCourseEnrollments```
+  - ```getBatch```
+  - ```searchCourseBatches```
 - ananlytics.jmx (1 JMeter Master, 2 JMeter Slaves)
-  - deviceRegister
-  - deviceProfile
-  - registerMobileDevicev2
+  - ```deviceRegister```
+  - ```deviceProfile```
+  - ```registerMobileDevicev2```
 - login.jmx (1 JMeter Master)
-  - login scenario
+  - ```login scenario```
 
 
 
