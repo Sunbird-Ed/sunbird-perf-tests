@@ -15,7 +15,7 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
 - **TPS: 25138 (with 27 AKS nodes)**
 
 **Service Pods configuration & Usage:**
-| Service Name | CPU Limit| Memory Limit | Min Pods | Max Pods | Pod Usage |CPU Utilization(Max) %|
+| Service Name | CPU Limit(Core)| Memory Limit | Min Pods | Max Pods | Pod Usage |CPU Utilization(Max) %|
 |--------------|----------|--------------|----------|----------|----------|----------|
 |Analytics     |  0.8     |    2.5G      |   2      |     6     |3|94|
 |API Manager   |    2     |   2.5G        |   2      |     30    |14|90|
@@ -80,7 +80,7 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
 - **TPS: 4986 with 14 AKS Nodes**	
 
 **Service Pods configuration & Usage:**
-| Service Name | CPU Limit| Memory Limit | Min Pods | Max Pods | Pod Usage |CPU Utilization(Max) %|
+| Service Name | CPU Limit(Core)| Memory Limit | Min Pods | Max Pods | Pod Usage |CPU Utilization(Max) %|
 |--------------|----------|--------------|----------|----------|----------|----------|
 |Analytics     |  0.5    |      1G     |     1    |     6    |3|78|
 |API Manager   |    2    |     1G    |    1   |    30    |3|77|
@@ -139,13 +139,11 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
   - ```login scenario```
 
 
-
-
 -------
 
 3. ## Soatest Scripts ##
 
-Cluster 1 - ```sokatest-autoscale-cluster1.jmx```
+Cluster 1 - sokatest-autoscale-cluster1.jmx
 - telemetry 
 - readContent 
 - readForm
