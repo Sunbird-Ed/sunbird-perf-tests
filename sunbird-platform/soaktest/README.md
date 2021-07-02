@@ -46,8 +46,9 @@ To run these scripts following jars needs to be placed into JMeter’s lib/ext d
 
 2. ## Sokatest with HPA Enabled - 25K TPS ##
 
-- **AKS Node:** Min -6 and Max - 40 
-- HPA with 70% CPU usage
+- **AKS Node:** Min no of nodes - 6 and Max no of nodes - 40 
+- **HPA with 70% CPU Usage**
+- **TPS: 25138 (with 27 AKS nodes)**	
 
 | Service Name | CPU Limit| Memory Limit | Min Pods | Max Pods |
 |--------------|----------|--------------|----------|----------|
