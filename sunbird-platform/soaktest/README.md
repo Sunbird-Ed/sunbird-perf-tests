@@ -50,6 +50,7 @@ To run these scripts following jars needs to be placed into JMeter’s lib/ext d
 - **HPA with 70% CPU Usage**
 - **TPS: 25138 (with 27 AKS nodes)**	
 
+**Service Pods configuration & Usage:**
 | Service Name | CPU Limit| Memory Limit | Min Pods | Max Pods | Pod Usage |CPU Utilization(Max) %|
 |--------------|----------|--------------|----------|----------|----------|----------|
 |Analytics     |  0.8     |    2.5       |   2      |     6     |3|94|
@@ -65,7 +66,7 @@ To run these scripts following jars needs to be placed into JMeter’s lib/ext d
 |Telemetry     |   0.8    |   1          |     2    |    40     |40|100|
 
 
-**Infra Configuration**
+**Infra Configuration & Usage:**
 | Service Name | Configuration| CPU Usage (Max) | Load AVG(Max) |Memory Usage(Max) |
 |--------------|----------|--------------|----------|----------|
 |AKS Node      | 8 Core, 16GB |    80.72%  |     37.97     |6.500 GB|
