@@ -143,9 +143,9 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
 
 -------
 
-3. ## Soatest Scripts Deatils - Cluster wise ##
+3. ## Soatest Scripts ##
 
-Cluster 1 - sokatest-autoscale-cluster1.jmx
+Cluster 1 - ```sokatest-autoscale-cluster1.jmx```
 - telemetry 
 - readContent 
 - readForm
