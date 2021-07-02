@@ -44,9 +44,10 @@ To run these scripts following jars needs to be placed into JMeter’s lib/ext d
 
 
 
-2. ## Sokatest with HPA Enabled ##
+2. ## Sokatest with HPA Enabled - 25K TPS ##
 
-AKS Node: Min -6 and AMx - 40 
+- AKS Node: Min -6 and AMx - 40 
+- HPA with 70% CPU usag e
 
 | Service Name | CPU Limit| Memory Limit | Min Pods | Max Pods |
 |--------------|----------|--------------|----------|----------|
@@ -64,6 +65,7 @@ AKS Node: Min -6 and AMx - 40
 **Infra Configuration**
 | Service Name | Configuration| CPU Usage | Load AVG |
 |--------------|----------|--------------|----------|
+|AKS Node    |          |              |          |
 |Cassandra    |          |              |          |
 |ES-LMS       |          |              |          |
 |COMP-LMS     |          |              |          |
@@ -72,5 +74,34 @@ AKS Node: Min -6 and AMx - 40
 |Redis -DP    |          |              |          |
 |KeyCloak|    |          |              |          |
 
-
+**JMX List**
+- cluster1.jmx
+  - sendTelemetry
+  - readContent 
+  - searchContent
+  - readForm
+  - getCourseHierarchy
+  - dialAssemble
+- leraner.jmx
+  - getUserProfileV3
+  - getUserProfileV2 
+  - getUserProfile
+  - searchManagedUser
+  - userFeed
+  - readUserConsent
+  - updateUserConsent
+  - updateUser
+  - searchUser
+- lms.jmx
+  - readContentState 
+  - updateContentState
+  - listCourseEnrollments
+  - getBatch
+  - searchCourseBatches
+- ananlytics.jmx
+  - deviceRegister
+  - deviceProfile
+  - registerMobileDevicev2
+- login.jmx
+  - login scenario
 
