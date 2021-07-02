@@ -108,3 +108,67 @@ To run these scripts following jars needs to be placed into JMeter’s lib/ext d
 - login.jmx
   - login scenario
 
+3. ## Sokatest with HPA Enabled - 5K TPS ##
+
+- **AKS Node:** Min no of nodes - 6 and Max no of nodes - 40 
+- **HPA with 70% CPU Usage**
+- **TPS: **	
+
+| Service Name | CPU Limit| Memory Limit | Min Pods | Max Pods | Pod Usage |CPU Utilization(Max) %|
+|--------------|----------|--------------|----------|----------|----------|----------|
+|Analytics     |      |           |         |         |||
+|API Manager   |        |          |       |        |||
+|AdminUtils    |        |             |        |        |||
+|Content       |         |           |        |          || |
+|Knowledgemw   |        |           |        |          |||
+|Learner       |       |             |       |        | ||
+|LMS           |       |             |        |        |||
+|Player        |        |             |       |      |||
+|Nginx-private-ingress    |     |     |     |      |||
+|Search        |        |             |        |       |||
+|Telemetry     |      |            |        |        |||
+
+
+**Infra Configuration**
+| Service Name | Configuration| CPU Usage (Max) | Load AVG(Max) |Memory Usage(Max) |
+|--------------|----------|--------------|----------|----------|
+|AKS Node      | 8 Core, 16GB |    |          ||
+|Cassandra    | 5 Node (16 Core , 64GB) |      |    ||
+|ES-LMS       | 3 nodes (16core , 64GB) |      |     ||
+|COMP-LMS     | 3 nodes (16core, 32 GB) |     |     ||
+|Kafka        | 3 nodes (4core , 16GB)  |     |     ||
+|Redis - LP   | 1 node (2core, 8GB)     |      |    ||
+|Redis -DP    | 1 node (32core, 128GB)  |      |     ||
+|KeyCloak     | 4 nodes (4core, 16GB)   |    |    |  |
+
+**JMX Details**
+- cluster1.jmx
+  - sendTelemetry
+  - readContent 
+  - searchContent
+  - readForm
+  - getCourseHierarchy
+  - dialAssemble
+- leraner.jmx
+  - getUserProfileV3
+  - getUserProfileV2 
+  - getUserProfile
+  - searchManagedUser
+  - userFeed
+  - readUserConsent
+  - updateUserConsent
+  - updateUser
+  - searchUser
+- lms.jmx
+  - readContentState 
+  - updateContentState
+  - listCourseEnrollments
+  - getBatch
+  - searchCourseBatches
+- ananlytics.jmx
+  - deviceRegister
+  - deviceProfile
+  - registerMobileDevicev2
+- login.jmx
+  - login scenario
+
