@@ -50,7 +50,7 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
   - ```readForm```
   - ```getCourseHierarchy```
   - ```dialAssemble``` 
-- leraner.jmx (1 JMeter Master, 4 JMeter Slaves)
+- learner.jmx (1 JMeter Master, 4 JMeter Slaves)
   - ```getUserProfileV3```
   - ```getUserProfileV2``` 
   - ```getUserProfile```
@@ -115,7 +115,7 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
   - ```readForm```
   - ```getCourseHierarchy```
   - ```dialAssemble``` 
-- leraner.jmx (1 JMeter Master, 4 JMeter Slaves)
+- learner.jmx (1 JMeter Master, 4 JMeter Slaves)
   - ```getUserProfileV3```
   - ```getUserProfileV2``` 
   - ```getUserProfile```
