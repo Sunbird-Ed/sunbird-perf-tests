@@ -65,16 +65,16 @@ To run these scripts following jars needs to be placed into JMeter’s lib/ext d
 
 
 **Infra Configuration**
-| Service Name | Configuration| CPU Usage | Load AVG |
-|--------------|----------|--------------|----------|
-|AKS Node    |          |              |          |
-|Cassandra    |          |              |          |
-|ES-LMS       |          |              |          |
-|COMP-LMS     |          |              |          |
-|KAFKA        |          |              |          |
-|Redis - LP   |          |              |          |
-|Redis -DP    |          |              |          |
-|KeyCloak|    |          |              |          |
+| Service Name | Configuration| CPU Usage (Max) | Load AVG(Max) |Memory Usage(Max) |
+|--------------|----------|--------------|----------|----------|
+|AKS Node      | 8 Core, 16GB |    80.72%  |     37.97     |6.500 GB|
+|Cassandra    | 5 Node (16 Core , 64GB) |   75.23%   |  46.67   |13.505 GB|
+|ES-LMS       | 3 nodes (16core , 64GB) |   35.59%   |  11.43   |28.5080 GB|
+|COMP-LMS     | 3 nodes (16core, 32 GB) |   30.86%   |  7.11    |19.6606 GB|
+|Kafka        | 3 nodes (4core , 16GB)  |   58.19%   |  5.17    |9.645 GB|
+|Redis - LP   | 1 node (2core, 8GB)     |    2.64%   |  0.23    |2.3 GB|
+|Redis -DP    | 1 node (32core, 128GB)  |    0.78%   |    0.3   |46.2 GB|
+|KeyCloak     | 4 nodes (4core, 16GB)   |   98.49%   |  11.24   | 7.520 GB |
 
 **JMX List**
 - cluster1.jmx
