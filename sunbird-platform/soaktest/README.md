@@ -1,4 +1,4 @@
-**Important Note:**
+**Note:**
 
 To run these soaktest APIs jmx scripts following jars needs to be placed into JMeter’s lib/ext directory. Download the JMeter Plugins Manager JAR files from the given link and then put it into JMeter's lib/ext directory.
 
@@ -77,8 +77,9 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
 
 - **AKS Node:** Min no of nodes - 6 and Max no of nodes - 40 
 - **HPA with 70% CPU Usage**
-- **TPS: 4986**	
+- **TPS: 4986 with 14 AKS Nodes**	
 
+**Service Pods configuration & Usage:**
 | Service Name | CPU Limit| Memory Limit | Min Pods | Max Pods | Pod Usage |CPU Utilization(Max) %|
 |--------------|----------|--------------|----------|----------|----------|----------|
 |Analytics     |  0.5    |      1G     |     1    |     6    |3|78|
@@ -94,17 +95,17 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
 |Telemetry     |    0.2  |     200M       |   1     |    40    |11|99|
 
 
-**Infra Configuration**
+**Infra Configuration & Usage:**
 | Service Name | Configuration| CPU Usage (Max) | Load AVG(Max) |Memory Usage(Max) |
 |--------------|----------|--------------|----------|----------|
-|AKS Node      | 8 Core, 16GB |    |          ||
-|Cassandra    | 5 Node (16 Core , 64GB) |      |    ||
-|ES-LMS       | 3 nodes (16core , 64GB) |      |     ||
-|COMP-LMS     | 3 nodes (16core, 32 GB) |     |     ||
-|Kafka        | 3 nodes (4core , 16GB)  |     |     ||
-|Redis - LP   | 1 node (2core, 8GB)     |      |    ||
-|Redis -DP    | 1 node (32core, 128GB)  |      |     ||
-|KeyCloak     | 4 nodes (4core, 16GB)   |    |    |  |
+|AKS Node      | 8 Core, 16GB |  50.93%  |   22.52       |	8.34 GB|
+|Cassandra    | 5 Node (16 Core , 64GB) |  38.92%    | 9.36    |12.564 GB|
+|ES-LMS       | 3 nodes (16core , 64GB) |  15.13%    |    4.66   |28.5413 GB|
+|COMP-LMS     | 3 nodes (16core, 32 GB) |   15.13%  |   6.06  |19.6504 GB|
+|Kafka        | 3 nodes (4core , 16GB)  | 16.08%     |  1.57    |	6.796 GB|
+|Redis - LP   | 1 node (2core, 8GB)     |  2.29%    |  0.32  |2.2 GB|
+|Redis -DP    | 1 node (32core, 128GB)  | 10.85%     |  2.24   |	71.4 GB|
+|KeyCloak     | 4 nodes (4core, 16GB)   | 99.92%   |  29.41  | 4.343 GB |
 
 **JMX Details**
 - cluster1.jmx (1 JMeter Master, 4 JMeter Slaves)
