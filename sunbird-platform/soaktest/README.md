@@ -50,19 +50,19 @@ To run these scripts following jars needs to be placed into JMeter’s lib/ext d
 - **HPA with 70% CPU Usage**
 - **TPS: 25138 (with 27 AKS nodes)**	
 
-| Service Name | CPU Limit| Memory Limit | Min Pods | Max Pods | CPU Utilization(Max) %|
-|--------------|----------|--------------|----------|----------|----------|
-|Analytics     |  0.8     |    2.5       |   2      |     6     |94|
-|API Manager   |    2     |   2.5        |   2      |     30    |90|
-|AdminUtils    |    1     |     2        |   1      |     6     |73|
-|Content       |   1      |   3.5        |   1     |     12     | 15|
-|Knowledgemw   |   1      |   1.5        |   2      |     10     |99|
-|Learner       |   1      |     3        |    2    |     40     | 100|
-|LMS           |   1      |     3        |    2    |     30     | 100|
-|Player        |    1     |     1        |    1     |    16     |9|
-|Nginx-private-ingress    |    0.2 |   0.3  |   2   |     6     |4|
-|Search        |   1      |   3          |    1     |    10     |99|
-|Telemetry     |   0.8    |   1          |     2    |    40     |100|
+| Service Name | CPU Limit| Memory Limit | Min Pods | Max Pods | Pod Usage |CPU Utilization(Max) %|
+|--------------|----------|--------------|----------|----------|----------|----------|
+|Analytics     |  0.8     |    2.5       |   2      |     6     |3|94|
+|API Manager   |    2     |   2.5        |   2      |     30    |14|90|
+|AdminUtils    |    1     |     2        |   1      |     6     |4|73|
+|Content       |   1      |   3.5        |   1     |     12     |1| 15|
+|Knowledgemw   |   1      |   1.5        |   2      |     10     |4|99|
+|Learner       |   1      |     3        |    2    |     40     | 40|100|
+|LMS           |   1      |     3        |    2    |     30     |17| 100|
+|Player        |    1     |     1        |    1     |    16     |2|9|
+|Nginx-private-ingress    |    0.2 |   0.3  |   2   |     6     |2|4|
+|Search        |   1      |   3          |    1     |    10     |3|99|
+|Telemetry     |   0.8    |   1          |     2    |    40     |40|100|
 
 
 **Infra Configuration**
