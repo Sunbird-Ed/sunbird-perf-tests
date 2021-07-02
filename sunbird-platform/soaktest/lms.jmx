@@ -25,7 +25,7 @@
           </elementProp>
           <elementProp name="apiKey" elementType="Argument">
             <stringProp name="Argument.name">apiKey</stringProp>
-            <stringProp name="Argument.value">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI0YzZhNjhiMWMzNDc0YmZiYjM5NGI0MDYwODVjZjRhZiJ9.0ZRY7Ya87ZKJl8Wj7a9uIbROivP0b2KpUOjKgLwnLQE</stringProp>
+            <stringProp name="Argument.value">{Authorization_Key}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
@@ -599,7 +599,7 @@
       <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config- HostData" enabled="true">
         <stringProp name="delimiter">,</stringProp>
         <stringProp name="fileEncoding">UTF-8</stringProp>
-        <stringProp name="filename">/mount/data/benchmark/sunbird-perf-tests/sunbird-platform/testdata/host_ips_5nodes.csv</stringProp>
+        <stringProp name="filename">~/testdata/host_ips_5nodes.csv</stringProp>
         <boolProp name="ignoreFirstLine">true</boolProp>
         <boolProp name="quotedData">false</boolProp>
         <boolProp name="recycle">true</boolProp>
@@ -609,7 +609,7 @@
       </CSVDataSet>
       <hashTree/>
       <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config- 1M UserData" enabled="true">
-        <stringProp name="filename">/mount/data/benchmark/sunbird-perf-tests/sunbird-platform/user-create/user-data-new/userdata-250K-tokens-05032021.csv</stringProp>
+        <stringProp name="filename">~/userdata-250K-tokens-05032021.csv</stringProp>
         <stringProp name="fileEncoding">UTF-8</stringProp>
         <stringProp name="variableNames">emailId,userId,token</stringProp>
         <boolProp name="ignoreFirstLine">true</boolProp>
@@ -621,7 +621,7 @@
       </CSVDataSet>
       <hashTree/>
       <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config-4M UserData" enabled="true">
-        <stringProp name="filename">/mount/data/benchmark/sunbird-perf-tests/sunbird-platform/user-create/user-data-new/4M-user-token-04032021.csv</stringProp>
+        <stringProp name="filename">~/4M-user-token-04032021.csv</stringProp>
         <stringProp name="fileEncoding">UTF-8</stringProp>
         <stringProp name="variableNames">emailId2,userId2,token2</stringProp>
         <boolProp name="ignoreFirstLine">true</boolProp>
@@ -633,7 +633,7 @@
       </CSVDataSet>
       <hashTree/>
       <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config - course and batches" enabled="true">
-        <stringProp name="filename">/mount/data/benchmark/sunbird-perf-tests/sunbird-platform/lms-apis/courses-batches.csv</stringProp>
+        <stringProp name="filename">~/courses-batches.csv</stringProp>
         <stringProp name="fileEncoding"></stringProp>
         <stringProp name="variableNames">courseId,batchId</stringProp>
         <boolProp name="ignoreFirstLine">true</boolProp>
