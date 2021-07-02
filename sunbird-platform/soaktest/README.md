@@ -46,20 +46,22 @@ To run these scripts following jars needs to be placed into JMeter’s lib/ext d
 
 2. ## Sokatest with HPA Enabled - 25K TPS ##
 
-- AKS Node: Min -6 and AMx - 40 
-- HPA with 70% CPU usag e
+- **AKS Node:** Min -6 and Max - 40 
+- HPA with 70% CPU usage
 
 | Service Name | CPU Limit| Memory Limit | Min Pods | Max Pods |
 |--------------|----------|--------------|----------|----------|
-|Analytics    |     |     |             |           |          |
-|API Manager    |     |     |             |           |          |
-|AdminUtils    |     |     |             |           |          |
-|Content   |     |     |             |           |          |
-|Learner   |     |     |             |           |          |
-|LMS  |     |     |             |           |          |
-|Player    |     |     |             |           |          |
-|Nginx-private-ingress    |     |     |             |           |          |
-|Telemetry    |     |     |             |           |          |
+|Analytics     |  0.8     |    2.5       |   2      |     6     |
+|API Manager   |    2     |   2.5        |   2      |     30    |
+|AdminUtils    |    1     |     2        |   1      |     6     | 
+|Content       |   1      |   3.5        |   1     |     12     | 
+|Knowledgemw   |   1      |   1.5        |    2    |     10     |
+|Learner       |   1      |     3        |    2    |     40     | 
+|LMS           |   1      |     3        |    2    |     30     | 
+|Player        |    1     |     1        |    1     |    16     |
+|Nginx-private-ingress    |    0.2 |   0.3  |   2          |     6      |
+|Search        |   1      |   3          |    1     |    10       |
+|Telemetry     |   0.8    |   1          |     2    |    40       |
 
 
 **Infra Configuration**
