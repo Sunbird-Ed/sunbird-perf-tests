@@ -33,3 +33,11 @@ e.g.
 | API           | Thread Count  | Samples  | Errors% | Throughput/sec|Avg Resp Time|   95th pct  |  99th pct   |
 | ------------- | ------------- | -------- | --------| ---------------|------------|-------------|-------------|
 | Auth Token    | 200           | 1000000   | 0(0.00%)| 674.3           |    290     | 334      |  448   |
+
+
+### Server Utilisation:
+| Backend          | CPU Usage %(max) | Memory Utilization (max) |
+| ------------- | ------------- |------------- |
+| Learner Service (CPU-1 Core; Memory- 1 GB)  |93 |51 |
+|Cassandra (CPU- 16Core; Memory- 64GB)| 20.31% | 13.12 GB|
+|KeyCloak (CPU- 4core ; Memory- 48GB)|59.17%| 4.50 GB|
