@@ -26,8 +26,15 @@ e.g.
 - Update `host.csv` file data with correct host details before running the test. It can be domain details / Kubernetes Node IPs/ LB IPs/ Direct Service IPs with port details.
 - Update `dialcodes.csv` file data with valid dialcodes.
 
-### Test Result
+### Test Result:
 
 | API               | Thread Count  | Samples  | Errors%   | Throughput/sec  |Avg Resp Time |   95th pct |  99th pct   |
 | ------------------| ------------- | -------- | --------- | --------------- |--------------|------------|-------------|
 | Composite Search | 200           |2000000  |  0(0.00%) | 2711.6          |70          | 63             |79         |
+
+
+### Server Utilisation:
+| Backend          | CPU Usage %(max) | Memory Utilization (max) |
+| ------------- | ------------- |------------- |
+| Search Service (CPU-1 Core; Memory- 3 GB)  |82% | 297 MiB |
+| ES (CPU- 8core ; Memory- 32GB)|51.84%  |19.5943 GB	|
