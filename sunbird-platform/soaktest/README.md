@@ -140,7 +140,7 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
 
 
 -------
-**Cluster wise script details:**
+**Cluster wise script details (Old scripts):**
 
 **sokatest-autoscale-cluster1.jmx:**
 - telemetry 
