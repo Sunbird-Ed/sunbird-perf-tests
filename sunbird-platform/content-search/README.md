@@ -27,7 +27,7 @@ e.g.
 - Update `host.csv` file data with correct host details before running the test. It can be domain details / Kubernetes Node IPs/ LB IPs/ Direct Service IPs with port details.
 - Update `searchQueryData.csv` file with correct search queries
 
-### Test Result
+### Test Result:
 
 | API             | Thread Count  | Errors%   | Throughput/sec  |Avg Resp Time |   95th pct  |  99th pct   |
 | --------------- | ------------- | --------- | --------------- |--------------|-------------|-------------|
