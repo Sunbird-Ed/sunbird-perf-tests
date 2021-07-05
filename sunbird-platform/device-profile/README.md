@@ -5,9 +5,10 @@ Benchmarking Device Profile API.
 
 ### Test Environment Details:
 1. No of AKS node - 16
-2. No of analytics service replicas - 12
+2. No of analytics service replicas - 12  (CPU- 1Core; Memory- 1GB)
 3. Redis - 1 node (CPU - 32core, Memory - 128GB)
-4. Release version - Release 3.9.0
+4. Kafka - 3 nodes (CPU- 4core; Memory- 16GB)
+5. Release version - Release 3.9.0
 
 
 **API End Point:** 
@@ -33,3 +34,11 @@ e.g.
 | API           | Thread Count | Samples  | Errors%   | Throughput/sec|Avg Resp Time|  95th pct | 99th pct |
 | ------------- | -------------| -------- | --------- | --------------|-------------|-----------|----------|
 | Device Profile| 200          | 2000000  | 0(0.00%)  | 9999.1       |  18         |     72    |   84     |
+
+
+### Server Utilisation:
+| Backend          | CPU Usage %(max) | Memory Utilization (max) |
+| ------------- | ------------- |------------- |
+| Analytics Service ( (CPU- 1Core; Memory- 1GB))  |79% |1018 MiB |
+| Kafka (CPU- 4core; Memory- 16GB)| 10.06% | 6.8 GB|
+| Redis (CPU - 32core, Memory - 128GB)| 2.97% | 42.3 GB|
