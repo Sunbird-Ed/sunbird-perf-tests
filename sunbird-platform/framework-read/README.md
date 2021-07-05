@@ -1,4 +1,4 @@
-**Test Scenario:**
+**Test Scenario:** ```Cached API```
 
 Benchmarking Framework Read API with and without category.
 
