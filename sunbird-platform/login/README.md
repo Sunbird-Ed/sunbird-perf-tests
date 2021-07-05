@@ -33,4 +33,4 @@ e.g.
 ### Server Utilisation:
 | Backend          | CPU Usage %(max) | Memory Utilization (max) |
 | ------------- | ------------- |------------- |
-| KeyCloak (CPU- 4Core; Memory- 16GB)|99%  | 2.180 GB|
+| KeyCloak (CPU- 4Core; Memory- 16GB)|99%  | 2.18 GB|
