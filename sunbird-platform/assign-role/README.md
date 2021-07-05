@@ -37,6 +37,6 @@ e.g.
 ### Server Utilisation:
 | Backend          | CPU Usage %(max) | Memory Utilization (max) |
 | ------------- | ------------- |------------- |
-| Learner Service (CPU-1 Core; Memory- 1 GB)  |100 |869 MiB|
-|Cassandra (CPU- 16Core; Memory- 64GB)| 29.76% | 28.46 GB|
-|ES (CPU- 8core ; Memory- 32GB)|19.04% | 28.46 GB|
+| Learner Service (CPU-1 Core; Memory- 1 GB)  |100% |869 MiB|
+| Cassandra (CPU- 16Core; Memory- 64GB)| 29.76% | 28.46 GB|
+| ES (CPU- 8core ; Memory- 32GB)|19.04% | 28.46 GB|
