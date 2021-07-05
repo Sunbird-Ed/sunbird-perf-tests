@@ -41,4 +41,4 @@ e.g.
 | ------------- | ------------- |------------- |
 | Analytics Service ( (CPU- 1Core; Memory- 1GB))  |79% |1018 MiB |
 | Kafka (CPU- 4core; Memory- 16GB)| 10.06% | 6.8 GB|
-| Redis (CPU - 32core, Memory - 128GB)| 2.97% | 42.3 GB|
+| Redis (CPU - 32core; Memory - 128GB)| 2.97% | 42.3 GB|
