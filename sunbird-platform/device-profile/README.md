@@ -29,7 +29,7 @@ e.g.
 - Update `ipaddress.csv` file data with IP Address
 
 
-### Test Result
+### Test Result:
 
 | API           | Thread Count | Samples  | Errors%   | Throughput/sec|Avg Resp Time|  95th pct | 99th pct |
 | ------------- | -------------| -------- | --------- | --------------|-------------|-----------|----------|
