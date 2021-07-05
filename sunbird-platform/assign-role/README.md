@@ -33,3 +33,10 @@ e.g.
 | API           | Thread Count  | Samples  | Errors%   | Throughput/sec  |Avg Resp Time  |   95th pct  |  99th pct   |
 | ------------- | ------------- | -------- | --------- | --------------- |---------------|-------------|-------------|
 | Assign Role   | 200           | 2000000   | 0 (0.00%) | 2686.3         |   72         |      110    |  194       |
+
+### Server Utilisation:
+| Backend          | CPU Usage %(max) | Memory Utilization (max) |
+| ------------- | ------------- |------------- |
+| Learner Service (CPU-1 Core; Memory- 1 GB)  |100 |86 |
+|Cassandra (CPU- 16Core; Memory- 64GB)| 29.76% | 28.46 GB|
+|ES (CPU- 8core ; Memory- 32GB)|19.04% | 28.4623 GB|
