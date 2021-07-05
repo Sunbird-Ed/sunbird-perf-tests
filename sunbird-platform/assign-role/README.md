@@ -39,4 +39,4 @@ e.g.
 | ------------- | ------------- |------------- |
 | Learner Service (CPU-1 Core; Memory- 1 GB)  |100 |86 |
 |Cassandra (CPU- 16Core; Memory- 64GB)| 29.76% | 28.46 GB|
-|ES (CPU- 8core ; Memory- 32GB)|19.04% | 28.4623 GB|
+|ES (CPU- 8core ; Memory- 32GB)|19.04% | 28.46 GB|
