@@ -35,3 +35,10 @@ e.g.
 |API                 |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
 |--------------------|------------|--------|---------| -------------|--------------|---------|--------|
 |Learner State Update|200         |2000000 |0(0.00%) |6571.5        | 29          |  69    |80     |
+
+
+### Server Utilisation:
+| Backend       | CPU Usage %(max) | Memory Utilization (max) |
+| ------------- | ------------- |------------- |
+| LMS Service (CPU-1 Core; Memory- 1 GB)  |100% |516 MiB|
+| ES (CPU- 8core ; Memory- 32GB)|47.67%    |28.42 GB |
