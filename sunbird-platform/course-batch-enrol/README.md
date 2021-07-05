@@ -35,3 +35,10 @@ e.g.
 | API                 | Thread Count  | Samples  | Errors%   | Throughput/sec  |Avg Resp Time|  95th pct | 99th pct |
 | ------------------- | ------------- | -------- | --------- | --------------- |-------------|-----------|----------|
 | Course Batch Enrol  | 200           | 1000000  | 0 (0.00%) | 4921          |       39    |    75   |   83   |
+
+
+### Server Utilisation:
+| Backend          | CPU Usage %(max) | Memory Utilization (max) |
+| ------------- | ------------- |------------- |
+|LMS Service (CPU-1 Core; Memory- 1 GB)  |82% |538 MiB  |
+|Cassandra (CPU- 16Core; Memory- 64GB)| 19.28% |13.75 GB |
