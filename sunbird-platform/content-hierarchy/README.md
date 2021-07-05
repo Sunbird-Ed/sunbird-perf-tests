@@ -30,7 +30,7 @@ e.g.
 
 
 
-### Test Result
+### Test Result:
 
 | API               | Thread Count  | Samples  |Throughput | Errors%   | Avg.            |95th pct         |99th pct       |
 | ----------------- | ------------- | -------- | --------- | --------- | --------------- |--------------- |--------------- |
