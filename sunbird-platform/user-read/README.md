@@ -30,7 +30,7 @@ e.g.
 - Update `UserData.csv` file with users Ids and user access token.
 - Update `host.csv` file data with correct host details before running the test. It can be domain details / Kubernetes Node IPs/ LB IPs/ Direct Service IPs with port details.
 
-### Test Result
+### Test Result:
 
 |API                |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
 |-------------------|------------|--------|---------| -------------|--------------|---------|--------|
@@ -41,4 +41,4 @@ e.g.
 | Backend          | CPU Usage %(max) | Memory Utilization (max) |
 | ------------- | ------------- |------------- |
 | Learner Service (CPU- 1Core; Memory- 3GB)  |100% |  540 MiB|
-| Cassandra (CPU- 16Core; Memory- 64GB)|  51.57%   | |13.693 GB
+| Cassandra (CPU- 16Core; Memory- 64GB)|  51.57%   | 13.693 GB|
