@@ -5,7 +5,7 @@ Benchmarking BMGS Update API.
 
 ### Test Environment Details
 1. No of AKS node - 16
-2. No of learner service replicas - 16 (1Core and 1 GB)
+2. No of learner service replicas - 16 (1Core and 3 GB)
 3. Cassandra Cluster- 5 Nodes; CPU- 8Core; Memory- 32GB
 4. ES Cluster - 3 nodes; CPU- 16core ; Memory- 64GB
 5. Release version - Release 3.9.0
@@ -39,6 +39,6 @@ e.g.
 ### Server Utilisation:
 | Backend          | CPU Usage %(max) | Memory Utilization (max) |
 | ------------- | ------------- |------------- |
-| Learner Service (CPU-1 Core; Memory- 1 GB)  | 100%| 735 MiB|
+| Learner Service (CPU-1 Core; Memory- 3 GB)  | 100%| 735 MiB|
 | Cassandra (CPU- 16Core; Memory- 64GB)|50.53%  |14.06 GB |
 | ES (CPU- 16core ; Memory- 64GB)|   50.42%  |28.48 GB |
