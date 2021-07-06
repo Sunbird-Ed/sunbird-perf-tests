@@ -5,8 +5,8 @@ Benchmarking User serach with emailIds API.
 
 ### Test Environment Details
 1. No of AKS node - 16
-2. No of learner service replicas - 16 (1 Core and 1 GB)
-3. Cassandra Cluster- 5 Nodes (CPU- 8Core; Memory- 32GB)
+2. No of learner service replicas - 16 (1 Core and 3 GB)
+3. Cassandra Cluster- 5 Nodes (CPU- 16Core; Memory- 64GB)
 4. ES Cluster - 3 nodes (CPU- 16core ; Memory- 64GB)
 5. Release version - Release 3.9.0
 
@@ -28,10 +28,16 @@ e.g.
 - `emailid01@yopmail.com` in run command should be updated with valid users email Id.
 
 
-### Test Result
+### Test Result:
 
 |API                |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
 |-------------------|------------|--------|---------| -------------|--------------|---------|--------|
 |User Search Email    |200         |1000000 |0(0.00%) | 2611.1       | 50           |  237     |672      |
 
 
+### Server Utilisation:
+| Backend          | CPU Usage %(max) | Memory Utilization (max) |
+| ------------- | ------------- |------------- |
+| Learner Service (CPU-1 Core; Memory- 3 GB)  | 93| 544 MiB  |
+| Cassandra (CPU- 16Core; Memory- 64GB)| 13.42% |13.32 GB |
+| ES (CPU- 16core ; Memory- 64GB)|24.66%   | 28.41 GB |
