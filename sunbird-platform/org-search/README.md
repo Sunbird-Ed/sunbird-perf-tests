@@ -5,7 +5,7 @@ Benchmarking Org Search API.
 
 ### Test Environment Details
 1. No of AKS node - 16
-2. No of learner service replicas - 8 (1 Core and 1 GB)
+2. No of learner service replicas - 8 (1 Core and 3 GB)
 3. Cassandra Cluster- 5 Nodes; CPU- 8Core; Memory- 32GB
 4. Release version - Release 3.9.0
 
