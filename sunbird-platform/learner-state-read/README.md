@@ -5,7 +5,7 @@ Benchmarking Learner State Read API.
 
 ### Test Environment Details
 1. No of AKS node - 16
-2. No of lms service replicas - 16(1 Core and 1 GB)
+2. No of lms service replicas - 16(1 Core and 3 GB)
 3. Cassandra Cluster- 5 Nodes (CPU- 16Core; Memory- 64GB)
 4. ES Cluster - 3 nodes (CPU- 16core ; Memory- 64GB)
 5. Release version - Release 3.9.0
@@ -41,5 +41,5 @@ e.g.
 ### Server Utilisation:
 | Backend          | CPU Usage %(max) | Memory Utilization (max) |
 | ------------- | ------------- |------------- |
-| LMS Service (CPU-1 Core; Memory- 1 GB)  |100% |460 MiB|
+| LMS Service (CPU-1 Core; Memory- 3 GB)  |100% |460 MiB|
 | Cassandra (CPU- 16Core; Memory- 64GB)|39.68%     | 13.205 GB	|
