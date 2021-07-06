@@ -40,4 +40,4 @@ e.g.
 | ------------- | ------------- |------------- |
 | LMS Service (CPU-1 Core; Memory- 1 GB)  |28%| 479 MiB |
 | Search Service (CPU-1 Core; Memory- 2 GB)  |42% |370 MiB |
-| ES (CPU- 8core ; Memory- 32GB)|23.81%  |19.6484 GB |
+| ES (CPU- 8core ; Memory- 32GB)|23.81%  |19.64 GB |
