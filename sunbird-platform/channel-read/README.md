@@ -5,7 +5,7 @@ Benchmarking Channel Read API.
 
 ### Test Environment Details:
 1. No of AKS node -16
-2. No of learner, LMS service replicas - 8 (1 core and 1 GB)
+2. No of learner, LMS service replicas - 8 (1 core and 3 GB)
 3. ES Cluster - 3 Nodes (CPU - 16core ; Memory - 32 GB)
 4. Release version - Release 3.9.0
 5. Redis - 1 Node (CPU- 2core; Memory- 8GB)
