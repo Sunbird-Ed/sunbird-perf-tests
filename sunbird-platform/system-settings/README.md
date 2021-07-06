@@ -5,7 +5,7 @@ Benchmarking Get System Settings API.
 
 ### Test Environment Details
 1. No of AKS node - 16
-2. No of learner service replicas - 8 (1 Core and 1 GB)
+2. No of learner service replicas - 8 (1 Core and 3 GB)
 3. Cassandra Cluster- 5 Nodes (CPU- 8Core; Memory- 32GB)
 4. Release version - Release 3.9.0
 
@@ -37,5 +37,5 @@ e.g.
 ### Server Utilisation:
 | Backend          | CPU Usage %(max) | Memory Utilization (max) |
 | ------------- | ------------- |------------- |
-| Learner Service (CPU-1 Core; Memory- 1 GB)  |NA |NA|
+| Learner Service (CPU-1 Core; Memory- 3 GB)  |NA |NA|
 | Cassandra (CPU- 16Core; Memory- 64GB)| NA |NA |
