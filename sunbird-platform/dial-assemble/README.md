@@ -42,6 +42,6 @@ e.g.
 ### Server Utilisation:
 | Backend       | CPU Usage %(max) | Memory Utilization (max) |
 | ------------- | ------------- |------------- |
-| LMS Service (CPU- 1Core; Memory- 1GB)  |36% |548 MiB   |
+| LMS Service (CPU- 1Core; Memory- 3GB)  |36% |548 MiB   |
 | Search Service (CPU- 1Core; Memory- 3GB)  | 42%|431 MiB |
 | ES (CPU- 8core ; Memory- 32GB)| 30.13%|19.58 GB |
