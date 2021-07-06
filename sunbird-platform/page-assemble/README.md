@@ -5,7 +5,7 @@ Benchmarking Page Assemble API with "?orgdetails=orgName,email" params.
 
 ### Test Environment Details
 1. No of AKS node - 16
-2. No of lms service replicas - 8 (1 Core and 1 GB)
+2. No of lms service replicas - 8 (1 Core and 3 GB)
 3. No of search service replicas - 8 (1 Core and 3 GB)
 4. Cassandra Cluster- 5 Nodes (CPU- 8Core; Memory- 32GB)
 5. Release version - Release 3.9.0
@@ -38,6 +38,6 @@ e.g.
 ### Server Utilisation:
 | Backend          | CPU Usage %(max) | Memory Utilization (max) |
 | ------------- | ------------- |------------- |
-| LMS Service (CPU-1 Core; Memory- 1 GB)  |28%| 479 MiB |
+| LMS Service (CPU-1 Core; Memory- 3 GB)  |28%| 479 MiB |
 | Search Service (CPU-1 Core; Memory- 2 GB)  |42% |370 MiB |
 | ES (CPU- 8core ; Memory- 32GB)|23.81%  |19.64 GB |
