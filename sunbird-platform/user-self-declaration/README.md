@@ -5,7 +5,7 @@ Benchmarking User Self Declaration API.
 
 ### Test Environment Details
 1. No of AKS node - 16
-2. No of learner service replicas - 16 (1 Core and 1 GB)
+2. No of learner service replicas - 16 (1 Core and 3 GB)
 3. Cassandra Cluster- 5 Nodes (CPU- 8Core; Memory- 32GB)
 4. ES Cluster - 3 nodes (CPU- 16core ; Memory- 64GB)
 5. Release version - Release 3.9.0
@@ -29,8 +29,16 @@ e.g.
 - Update `userData.csv` file with valid userIds and user access token
 - 
 
-### Test Result
+### Test Result:
 
 |API                |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
 |-------------------|------------|--------|---------| -------------|--------------|---------|--------|
 |Self Declaration   |200         |2000000 |0(0.00%) | 2914.2       | 50          |  220     |425      |
+
+
+### Server Utilisation:
+| Backend          | CPU Usage %(max) | Memory Utilization (max) |
+| ------------- | ------------- |------------- |
+| Learner Service (CPU-1 Core; Memory- 3 GB)  |99% | 539 MiB  |
+| Cassandra (CPU- 16Core; Memory- 64GB)|  35.96%|13.30 GB|
+| ES (CPU- 16core ; Memory- 64GB)|  5.07%  | 28.47 GB|

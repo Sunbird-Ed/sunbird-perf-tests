@@ -4,8 +4,8 @@ Benchmarking Auth Tokene API.
 
 ### Test Environment Details:
 1. No of AKS node - 16
-2. No of learner service replicas - 8 (1Core and 1GB)
-3. KeyCloak - 4 KeyCloak servers
+2. No of learner service replicas - 8 (1Core and 3GB)
+3. KeyCloak - 4 KeyCloak servers (CPU- 4core ; Memory- 16GB)
 4. ES Cluster - 3 nodes (CPU- 8core ; Memory- 32GB)
 5. Cassandra Cluster- 5 Nodes (CPU- 16Core; Memory- 64GB)
 6. Release version - Release 3.9.0
@@ -33,3 +33,11 @@ e.g.
 | API           | Thread Count  | Samples  | Errors% | Throughput/sec|Avg Resp Time|   95th pct  |  99th pct   |
 | ------------- | ------------- | -------- | --------| ---------------|------------|-------------|-------------|
 | Auth Token    | 200           | 1000000   | 0(0.00%)| 674.3           |    290     | 334      |  448   |
+
+
+### Server Utilisation:
+| Backend          | CPU Usage %(max) | Memory Utilization (max) |
+| ------------- | ------------- |------------- |
+| Learner Service (CPU-1 Core; Memory- 3 GB)  |93 |518 MiB   |
+|Cassandra (CPU- 16Core; Memory- 64GB)| 20.31% | 13.12 GB|
+|KeyCloak (CPU- 4core ; Memory- 16GB)|59.17%| 4.50 GB|

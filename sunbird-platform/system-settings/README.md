@@ -1,13 +1,13 @@
-### Test Scenario
+### Test Scenario ```Cached API```
 
 Benchmarking Get System Settings API.
 
 
 ### Test Environment Details
 1. No of AKS node - 16
-2. No of learner service replicas - 8 (1 Core and 1 GB)
+2. No of learner service replicas - 8 (1 Core and 3 GB)
 3. Cassandra Cluster- 5 Nodes (CPU- 8Core; Memory- 32GB)
-4.  Release version - Release 3.9.0
+4. Release version - Release 3.9.0
 
 
 **API End Point** 
@@ -27,8 +27,15 @@ e.g.
 - Update `host.csv` file data with correct host details before running the test. It can be domain details / Kubernetes Node IPs/ LB IPs/ Direct Service IPs with port details.
 - Update `system-settings.csv` file with settings name.
 
-### Test Result
+### Test Result:
 
 |API                |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
 |-------------------|------------|--------|---------| -------------|--------------|---------|--------|
 |Get System Settings|400         |4000000 |0(0.00%) | 20597.9       |0           |  1      |3      |
+
+
+### Server Utilisation:
+| Backend          | CPU Usage %(max) | Memory Utilization (max) |
+| ------------- | ------------- |------------- |
+| Learner Service (CPU-1 Core; Memory- 3 GB)  |NA |NA|
+| Cassandra (CPU- 16Core; Memory- 64GB)| NA |NA |

@@ -31,8 +31,15 @@ e.g.
 - Update `userData.csv` file with valid emailIds (FirstName, Email)
 
 
-### Test Result
+### Test Result:
 
 | API           | Thread Count  | Samples  | Errors% | Throughput/sec|Avg Resp Time|   95th pct  |  99th pct   |
 | ------------- | ------------- | -------- | --------| ---------------|------------|-------------|-------------|
-| Auth Token    | 200           | 1000000   | 0(0.00%)| 804.4           |    241    | 397  |  528   |
+| Managed User Creation | 200           | 1000000   | 0(0.00%)| 804.4           |    241    | 397  |  528   |
+
+### Server Utilisation:
+| Backend          | CPU Usage %(max) | Memory Utilization (max) |
+| ------------- | ------------- |------------- |
+| Learner Service (CPU-1 Core; Memory- 3 GB)  |85% |735 MiB|
+| Cassandra (CPU- 16Core; Memory- 64GB)| 46.20% |14.03 GB |
+| ES (CPU- 8core ; Memory- 32GB)| 38.52%  | 28.48 GB|

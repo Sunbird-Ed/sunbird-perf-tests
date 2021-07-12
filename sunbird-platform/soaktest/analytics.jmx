@@ -72,10 +72,10 @@
         <boolProp name="UserParameters.per_iteration">false</boolProp>
       </UserParameters>
       <hashTree/>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="Device Register Mobile - Ultimate Thread Group" enabled="true">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="deviceRegister- Ultimate Thread Group" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="1140220053">
-            <stringProp name="1691">50</stringProp>
+          <collectionProp name="386395351">
+            <stringProp name="1758">75</stringProp>
             <stringProp name="1629">30</stringProp>
             <stringProp name="1572771">3600</stringProp>
             <stringProp name="1572771">3600</stringProp>
@@ -89,7 +89,7 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
       </kg.apc.jmeter.threads.UltimateThreadGroup>
       <hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="deviceRegister-Mobile" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="deviceRegister" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
             <collectionProp name="Arguments.arguments">
@@ -181,15 +181,15 @@
           </HeaderManager>
           <hashTree/>
           <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-            <stringProp name="ConstantTimer.delay">400</stringProp>
+            <stringProp name="ConstantTimer.delay">600</stringProp>
           </ConstantTimer>
           <hashTree/>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="Device Register Portal - Ultimate Thread Group" enabled="true">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="deviceProfile - Ultimate Thread Group" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="1140220053">
-            <stringProp name="1691">50</stringProp>
+          <collectionProp name="386395351">
+            <stringProp name="1758">75</stringProp>
             <stringProp name="1629">30</stringProp>
             <stringProp name="1572771">3600</stringProp>
             <stringProp name="1572771">3600</stringProp>
@@ -203,157 +203,7 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
       </kg.apc.jmeter.threads.UltimateThreadGroup>
       <hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="deviceRegister-Portal" enabled="true">
-          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
-            <collectionProp name="Arguments.arguments">
-              <elementProp name="" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">{&#xd;
-  &quot;request&quot;: {&#xd;
-    &quot;dspec&quot;: {&#xd;
-      &quot;os&quot;: &quot;Android 6.0&quot;,&#xd;
-      &quot;make&quot;: &quot;Motorola XT1068&quot;,&#xd;
-      &quot;id&quot;: &quot;f5db26762708c2265c99b9994cc9aed6692d02f8&quot;,&#xd;
-      &quot;idisk&quot;: 12.79,&#xd;
-      &quot;edisk&quot;: 12.79,&#xd;
-      &quot;scrn&quot;: 4.97,&#xd;
-      &quot;camera&quot;: &quot;&quot;,&#xd;
-      &quot;cpu&quot;: &quot;abi: armeabi-v7a  ARMv7 Processor rev 3 (v7l) &quot;,&#xd;
-      &quot;sims&quot;: -1,&#xd;
-      &quot;webview&quot;: &quot;85.0.4183.81&quot;,&#xd;
-      &quot;ts&quot;: &quot;${__time(yyyy-MM-dd&apos;T&apos;HH:mm:ss.SSSZ)}&quot;&#xd;
-    },&#xd;
-    &quot;channel&quot;: &quot;505c7c48ac6dc1edc9b08f21db5a571d&quot;,&#xd;
-    &quot;fcmToken&quot;: &quot;eQUX2D9MCwM:APA91bFEnE-lb7FtLVRUFjToc1_739IGph5sgQP_mmmVCVdZkW4M7hRkAiAjuLIBI-VHoyuSTyfxqrXlvC0vVvgTeB5-nsf85KG1EzOBrheG3ED9KMuoz_r8sM57kK-0eaYi_i5C1hMn&quot;,&#xd;
-    &quot;producer&quot;: &quot;loadtest.diksha.app&quot;,&#xd;
-    &quot;first_access&quot;: 1599637635460,&#xd;
-    &quot;userDeclaredLocation&quot;: {&#xd;
-      &quot;state&quot;: &quot;Karnataka&quot;,&#xd;
-      &quot;district&quot;: &quot;Belagavi Chikkodi&quot;&#xd;
-    }&#xd;
-  }&#xd;
-}</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-            </collectionProp>
-          </elementProp>
-          <stringProp name="HTTPSampler.domain">${host}</stringProp>
-          <stringProp name="HTTPSampler.port">${port}</stringProp>
-          <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
-          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/api/v3/device/register/${deviceId}</stringProp>
-          <stringProp name="HTTPSampler.method">POST</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-          <stringProp name="HTTPSampler.response_timeout"></stringProp>
-        </HTTPSamplerProxy>
-        <hashTree>
-          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
-            <collectionProp name="HeaderManager.headers">
-              <elementProp name="X-Device-Id" elementType="Header">
-                <stringProp name="Header.name">X-Device-Id</stringProp>
-                <stringProp name="Header.value">${deviceId}</stringProp>
-              </elementProp>
-              <elementProp name="Accept" elementType="Header">
-                <stringProp name="Header.name">Accept</stringProp>
-                <stringProp name="Header.value">application/json</stringProp>
-              </elementProp>
-              <elementProp name="X-App-Id" elementType="Header">
-                <stringProp name="Header.name">X-App-Id</stringProp>
-                <stringProp name="Header.value">loadtest.diksha.app</stringProp>
-              </elementProp>
-              <elementProp name="X-Channel-Id" elementType="Header">
-                <stringProp name="Header.name">X-Channel-Id</stringProp>
-                <stringProp name="Header.value">505c7c48ac6dc1edc9b08f21db5a571d</stringProp>
-              </elementProp>
-              <elementProp name="Content-Type" elementType="Header">
-                <stringProp name="Header.name">Content-Type</stringProp>
-                <stringProp name="Header.value">application/json</stringProp>
-              </elementProp>
-              <elementProp name="Accept-Encoding" elementType="Header">
-                <stringProp name="Header.name">Accept-Encoding</stringProp>
-                <stringProp name="Header.value">gzip</stringProp>
-              </elementProp>
-              <elementProp name="User-Agent" elementType="Header">
-                <stringProp name="Header.name">User-Agent</stringProp>
-                <stringProp name="Header.value">Dalvik/2.1.0 (Linux; U; Android 6.0; XT1068 Build/MPB24.65-34-3)</stringProp>
-              </elementProp>
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">ts</stringProp>
-                <stringProp name="Header.value">2020-11-05T21:52:16+05:30</stringProp>
-              </elementProp>
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">X-App-Version</stringProp>
-                <stringProp name="Header.value">3.3.2</stringProp>
-              </elementProp>
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">X-msgid</stringProp>
-                <stringProp name="Header.value">5b6dc3c3-2c08-c065-c53a-03537390f265</stringProp>
-              </elementProp>
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">X-Request-ID</stringProp>
-                <stringProp name="Header.value">5b6dc3c3-2c08-c065-c53a-03537390f265</stringProp>
-              </elementProp>
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">X-Source</stringProp>
-                <stringProp name="Header.value">web</stringProp>
-              </elementProp>
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">X-User-ID</stringProp>
-                <stringProp name="Header.value">137d4226-95f7-41b4-97f9-31e46d18f507</stringProp>
-              </elementProp>
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
-                <stringProp name="Header.value">same-origin</stringProp>
-              </elementProp>
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
-                <stringProp name="Header.value">cors</stringProp>
-              </elementProp>
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
-                <stringProp name="Header.value">empty</stringProp>
-              </elementProp>
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">Referer</stringProp>
-                <stringProp name="Header.value">https://loadtest.ntp.net.in/resources/</stringProp>
-              </elementProp>
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">Accept-Language</stringProp>
-                <stringProp name="Header.value">en-GB,en-US;q=0.9,en;q=0.8</stringProp>
-              </elementProp>
-            </collectionProp>
-          </HeaderManager>
-          <hashTree/>
-          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-            <stringProp name="ConstantTimer.delay">1000</stringProp>
-          </ConstantTimer>
-          <hashTree/>
-        </hashTree>
-      </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="Device Profile Mobile - Ultimate Thread Group" enabled="true">
-        <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="1140220053">
-            <stringProp name="1691">50</stringProp>
-            <stringProp name="1629">30</stringProp>
-            <stringProp name="1572771">3600</stringProp>
-            <stringProp name="1572771">3600</stringProp>
-            <stringProp name="1572771">3600</stringProp>
-          </collectionProp>
-        </collectionProp>
-        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
-          <boolProp name="LoopController.continue_forever">false</boolProp>
-          <intProp name="LoopController.loops">-1</intProp>
-        </elementProp>
-        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
-      </kg.apc.jmeter.threads.UltimateThreadGroup>
-      <hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="deviceProfile-Mobile" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="deviceProfile" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
@@ -414,138 +264,15 @@
           </HeaderManager>
           <hashTree/>
           <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-            <stringProp name="ConstantTimer.delay">400</stringProp>
+            <stringProp name="ConstantTimer.delay">300</stringProp>
           </ConstantTimer>
           <hashTree/>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="Device Profile Portal - Ultimate Thread Group" enabled="true">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="registerMobileDevicev2 - Ultimate Thread Group" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="1140220053">
-            <stringProp name="1691">50</stringProp>
-            <stringProp name="1629">30</stringProp>
-            <stringProp name="1572771">3600</stringProp>
-            <stringProp name="1572771">3600</stringProp>
-            <stringProp name="1572771">3600</stringProp>
-          </collectionProp>
-        </collectionProp>
-        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
-          <boolProp name="LoopController.continue_forever">false</boolProp>
-          <intProp name="LoopController.loops">-1</intProp>
-        </elementProp>
-        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
-      </kg.apc.jmeter.threads.UltimateThreadGroup>
-      <hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="deviceProfile-Portal" enabled="true">
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-            <collectionProp name="Arguments.arguments"/>
-          </elementProp>
-          <stringProp name="HTTPSampler.domain">${host}</stringProp>
-          <stringProp name="HTTPSampler.port">${port}</stringProp>
-          <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
-          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/api/v3/device/profile/${deviceId}</stringProp>
-          <stringProp name="HTTPSampler.method">GET</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-          <stringProp name="HTTPSampler.response_timeout"></stringProp>
-        </HTTPSamplerProxy>
-        <hashTree>
-          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
-            <collectionProp name="HeaderManager.headers">
-              <elementProp name="X-Device-Id" elementType="Header">
-                <stringProp name="Header.name">X-Device-Id</stringProp>
-                <stringProp name="Header.value">${deviceId}</stringProp>
-              </elementProp>
-              <elementProp name="Accept" elementType="Header">
-                <stringProp name="Header.name">Accept</stringProp>
-                <stringProp name="Header.value">application/json</stringProp>
-              </elementProp>
-              <elementProp name="X-App-Id" elementType="Header">
-                <stringProp name="Header.name">X-App-Id</stringProp>
-                <stringProp name="Header.value">loadtest.diksha.app</stringProp>
-              </elementProp>
-              <elementProp name="X-Channel-Id" elementType="Header">
-                <stringProp name="Header.name">X-Channel-Id</stringProp>
-                <stringProp name="Header.value">505c7c48ac6dc1edc9b08f21db5a571d</stringProp>
-              </elementProp>
-              <elementProp name="Content-Type" elementType="Header">
-                <stringProp name="Header.name">Content-Type</stringProp>
-                <stringProp name="Header.value">application/json</stringProp>
-              </elementProp>
-              <elementProp name="Accept-Encoding" elementType="Header">
-                <stringProp name="Header.name">Accept-Encoding</stringProp>
-                <stringProp name="Header.value">gzip</stringProp>
-              </elementProp>
-              <elementProp name="User-Agent" elementType="Header">
-                <stringProp name="Header.name">User-Agent</stringProp>
-                <stringProp name="Header.value">Dalvik/2.1.0 (Linux; U; Android 6.0; XT1068 Build/MPB24.65-34-3)</stringProp>
-              </elementProp>
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">ts</stringProp>
-                <stringProp name="Header.value">2020-11-05T21:52:16+05:30</stringProp>
-              </elementProp>
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">X-App-Version</stringProp>
-                <stringProp name="Header.value">3.3.2</stringProp>
-              </elementProp>
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">X-msgid</stringProp>
-                <stringProp name="Header.value">5b6dc3c3-2c08-c065-c53a-03537390f265</stringProp>
-              </elementProp>
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">X-Request-ID</stringProp>
-                <stringProp name="Header.value">5b6dc3c3-2c08-c065-c53a-03537390f265</stringProp>
-              </elementProp>
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">X-Source</stringProp>
-                <stringProp name="Header.value">web</stringProp>
-              </elementProp>
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">X-Session-ID</stringProp>
-                <stringProp name="Header.value">xzEIolUEXW7j6iqbjpsxcsi_QiAhJC9g</stringProp>
-              </elementProp>
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">X-User-ID</stringProp>
-                <stringProp name="Header.value">137d4226-95f7-41b4-97f9-31e46d18f507</stringProp>
-              </elementProp>
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
-                <stringProp name="Header.value">same-origin</stringProp>
-              </elementProp>
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
-                <stringProp name="Header.value">cors</stringProp>
-              </elementProp>
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
-                <stringProp name="Header.value">empty</stringProp>
-              </elementProp>
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">Referer</stringProp>
-                <stringProp name="Header.value">https://loadtest.ntp.net.in/resources/</stringProp>
-              </elementProp>
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">Accept-Language</stringProp>
-                <stringProp name="Header.value">en-GB,en-US;q=0.9,en;q=0.8</stringProp>
-              </elementProp>
-            </collectionProp>
-          </HeaderManager>
-          <hashTree/>
-          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-            <stringProp name="ConstantTimer.delay">1050</stringProp>
-          </ConstantTimer>
-          <hashTree/>
-        </hashTree>
-      </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="Register Mobile Devicev2 Mobile - Ultimate Thread Group" enabled="true">
-        <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="1549576728">
-            <stringProp name="1691">50</stringProp>
+          <collectionProp name="386395351">
+            <stringProp name="1758">75</stringProp>
             <stringProp name="1629">30</stringProp>
             <stringProp name="1572771">3600</stringProp>
             <stringProp name="1572771">3600</stringProp>
@@ -628,13 +355,13 @@
               </elementProp>
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">Authorization</stringProp>
-                <stringProp name="Header.value">Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdW5iaXJkLTEuMCJ9.hupJSdO54Cz47nB3PQb0Sp0wWFF2rC_SRTWUihQLWgM</stringProp>
+                <stringProp name="Header.value">Bearer {Authorization_KEY}</stringProp>
               </elementProp>
             </collectionProp>
           </HeaderManager>
           <hashTree/>
           <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-            <stringProp name="ConstantTimer.delay">300</stringProp>
+            <stringProp name="ConstantTimer.delay">600</stringProp>
           </ConstantTimer>
           <hashTree/>
         </hashTree>

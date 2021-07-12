@@ -28,8 +28,15 @@ e.g.
 -  Update `ipaddress.csv` file data with IP Address.
 
 
-### Test Result
+### Test Result:
 
 | API             | Thread Count| Samples  | Errors% |Throughput/sec|Avg Resp Time|95th pct| 99th pct |
 | ----------------| ------------| -------- | --------| -------------|-------------|--------|----------|
 | Device Register | 200         | 2000000  | 0(0.00%)| 2226.7       |    68      |  129    |     162  |
+
+### Server Utilisation:
+| Backend          | CPU Usage %(max) | Memory Utilization (max) |
+| ------------- | ------------- |------------- |
+| Analytics Service ( (CPU- 1Core; Memory- 1GB))  |93% |1016 MiB |
+| Kafka (CPU- 4core; Memory- 16GB)|16.71% |6.8 GB|
+| Redis (CPU - 32core; Memory - 128GB)| 2.08% | 43.1 GB|

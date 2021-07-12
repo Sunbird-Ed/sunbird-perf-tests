@@ -5,9 +5,9 @@ Benchmarking Get User Profile API.
 
 ### Test Environment Details
 1. No of AKS node - 16
-2. No of learner service replicas - 16 (1Core and 1GB)
-3. Cassandra Cluster- 5 Nodes; CPU- 8Core; Memory- 32GB
-4. ES Cluster - 3 nodes; CPU- 16core ; Memory- 64GB
+2. No of learner service replicas - 16 (1Core and 3GB)
+3. Cassandra Cluster- 5 Nodes (CPU- 16Core; Memory- 64GB)
+4. ES Cluster - 3 nodes (CPU- 16core ; Memory- 64GB)
 5. Release version - Release 3.9.0
 
 
@@ -30,8 +30,15 @@ e.g.
 - Update `UserData.csv` file with users Ids and user access token.
 - Update `host.csv` file data with correct host details before running the test. It can be domain details / Kubernetes Node IPs/ LB IPs/ Direct Service IPs with port details.
 
-### Test Result
+### Test Result:
 
 |API                |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
 |-------------------|------------|--------|---------| -------------|--------------|---------|--------|
 |Get User Profile   |200         |2000000 |0(0.00%) | 3680.2       | 50           |  91     |100     |
+
+
+### Server Utilisation:
+| Backend          | CPU Usage %(max) | Memory Utilization (max) |
+| ------------- | ------------- |------------- |
+| Learner Service (CPU- 1Core; Memory- 3GB)  |100% |  540 MiB|
+| Cassandra (CPU- 16Core; Memory- 64GB)|  51.57%   | 13.693 GB|

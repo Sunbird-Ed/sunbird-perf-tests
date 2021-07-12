@@ -1,4 +1,4 @@
-### Test Scenario:
+### Test Scenario: ```Cached API```
 
 Benchmarking Content Hierarchy API.
 
@@ -30,10 +30,13 @@ e.g.
 
 
 
-### Test Result
+### Test Result:
 
 | API               | Thread Count  | Samples  |Throughput | Errors%   | Avg.            |95th pct         |99th pct       |
 | ----------------- | ------------- | -------- | --------- | --------- | --------------- |--------------- |--------------- |
 | Content Hierarchy | 200           | 2000000  | 20946.8  | 0 (0.00%)  |2                |     4           |10         |
 
-*Note - This API is cached
+### Server Utilisation:
+| Backend          | CPU Usage %(max) | Memory Utilization (max) |
+| ------------- | ------------- |------------- |
+| Redis (CPU- 2core; Memory- 8GB)  |0.88% |	2.18 GB|

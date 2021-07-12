@@ -1,4 +1,4 @@
-### Test Scenario:
+### Test Scenario: ```Cached API```
 
 Benchmarking content read API.
 
@@ -29,8 +29,15 @@ e.g.
 - Update `host.csv` file data with correct host details before running the test. It can be domain details / Kubernetes Node IPs/ LB IPs/ Direct Service IPs with port details.
 - Update `contents.csv` file data with content Ids
 
-### Test Result
+### Test Result:
 
 | API           | Thread Count  | Samples  | Errors %     | Throughput/sec |Avg Resp Time|95th pct| 99th pct |
 | ------------- | ------------- | -------- | -------------| ---------------|-------------|--------|----------|
 | Content Read  | 200           | 20000000  | 0 (0.00%) | 15533.4          |    7       |    3  |    7    |
+
+
+### Server Utilisation:
+| Backend          | CPU Usage %(max) | Memory Utilization (max) |
+| ------------- | ------------- |------------- |
+| Content Service (CPU- 1core; Memory- 3GB)  |32% |472 MiB 	|
+| Cassandra (CPU- 16Core; Memory- 64GB)|15.40% | 13.22 GB|

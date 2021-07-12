@@ -5,8 +5,8 @@ Benchmarking Login scenario (with 4 api calls).
 
 ### Test Environment Details
 1. No of AKS node - 16
-2. No of learner service replicas - 8 (1 Core and 1 GB)
-3. KeyCloak Server - 4 servers
+2. No of learner service replicas - 8 (1 Core and 3 GB)
+3. KeyCloak Server - 4 servers (CPU- 4Core; Memory- 16GB)
 4. Release version - Release 3.9.0
 
 
@@ -23,8 +23,14 @@ e.g.
 - Update `host.csv` file data with correct host details before running the test. It can be domain details / Kubernetes Node IPs/ LB IPs/ Direct Service IPs with port details.
 - Update `userData.csv` with valid user email Ids.
 
-### Test Result
+### Test Result:
 
 |API                |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
 |-------------------|------------|--------|---------| -------------|--------------|---------|--------|
 |Login (4 API Calls)|40          |228601 |30(0.00%)| 304.8       | 115       | 546  |777  |
+
+
+### Server Utilisation:
+| Backend          | CPU Usage %(max) | Memory Utilization (max) |
+| ------------- | ------------- |------------- |
+| KeyCloak (CPU- 4Core; Memory- 16GB)|99%  | 2.18 GB|

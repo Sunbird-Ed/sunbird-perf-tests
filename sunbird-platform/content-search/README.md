@@ -5,7 +5,7 @@ Benchmarking Search Content API with different search queries.
 
 ### Test Environment Details:
 1. No of AKS node - 16
-2. No ofContent service replicas - 6 (1Core and 3GB)
+2. No of Content service replicas - 6 (1Core and 3GB)
 3. ES Cluster - 3 Nodes (CPU - 16core ; Memory - 32 GB)
 4. Release version - Release 3.9.0
 
@@ -27,8 +27,15 @@ e.g.
 - Update `host.csv` file data with correct host details before running the test. It can be domain details / Kubernetes Node IPs/ LB IPs/ Direct Service IPs with port details.
 - Update `searchQueryData.csv` file with correct search queries
 
-### Test Result
+### Test Result:
 
 | API             | Thread Count  | Errors%   | Throughput/sec  |Avg Resp Time |   95th pct  |  99th pct   |
 | --------------- | ------------- | --------- | --------------- |--------------|-------------|-------------|
 | Search Content  | 200           | 0 (0.00%) | 5009.9          |37            |56           | 99.99          |
+
+
+### Server Utilisation:
+| Backend          | CPU Usage %(max) | Memory Utilization (max) |
+| ------------- | ------------- |------------- |
+|Search Service (CPU-1 Core; Memory- 3 GB)  |52% |464 MiB|
+|ES (CPU- 16core ; Memory- 32GB)|65.18%  | 19.57 GB|

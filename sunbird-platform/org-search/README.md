@@ -1,13 +1,13 @@
-### Test Scenario
+### Test Scenario: ```Cached API```
 
 Benchmarking Org Search API.
 
 
 ### Test Environment Details
 1. No of AKS node - 16
-2. No of learner service replicas - 8 (1 Core and 1 GB)
+2. No of learner service replicas - 8 (1 Core and 3 GB)
 3. Cassandra Cluster- 5 Nodes; CPU- 8Core; Memory- 32GB
-4. Release version - NA
+4. Release version - Release 3.9.0
 
 
 **API End Point:** 
@@ -26,8 +26,14 @@ e.g.
 - Update `host.csv` file data with correct host details before running the test. It can be domain details / Kubernetes Node IPs/ LB IPs/ Direct Service IPs with port details.
 - Update `orgs.csv` file with valid org Ids
 
-### Test Result
+### Test Result:
 
 |API       |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
 |----------|------------|--------|---------| -------------|--------------|---------|--------|
 |Org Search|200         |10000000|0(0.00%) | 19608.1       | 2           | 4     |7    |
+
+
+### Server Utilisation:
+| Backend          | CPU Usage %(max) | Memory Utilization (max) |
+| ------------- | ------------- |------------- |
+| Cassandra (CPU- 16Core; Memory- 64GB)| 2.33% | 13.138 GB|

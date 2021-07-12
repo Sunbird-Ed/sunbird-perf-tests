@@ -29,8 +29,15 @@ e.g.
 
 
 
-### Test Result
+### Test Result:
 
 |API                |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
 |-------------------|------------|--------|---------| -------------|--------------|---------|--------|
 |Send Telemetry     |200         |4000000 |0(0.00%) | 7914.8       | 24          |  57    |186     |
+
+
+### Server Utilisation:
+| Backend          | CPU Usage %(max) | Memory Utilization (max) |
+| ------------- | ------------- |------------- |
+| Telemetry Service (CPU-1 Core; Memory- 1 GB)  |96% |126 MiB |
+| Kafka (CPU - 4core; Memory - 16GB)| 31.36%|6.79 GB |
