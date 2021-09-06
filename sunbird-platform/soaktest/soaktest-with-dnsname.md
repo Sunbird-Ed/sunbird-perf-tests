@@ -34,14 +34,14 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
 **Infra Configuration & Usage:**
 | Service Name | Configuration| CPU Usage (Max) | Load AVG(Max) |Memory Usage(Max) |
 |--------------|----------|--------------|----------|----------|
-|AKS Node      | 8 Core, 16GB |    80.72%  |     37.97     |6.500 GB|
-|Cassandra    | 5 Node (16 Core , 64GB) |   75.23%   |  46.67   |13.505 GB|
-|ES-LMS       | 3 nodes (16core , 64GB) |   35.59%   |  11.43   |28.5080 GB|
-|COMP-LMS     | 3 nodes (16core, 32 GB) |   30.86%   |  7.11    |19.6606 GB|
-|Kafka        | 3 nodes (4core , 16GB)  |   58.19%   |  5.17    |9.645 GB|
-|Redis - LP   | 1 node (2core, 8GB)     |    2.64%   |  0.23    |2.3 GB|
-|Redis -DP    | 1 node (32core, 128GB)  |    0.78%   |    0.3   |46.2 GB|
-|KeyCloak     | 4 nodes (4core, 16GB)   |   98.49%   |  11.24   | 7.520 GB |
+|AKS Node      | 8 Core, 16GB |    85.18%  |     40.85     |7.44 GB|
+|Cassandra    | 5 Node (16 Core , 64GB) |    76.77%    |  40.80    |13.136 GB |
+|ES-LMS       | 3 nodes (16core , 64GB) |   33.22%   |  8.66  |28.5714 GB |
+|COMP-LMS     | 3 nodes (16core, 32 GB) |   22.01%   |   5.95    |19.6741 GB |
+|Kafka        | 3 nodes (4core , 16GB)  |    52.43%   |  3.85     |9.397 GB  |
+|Redis - LP   | 1 node (2core, 8GB)     |    0.57%  |   0.25   |2.52581 GB |
+|Redis -DP    | 1 node (32core, 128GB)  |    2.91%   |     0.75  |39.47 GB|
+|KeyCloak     | 4 nodes (4core, 16GB)   |  99.85%  |  21.71    | 3.760 GB  |
 
 **JMX Details**
 - cluster1.jmx (1 JMeter Master, 4 JMeter Slaves)
