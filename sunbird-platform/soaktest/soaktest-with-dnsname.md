@@ -10,7 +10,7 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
 
 1. ## Sokatest with HPA Enabled - Test run with DNS Name
 
-- **AKS Node:** Min no of nodes - 8 and Max no of nodes - 40 
+- **AKS Cluster Autoscaler configuration:** Min no of nodes - 8 and Max no of nodes - 40 
 - **HPA with 70% CPU Usage**
 - **TPS: 19926 (with 27 AKS nodes)**
 - **Release 4.1.0**
