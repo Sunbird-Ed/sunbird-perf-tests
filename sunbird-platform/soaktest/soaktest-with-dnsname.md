@@ -43,6 +43,34 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
 |Redis -DP    | 1 node (32core, 128GB)  |    2.91%   |     0.75  |39.47 GB|
 |KeyCloak     | 4 nodes (4core, 16GB)   |  99.85%  |  21.71    | 3.760 GB  |
 
+**API-wise TPS:**
+
+| API Name | Throughput| Error % | Avg. Response Time |95th pct| 99th pct |
+|--------------|----------|--------------|----------|----------|-------|
+|dialAssemble| | | | | |
+|getCourseHierarchy| | | | | |
+|readContent| | | | | |
+|readForm| | | | | |
+|searchContent| | | | | |
+|sendTelemetry| | | | | |
+|getUserProfile| | | | | |
+|getUserProfileV2| | | | | |
+|getUserProfileV3| | | | | |
+|searchManagedUser| | | | | |
+|searchUser| | | | | |
+|updateUser| | | | | |
+|updateUserConsent| | | | | |
+|userFeed| | | | | |
+|getBatch| | | | | |
+|listCourseEnrollments| | | | | |
+|readContentState| | | | | |
+|searchCourseBatches| | | | | |
+|updateContentState| | | | | |
+|deviceProfile| | | | | |
+|deviceRegister| | | | | |
+|registerMobileDevicev2| | | | | |
+|login| | | | | |
+
 **JMX Details**
 - cluster1.jmx (1 JMeter Master, 4 JMeter Slaves)
   - ```sendTelemetry```
