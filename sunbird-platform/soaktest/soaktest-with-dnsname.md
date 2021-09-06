@@ -8,9 +8,9 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
   - Download from https://repo1.maven.org/maven2/kg/apc/jmeter-plugins-casutg/2.9/
 
 
-1. ## Sokatest with HPA Enabled - Test run with** DNS Name**
+1. ## Sokatest with HPA Enabled - Test run with DNS Name
 
-- **AKS Node:** Min no of nodes - 6 and Max no of nodes - 40 
+- **AKS Node:** Min no of nodes - 8 and Max no of nodes - 40 
 - **HPA with 70% CPU Usage**
 - **TPS: 19926 (with 27 AKS nodes)**
 - **Release 4.1.0**
@@ -18,17 +18,17 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
 **Service Pods configuration & Usage:**
 | Service Name | CPU Limit(Core)| Memory Limit | Min Pods | Max Pods | Pod Usage |CPU Utilization(Max) %|
 |--------------|----------|--------------|----------|----------|----------|----------|
-|Analytics     |  0.8     |    2.5G      |   2      |     6     |3|94|
-|API Manager   |    2     |   2.5G        |   2      |     30    |14|90|
-|AdminUtils    |    1     |     2G        |   1      |     6     |4|73|
-|Content       |   1      |   3.5G        |   1     |     12     |1| 15|
-|Knowledgemw   |   1      |   1.5G        |   2      |     10     |4|99|
+|Analytics     |  0.8     |    2.5G      |   2      |     6     |3|89|
+|API Manager   |    2     |   2.5G        |   2      |     30    |11|87|
+|AdminUtils    |    1     |     2G        |   1      |     6     |6|100|
+|Content       |   1      |   3.5G        |   1     |     12     |1| 2|
+|Knowledgemw   |   1      |   1.5G        |   2      |     10     |4|100|
 |Learner       |   1      |     3G        |    2    |     40     | 40|100|
 |LMS           |   1      |     3G        |    2    |     30     |17| 100|
-|Player        |    1     |     1G        |    1     |    16     |2|9|
+|Player        |    1     |     1G        |    1     |    16     |3|75|
 |Nginx-private-ingress    |    0.2 |   0.3G  |   2   |     6     |2|4|
-|Search        |   1      |   3G          |    1     |    10     |3|99|
-|Telemetry     |   0.8    |   1G          |     2    |    40     |40|100|
+|Search        |   1      |   3G          |    1     |    10     |2|90|
+|Telemetry     |   0.8    |   1G          |     2    |    40     |27|100|
 
 
 **Infra Configuration & Usage:**
