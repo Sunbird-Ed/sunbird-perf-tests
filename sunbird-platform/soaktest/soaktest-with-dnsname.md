@@ -43,12 +43,12 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
 |Redis -DP    | 1 node (32core, 128GB)  |    2.91%   |     0.75  |39.47 GB|
 |KeyCloak     | 4 nodes (4core, 16GB)   |  99.85%  |  21.71    | 3.760 GB  |
 
-**API-wise TPS:**
+**API wise TPS:**
 
 | API Name | Throughput| Error % | Avg. Response Time |95th pct| 99th pct |
 |--------------|----------|--------------|----------|----------|-------|
 |dialAssemble| 96.8| 0.00%| 55.89|70 |91 |
-|getCourseHierarchy|125.22 | | | | |
+|getCourseHierarchy|125.22 |0.00% | 2.6|3 |12 |
 |readContent|	213.23|	0.00%|	5.97|	2|	11|
 |readForm	|88.43|	0.02%|	203.97|	100	|4946|
 |searchContent|	211.25|	0.03%|	12.61|	22|	58|
