@@ -47,7 +47,7 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
 
 | API Name | Throughput| Error % | Avg. Response Time |95th pct| 99th pct |
 |--------------|----------|--------------|----------|----------|-------|
-|dialAssemble| | | | | |
+|dialAssemble| 96.8| 0.00%| 55.89|70 |91 |
 |getCourseHierarchy| | | | | |
 |readContent| | | | | |
 |readForm| | | | | |
