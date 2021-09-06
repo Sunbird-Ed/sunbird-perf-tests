@@ -10,7 +10,7 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
 ----------
 1. ## Sokatest with HPA Enabled - 25K TPS ##
 
-- **AKS Node:** Min no of nodes - 6 and Max no of nodes - 40 
+- **AKS Cluster Autoscaler configuration:** Min no of nodes - 6 and Max no of nodes - 40 
 - **HPA with 70% CPU Usage**
 - **TPS: 25138 (with 27 AKS nodes)**
 
@@ -75,7 +75,7 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
 --------
 2. ## Sokatest with HPA Enabled - 5K TPS ##
 
-- **AKS Node:** Min no of nodes - 6 and Max no of nodes - 40 
+- **AKS Cluster Autoscaler configuration:** Min no of nodes - 6 and Max no of nodes - 40 
 - **HPA with 70% CPU Usage**
 - **TPS: 4986 with 14 AKS Nodes**	
 
