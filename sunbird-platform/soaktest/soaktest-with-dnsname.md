@@ -12,7 +12,8 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
 
 - **AKS Node:** Min no of nodes - 6 and Max no of nodes - 40 
 - **HPA with 70% CPU Usage**
-- **TPS: 25138 (with 27 AKS nodes)**
+- **TPS: 19926 (with 27 AKS nodes)**
+- **Release 4.1.0**
 
 **Service Pods configuration & Usage:**
 | Service Name | CPU Limit(Core)| Memory Limit | Min Pods | Max Pods | Pod Usage |CPU Utilization(Max) %|
