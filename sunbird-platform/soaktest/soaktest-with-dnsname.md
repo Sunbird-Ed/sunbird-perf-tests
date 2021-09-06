@@ -48,28 +48,28 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
 | API Name | Throughput| Error % | Avg. Response Time |95th pct| 99th pct |
 |--------------|----------|--------------|----------|----------|-------|
 |dialAssemble| 96.8| 0.00%| 55.89|70 |91 |
-|getCourseHierarchy| | | | | |
-|readContent| | | | | |
-|readForm| | | | | |
-|searchContent| | | | | |
-|sendTelemetry| | | | | |
-|getUserProfile| | | | | |
-|getUserProfileV2| | | | | |
-|getUserProfileV3| | | | | |
-|searchManagedUser| | | | | |
-|searchUser| | | | | |
-|updateUser| | | | | |
-|updateUserConsent| | | | | |
-|userFeed| | | | | |
-|getBatch| | | | | |
-|listCourseEnrollments| | | | | |
-|readContentState| | | | | |
-|searchCourseBatches| | | | | |
-|updateContentState| | | | | |
-|deviceProfile| | | | | |
-|deviceRegister| | | | | |
-|registerMobileDevicev2| | | | | |
-|login| | | | | |
+|getCourseHierarchy|125.22 | | | | |
+|readContent|	213.23|	0.00%|	5.97|	2|	11|
+|readForm	|88.43|	0.02%|	203.97|	100	|4946|
+|searchContent|	211.25|	0.03%|	12.61|	22|	58|
+|sendTelemetry|	5409.17|0.00%|	44.16	|8|	19|
+|getUserProfile|	156.85|	0.00%|	80.11|	85|	110|
+|getUserProfileV2|	156.84|	0.00%|	80.16|	85|	108.99|
+|getUserProfileV3|	2440.53|	0.00%|	71.61|	21|	30|
+|searchManagedUser|	214.48|	0.00%|	615.92|	360|	503.99|
+|searchUser|	161.19|	0.00%	|45.55|	72|	96|
+|updateUser|	158.93|	0.00%|	63.35|	82|	107|
+|updateUserConsent|	159.56|	0.00%|	58.31|	83|	108|
+|userFeed|	524.68|	0.00%|	32.12|	46|	73|
+|getBatch|	133.77|	0.00%|	1.33|	2|	11|
+|listCourseEnrollments|	265.92|	0.00%|	744.91|	104|	146|
+|readContentState|1103.79|	0.00%	|96.43|	10|	16|
+|searchCourseBatches|	158.95|	0.00%|	63.31|	68|	97|
+|updateContentState|	1020.72|	0.00%|	116.24|	20|	37|
+|deviceProfile|	327.86|	0.00%|	5.58	|6|	14|
+|deviceRegister|	163.41|	0.00%|	6.81|	7	|16|
+|registerMobileDevicev2|	161.53|	0.00%|	20.83|	7	|17|
+|login| 278.94| 0.00%| 	95.49|120.00 |	155.00 |
 
 **JMX Details**
 - cluster1.jmx (1 JMeter Master, 4 JMeter Slaves)
