@@ -8,7 +8,7 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
   - Download from https://repo1.maven.org/maven2/kg/apc/jmeter-plugins-casutg/2.9/
 
 
-1. ## Sokatest with HPA Enabled - Test run with DNS Name
+1. ## Sokatest with HPA Enabled - Test run with** DNS Name**
 
 - **AKS Node:** Min no of nodes - 6 and Max no of nodes - 40 
 - **HPA with 70% CPU Usage**
