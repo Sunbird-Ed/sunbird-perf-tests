@@ -174,6 +174,5 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
 - Device Profile
 - Register Mobile Devicev2
 
----------
 3. ## Sokatest with HPA Enabled - Testrun with DNS Name 
 TestResult: [Test run result with DNS Name](https://github.com/juthipaul/sunbird-perf-tests/blob/master/sunbird-platform/soaktest/soaktest-with-dnsname.md).
