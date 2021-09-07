@@ -70,7 +70,7 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
 |updateUserConsent|	159.56|	0.00%|	58.31|	83|	108|
 |userFeed|	524.68|	0.00%|	32.12|	46|	73|
 |updateContentState|	1020.72|	0.00%|	116.24|	20|	37|
-|login| 278.94| 0.00%| 	95.49|120.00 |	155.00 |
+|login| 278.94| 0.00%| 	95.49|120 |	155 |
 
 **JMX Details**
 - cluster1.jmx (1 JMeter Master, 4 JMeter Slaves)
