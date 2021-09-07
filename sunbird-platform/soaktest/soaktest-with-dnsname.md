@@ -72,9 +72,10 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
 |updateContentState|	1020.72|	0.00%|	116.24|	20|	37|
 |login| 278.94| 0.00%| 	95.49|120 |	155 |
 
+----
 **JMX Script Details**
-
 Soak test were ran from mutliple JMeter cluster. Following are the cluster wise details.
+
 - Cluster 1
   - 1 JMeter Master, 4 JMeter Slaves
   - JMeter Script [cluster1.jmx](https://github.com/juthipaul/sunbird-perf-tests/blob/master/sunbird-platform/soaktest/cluster1.jmx)
@@ -115,7 +116,7 @@ Soak test were ran from mutliple JMeter cluster. Following are the cluster wise 
     - ```deviceProfile```
     - ```registerMobileDevicev2```
 -  Cluster 5
-  - 1 JMeter Master
-  - JMeter Script [login.jmx](https://github.com/juthipaul/sunbird-perf-tests/blob/master/sunbird-platform/soaktest/login.jmx)
-  - List of APIs
-     - ```login scenario```
+    - 1 JMeter Master
+    - JMeter Script [login.jmx](https://github.com/juthipaul/sunbird-perf-tests/blob/master/sunbird-platform/soaktest/login.jmx)
+    - List of APIs
+       - ```login scenario```
