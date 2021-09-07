@@ -1,4 +1,4 @@
-1. ## Sokatest with HPA Enabled - Test run with DNS Name
+## Sokatest with HPA Enabled - Test run with DNS Name
 
 - **AKS Cluster Autoscaler configuration:** Min no of nodes - 8 and Max no of nodes - 40 
 - **HPA threshold: 70% CPU**
