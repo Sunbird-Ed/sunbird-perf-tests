@@ -80,7 +80,7 @@ Following are the cluster wise detailed details.
 
 - Cluster 1
   - 1 JMeter Master, 4 JMeter Slaves
-  - JMeter Script [cluster1.jmx](https://github.com/juthipaul/sunbird-perf-tests/blob/master/sunbird-platform/soaktest/cluster1.jmx)
+  - JMeter Script Link [cluster1.jmx](https://github.com/juthipaul/sunbird-perf-tests/blob/master/sunbird-platform/soaktest/cluster1.jmx)
   - List of APIs
     - ```sendTelemetry```
     - ```readContent```
@@ -90,7 +90,7 @@ Following are the cluster wise detailed details.
     - ```dialAssemble``` 
 - Cluster 2
   - 1 JMeter Master, 4 JMeter Slaves
-  - JMeter Script [learner.jmx](https://github.com/juthipaul/sunbird-perf-tests/blob/master/sunbird-platform/soaktest/learner.jmx)
+  - JMeter Script Link [learner.jmx](https://github.com/juthipaul/sunbird-perf-tests/blob/master/sunbird-platform/soaktest/learner.jmx)
   - List of APIs
     - ```getUserProfileV3```
     - ```getUserProfileV2``` 
@@ -103,7 +103,7 @@ Following are the cluster wise detailed details.
     - ```searchUser```
 - Cluster 3
   - 1 JMeter Master, 4 JMeter Slaves
-  - JMeter Script [lms.jmx](https://github.com/juthipaul/sunbird-perf-tests/blob/master/sunbird-platform/soaktest/lms.jmx)
+  - JMeter Script Link [lms.jmx](https://github.com/juthipaul/sunbird-perf-tests/blob/master/sunbird-platform/soaktest/lms.jmx)
   - List of APIs
     - ```readContentState```
     - ```updateContentState```
@@ -112,13 +112,13 @@ Following are the cluster wise detailed details.
     - ```searchCourseBatches```
 - Cluster 4
   - 1 JMeter Master, 4 JMeter Slaves
-  - JMeter Script [analytics.jmx](https://github.com/juthipaul/sunbird-perf-tests/blob/master/sunbird-platform/soaktest/analytics.jmx)
+  - JMeter Script Link [analytics.jmx](https://github.com/juthipaul/sunbird-perf-tests/blob/master/sunbird-platform/soaktest/analytics.jmx)
   - List of APIs
     - ```deviceRegister```
     - ```deviceProfile```
     - ```registerMobileDevicev2```
 -  Cluster 5
     - 1 JMeter Master
-    - JMeter Script [login.jmx](https://github.com/juthipaul/sunbird-perf-tests/blob/master/sunbird-platform/soaktest/login.jmx)
+    - JMeter Script Link [login.jmx](https://github.com/juthipaul/sunbird-perf-tests/blob/master/sunbird-platform/soaktest/login.jmx)
     - List of APIs
        - ```login scenario```
