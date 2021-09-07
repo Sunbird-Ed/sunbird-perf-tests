@@ -17,7 +17,7 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
 - **Release version: Release-4.1.0**
 
 **Service Pods configuration & Usage:**
-| Service Name | CPU Limit(Core)| Memory Limit | Min Pods | Max Pods | Pod Usage |CPU Utilization(Max) %|
+| Service Name | CPU Limit(Core)| Memory Limit |HPA Min Pods | HPA Max Pods | Max Pods Used |CPU Utilization(Max) %|
 |--------------|----------|--------------|----------|----------|----------|----------|
 |Analytics     |  0.8     |    2.5G      |   2      |     6     |3|89|
 |API Manager   |    2     |   2.5G        |   2      |     30    |11|87|
