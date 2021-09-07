@@ -12,7 +12,7 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
 
 - **AKS Cluster Autoscaler configuration:** Min no of nodes - 8 and Max no of nodes - 40 
 - **HPA threshold: 70% CPU**
-- **Transactions per second: 19926**
+- **Max transactions per second: 19926**
 - **Max no of AKS node used: 27**
 - **Release version: Release-4.1.0**
 
@@ -74,7 +74,9 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
 
 ----
 **JMX Script Details**
-Soak test were ran from mutliple JMeter cluster. Following are the cluster wise details.
+
+Multple JMeter cluster are being used for this test. APIs were grouped and ran from different cluster.
+Following are the cluster wise detailed details.
 
 - Cluster 1
   - 1 JMeter Master, 4 JMeter Slaves
