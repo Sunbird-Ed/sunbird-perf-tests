@@ -10,9 +10,10 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
 ----------
 1. ## Sokatest with HPA Enabled - 25K TPS ##
 
-- **AKS Node:** Min no of nodes - 6 and Max no of nodes - 40 
-- **HPA with 70% CPU Usage**
-- **TPS: 25138 (with 27 AKS nodes)**
+- **AKS Cluster Autoscaler configuration:** Min no of nodes - 6 and Max no of nodes - 40 
+- **HPA threshold: 70% CPU**
+- **Max transactions per second: 25138**
+- **Max no of AKS node used: 27**
 
 **Service Pods configuration & Usage:**
 | Service Name | CPU Limit(Core)| Memory Limit | Min Pods | Max Pods | Pod Usage |CPU Utilization(Max) %|
@@ -75,7 +76,7 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
 --------
 2. ## Sokatest with HPA Enabled - 5K TPS ##
 
-- **AKS Node:** Min no of nodes - 6 and Max no of nodes - 40 
+- **AKS Cluster Autoscaler configuration:** Min no of nodes - 6 and Max no of nodes - 40 
 - **HPA with 70% CPU Usage**
 - **TPS: 4986 with 14 AKS Nodes**	
 
@@ -174,3 +175,5 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
 - Device Profile
 - Register Mobile Devicev2
 
+3. ## Sokatest with HPA Enabled - Testrun with DNS Name 
+TestResult: [Test run result with DNS Name](https://github.com/juthipaul/sunbird-perf-tests/blob/master/sunbird-platform/soaktest/soaktest-with-dnsname.md).
