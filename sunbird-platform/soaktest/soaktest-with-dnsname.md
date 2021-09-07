@@ -1,13 +1,3 @@
-**Note:**
-
-To run these soaktest APIs jmx scripts following jars needs to be placed into JMeter’s lib/ext directory. Download the JMeter Plugins Manager JAR files from the given link and then put it into JMeter's lib/ext directory.
-
-1. jmeter-plugins-cmn-jmeter-0.6.jar 
-  - Download from https://repo1.maven.org/maven2/kg/apc/jmeter-plugins-cmn-jmeter/0.6/
-2. jmeter-plugins-casutg-2.9.jar
-  - Download from https://repo1.maven.org/maven2/kg/apc/jmeter-plugins-casutg/2.9/
-----------
-
 1. ## Sokatest with HPA Enabled - Test run with DNS Name
 
 - **AKS Cluster Autoscaler configuration:** Min no of nodes - 8 and Max no of nodes - 40 
@@ -122,3 +112,12 @@ Following are the cluster wise detailed details.
     - JMeter Script Link [login.jmx](https://github.com/juthipaul/sunbird-perf-tests/blob/master/sunbird-platform/soaktest/login.jmx)
     - List of APIs
        - ```login scenario```
+____________
+**Note:**
+
+To run these soaktest APIs jmx scripts following jars needs to be placed into JMeter’s lib/ext directory. Download the JMeter Plugins Manager JAR files from the given link and then put it into JMeter's lib/ext directory.
+
+1. jmeter-plugins-cmn-jmeter-0.6.jar 
+  - Download from https://repo1.maven.org/maven2/kg/apc/jmeter-plugins-cmn-jmeter/0.6/
+2. jmeter-plugins-casutg-2.9.jar
+  - Download from https://repo1.maven.org/maven2/kg/apc/jmeter-plugins-casutg/2.9/
