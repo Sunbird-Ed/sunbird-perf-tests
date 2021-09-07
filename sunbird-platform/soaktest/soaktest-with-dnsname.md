@@ -75,7 +75,7 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
 ----
 **JMX Script Details**
 
-Multple JMeter cluster are being used for this test. APIs were grouped and ran from different cluster.
+Multple JMeter clusters are being used for this test. APIs were grouped and ran from different cluster.
 Following are the cluster wise detailed details.
 
 - Cluster 1
