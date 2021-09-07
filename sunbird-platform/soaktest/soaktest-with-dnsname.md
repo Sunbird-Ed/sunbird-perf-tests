@@ -16,7 +16,7 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
 - **Max no of AKS node used: 27**
 - **Release version: Release-4.1.0**
 
-**Service Pods configuration & Usage:**
+**Service Pods Configuration & Usage:**
 | Service Name | CPU Limit(Core)| Memory Limit |HPA Min Pods | HPA Max Pods | Max Pods Used |CPU Utilization(Max) %|
 |--------------|----------|--------------|----------|----------|----------|----------|
 |Analytics     |  0.8     |    2.5G      |   2      |     6     |3|89|
@@ -33,16 +33,16 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
 
 
 **Infra Configuration & Usage:**
-| Service Name | Configuration| CPU Usage (Max) | Load AVG(Max) |Memory Usage(Max) |
-|--------------|----------|--------------|----------|----------|
-|AKS Node      | 8 Core, 16GB |    85.18%  |     40.85     |7.44 GB|
-|Cassandra    | 5 Node (16 Core , 64GB) |    76.77%    |  40.80    |13.136 GB |
-|ES-LMS       | 3 nodes (16core , 64GB) |   33.22%   |  8.66  |28.5714 GB |
-|COMP-LMS     | 3 nodes (16core, 32 GB) |   22.01%   |   5.95    |19.6741 GB |
-|Kafka        | 3 nodes (4core , 16GB)  |    52.43%   |  3.85     |9.397 GB  |
-|Redis - LP   | 1 node (2core, 8GB)     |    0.57%  |   0.25   |2.52581 GB |
-|Redis -DP    | 1 node (32core, 128GB)  |    2.91%   |     0.75  |39.47 GB|
-|KeyCloak     | 4 nodes (4core, 16GB)   |  99.85%  |  21.71    | 3.760 GB  |
+| Service Name | Configuration| CPU Usage (Max) | Memory Usage(Max) |
+|--------------|----------|--------------|----------|
+|AKS Node      | 8 Core, 16GB           |    85.18%  |7.44 GB     |
+|Cassandra    | 5 Node (16 Core , 64GB) |    76.77%  | 13.136 GB  |
+|ES-LMS       | 3 nodes (16core , 64GB) |   33.22%   | 28.5714 GB |
+|COMP-LMS     | 3 nodes (16core, 32 GB) |    22.01%  |   19.6741 GB |
+|Kafka        | 3 nodes (4core , 16GB)  |    52.43%  | 9.397 GB  |
+|Redis - LP   | 1 node (2core, 8GB)     |    0.57%   |   2.52581 GB |
+|Redis -DP    | 1 node (32core, 128GB)  |    2.91%   |    39.47 GB|
+|KeyCloak     | 4 nodes (4core, 16GB)   |   99.85%    |  3.760 GB  |
 
 **API wise TPS:**
 
