@@ -72,24 +72,31 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
 |updateContentState|	1020.72|	0.00%|	116.24|	20|	37|
 |login| 278.94| 0.00%| 	95.49|120 |	155 |
 
-**JMX Details**
-- cluster1.jmx (1 JMeter Master, 4 JMeter Slaves)
-  - ```sendTelemetry```
-  - ```readContent```
-  - ```searchContent```
-  - ```readForm```
-  - ```getCourseHierarchy```
-  - ```dialAssemble``` 
-- learner.jmx (1 JMeter Master, 4 JMeter Slaves)
-  - ```getUserProfileV3```
-  - ```getUserProfileV2``` 
-  - ```getUserProfile```
-  - ```searchManagedUser```
-  - ```userFeed```
-  - ```readUserConsent```
-  - ```updateUserConsent```
-  - ```updateUser```
-  - ```searchUser```
+**JMX Script Details**
+
+Soak test were ran from mutliple JMeter cluster. Following are the cluster wise details.
+- Cluster 1
+  - 1 JMeter Master, 4 JMeter Slaves
+  - List of APIs
+    - ```sendTelemetry```
+    - ```readContent```
+    - ```searchContent```
+    - ```readForm```
+    - ```getCourseHierarchy```
+    - ```dialAssemble``` 
+- Cluster 2
+  - 1 JMeter Master, 4 JMeter Slaves
+  - JMX Script [learner.jmx](https://github.com/juthipaul/sunbird-perf-tests/blob/master/sunbird-platform/soaktest/learner.jmx)
+  - List of APIs
+    - ```getUserProfileV3```
+    - ```getUserProfileV2``` 
+    - ```getUserProfile```
+    - ```searchManagedUser```
+    - ```userFeed```
+    - ```readUserConsent```
+    - ```updateUserConsent```
+    - ```updateUser```
+    - ```searchUser```
 - lms.jmx (1 JMeter Master, 4 JMeter Slaves)
   - ```readContentState```
   - ```updateContentState```
