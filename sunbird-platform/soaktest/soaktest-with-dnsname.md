@@ -77,6 +77,7 @@ To run these soaktest APIs jmx scripts following jars needs to be placed into JM
 Soak test were ran from mutliple JMeter cluster. Following are the cluster wise details.
 - Cluster 1
   - 1 JMeter Master, 4 JMeter Slaves
+  - JMeter Script [cluster1.jmx](https://github.com/juthipaul/sunbird-perf-tests/blob/master/sunbird-platform/soaktest/cluster1.jmx)
   - List of APIs
     - ```sendTelemetry```
     - ```readContent```
@@ -86,7 +87,7 @@ Soak test were ran from mutliple JMeter cluster. Following are the cluster wise 
     - ```dialAssemble``` 
 - Cluster 2
   - 1 JMeter Master, 4 JMeter Slaves
-  - JMX Script [learner.jmx](https://github.com/juthipaul/sunbird-perf-tests/blob/master/sunbird-platform/soaktest/learner.jmx)
+  - JMeter Script [learner.jmx](https://github.com/juthipaul/sunbird-perf-tests/blob/master/sunbird-platform/soaktest/learner.jmx)
   - List of APIs
     - ```getUserProfileV3```
     - ```getUserProfileV2``` 
@@ -97,15 +98,24 @@ Soak test were ran from mutliple JMeter cluster. Following are the cluster wise 
     - ```updateUserConsent```
     - ```updateUser```
     - ```searchUser```
-- lms.jmx (1 JMeter Master, 4 JMeter Slaves)
-  - ```readContentState```
-  - ```updateContentState```
-  - ```istCourseEnrollments```
-  - ```getBatch```
-  - ```searchCourseBatches```
-- ananlytics.jmx (1 JMeter Master, 2 JMeter Slaves)
-  - ```deviceRegister```
-  - ```deviceProfile```
-  - ```registerMobileDevicev2```
-- login.jmx (1 JMeter Master)
-  - ```login scenario```
+- Cluster 3
+  - 1 JMeter Master, 4 JMeter Slaves
+  - JMeter Script [lms.jmx](https://github.com/juthipaul/sunbird-perf-tests/blob/master/sunbird-platform/soaktest/lms.jmx)
+  - List of APIs
+    - ```readContentState```
+    - ```updateContentState```
+    - ```istCourseEnrollments```
+    - ```getBatch```
+    - ```searchCourseBatches```
+- Cluster 4
+  - 1 JMeter Master, 4 JMeter Slaves
+  - JMeter Script [analytics.jmx](https://github.com/juthipaul/sunbird-perf-tests/blob/master/sunbird-platform/soaktest/analytics.jmx)
+  - List of APIs
+    - ```deviceRegister```
+    - ```deviceProfile```
+    - ```registerMobileDevicev2```
+-  Cluster 5
+  - 1 JMeter Master
+  - JMeter Script [login.jmx](https://github.com/juthipaul/sunbird-perf-tests/blob/master/sunbird-platform/soaktest/login.jmx)
+  - List of APIs
+     - ```login scenario```
