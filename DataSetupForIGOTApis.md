@@ -2,7 +2,7 @@
 
 ### Step 1:Inorder to Create User follow the below steps
 
-1.CreateUser.jmx using this you can generate newlyCreatedUserList.csv
+1.CreateUser.jmx using this newlyCreatedUserList.csv gets generated.
 
 2.Needed any one bearerToken for CreateUser.jmx
 
@@ -10,7 +10,7 @@
 
 ### Step 2:After Creating Users follow below steps
 
-1.AssignDepartmentAndRole.jmx using this you can assign role to created users.
+1.AssignDepartmentAndRole.jmx using this assigning roles to created users.
 
 2.Have to set the cookie in header for that department mdo admin in header
 
