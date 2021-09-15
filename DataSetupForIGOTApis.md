@@ -58,6 +58,6 @@ all the above 4 steps can be executed one by one slave.
 
 1.Few Network hub apis requires two csvs one is AddConnectionFrom.csv and other is AddConnectionTo.csv
 
-2.Both the files can be achived by spliting the Cookie.csv file to two and save one with AddConnectionFrom.csv and other with AddConnectionTo.csv
+2.Both the files can be achived by spliting the Cookie.csv file into two and save one with AddConnectionFrom.csv and other with AddConnectionTo.csv
 
 3.AddConnectionFrom.csv and AddConnectionTo.csv both files contains userIds which is required for network Apis.
