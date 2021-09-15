@@ -1,6 +1,0 @@
-slug,identifier,isRootOrg
-channel1,root-org-1,true
-channel2,root-org-2,false
-
-#The above lines are sample. Enter the slug, channel name and is root org details. Do not remove first line which is the header line.
-#This file should contain only the above line. Please remove these comment lines before running.
