@@ -19,7 +19,7 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 5 slaves in) were setu
 
 ### Infrastructure and Container details
 * Exact same infrastructre, container replicas, container cpu and memory limits were setup for Kubernetes and Docker
-* Docker and Kubernetes were setup with 12 Nodes - Standard D4s v3 (4 vcpus, 16 GiB memory) on Azure
+* Docker and Kubernetes were setup with 7 Nodes - Standard f8s v3 (8 vcpus, 16 GiB memory) on Azure
 * Kubernetes was setup in AKS
   * In AKS, Azure CNI networking was used
   * A subnet with a CIDR /22 in the VNET was created for AKS cluster
