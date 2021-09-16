@@ -28,9 +28,9 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 5 slaves in) were setu
   * You will be able to directly connect to the pod using the pod ip
   * If you inspect the traffic to / from pods, you will see the IP of the pod as source / destination and not the node in which it is running (there is no NAT between pod and node)
   * For more information on Azure CNI, please visit - https://docs.microsoft.com/en-us/azure/aks/configure-azure-cni
-* All the 12 nodes were used to invoke the service from Jmeter in round robin
+* All the 7 nodes were used to invoke the service from Jmeter in round robin
 * Container repilcas -
-  * Proxy - 12 (cpu limit - 1 core, memory limit - 1GB)
+  * Proxy - 7 (cpu limit - 1 core, memory limit - 1GB)
   * Kong - 6 (cpu limit - 1 core, memory limit - 1GB)
   * Player - 8 (cpu limit - 1.5 core, memory limit - 1GB)
   * KnowledgeMW - 8 (cpu limit - 2 core, memory limit - 4GB)
