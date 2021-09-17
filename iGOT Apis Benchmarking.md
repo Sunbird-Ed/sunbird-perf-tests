@@ -99,3 +99,17 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 5 slaves in) were setu
 | LatestDiscussion      | 100          | 5497186       | 3           | 645.59   | 267                         | 484                         | 190.29               | 
 | Recommended Connection| 100          | 3939967       | 3           | 901.54   | 271                         | 785.96                      | 136.39               |
 | Send Telemetry        | 100          | 34939561      | 1           | 100.09   | 26                          | 37                          | 1209.47              |
+
+**4. Discussion Hub Individual API benchmarking** 
+
+>**Kubernetes**
+
+* Ran internally with in azure with Redis implementation.
+
+| API            | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time| Throughput (req/sec) | 
+|----------------------|--------------|---------------|-------------|----------|----------|----------|----------------------| 
+| Create Discussion    | 100          | 100000        | 9           | 67.02    | 241      | 445.99   | 1306.57              | 
+| Reply to Topic       | 100          | 100000        | 413         | 93.25    | 315      | 1627.99  | 964.83               | 
+| Topic Read           | 100          | 1000          | 0           | 1251.66  | 3144.95  | 4249.75  | 67.89                | 
+| up Vote              | 100          | 10000         | 0           | 28.47    | 46       | 199      | 828.43               | 
+| Down Vote            | 100          | 10000         | 0           | 32.33    | 52.95    | 280.99   | 759.47               | 
