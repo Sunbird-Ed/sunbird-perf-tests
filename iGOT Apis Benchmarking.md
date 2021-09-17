@@ -113,3 +113,14 @@ For benchmarking the APIs, one Jmeter cluster (1 master + 5 slaves in) were setu
 | Topic Read           | 100          | 1000          | 0           | 1251.66  | 3144.95  | 4249.75  | 67.89                | 
 | up Vote              | 100          | 10000         | 0           | 28.47    | 46       | 199      | 828.43               | 
 | Down Vote            | 100          | 10000         | 0           | 32.33    | 52.95    | 280.99   | 759.47               | 
+
+
+
+* Ran Externally from AWS to Azure with Redis implementation.
+
+| API            | Thread Count | No of Samples | Error Count | Avg (ms) | 95 percentile response time | 99 percentile response time| Throughput (req/sec) | 
+|----------------------|--------------|---------------|-------------|----------|----------|----------|----------------------| 
+| Create Discussion    | 100          | 100000        | 0           | 107.99   | 186      | 328      | 705.51               | 
+| Reply to Topic       | 100          | 100000        | 0           | 108.62   | 206      | 428.98   | 820.62               | 
+| up Vote              | 100          | 100000        | 0           | 86.27    | 176      | 368.9    | 1011.39              | 
+| Down Vote            | 100          | 100000        | 3236        | 84.45    | 126      | 355.99   | 938.89               | 
