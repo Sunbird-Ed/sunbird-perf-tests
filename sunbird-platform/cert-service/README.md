@@ -33,4 +33,5 @@ e.g.
 ### Server Utilisation:
 | Backend          | CPU Usage %(max) | Memory Utilization (max) |
 | ------------- | ------------- |------------- |
-||||
+|Cert service- 16 (CPU- 1 Core; Memory- 1 GB)|48%|621 MiB|
+|Print service- 16 (CPU- 1 Core; Memory- 1 GB)|100%|792 MiB  |
