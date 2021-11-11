@@ -37,4 +37,4 @@ e.g.
 | Backend          | CPU Usage %(max) | Memory Utilization (max) |
 | ------------- | ------------- |------------- |
 | LMS Service (CPU-1 Core; Memory- 3 GB)  |100% |462 MiB |
-| ES (CPU- 16core ; Memory- 64GB)| 24.43%  |  28.3623 GB|
+| ES (CPU- 16core ; Memory- 64GB)| 24.43%  |  28.36 GB|
