@@ -39,4 +39,4 @@ e.g.
 ### Server Utilisation:
 | Backend          | CPU Usage %(max) | Memory Utilization (max) |
 | ------------- | ------------- |------------- |
-| Redis (CPU- 2core; Memory- 8GB)  |0.27%  |	2.15 GB|
+| Redis (CPU- 2core; Memory- 8GB)  |0.27%  |	2.15 GB| 
