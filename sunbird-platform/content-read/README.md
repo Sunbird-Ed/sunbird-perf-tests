@@ -9,7 +9,7 @@ Benchmarking content read API.
 3. ES Cluster - 3 Nodes  (CPU - 16core ; Memory - 32 GB)
 4. Cassandra Cluster- 5 Nodes (CPU- 8Core; Memory- 32GB)
 5. Redis - 1 node  (CPU- 2core; Memory - 8GB)
-6. Release version - NA
+6. Release version - Release 4.3.0
 
 
 **API End Point:** 
