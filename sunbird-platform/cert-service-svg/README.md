@@ -1,6 +1,6 @@
 ### Test Scenario:
 
-Benchmarking certificate pdf download API.
+Benchmarking certificate svg generate API.
 
 ### Test Environment Details:
 1. No of AKS node - 16
