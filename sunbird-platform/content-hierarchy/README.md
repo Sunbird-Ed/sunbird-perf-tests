@@ -9,7 +9,7 @@ Benchmarking Content Hierarchy API.
 2. No of content service replica - 6 (1 Core and 3 GB)
 3. ES Cluster - 3 nodes (CPU- 8core ; Memory- 32GB)
 4. Cassandra Cluster- 5 Nodes (CPU- 16Core; Memory- 64GB)
-4. Release version - Release 3.9.0
+4. Release version - Release 4.3.0
 
 
 **API End Point:**  `/api/course/v1/hierarchy`
@@ -34,9 +34,9 @@ e.g.
 
 | API               | Thread Count  | Samples  |Throughput | Errors%   | Avg.            |95th pct         |99th pct       |
 | ----------------- | ------------- | -------- | --------- | --------- | --------------- |--------------- |--------------- |
-| Content Hierarchy | 200           | 2000000  | 20946.8  | 0 (0.00%)  |2                |     4           |10         |
+| Content Hierarchy | 200           | 2000000  | 20981.5  | 0 (0.00%)  |1                |     5           |11         |
 
 ### Server Utilisation:
 | Backend          | CPU Usage %(max) | Memory Utilization (max) |
 | ------------- | ------------- |------------- |
-| Redis (CPU- 2core; Memory- 8GB)  |0.88% |	2.18 GB|
+| Redis (CPU- 2core; Memory- 8GB)  |0.27%  |	2.15 GB|
