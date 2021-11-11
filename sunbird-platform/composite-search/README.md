@@ -37,4 +37,4 @@ e.g.
 | Backend          | CPU Usage %(max) | Memory Utilization (max) |
 | ------------- | ------------- |------------- |
 | Search Service (CPU-1 Core; Memory- 3 GB)  |89% | 540 MiB |
-| ES (CPU- 8core ; Memory- 32GB)|56.46%  |19.5943 GB	|
+| ES (CPU- 8core ; Memory- 32GB)|56.46%  |19.5943 GB	| 
