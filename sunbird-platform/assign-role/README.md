@@ -4,10 +4,10 @@ Benchmarking Assign Role API.
 
 ### Test Environment Details:
 1. No of AKS node - 16
-2. No of learner service replica - 16 (1 Core and 3 GB)
-4. ES Cluster - 3 nodes (CPU- 16core ; Memory- 64GB)
-5. Cassandra Cluster- 5 Nodes (CPU- 16Core; Memory- 64GB)
-6. Release version - Release 3.9.0
+2. No of learner service replica - 16 (CPU- 1 Core; Memory- 3 GB)
+4. ES Cluster - 3 nodes (CPU- 16 Core; Memory- 64 GB)
+5. Cassandra Cluster- 5 Nodes (CPU- 16 Core; Memory- 64 GB)
+6. Release version - Release 4.3.0
 
 **API End Point:** 
 `/api/user/v1/role/assign`
@@ -32,11 +32,11 @@ e.g.
 
 | API           | Thread Count  | Samples  | Errors%   | Throughput/sec  |Avg Resp Time  |   95th pct  |  99th pct   |
 | ------------- | ------------- | -------- | --------- | --------------- |---------------|-------------|-------------|
-| Assign Role   | 200           | 2000000   | 0 (0.00%) | 2686.3         |   72         |      110    |  194       |
+| Assign Role   | 200           | 2000000   | 0 (0.00%) | 2632        |   74         |      187    |  214       |
 
 ### Server Utilisation:
 | Backend          | CPU Usage %(max) | Memory Utilization (max) |
 | ------------- | ------------- |------------- |
-| Learner Service (CPU-1 Core; Memory- 3 GB)  |100% |869 MiB|
-| Cassandra (CPU- 16Core; Memory- 64GB)| 29.76% | 28.46 GB|
-| ES (CPU- 16core ; Memory- 64GB)|19.04% | 28.46 GB|
+| Learner Service (CPU-1 Core; Memory- 3 GB)  |100% |883 MiB |
+| Cassandra (CPU- 16Core; Memory- 64GB)|  28.71% | 13.21 GB |
+| ES (CPU- 16core ; Memory- 64GB)|28.78% | 28.51 GB|
