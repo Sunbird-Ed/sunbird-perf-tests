@@ -7,7 +7,7 @@ Benchmarking Batch List API.
 2. No of lms service replica - 8 (1 Core and 3 GB)
 4. ES Cluster - 3 nodes (CPU- 16core ; Memory- 64GB)
 5. Cassandra Cluster- 5 Nodes (CPU- 16Core; Memory- 64GB)
-6. Release version - Release 4.0.0
+6. Release version - Release 4.3.0
 
 **API End Point:** 
 `/api/course/v1/batch/list`
@@ -31,10 +31,10 @@ e.g.
 
 | API           | Thread Count  | Samples  | Errors%   | Throughput/sec  |Avg Resp Time  |   95th pct  |  99th pct   |
 | ------------- | ------------- | -------- | --------- | --------------- |---------------|-------------|-------------|
-|  Batch List  |       200    |  1000000  | 0 (0.00%) |    3448.8      |     52      |    81     |   89    |
+|  Batch List  |       200    |  1000000  | 0 (0.00%) |    3265.3      |     55      |    86     |   91    |
 
 ### Server Utilisation:
 | Backend          | CPU Usage %(max) | Memory Utilization (max) |
 | ------------- | ------------- |------------- |
-| LMS Service (CPU-1 Core; Memory- 3 GB)  |100% |545 MiB |
-| ES (CPU- 16core ; Memory- 64GB)|26.89% |  28.38 GB|
+| LMS Service (CPU-1 Core; Memory- 3 GB)  |100% |462 MiB |
+| ES (CPU- 16core ; Memory- 64GB)| 24.43%  |  28.3623 GB|
