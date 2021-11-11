@@ -38,6 +38,6 @@ e.g.
 ### Server Utilisation:
 | Backend          | CPU Usage %(max) | Memory Utilization (max) |
 | ------------- | ------------- |------------- |
-| Learner Service (CPU-1 Core; Memory- 3 GB)  |98 | 888 MiB   |
+| Learner Service (CPU-1 Core; Memory- 3 GB)  |98% | 888 MiB   |
 |Cassandra (CPU- 16Core; Memory- 64GB)| 14.97%  | 13.153 GB |
 |KeyCloak (CPU- 4core ; Memory- 16GB)|41.22%| 7.086 GB|
