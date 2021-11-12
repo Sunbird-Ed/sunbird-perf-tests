@@ -7,7 +7,7 @@ Benchmarking Get System Settings API.
 1. No of AKS node - 16
 2. No of learner service replicas - 8 (1 Core and 3 GB)
 3. Cassandra Cluster- 5 Nodes (CPU- 8Core; Memory- 32GB)
-4. Release version - Release 3.9.0
+4. Release version - Release 4.3.0
 
 
 **API End Point** 
@@ -31,7 +31,7 @@ e.g.
 
 |API                |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
 |-------------------|------------|--------|---------| -------------|--------------|---------|--------|
-|Get System Settings|400         |4000000 |0(0.00%) | 20597.9       |0           |  1      |3      |
+|Get System Settings|400         |2000000 |0(0.00%) | 23556.3       |0           |  1      |5      |
 
 
 ### Server Utilisation:
