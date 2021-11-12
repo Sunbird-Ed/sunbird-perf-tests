@@ -34,7 +34,7 @@ e.g.
 
 |API                |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
 |-------------------|------------|--------|---------| -------------|--------------|---------|--------|
-|TNC Accept         |200         |1000000 |0(0.00%)| 2217        | 23           |  82     |93  |
+|Group TNC Accept         |200         |1000000 |0(0.00%)| 2217        | 23           |  82     |93  |
 
 
 ### Server Utilisation:
