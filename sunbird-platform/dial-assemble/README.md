@@ -9,7 +9,7 @@ Benchmarking Dial Assemble API.
 2. No of search service replicas - 8 (1 core and 3 GB)
 4. ES Cluster - 3 nodes (CPU- 8core ; Memory- 32GB)
 5. Cassandra Cluster- 5 Nodes (CPU- 16Core; Memory- 64GB)
-6. Release version - Release 3.9.0
+6. Release version - Release 4.3.0
 
 
 **API End Point:** 
@@ -36,12 +36,12 @@ e.g.
 
 | API           | Thread Count  | Samples  | Errors%   | Throughput/sec|Avg Resp Time| 95th pct | 99th pct |
 | ------------- | ------------- | -------- | --------- | --------------|-------------|----------|----------|
-| Dial Assemble | 200           | 500000   | 0(0.00%)  | 845.7        |    234      |     397  |  505.99 |
+| Dial Assemble | 200           | 1000000   | 0(0.00%)  | 831.5        |    238      |     374  |  488 |
 
 
 ### Server Utilisation:
 | Backend       | CPU Usage %(max) | Memory Utilization (max) |
 | ------------- | ------------- |------------- |
-| LMS Service (CPU- 1Core; Memory- 3GB)  |36% |548 MiB   |
-| Search Service (CPU- 1Core; Memory- 3GB)  | 42%|431 MiB |
-| ES (CPU- 8core ; Memory- 32GB)| 30.13%|19.58 GB |
+| LMS Service (CPU- 1Core; Memory- 3GB)  |38% |537 MiB   |
+| Search Service (CPU- 1Core; Memory- 3GB)  | 43%|306 MiB |
+| ES (CPU- 8core ; Memory- 32GB)| 30.30% | 19.62 GB |
