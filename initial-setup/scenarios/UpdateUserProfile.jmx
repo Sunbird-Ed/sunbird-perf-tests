@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.4.1">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="UpdateUserProfile" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="threadNum" elementType="Argument">
+            <stringProp name="Argument.name">threadNum</stringProp>
+            <stringProp name="Argument.value">THREADS_COUNT</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="rampUpTime" elementType="Argument">
+            <stringProp name="Argument.name">rampUpTime</stringProp>
+            <stringProp name="Argument.value">RAMPUP_TIME</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="loopCount" elementType="Argument">
+            <stringProp name="Argument.name">loopCount</stringProp>
+            <stringProp name="Argument.value">CTRL_LOOPS</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="protocol" elementType="Argument">
+            <stringProp name="Argument.name">protocol</stringProp>
+            <stringProp name="Argument.value">PROTOCOL</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="port" elementType="Argument">
+            <stringProp name="Argument.name">port</stringProp>
+            <stringProp name="Argument.value">PORT</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="DATA_DIR" elementType="Argument">
+            <stringProp name="Argument.name">DATA_DIR</stringProp>
+            <stringProp name="Argument.value">DATADIR</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="UpdateUserProfile" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">${loopCount}</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${threadNum}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${rampUpTime}</stringProp>
+        <longProp name="ThreadGroup.start_time">1476265242000</longProp>
+        <longProp name="ThreadGroup.end_time">1476265242000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${dynamicUrl}</stringProp>
+          <stringProp name="HTTPSampler.port">${port}</stringProp>
+          <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path"></stringProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </ConfigTestElement>
+        <hashTree/>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Cookie</stringProp>
+              <stringProp name="Header.value">${cookie}</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">rootOrg</stringProp>
+              <stringProp name="Header.value">igot</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">org</stringProp>
+              <stringProp name="Header.value">dopt</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">wid</stringProp>
+              <stringProp name="Header.value">${userId}</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UpdateUserProfile" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;academics&quot;: [&#xd;
+    {&#xd;
+      &quot;osUpdatedAt&quot;: &quot;2021-06-14T08:04:37.326Z&quot;,&#xd;
+      &quot;nameOfQualification&quot;: &quot;10th board&quot;,&#xd;
+      &quot;yearOfPassing&quot;: &quot;&quot;,&#xd;
+      &quot;osCreatedAt&quot;: &quot;2021-06-14T08:04:37.326Z&quot;,&#xd;
+      &quot;osUpdatedBy&quot;: &quot;&quot;,&#xd;
+      &quot;osCreatedBy&quot;: &quot;&quot;,&#xd;
+      &quot;nameOfInstitute&quot;: &quot;&quot;,&#xd;
+      &quot;osid&quot;: &quot;61386e6c-fff6-4562-a112-5a9929135860&quot;,&#xd;
+      &quot;type&quot;: &quot;X_STANDARD&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;osUpdatedAt&quot;: &quot;2021-06-14T08:04:37.326Z&quot;,&#xd;
+      &quot;nameOfQualification&quot;: &quot;&quot;,&#xd;
+      &quot;yearOfPassing&quot;: &quot;&quot;,&#xd;
+      &quot;osCreatedAt&quot;: &quot;2021-06-14T08:04:37.326Z&quot;,&#xd;
+      &quot;osUpdatedBy&quot;: &quot;&quot;,&#xd;
+      &quot;osCreatedBy&quot;: &quot;&quot;,&#xd;
+      &quot;nameOfInstitute&quot;: &quot;&quot;,&#xd;
+      &quot;osid&quot;: &quot;58b0b7b5-c16e-447f-9f37-0ea68cf71144&quot;,&#xd;
+      &quot;type&quot;: &quot;XII_STANDARD&quot;&#xd;
+    }&#xd;
+  ],&#xd;
+  &quot;employmentDetails&quot;: {&#xd;
+    &quot;allotmentYearOfService&quot;: &quot;&quot;,&#xd;
+    &quot;cadre&quot;: &quot;&quot;,&#xd;
+    &quot;civilListNo&quot;: &quot;&quot;,&#xd;
+    &quot;departmentName&quot;: &quot;${departmentId}&quot;,&#xd;
+    &quot;dojOfService&quot;: &quot;&quot;,&#xd;
+    &quot;employeeCode&quot;: &quot;&quot;,&#xd;
+    &quot;officialPostalAddress&quot;: &quot;&quot;,&#xd;
+    &quot;payType&quot;: &quot;&quot;,&#xd;
+    &quot;pinCode&quot;: &quot;&quot;,&#xd;
+    &quot;service&quot;: &quot;&quot;,&#xd;
+    &quot;osCreatedAt&quot;: &quot;2021-06-14T08:04:37.326Z&quot;,&#xd;
+    &quot;osUpdatedAt&quot;: &quot;2021-06-14T08:04:37.326Z&quot;,&#xd;
+    &quot;osCreatedBy&quot;: &quot;&quot;,&#xd;
+    &quot;osUpdatedBy&quot;: &quot;&quot;,&#xd;
+    &quot;osid&quot;: &quot;de3c00e2-349c-4715-b132-9778e525e34e&quot;,&#xd;
+    &quot;_osroot&quot;: &quot;a832a61b-b53c-4542-b9ee-9605a0925c6a&quot;,&#xd;
+    &quot;@type&quot;: &quot;employmentDetails&quot;&#xd;
+  },&#xd;
+  &quot;interests&quot;: {&#xd;
+    &quot;hobbies&quot;: [],&#xd;
+    &quot;professional&quot;: [],&#xd;
+    &quot;osCreatedAt&quot;: &quot;2021-06-14T08:04:37.326Z&quot;,&#xd;
+    &quot;osUpdatedAt&quot;: &quot;2021-06-14T08:04:37.326Z&quot;,&#xd;
+    &quot;osCreatedBy&quot;: &quot;&quot;,&#xd;
+    &quot;osUpdatedBy&quot;: &quot;&quot;,&#xd;
+    &quot;osid&quot;: &quot;bfdcda91-3609-4350-b8a2-e4595c0d9810&quot;,&#xd;
+    &quot;_osroot&quot;: &quot;a832a61b-b53c-4542-b9ee-9605a0925c6a&quot;,&#xd;
+    &quot;@type&quot;: &quot;interests&quot;&#xd;
+  },&#xd;
+  &quot;personalDetails&quot;: {&#xd;
+    &quot;firstname&quot;: &quot;${__RandomString(5,abcdefghijklmnopqrstuvwxyz,)}&quot;,&#xd;
+    &quot;primaryEmail&quot;: &quot;${email}&quot;,&#xd;
+    &quot;surname&quot;: &quot;${__RandomString(5,abcdefghijklmnopqrstuvwxyz,)}&quot;,&#xd;
+    &quot;userName&quot;: &quot;${__RandomString(10,abcdefghijklmnopqrstuvwxyz,)}&quot;,&#xd;
+    &quot;osCreatedAt&quot;: &quot;2021-06-14T08:04:37.326Z&quot;,&#xd;
+    &quot;osUpdatedAt&quot;: &quot;2021-06-14T08:04:37.326Z&quot;,&#xd;
+    &quot;osCreatedBy&quot;: &quot;&quot;,&#xd;
+    &quot;osUpdatedBy&quot;: &quot;&quot;,&#xd;
+    &quot;osid&quot;: &quot;74b8d9c2-ddc9-4960-a22b-27c7e261659f&quot;,&#xd;
+    &quot;_osroot&quot;: &quot;a832a61b-b53c-4542-b9ee-9605a0925c6a&quot;,&#xd;
+    &quot;@type&quot;: &quot;personalDetails&quot;&#xd;
+  },&#xd;
+  &quot;professionalDetails&quot;: [&#xd;
+    {&#xd;
+      &quot;osUpdatedAt&quot;: &quot;2021-06-14T08:04:37.326Z&quot;,&#xd;
+      &quot;osCreatedAt&quot;: &quot;2021-06-14T08:04:37.326Z&quot;,&#xd;
+      &quot;osUpdatedBy&quot;: &quot;&quot;,&#xd;
+      &quot;name&quot;: &quot;&quot;,&#xd;
+      &quot;osCreatedBy&quot;: &quot;&quot;,&#xd;
+      &quot;osid&quot;: &quot;6ebabca2-81e5-4293-9506-a4a7fd3bc146&quot;&#xd;
+    }&#xd;
+  ],&#xd;
+  &quot;skills&quot;: {&#xd;
+    &quot;additionalSkills&quot;: &quot;&quot;,&#xd;
+    &quot;certificateDetails&quot;: &quot;&quot;,&#xd;
+    &quot;osCreatedAt&quot;: &quot;2021-06-14T08:04:37.326Z&quot;,&#xd;
+    &quot;osUpdatedAt&quot;: &quot;2021-06-14T08:04:37.326Z&quot;,&#xd;
+    &quot;osCreatedBy&quot;: &quot;&quot;,&#xd;
+    &quot;osUpdatedBy&quot;: &quot;&quot;,&#xd;
+    &quot;osid&quot;: &quot;8f1d6534-bafe-42f9-89db-e31cbeeb5b17&quot;,&#xd;
+    &quot;@type&quot;: &quot;skills&quot;,&#xd;
+    &quot;_osroot&quot;: &quot;a832a61b-b53c-4542-b9ee-9605a0925c6a&quot;&#xd;
+  },&#xd;
+  &quot;userId&quot;: &quot;${userId}&quot;,&#xd;
+  &quot;id&quot;: &quot;${userId}&quot;,&#xd;
+  &quot;@id&quot;: &quot;${userId}&quot;,&#xd;
+  &quot;osCreatedAt&quot;: &quot;2021-06-14T08:04:37.326Z&quot;,&#xd;
+  &quot;osUpdatedAt&quot;: &quot;2021-06-14T08:04:37.326Z&quot;,&#xd;
+  &quot;osCreatedBy&quot;: &quot;&quot;,&#xd;
+  &quot;osUpdatedBy&quot;: &quot;&quot;,&#xd;
+  &quot;osid&quot;: &quot;a832a61b-b53c-4542-b9ee-9605a0925c6a&quot;,&#xd;
+  &quot;@type&quot;: &quot;UserProfile&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/apis/protected/v8/user/profileRegistry/updateUserRegistry</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="DepartmentData" enabled="true">
+          <stringProp name="filename">${DATA_DIR}/createuser.csv</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="variableNames">departmentId</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="cookieData" enabled="true">
+          <stringProp name="filename">${DATA_DIR}/Cookie.csv</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="variableNames">email,userId,cookie</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="URLData" enabled="true">
+          <stringProp name="filename">${DATA_DIR}/urls.csv</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="variableNames">dynamicUrl</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

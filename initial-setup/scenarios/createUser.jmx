@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jmeterTestPlan version="1.2" properties="5.0" jmeter="5.1.1 r1855137">
   <hashTree>
-    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="ContentSearch" enabled="true">
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="createUser" enabled="true">
       <stringProp name="TestPlan.comments"></stringProp>
       <boolProp name="TestPlan.functional_mode">false</boolProp>
       <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
@@ -42,7 +42,7 @@
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
     <hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="ContentSearch" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="UserOnboarding" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -55,6 +55,7 @@
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
       </ThreadGroup>
       <hashTree>
         <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
@@ -65,7 +66,7 @@
             </elementProp>
             <elementProp name="" elementType="Header">
               <stringProp name="Header.name">Authorization</stringProp>
-              <stringProp name="Header.value">${bearer}</stringProp>
+              <stringProp name="Header.value">bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJTbHRMMGQ5cTNUNFpmUWxBV2VHSTZEVmdITHhWZEl3YyJ9.msO1VimNn3rpx9u6i-ALUGJMLHcR-ngNu5fsTtJNDe0</stringProp>
             </elementProp>
             <elementProp name="" elementType="Header">
               <stringProp name="Header.name">Accept-Encoding</stringProp>
@@ -78,6 +79,10 @@
             <elementProp name="" elementType="Header">
               <stringProp name="Header.name">org</stringProp>
               <stringProp name="Header.value">dopt</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">X-Authenticated-User-Token</stringProp>
+              <stringProp name="Header.value">${bearer}</stringProp>
             </elementProp>
           </collectionProp>
         </HeaderManager>
@@ -96,14 +101,22 @@
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
         </ConfigTestElement>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="ContentSearch" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="CreateUser" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
             <collectionProp name="Arguments.arguments">
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">&#xd;
-{&quot;request&quot;:{&quot;filters&quot;:{&quot;primaryCategory&quot;:[&quot;Course&quot;],&quot;contentType&quot;:[&quot;Course&quot;]},&quot;query&quot;:&quot;&quot;,&quot;sort_by&quot;:{&quot;lastUpdatedOn&quot;:&quot;desc&quot;},&quot;fields&quot;:[&quot;name&quot;,&quot;appIcon&quot;,&quot;instructions&quot;,&quot;description&quot;,&quot;purpose&quot;,&quot;mimeType&quot;,&quot;gradeLevel&quot;,&quot;identifier&quot;,&quot;medium&quot;,&quot;pkgVersion&quot;,&quot;board&quot;,&quot;subject&quot;,&quot;resourceType&quot;,&quot;primaryCategory&quot;,&quot;contentType&quot;,&quot;channel&quot;,&quot;organisation&quot;,&quot;trackable&quot;,&quot;license&quot;,&quot;posterImage&quot;,&quot;idealScreenSize&quot;,&quot;learningMode&quot;,&quot;creatorLogo&quot;,&quot;duration&quot;]},&quot;query&quot;:&quot;&quot;}</stringProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;request&quot;: {&#xd;
+        &quot;email&quot;: &quot;testuser${counter_value}@yopmail.com&quot;,&#xd;
+        &quot;emailVerified&quot;: true,&#xd;
+        &quot;firstName&quot;: &quot;${counter_value}&quot;,&#xd;
+        &quot;lastName&quot;: &quot;${counter_value}&quot;,&#xd;
+        &quot;password&quot;: &quot;Password@123&quot;,&#xd;
+        &quot;channel&quot;:&quot;Department Name&quot;&#xd;
+    }&#xd;
+}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
@@ -112,7 +125,7 @@
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/apis/proxies/v8/sunbirdigot/read</stringProp>
+          <stringProp name="HTTPSampler.path">/api/user/v1/create</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -122,7 +135,46 @@
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
         </HTTPSamplerProxy>
-        <hashTree/>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="userId JSON Extractor" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">userId</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.result.userId;</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">0</stringProp>
+            <boolProp name="JSONPostProcessor.compute_concat">true</boolProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="User Parameters" enabled="true">
+            <collectionProp name="UserParameters.names">
+              <stringProp name="96619420">email</stringProp>
+            </collectionProp>
+            <collectionProp name="UserParameters.thread_values">
+              <collectionProp name="-1192782422">
+                <stringProp name="-123899673">testuser${counter_value}@yopmail.com</stringProp>
+              </collectionProp>
+            </collectionProp>
+            <boolProp name="UserParameters.per_iteration">false</boolProp>
+          </UserParameters>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell PostProcessor" enabled="true">
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">// get variables from json  extractor 
+ userList = vars.get(&quot;userId&quot;);
+ emailId=vars.get(&quot;email&quot;);
+ 
+
+ // pass true if want to append to existing file  
+ // if want to overwrite, then don&apos;t pass the second argument
+ FileWriter fstream = new FileWriter(&quot;${DATA_DIR}/newlyCreatedUserList.csv&quot;, true);
+ BufferedWriter out = new BufferedWriter(fstream);
+ out.write(emailId+&quot;,&quot;+userList);
+ out.write(System.getProperty(&quot;line.separator&quot;));
+ out.close();
+ fstream.close()</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+        </hashTree>
         <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter" enabled="true">
           <stringProp name="CounterConfig.start">${__time()}</stringProp>
           <stringProp name="CounterConfig.end"></stringProp>
@@ -132,16 +184,16 @@
           <boolProp name="CounterConfig.per_user">false</boolProp>
         </CounterConfig>
         <hashTree/>
-        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="users" enabled="true">
-          <stringProp name="filename">${DATA_DIR}/users.csv</stringProp>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="BearerData" enabled="true">
+          <stringProp name="filename">${DATA_DIR}/bearerone.csv</stringProp>
           <stringProp name="fileEncoding"></stringProp>
-          <stringProp name="variableNames">userId</stringProp>
+          <stringProp name="variableNames">bearer</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
           <stringProp name="delimiter">,</stringProp>
           <boolProp name="quotedData">false</boolProp>
           <boolProp name="recycle">true</boolProp>
           <boolProp name="stopThread">false</boolProp>
-          <stringProp name="shareMode">shareMode.group</stringProp>
-          <boolProp name="ignoreFirstLine">false</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
         </CSVDataSet>
         <hashTree/>
         <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="URLData" enabled="true">
@@ -156,17 +208,42 @@
           <stringProp name="shareMode">shareMode.all</stringProp>
         </CSVDataSet>
         <hashTree/>
-        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="BearerData" enabled="true">
-          <stringProp name="filename">${DATA_DIR}/bearer.csv</stringProp>
-          <stringProp name="fileEncoding"></stringProp>
-          <stringProp name="variableNames">bearer</stringProp>
-          <boolProp name="ignoreFirstLine">false</boolProp>
-          <stringProp name="delimiter">,</stringProp>
-          <boolProp name="quotedData">false</boolProp>
-          <boolProp name="recycle">true</boolProp>
-          <boolProp name="stopThread">false</boolProp>
-          <stringProp name="shareMode">shareMode.all</stringProp>
-        </CSVDataSet>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
         <hashTree/>
       </hashTree>
     </hashTree>

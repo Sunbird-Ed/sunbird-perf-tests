@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.1.1 r1855137">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="AddWorkAllocation" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="threadNum" elementType="Argument">
+            <stringProp name="Argument.name">threadNum</stringProp>
+            <stringProp name="Argument.value">THREADS_COUNT</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="rampUpTime" elementType="Argument">
+            <stringProp name="Argument.name">rampUpTime</stringProp>
+            <stringProp name="Argument.value">RAMPUP_TIME</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="loopCount" elementType="Argument">
+            <stringProp name="Argument.name">loopCount</stringProp>
+            <stringProp name="Argument.value">CTRL_LOOPS</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="protocol" elementType="Argument">
+            <stringProp name="Argument.name">protocol</stringProp>
+            <stringProp name="Argument.value">PROTOCOL</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="port" elementType="Argument">
+            <stringProp name="Argument.name">port</stringProp>
+            <stringProp name="Argument.value">PORT</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="DATA_DIR" elementType="Argument">
+            <stringProp name="Argument.name">DATA_DIR</stringProp>
+            <stringProp name="Argument.value">DATADIR</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">${loopCount}</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${threadNum}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${rampUpTime}</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${mdoUrl}</stringProp>
+          <stringProp name="HTTPSampler.port">${port}</stringProp>
+          <stringProp name="HTTPSampler.protocol">${protocol}</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path"></stringProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </ConfigTestElement>
+        <hashTree/>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">org</stringProp>
+              <stringProp name="Header.value">dopt</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">rootorg</stringProp>
+              <stringProp name="Header.value">igot</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Cookie</stringProp>
+              <stringProp name="Header.value">${cookie}</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Host</stringProp>
+              <stringProp name="Header.value">frac.igot-dev.in</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">hostpath</stringProp>
+              <stringProp name="Header.value">igot-dev.in</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AddWorkAllocation" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;userId&quot;: &quot;9ce62cd5-3acc-4966-82e7-672b15d17dd2&quot;,&#xd;
+  &quot;positionDescription&quot;: &quot;Coordinating  and assisting States Parties in their efforts to meet their obligations under the Convention and thereby enable them to achieve its full and effective implementation&quot;,&#xd;
+  &quot;userPosition&quot;: &quot;Director (External assistance and internation&quot;,&#xd;
+  &quot;positionId&quot;: &quot;PID099&quot;,&#xd;
+  &quot;userName&quot;: &quot;amit kumar&quot;,&#xd;
+  &quot;userEmail&quot;: &quot;amityadavumma@yopmail.com&quot;,&#xd;
+  &quot;roleCompetencyList&quot;: [&#xd;
+    {&#xd;
+      &quot;roleDetails&quot;: {&#xd;
+        &quot;type&quot;: &quot;ROLE&quot;,&#xd;
+        &quot;name&quot;: &quot;To Coordinate all the Training Activities of &quot;,&#xd;
+        &quot;description&quot;: &quot;- Preparation of Annual Training Calendar (ATC), Annual Report , Consolidated weekly schedule, slotting  OSP/CSP/TOT/ PT/FA  and other training  programmes required from time to time. Preparation of s&quot;,&#xd;
+        &quot;childNodes&quot;: [&#xd;
+          {&#xd;
+            &quot;type&quot;: &quot;ACTIVITY&quot;,&#xd;
+            &quot;id&quot;: &quot;AID081&quot;,&#xd;
+            &quot;name&quot;: &quot;&quot;,&#xd;
+            &quot;description&quot;: &quot;Recording, Reviewing and Destruction of old records in the department.\n&quot;,&#xd;
+            &quot;submittedToName&quot;: &quot;Final authority&quot;,&#xd;
+            &quot;submittedToId&quot;: &quot;&quot;,&#xd;
+            &quot;submittedToEmail&quot;: &quot;&quot;,&#xd;
+            &quot;submissionFrom&quot;: &quot;&quot;,&#xd;
+            &quot;submissionFromId&quot;: &quot;&quot;,&#xd;
+            &quot;submissionFromEmail&quot;: &quot;&quot;&#xd;
+          },&#xd;
+          {&#xd;
+            &quot;type&quot;: &quot;ACTIVITY&quot;,&#xd;
+            &quot;id&quot;: &quot;AID079&quot;,&#xd;
+            &quot;name&quot;: &quot;&quot;,&#xd;
+            &quot;description&quot;: &quot;Coordination of matters relating to RTI Act, 2005 with concerned CPIOs of this Department and its organizations.&quot;,&#xd;
+            &quot;submittedToName&quot;: &quot;A N NARAYANAN&quot;,&#xd;
+            &quot;submittedToId&quot;: &quot;39f51a05-6d11-4116-8940-147838c66207&quot;,&#xd;
+            &quot;submittedToEmail&quot;: &quot;an.narayanan@nic.in&quot;,&#xd;
+            &quot;submissionFrom&quot;: &quot;&quot;,&#xd;
+            &quot;submissionFromId&quot;: &quot;&quot;,&#xd;
+            &quot;submissionFromEmail&quot;: &quot;&quot;&#xd;
+          }&#xd;
+        ]&#xd;
+      },&#xd;
+      &quot;competencyDetails&quot;: [&#xd;
+        {&#xd;
+          &quot;type&quot;: &quot;COMPETENCY&quot;,&#xd;
+          &quot;id&quot;: &quot;CID0549&quot;,&#xd;
+          &quot;name&quot;: &quot;New Test Competency&quot;,&#xd;
+          &quot;description&quot;: &quot;New Test CompetencyNew Test Competency&quot;,&#xd;
+          &quot;level&quot;: &quot;Level 1&quot;,&#xd;
+          &quot;source&quot;: &quot;Work Allocation Tool&quot;,&#xd;
+          &quot;additionalProperties&quot;: {&#xd;
+            &quot;competencyArea&quot;: &quot;Political Sciences&quot;,&#xd;
+            &quot;competencyType&quot;: &quot;Behavioural&quot;&#xd;
+          }&#xd;
+        }&#xd;
+      ]&#xd;
+    }&#xd;
+  ],&#xd;
+  &quot;unmappedActivities&quot;: [],&#xd;
+  &quot;unmappedCompetencies&quot;: [],&#xd;
+  &quot;progress&quot;: 100,&#xd;
+  &quot;errorCount&quot;: 0,&#xd;
+  &quot;workOrderId&quot;: &quot;eab70bff-e5ee-486a-af68-4059afee8601&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/apis/protected/v8/workallocation/v2/add</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CookieData" enabled="true">
+          <stringProp name="filename">${DATA_DIR}/Cookie.csv</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="variableNames">cookie,userId</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="mdoURLData" enabled="true">
+          <stringProp name="filename">${DATA_DIR}/mdourl.csv</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="variableNames">mdoUrl</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
