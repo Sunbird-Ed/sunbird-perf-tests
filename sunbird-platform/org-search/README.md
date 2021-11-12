@@ -7,11 +7,14 @@ Benchmarking Org Search API.
 1. No of AKS node - 16
 2. No of learner service replicas - 8 (1 Core and 3 GB)
 3. Cassandra Cluster- 5 Nodes; CPU- 8Core; Memory- 32GB
-4. Release version - Release 3.9.0
+4. Release version - Release 4.3.0
 
 
 **API End Point:** 
+
 `/api/org/v1/search`
+
+`/api/org/v2/search`
 
 
 **Executing the test scenario using JMeter**
@@ -26,11 +29,23 @@ e.g.
 - Update `host.csv` file data with correct host details before running the test. It can be domain details / Kubernetes Node IPs/ LB IPs/ Direct Service IPs with port details.
 - Update `orgs.csv` file with valid org Ids
 
-### Test Result:
+### Test Result searchOrg - `/api/org/v1/search`:
 
 |API       |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
 |----------|------------|--------|---------| -------------|--------------|---------|--------|
-|Org Search|200         |10000000|0(0.00%) | 19608.1       | 2           | 4     |7    |
+|Org Search V1 |200         |10000000|0(0.00%) | 13319.6       | 7           | 13     |25   |
+
+
+### Server Utilisation:
+| Backend          | CPU Usage %(max) | Memory Utilization (max) |
+| ------------- | ------------- |------------- |
+| Cassandra (CPU- 16Core; Memory- 64GB)| 2.33% | 13.138 GB|
+
+### Test Result searchOrgV2 - `/api/org/v2/search`:
+
+|API       |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
+|----------|------------|--------|---------| -------------|--------------|---------|--------|
+|Org Search V2 |200         |10000000|0(0.00%) | 17497       | 3           | 9     |23   |
 
 
 ### Server Utilisation:
