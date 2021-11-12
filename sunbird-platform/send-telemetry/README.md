@@ -7,7 +7,7 @@ Benchmarking Send Telemetry API.
 1. No of AKS node - 16
 2. No of telemetry service replicas - 16 (1 Core and 1 GB)
 3. Kafka Cluster - 3 nodes (CPU - 4core and Memory - 16GB)
-4. Release version - Release 3.9.0
+4. Release version - Release 4.3.0
 
 
 **API End Point:** 
@@ -33,11 +33,11 @@ e.g.
 
 |API                |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
 |-------------------|------------|--------|---------| -------------|--------------|---------|--------|
-|Send Telemetry     |200         |4000000 |0(0.00%) | 7914.8       | 24          |  57    |186     |
+|Send Telemetry     |200         |4000000 |0(0.00%) | 7470.9       | 26         |  57    |74    |
 
 
 ### Server Utilisation:
 | Backend          | CPU Usage %(max) | Memory Utilization (max) |
 | ------------- | ------------- |------------- |
-| Telemetry Service (CPU-1 Core; Memory- 1 GB)  |96% |126 MiB |
-| Kafka (CPU - 4core; Memory - 16GB)| 31.36%|6.79 GB |
+| Telemetry Service (CPU-1 Core; Memory- 1 GB)  |99% |121.8 MiB |
+| Kafka (CPU - 4core; Memory - 16GB)|  38.36% | 6.774 GB  |
