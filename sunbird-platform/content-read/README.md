@@ -33,7 +33,7 @@ e.g.
 
 | API           | Thread Count  | Samples  | Errors %     | Throughput/sec |Avg Resp Time|95th pct| 99th pct |
 | ------------- | ------------- | -------- | -------------| ---------------|-------------|--------|----------|
-| Content Read  | 200           | 20000000  | 0 (0.00%) | 15533.4          |    7       |    3  |    7    |
+| Content Read  | 200           | 20000000  | 0 (0.00%) | 27360.7          |    2       |    3  |    5    |
 
 
 ### Server Utilisation:
