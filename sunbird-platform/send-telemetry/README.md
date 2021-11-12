@@ -40,4 +40,4 @@ e.g.
 | Backend          | CPU Usage %(max) | Memory Utilization (max) |
 | ------------- | ------------- |------------- |
 | Telemetry Service (CPU-1 Core; Memory- 1 GB)  |99% |121.8 MiB |
-| Kafka (CPU - 4core; Memory - 16GB)|  38.36% | 6.774 GB  |
+| Kafka (CPU - 4core; Memory - 16GB)|  38.36% | 6.78 GB  |
