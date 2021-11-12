@@ -1,6 +1,6 @@
 ### Test Scenario
 
-Benchmarking TNC Accept API.
+Benchmarking Group TNC Accept API.
 
 
 ### Test Environment Details
@@ -34,12 +34,12 @@ e.g.
 
 |API                |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
 |-------------------|------------|--------|---------| -------------|--------------|---------|--------|
-|Group TNC Accept         |200         |1000000 |0(0.00%)| 2217        | 23           |  82     |93  |
+|Group TNC Accept         |200         |1000000 |47 (0.00%)| 782.1        | 14           |  17     |44  |
 
 
 ### Server Utilisation:
 | Backend          | CPU Usage %(max) | Memory Utilization (max) |
 | ------------- | ------------- |------------- |
-| Learner Service (CPU-1 Core; Memory- 3 GB)  | 99%|  491 MiB|
-| Cassandra (CPU- 16Core; Memory- 64GB)| 22.29%     |13.27 GB |
-| ES (CPU- 16core ; Memory- 64GB)| 37.47%   |28.48 GB |
+| Learner Service (CPU-1 Core; Memory- 3 GB)  | 64%|  447 MiB|
+| Cassandra (CPU- 16Core; Memory- 64GB)| 11.44%     | 13.25 GB |
+| ES (CPU- 16core ; Memory- 64GB)| 20.58%   | 28.51 GB    |
