@@ -1,6 +1,6 @@
 ### Test Scenario
 
-Benchmarking Get User Profile API.
+Benchmarking User Role read API.
 
 
 ### Test Environment Details
@@ -12,7 +12,7 @@ Benchmarking Get User Profile API.
 
 
 **API End Point:** 
-`/api/user/v3/read`
+`/api/user/v1/role/read/`
 
 
 **Executing the test scenario using JMeter**
@@ -22,7 +22,7 @@ Benchmarking Get User Profile API.
 
 e.g.
 
-```./run_scenario.sh /mount/data/benchmark/apache-jmeter-5.3/ 'Jmeter_Slave1_IP,Jmeter_Slave2_IP,Jmeter_Slave3_IP,Jmeter_Slave4_IP' user-read user-read 5 1 5 "ABCDEFabcdef012345" /mount/data/benchmark/sunbird-perf-tests/sunbird-platform/testdata/host.csv  /mount/data/benchmark/sunbird-perf-tests/sunbird-platform/testdata/userData.csv /api/user/v3/read```
+```./run_scenario.sh ~/apache-jmeter-5.3/ 'Jmeter_Slave1_IP,Jmeter_Slave2_IP,Jmeter_Slave3_IP,Jmeter_Slave4_IP' user-role-read user-role-read 5 1 5 "ABCDEFabcdef012345" ~/sunbird-perf-tests/sunbird-platform/testdata/host.csv  ~/sunbird-perf-tests/sunbird-platform/testdata/userData.csv /api/user/v1/role/read/```
 
 
 **Note**
@@ -34,11 +34,11 @@ e.g.
 
 |API                |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
 |-------------------|------------|--------|---------| -------------|--------------|---------|--------|
-|Get User Profile   |200         |2000000 |0(0.00%) | 2435.4      | 78           |  104    |187.99     |
+| User Role Read    |200         |2000000 |0(0.00%) | 6788      | 28           |  81    |89     |
 
 
 ### Server Utilisation:
 | Backend          | CPU Usage %(max) | Memory Utilization (max) |
 | ------------- | ------------- |------------- |
-| Learner Service (CPU- 1Core; Memory- 3GB)  |100% |  474 MiB|
-| Cassandra (CPU- 16Core; Memory- 64GB)|  43.64%   | 13.220 GB|
+| Learner Service (CPU- 1Core; Memory- 3GB)  |100% | 460 MiB|
+| Cassandra (CPU- 16Core; Memory- 64GB)|   12.90%    | 13.017 GB |

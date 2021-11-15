@@ -7,8 +7,8 @@ Benchmarking Channel Read API.
 1. No of AKS node -16
 2. No of learner, LMS service replicas - 8 (1 core and 3 GB)
 3. ES Cluster - 3 Nodes (CPU - 16core ; Memory - 32 GB)
-4. Release version - Release 3.9.0
-5. Redis - 1 Node (CPU- 2core; Memory- 8GB)
+4. Redis - 1 Node (CPU- 2core; Memory- 8GB)
+5. Release version - Release 4.3.0
 
 
 **API End Point:** `/api/channel/v1/read`
@@ -26,11 +26,11 @@ e.g.
 - Update `host.csv` file data with correct host details before running the test. It can be domain details / Kubernetes Node IPs/ LB IPs/ Direct Service IPs with port details.
 - Update `channel.csv` file with valid channel Ids.
 
-### Test Result
+### Test Result 
 
 | API           | Thread Count  | Samples  | Errors%   | Throughput/sec  |Avg Resp Time |   95th pct  |  99th pct   |
 | ------------- | ------------- | -------- | --------- | --------------- |--------------|-------------|-------------|
-| Channel Read  | 200           | 5000000  | 0 (0.00%) | 33999.3         |0            |1            |4           |
+| Channel Read  | 200           | 5000000  | 0 (0.00%) | 32613         |0            |2            |6           |
 
 
 ### Server Utilisation:

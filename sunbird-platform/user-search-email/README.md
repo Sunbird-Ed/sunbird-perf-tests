@@ -8,7 +8,7 @@ Benchmarking User serach with emailIds API.
 2. No of learner service replicas - 16 (1 Core and 3 GB)
 3. Cassandra Cluster- 5 Nodes (CPU- 16Core; Memory- 64GB)
 4. ES Cluster - 3 nodes (CPU- 16core ; Memory- 64GB)
-5. Release version - Release 3.9.0
+5. Release version - Release 4.3.0
 
 
 **API End Point:** 
@@ -32,12 +32,12 @@ e.g.
 
 |API                |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
 |-------------------|------------|--------|---------| -------------|--------------|---------|--------|
-|User Search Email    |200         |1000000 |0(0.00%) | 2611.1       | 50           |  237     |672      |
+|User Search Email    |200         |1000000 |0(0.00%) | 3185.4       | 61           |  104     |179     |
 
 
 ### Server Utilisation:
 | Backend          | CPU Usage %(max) | Memory Utilization (max) |
 | ------------- | ------------- |------------- |
-| Learner Service (CPU-1 Core; Memory- 3 GB)  | 93| 544 MiB  |
-| Cassandra (CPU- 16Core; Memory- 64GB)| 13.42% |13.32 GB |
-| ES (CPU- 16core ; Memory- 64GB)|24.66%   | 28.41 GB |
+| Learner Service (CPU-1 Core; Memory- 3 GB)  | 100|  894 MiB  |
+| Cassandra (CPU- 16Core; Memory- 64GB)| 14.00%  |13.20 GB  |
+| ES (CPU- 16core ; Memory- 64GB)| 26.28%    | 28.51 GB |

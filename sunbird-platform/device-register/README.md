@@ -7,7 +7,7 @@ Benchmarking Device Register  API.
 1. No of AKS node - 16
 2. No of analytics service replicas - 12
 3. Redis - 1 node (CPU - 32core, Memory - 128GB)
-4. Release version - Release 3.9.0
+4. Release version - Release 4.3.0
 
 
 **API End Point:** 
@@ -32,11 +32,11 @@ e.g.
 
 | API             | Thread Count| Samples  | Errors% |Throughput/sec|Avg Resp Time|95th pct| 99th pct |
 | ----------------| ------------| -------- | --------| -------------|-------------|--------|----------|
-| Device Register | 200         | 2000000  | 0(0.00%)| 2226.7       |    68      |  129    |     162  |
+| Device Register | 200         | 2000000  | 0(0.00%)| 2161.5       |    79      |  128    |     161  |
 
 ### Server Utilisation:
 | Backend          | CPU Usage %(max) | Memory Utilization (max) |
 | ------------- | ------------- |------------- |
-| Analytics Service ( (CPU- 1Core; Memory- 1GB))  |93% |1016 MiB |
-| Kafka (CPU- 4core; Memory- 16GB)|16.71% |6.8 GB|
-| Redis (CPU - 32core; Memory - 128GB)| 2.08% | 43.1 GB|
+| Analytics Service ( (CPU- 1Core; Memory- 1GB))  |100% |972 MiB |
+| Kafka (CPU- 4core; Memory- 16GB)|13.54% |6.7 GB|
+| Redis (CPU - 32core; Memory - 128GB)|  0.49%| 95.6 GB|

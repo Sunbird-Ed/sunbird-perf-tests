@@ -8,7 +8,7 @@ Benchmarking BMGS Update API.
 2. No of learner service replicas - 16 (1Core and 3 GB)
 3. Cassandra Cluster- 5 Nodes; CPU- 8Core; Memory- 32GB
 4. ES Cluster - 3 nodes; CPU- 16core ; Memory- 64GB
-5. Release version - Release 3.9.0
+5. Release version - Release 4.3.0
 
 
 **API End Point:** 
@@ -33,12 +33,12 @@ e.g.
 
 |API          |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
 |-------------|------------|--------|---------| -------------|--------------|---------|--------|
-|BMGS Update  |200         |2000000  |0(0.00%) | 2208.9       | 86          |  135    |196 |
+|BMGS Update  |200         |2000000  |0(0.00%) | 2102       | 90          |  115    |192 |
 
 
 ### Server Utilisation:
 | Backend          | CPU Usage %(max) | Memory Utilization (max) |
 | ------------- | ------------- |------------- |
-| Learner Service (CPU-1 Core; Memory- 3 GB)  | 100%| 735 MiB|
-| Cassandra (CPU- 16Core; Memory- 64GB)|50.53%  |14.06 GB |
-| ES (CPU- 16core ; Memory- 64GB)|   50.42%  |28.48 GB |
+| Learner Service (CPU-1 Core; Memory- 3 GB)  | 100%|  764 MiB|
+| Cassandra (CPU- 16Core; Memory- 64GB)|40.39%   |13.19 GB |
+| ES (CPU- 16core ; Memory- 64GB)|   28.18%  |  28.48 GB   |

@@ -8,9 +8,10 @@ numThreads=$5
 rampupTime=$6
 ctrlLoops=$7
 apiKey=$8
-csvFileHost=${9}
-csvFileUser=${10}
-roleReadApi=${11}
+csvFileHost=$9
+csvFileRequest=${10}
+tncAcceptApi=${11}
+
 
 
 JMETER_HOME=/mnt/data/benchmark/apache-jmeter-4.0
@@ -34,6 +35,10 @@ mkdir $SCENARIO_LOGS/$scenario_id
 mkdir $SCENARIO_LOGS/$scenario_id/logs
 mkdir $SCENARIO_LOGS/$scenario_id/server/
 
+
+
+
+
 rm ~/current_scenario/*.jmx
 cp /mount/data/benchmark/sunbird-perf-tests/sunbird-platform/$scenario_name/$scenario_name.jmx $JMX_FILE_PATH
 
@@ -45,8 +50,8 @@ echo "rampupTime = " ${rampupTime}
 echo "ctrlLoops = " ${ctrlLoops}
 echo "apiKey = " ${apiKey}
 echo "csvFileHost = " ${csvFileHost}
-echo "csvFileUser = " ${csvFileUser}
-echo "roleReadApi = " ${roleReadApi}
+echo "csvFileRequest = " ${csvFileRequest}
+echo "tncAcceptApi = " ${tncAcceptApi}
 
 
 sed "s/THREADS_COUNT/${numThreads}/g" $JMX_FILE_PATH > jmx.tmp
@@ -62,16 +67,18 @@ mv jmx.tmp $JMX_FILE_PATH
 sed "s/API_KEY/${apiKey}/g" $JMX_FILE_PATH > jmx.tmp
 mv jmx.tmp $JMX_FILE_PATH
 
+
 sed "s#DOMAIN_FILE#${csvFileHost}#g" $JMX_FILE_PATH > jmx.tmp
 mv jmx.tmp $JMX_FILE_PATH
 
-sed "s#CSV_FILE#${csvFileUser}#g" $JMX_FILE_PATH > jmx.tmp
+sed "s#CSV_FILE#${csvFileRequest}#g" $JMX_FILE_PATH > jmx.tmp
 mv jmx.tmp $JMX_FILE_PATH
 
-sed "s#PATH_PREFIX#${roleReadApi}#g" $JMX_FILE_PATH > jmx.tmp
+sed "s#PATH_PREFIX#${tncAcceptApi}#g" $JMX_FILE_PATH > jmx.tmp
 mv jmx.tmp $JMX_FILE_PATH
 
-###Copy JMX File to Logs dir ###
+
+#Copy JMX File to Logs dir ###
 cp $JMX_FILE_PATH $SCENARIO_LOGS/$scenario_id/logs
 
 echo "Running ... "

@@ -39,7 +39,7 @@ Benchmarking User Create API.
 3. Cassandra Cluster- 5 Node (CPU- 16Core; Memory- 64GB)
 4. ES Cluster - 3 Nodes (CPU- 16core; Memory- 64GB)
 5. No of keyCloak server - 4 (CPU- 4core; Memory- 16GB)
-6. Release version - Release 3.9.0
+6. Release version - Release 4.3.0
 
 
 **API End Point:** 
@@ -63,12 +63,12 @@ e.g.
 
 |API         |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
 |------------|------------|--------|---------| -------------|--------------|---------|--------|
-|User Create |100         |50000  |0(0.00%) | 82.8         | 1177         |  2061   |2431 |
+|User Create |100         |25000  |0(0.00%) | 103.5         | 947         |  1206   |1309 |
 
 
 ### Server Utilisation:
 | Backend          | CPU Usage %(max) | Memory Utilization (max) |
 | ------------- | ------------- |------------- |
-| Learner Service (CPU-1 Core; Memory- 3 GB)  |40% |   514 MiB |
-| Cassandra (CPU- 16Core; Memory- 64GB)| 19.97% |13.24 GB |
-| KeyCloak (CPU- 4core ; Memory- 16GB)|99.09%| 2.013 GB|
+| Learner Service (CPU-1 Core; Memory- 3 GB)  |44% |   572 MiB |
+| Cassandra (CPU- 16Core; Memory- 64GB)|  7.62% |13.24 GB |
+| KeyCloak (CPU- 4core ; Memory- 16GB)| 87.22%| 2.013 GB|

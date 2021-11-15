@@ -8,7 +8,7 @@ Benchmarking Auth Tokene API.
 3. No of replicas - 3 KeyCloak servers
 4. ES Cluster - 3 nodes (CPU- 8core ; Memory- 32GB)
 5. Cassandra Cluster- 5 Nodes (CPU- 16Core; Memory- 64GB)
-6. Release version - Release 3.9.0
+6. Release version - Release 4.3.0
 
 
 **API End Point:** `/api/user/v4/create`
@@ -35,11 +35,11 @@ e.g.
 
 | API           | Thread Count  | Samples  | Errors% | Throughput/sec|Avg Resp Time|   95th pct  |  99th pct   |
 | ------------- | ------------- | -------- | --------| ---------------|------------|-------------|-------------|
-| Managed User Creation | 200           | 1000000   | 0(0.00%)| 804.4           |    241    | 397  |  528   |
+| Managed User Creation | 200           | 1000000   | 0(0.00%)| 896.5           |    209    | 362  |  733.99   |
 
 ### Server Utilisation:
 | Backend          | CPU Usage %(max) | Memory Utilization (max) |
 | ------------- | ------------- |------------- |
-| Learner Service (CPU-1 Core; Memory- 3 GB)  |85% |735 MiB|
+| Learner Service (CPU-1 Core; Memory- 3 GB)  |100% | 484 MiB|
 | Cassandra (CPU- 16Core; Memory- 64GB)| 46.20% |14.03 GB |
 | ES (CPU- 8core ; Memory- 32GB)| 38.52%  | 28.48 GB|
