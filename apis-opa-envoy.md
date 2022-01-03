@@ -28,7 +28,7 @@ For benchmarking the APIs, a Jmeter cluster (1 master + 4 slaves in cluster) was
 - Each run was done twice
   - With OPA and Envoy
   - Without OPA and Envoy
-- Some runs were done multiple times to verify throughput, latencies, errors are consistent across multiple runs
+- Some runs were done multiple times to verify throughput, latencies and errors are consistent across multiple runs
 - OPA and Envoy were added as sidecars for the following services on Kubernetes
   - Analytics
   - CertRegistry
@@ -488,13 +488,14 @@ For benchmarking the APIs, a Jmeter cluster (1 master + 4 slaves in cluster) was
 - The overall infra CPU usage (_kubernetes cluster, databases and other VMs involved in the run_) also increased due to additional resources used by OPA and Envoy or due to better throughput
 - In some cases the overall CPU usage decreased after introducing OPA and Envoy
 - In general, an increase of _10% - 20%_ in **_average_** overall CPU usage is expected due to OPA and Envoy sidecars
-- _The increase in overall memory usage is negligible, hence we have not taken it into consideration_
+- _The increase in overall memory usage is negligible compared to regular workloads, hence we have not taken it into consideration_
+
 ### Long Run Soak Test
 - We ran a 60 hour benchmark on the APIs that are part of the soak test (top used APIs) and the results were as we expected
 - Overall TPS
   - 22850 (with opa and envoy)
   - 16800 (without opa and envoy)
-- There is an increase in API latencies and infra resource utilization as we expected due to -
+- There is an increase in API latencies and infra resource utilization due to -
   - Higher throughput
   - OPA and Envoy side cars
 
