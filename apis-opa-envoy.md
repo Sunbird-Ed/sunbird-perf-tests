@@ -502,7 +502,7 @@ For benchmarking the APIs, a Jmeter cluster (1 master + 4 slaves in cluster) was
 - **KO** indicates the number of errors (NOT OK)
 - The **Received** and **Sent** column indicate network bandwidth in **KB/s**
 
-#### With OPA and Envoy
+### With OPA and Envoy
 ##### Jmeter Cluster 1
 | API                    | #Samples   | KO    | Error % | Average | Min | Max   | Median | 90th pct | 95th pct | 99th pct | Transactions/s | Received | Sent     |
 |-----------------------------|------------|-------|-------|--------|---|-------|----|----|----|--------|----------|----------|----------|
@@ -561,7 +561,7 @@ For benchmarking the APIs, a Jmeter cluster (1 master + 4 slaves in cluster) was
 | keycloakloginaction-2                             | 5782360  | 13   | 0.00% | 74.68   | 1  | 60002  | 10  | 25      | 44    | 59     | 28.75  | 55.49  | 22.9   |
 | keycloakloginaction-3                             | 15       | 0    | 0.00% | 3007.73 | 16 | 32414  | 34  | 20289.2 | 32414 | 32414  | 0      | 0      | 0      |
 
-#### Without OPA and Envoy
+### Without OPA and Envoy
 ##### Jmeter Cluster 1
 | API                    | #Samples   | KO    | Error % | Average | Min | Max   | Median | 90th pct | 95th pct | 99th pct | Transactions/s | Received | Sent     |
 |-----------------------------|------------|-------|-------|--------|---|-------|----|----|----|--------|----------|----------|----------|
