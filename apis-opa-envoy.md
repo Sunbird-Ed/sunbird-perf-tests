@@ -498,6 +498,9 @@ For benchmarking the APIs, a Jmeter cluster (1 master + 4 slaves in cluster) was
 - There is an increase in API latencies and infra resource utilization due to -
   - Higher throughput
   - OPA and Envoy side cars
+- All **times** are in **milliseconds** (avg, min, max, median etc)
+- **KO** indicates the number of errors (NOT OK)
+- The **Received** and **Sent** column indicate network bandwidth in **KB/s**
 
 #### With OPA and Envoy
 ##### Jmeter Cluster 1
