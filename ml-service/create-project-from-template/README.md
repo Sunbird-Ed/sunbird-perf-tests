@@ -25,7 +25,7 @@ e.g.
 ### Test Result:
 | API           | Thread Count  | Samples  | Errors%   | Throughput/sec  |Avg Resp Time  |   95th pct  |  99th pct   |
 | ------------- | ------------- | -------- | --------- | --------------- |---------------|-------------|-------------|
-| Entity Report  | 200           |  2000000  | 10 (0.00%) | 2763.8       |     69    |   264    |	327|
+| Create Project From Template  | 200           |  2000000  | 10 (0.00%) | 2763.8       |     69    |   264    |	327|
 
 
 ### Server Utilisation:
