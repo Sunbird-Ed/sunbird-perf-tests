@@ -1,5 +1,5 @@
 ### Test Scenario:
-Benchmarking EntityReport API.
+Benchmarking Create `Project from Template` API.
 
 ### Test Environment Details:
 1. ml-core - 16 pods (1core and 1GB)
