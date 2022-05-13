@@ -36,5 +36,5 @@ e.g.
 ### Server Utilisation: 
 | Backend          | CPU Usage %(max) | Memory Utilization (max) |
 | ------------- | ------------- |------------- |
-|Registry- 16 (CPU- 1 Core; Memory- 1 GB)|80%|50%|
+|Registry Service- 16 (CPU- 1 Core; Memory- 1 GB)|80%|50%|
 |ES Usage (3 Nodes; CPU - 16core ; Memory -  64GB)|30%| 28.48 GB   |
