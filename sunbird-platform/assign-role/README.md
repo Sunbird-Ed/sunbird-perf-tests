@@ -11,6 +11,7 @@ Benchmarking Assign Role API.
 
 **API End Point:** 
 `/api/user/v1/role/assign`
+`/api/user/v2/role/assign`
 
 
 **Executing the test scenario using JMeter:**
@@ -32,7 +33,8 @@ e.g.
 
 | API           | Thread Count  | Samples  | Errors%   | Throughput/sec  |Avg Resp Time  |   95th pct  |  99th pct   |
 | ------------- | ------------- | -------- | --------- | --------------- |---------------|-------------|-------------|
-| Assign Role   | 200           | 2000000   | 0 (0.00%) | 2632        |   74         |      187    |  214       |
+| Assign Role v1  | 200           | 2000000   | 0 (0.00%) | 2632        |   74         |      187    |  214       |
+| Assign Role v2  | 200           | 2000000   | 0 (0.00%) | 2632        |   74         |      187    |  214       |
 
 ### Server Utilisation:
 | Backend          | CPU Usage %(max) | Memory Utilization (max) |
