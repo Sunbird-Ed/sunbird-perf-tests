@@ -1,5 +1,5 @@
 ### Test Scenario:
-Benchmarking Create `Get Question Template Details` API.
+Benchmarking `Get Question Template Details` API.
 
 ### Test Environment Details:
 1. ml-core - 8 pods (1core, 1GB)
