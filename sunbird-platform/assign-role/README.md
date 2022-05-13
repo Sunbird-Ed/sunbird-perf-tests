@@ -7,9 +7,10 @@ Benchmarking Assign Role API.
 2. No of learner service replica - 16 (CPU- 1 Core; Memory- 3 GB)
 4. ES Cluster - 3 nodes (CPU- 16 Core; Memory- 64 GB)
 5. Cassandra Cluster- 5 Nodes (CPU- 16 Core; Memory- 64 GB)
-6. Release version - Release 4.3.0
+6. Release version - Release 4.8.0
 
 **API End Point:** 
+
 `/api/user/v1/role/assign`
 `/api/user/v2/role/assign`
 
@@ -33,8 +34,8 @@ e.g.
 
 | API           | Thread Count  | Samples  | Errors%   | Throughput/sec  |Avg Resp Time  |   95th pct  |  99th pct   |
 | ------------- | ------------- | -------- | --------- | --------------- |---------------|-------------|-------------|
-| Assign Role v1  | 200           | 2000000   | 0 (0.00%) | 2632        |   74         |      187    |  214       |
-| Assign Role v2  | 200           | 2000000   | 0 (0.00%) | 2632        |   74         |      187    |  214       |
+| Assign Role v1  | 200           | 2000000   | 0 (0.00%) | 3159.9        |   61         |      110    |  191       |
+| Assign Role v2  | 200           | 2000000   | 0 (0.00%) | 3127.6        |   52         |      112    |  197       |
 
 ### Server Utilisation:
 | Backend          | CPU Usage %(max) | Memory Utilization (max) |
