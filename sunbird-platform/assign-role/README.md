@@ -42,4 +42,4 @@ e.g.
 | ------------- | ------------- |------------- |
 | Learner Service (CPU-1 Core; Memory- 3 GB)  |100% |883 MiB |
 | Cassandra (CPU- 16Core; Memory- 64GB)|  19% | 11.37 GB |
-| ES (CPU- 16core ; Memory- 64GB)|40% | 28.49 GB|
+| ES (CPU- 16core ; Memory- 64GB)|40% |28.49 GB|
