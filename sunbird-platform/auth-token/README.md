@@ -1,14 +1,14 @@
 ### Test Scenario:
 
-Benchmarking Auth Tokene API.
+Benchmarking Auth Token API.
 
 ### Test Environment Details:
 1. No of AKS node - 16
 2. No of learner service replicas - 8 (1Core and 3GB)
 3. KeyCloak - 4 KeyCloak servers (CPU- 4core ; Memory- 16GB)
 4. ES Cluster - 3 nodes (CPU- 8core ; Memory- 32GB)
-5. Cassandra Cluster- 5 Nodes (CPU- 16Core; Memory- 64GB)
-6. Release version - Release 4.3.0
+5. Cassandra Cluster- 7 Nodes (CPU- 16Core; Memory- 64GB)
+6. Release version - Release 4.8.0
 
 
 **API End Point:** `/auth/realms/sunbird/protocol/openid-connect/token`
@@ -32,12 +32,12 @@ e.g.
 
 | API           | Thread Count  | Samples  | Errors% | Throughput/sec|Avg Resp Time|   95th pct  |  99th pct   |
 | ------------- | ------------- | -------- | --------| ---------------|------------|-------------|-------------|
-| Auth Token    | 200           | 1000000   | 0(0.00%)| 589.3           |    268     | 466      |  744.99   |
+| Auth Token    | 200           | 1000000   | 0(0.00%)| 526.7           |    295     | 351.95      |  566.98   |
 
 
 ### Server Utilisation:
-| Backend          | CPU Usage %(max) | Memory Utilization (max) |
+| Backend          | CPU Usage %(max) | Memory Utilization (max)|
 | ------------- | ------------- |------------- |
-| Learner Service (CPU-1 Core; Memory- 3 GB)  |98% | 888 MiB   |
-|Cassandra (CPU- 16Core; Memory- 64GB)| 14.97%  | 13.153 GB |
-|KeyCloak (CPU- 4core ; Memory- 16GB)|41.22%| 7.086 GB|
+|Learner Service (CPU-1 Core; Memory- 3 GB)  |98% | 888 MiB   |
+|Cassandra (CPU- 16Core; Memory- 64GB)|  9.47%  |  13.85 GB |
+|KeyCloak (CPU- 4core ; Memory- 16GB)|47.59%| 6.623 GB|
