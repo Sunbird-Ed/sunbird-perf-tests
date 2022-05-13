@@ -1,6 +1,6 @@
 ### Test Scenario:
 
-Benchmarking Auth Tokene API.
+Benchmarking DialCode Read API.
 
 ### Test Environment Details:
 1. No of AKS node - 16
