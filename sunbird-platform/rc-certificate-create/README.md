@@ -4,9 +4,9 @@ Benchmarking Certificate Create API.
 
 ### Test Environment Details:
 1. No of AKS node - 16
-2. No of Registry replica - 16 (CPU- 1.5 Core; Memory- 2 GB)
-3. No of certificateapi replica - 16 (CPU- 1.5 Core; Memory- 1 GB)
-4. No of certificatesign  replica - 16 (CPU- 1 Core; Memory- 1 GB)
+2. No of Registry replica - 8 (CPU- 1.5 Core; Memory- 2 GB)
+3. No of Certificateapi replica - 4 (CPU- 1.5 Core; Memory- 1 GB)
+4. No of Certificatesign  replica - 8 (CPU- 1 Core; Memory- 1 GB)
 5. ES Usage (3 Nodes; CPU - 16core ; Memory -  64GB)
 6. Release version - Release 4.8.0
 
