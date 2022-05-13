@@ -31,7 +31,7 @@ e.g.
 ### Server Utilisation:
 | Backend          | CPU Usage %(max) | Memory Utilization (max) |
 | ------------- | ------------- |------------- |
-|ml-core 8 pods (1core and 1GB)|1%|7%|
-|ml-projects 8 pods (1core and 1GB)|100%|8%|
+|ml-core - 8 pods (1core and 1GB)|1%|7%|
+|ml-projects -8 pods (1core and 1GB)|100%|8%|
 |Mongo DB (16core, 32GB)| 14%| 17.373 GB   |
 
