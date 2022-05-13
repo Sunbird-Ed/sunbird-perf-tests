@@ -2,8 +2,8 @@
 Benchmarking `Project from Template` API.
 
 ### Test Environment Details:
-1. ml-core - 16 pods (1core and 1GB)
-2. ml-projects - 16 pods (1Core, 1GB) 
+1. ml-core - 8 pods (1core and 1GB)
+2. ml-projects - 8 pods (1Core, 1GB) 
 3. Mongo DB (16core, 32GB)
 4. Release version - Release 4.8.0
 
