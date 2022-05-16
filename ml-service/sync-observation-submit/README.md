@@ -19,7 +19,7 @@ e.g.
 **Note**
 - Update `host.csv` with valid domain details
 - Update `userdata.csv` with valid user accesstoken data
-- Update `projectIds.csv` with valid projectIds
+- Update `ProjectSync.csv` with valid project sync preSignedUrl
 
 
 ### Test Result:
