@@ -14,7 +14,7 @@ Benchmarking `Get list of sub entity based on role and location` API.
 
 e.g.
 
-```./run_scenario.sh ~/apache-jmeter-5.3 'Jmeter_Slave1_IP,Jmeter_Slave2_IP' sub-entity-list sub-entity-list-R1 5 1 5 ABCDEFabcdef012345 ~/sunbird-perf-tests/sunbird-platform/testdata/host.csv ~/sunbird-perf-tests/testdata/locationData.csv ~/sunbird-perf-tests/testdata/userdata.csv /api/entities/mlcore/v1/subEntityListBasedOnRoleAndLocation ```
+```./run_scenario.sh ~/apache-jmeter-5.3 'Jmeter_Slave1_IP,Jmeter_Slave2_IP' sub-entity-list sub-entity-list-R1 5 1 5 ABCDEFabcdef012345 ~/sunbird-perf-tests/testdata/host.csv ~/sunbird-perf-tests/testdata/locationData.csv ~/sunbird-perf-tests/testdata/userdata.csv /api/entities/mlcore/v1/subEntityListBasedOnRoleAndLocation ```
 
 
 **Note**
