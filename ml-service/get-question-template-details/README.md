@@ -25,7 +25,7 @@ e.g.
 ### Test Result:
 | API           | Thread Count  | Samples  | Errors%   | Throughput/sec  |Avg Resp Time  |   95th pct  |  99th pct   |
 | ------------- | ------------- | -------- | --------- | --------------- |---------------|-------------|-------------|
-| Question Template Details  | 100           |  500000  | 0 (0.00%) | 1063.2      |     92   |   254    |	416.99|
+| Get Question Template Details  | 100           |  500000  | 0 (0.00%) | 1063.2      |     92   |   254    |	416.99|
 
 
 ### Server Utilisation:
