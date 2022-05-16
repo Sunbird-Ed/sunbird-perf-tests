@@ -14,7 +14,7 @@ Benchmarking `Get file upload url for Sync, Observation submit` API.
 
 e.g.
 
-```./run_scenario.sh ~/apache-jmeter-5.3 '28.0.0.19' sync-observation-submit sync-observation-submit-R1 5 1 5 ABCDEFabcdef012345 ~/sunbird-perf-tests/testdata/host.csv ~/sunbird-perf-tests/testdata/ProjectSync.csv ~/sunbird-perf-tests/testdata/userdata.csv /api/cloud-services/mlcore/v1/files/preSignedUrls```
+```./run_scenario.sh ~/apache-jmeter-5.3 'Jmeter_Slave1_IP,Jmeter_Slave2_IP' sync-observation-submit sync-observation-submit-R1 5 1 5 ABCDEFabcdef012345 ~/sunbird-perf-tests/testdata/host.csv ~/sunbird-perf-tests/testdata/ProjectSync.csv ~/sunbird-perf-tests/testdata/userdata.csv /api/cloud-services/mlcore/v1/files/preSignedUrls```
 
 **Note**
 - Update `host.csv` with valid domain details
