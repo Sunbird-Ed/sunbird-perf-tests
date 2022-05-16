@@ -2,7 +2,7 @@
 Benchmarking `Get file upload url for Sync, Observation submit` API.
 
 ### Test Environment Details:
-1. ml-core - 16 pods (1Core, 1GB) 
+1. ml-core - 8 pods (1Core, 1GB) 
 2. Mongo DB (4core, 16GB)
 3. Release version - Release 4.7.0
 
