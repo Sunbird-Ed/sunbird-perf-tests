@@ -25,7 +25,7 @@ e.g.
 ### Test Result:
 | API           | Thread Count  | Samples  | Errors%   | Throughput/sec  |Avg Resp Time  |   95th pct  |  99th pct   |
 | ------------- | ------------- | -------- | --------- | --------------- |---------------|-------------|-------------|
-| Project Details  | 100        |  1500000  | 0 (0.00%) | 1643.5       |     59    |   103    |	150|
+| Project Full Report  | 100        |  1500000  | 0 (0.00%) | 1643.5       |     59    |   103    |	150|
 
 
 ### Server Utilisation:
