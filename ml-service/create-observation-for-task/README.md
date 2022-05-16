@@ -1,5 +1,5 @@
 ### Test Scenario:
-Benchmarking Create observation for task API.
+Benchmarking `Create observation for task` API.
 
 ### Test Environment Details:
 1. ml-projects - 8 pods (1core and 1GB)
@@ -24,7 +24,7 @@ e.g.
 ### Test Result:
 | API           | Thread Count  | Samples  | Errors%   | Throughput/sec  |Avg Resp Time  |   95th pct  |  99th pct   |
 | ------------- | ------------- | -------- | --------- | --------------- |---------------|-------------|-------------|
-| Create observation  | 100           |  2500000  | 0 (0.00%) | 2839.3       |     33     |   159     |	191|
+| Create observation for task  | 100           |  2500000  | 0 (0.00%) | 2839.3       |     33     |   159     |	191|
 
 
 ### Server Utilisation:
