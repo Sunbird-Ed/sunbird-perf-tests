@@ -7,8 +7,8 @@ Benchmarking Page Assemble API with "?orgdetails=orgName,email" params.
 1. No of AKS node - 16
 2. No of lms service replicas - 8 (1 Core and 3 GB)
 3. No of search service replicas - 8 (1 Core and 3 GB)
-4. Cassandra Cluster- 5 Nodes (CPU- 8Core; Memory- 32GB)
-5. Release version - Release 4.3.0
+4. Cassandra Cluster- 7 Nodes (CPU- 8Core; Memory- 32GB)
+5. Release version - Release 4.8.0
 
 
 **API End Point:** 
@@ -32,12 +32,12 @@ e.g.
 
 |API           |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
 |--------------|------------|--------|---------| -------------|--------------|---------|--------|
-|Page Assemble |200         |1000000  |0(0.00%))| 790.5          | 251         |  400   |545.99 |
+|Page Assemble |200         |1000000  |2(0.00%))| 709          | 279         |  4444  |588 |
 
 
 ### Server Utilisation:
 | Backend          | CPU Usage %(max) | Memory Utilization (max) |
 | ------------- | ------------- |------------- |
-| LMS Service (CPU-1 Core; Memory- 3 GB)  |29%|  544 MiB |
-| Search Service (CPU-1 Core; Memory- 2 GB)  |27% | 311 MiB |
-| ES (CPU- 8core ; Memory- 32GB)| 27.33%  |19.62 GB |
+| LMS Service (CPU-1 Core; Memory- 3 GB)  |27%|  544 MiB |
+| Search Service (CPU-1 Core; Memory- 2 GB)  |27% | 407 MiB   |
+| ES (CPU- 8core ; Memory- 32GB)|  26.08%     |19.64 GB   |
