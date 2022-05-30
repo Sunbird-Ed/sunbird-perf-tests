@@ -6,9 +6,9 @@ Benchmarking Get User API.
 ### Test Environment Details
 1. No of AKS node - 16
 2. No of learner service replicas - 16 (1 Core and 3 GB)
-3. Cassandra Cluster- 5 Nodes (CPU- 16Core; Memory- 64GB)
+3. Cassandra Cluster- 7 Nodes (CPU- 16Core; Memory- 64GB)
 4. ES Cluster - 3 nodes (CPU- 16core ; Memory- 64GB)
-5. Release version - Release 4.3.0
+5. Release version - Release 4.8.0
 
 
 **API End Point:** 
@@ -34,11 +34,11 @@ e.g.
 
 |API                |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
 |-------------------|------------|--------|---------| -------------|--------------|---------|--------|
-|User Get           |200         |2000000 |0(0.00%) | 3174.9       | 61           |  98     |109    |
+|User Get           |200         |2000000 |0(0.00%) | 3155.8       | 62           |  100     |181    |
 
 
 ### Server Utilisation:
 | Backend          | CPU Usage %(max) | Memory Utilization (max) |
 | ------------- | ------------- |------------- |
-| Learner Service (CPU- 1Core; Memory- 3GB)  |100% |545 MiB |
-| Cassandra (CPU- 16Core; Memory- 64GB)|42.90%  |13.23 GB |
+| Learner Service (CPU- 1Core; Memory- 3GB)  |100% |652 MiB   |
+| Cassandra (CPU- 16Core; Memory- 64GB)|30.25%   | 13.70 GB  |
