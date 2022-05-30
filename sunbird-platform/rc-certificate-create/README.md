@@ -34,7 +34,7 @@ e.g.
 |   Certificate Create |   100        |  250000  |242.2 |     0 (0.00%)    |  399          |  1797     |  2064     |
 
 ### Server Utilisation: 
-| Backend          | CPU Usage %(max) | Memory Utilization (max) |
+| Backend          | CPU Usage %(max) | Memory Utilization (max)|
 | ------------- | ------------- |------------- |
 |Registry Service - 16 (CPU- 1 Core; Memory- 1 GB)|1%|8%|
 |ES Usage (3 Nodes; CPU - 16core ; Memory -  64GB)|100%|90%  |
