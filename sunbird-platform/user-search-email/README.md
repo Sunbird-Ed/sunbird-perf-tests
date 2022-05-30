@@ -6,13 +6,13 @@ Benchmarking User serach with emailIds API.
 ### Test Environment Details
 1. No of AKS node - 16
 2. No of learner service replicas - 16 (1 Core and 3 GB)
-3. Cassandra Cluster- 5 Nodes (CPU- 16Core; Memory- 64GB)
+3. Cassandra Cluster- 7 Nodes (CPU- 16Core; Memory- 64GB)
 4. ES Cluster - 3 nodes (CPU- 16core ; Memory- 64GB)
-5. Release version - Release 4.3.0
+5. Release version - Release 4.8.0
 
 
 **API End Point:** 
-`/api/user/v1/search`
+`/api/user/v2/search`
 
 **Executing the test scenario using JMeter**
 ```./run_scenario.sh <JMETER_HOME> <JMETER_IP_LIST> <SCENARIO_NAME> <SCENARIO_ID> <THREADS_COUNT> <RAMPUP_TIME> <CTRL_LOOPS> <API_KEY> <DOMAIN_URL> <USER_EMAIL_ID> <DOMAIN_FILE> <CSV_FILE> <pathPrefix> ```
@@ -32,12 +32,12 @@ e.g.
 
 |API                |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
 |-------------------|------------|--------|---------| -------------|--------------|---------|--------|
-|User Search Email    |200         |1000000 |0(0.00%) | 3185.4       | 61           |  104     |179     |
+|User Search Email    |200         |1000000 |0(0.00%) | 2972.3       | 66           |  164     |200     |
 
 
 ### Server Utilisation:
 | Backend          | CPU Usage %(max) | Memory Utilization (max) |
 | ------------- | ------------- |------------- |
 | Learner Service (CPU-1 Core; Memory- 3 GB)  | 100|  894 MiB  |
-| Cassandra (CPU- 16Core; Memory- 64GB)| 14.00%  |13.20 GB  |
-| ES (CPU- 16core ; Memory- 64GB)| 26.28%    | 28.51 GB |
+| Cassandra (CPU- 16Core; Memory- 64GB)|  10.62%   | 13.78 GB    |
+| ES (CPU- 16core ; Memory- 64GB)|   26.40%    |   28.52 GB |
