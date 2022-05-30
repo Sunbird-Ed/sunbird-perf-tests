@@ -7,7 +7,7 @@ Benchmarking Login scenario (with 4 api calls).
 1. No of AKS node - 16
 2. No of learner service replicas - 8 (1 Core and 3 GB)
 3. KeyCloak Server - 4 servers (CPU- 4Core; Memory- 16GB)
-4. Release version - Release 4.3.0
+4. Release version - Release 4.8.0
 
 
 **Executing the test scenario using JMeter**
@@ -27,7 +27,7 @@ e.g.
 
 |API                |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
 |-------------------|------------|--------|---------| -------------|--------------|---------|--------|
-|Login (4 API Calls)|40          |228601 |30(0.00%)| 370.2       | 98       | 411  |500  |
+|Login (4 API Calls)|160          |264218 |0 (0.00%)| 400.11      | 668      | 2001.95  |3090.96  |
 
 
 ### Server Utilisation:
