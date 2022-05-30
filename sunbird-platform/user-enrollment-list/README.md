@@ -7,8 +7,8 @@ Benchmarking User Enrollment List API.
 1. No of AKS node - 16
 2. No of learner service replicas - 8 (1 Core and 3 GB)
 3. No of LMS service replicas - 16 (1 Core and 1 GB)
-4. Cassandra Cluster- 5 Nodes (CPU- 8Core; Memory- 32GB)
-5. Release version - Release 4.3.0
+4. Cassandra Cluster- 7 Nodes (CPU- 8Core; Memory- 32GB)
+5. Release version - Release 4.8.0
 
 
 **API End Point:** 
@@ -33,11 +33,11 @@ e.g.
 
 |API                 |Thread Count|Samples |Errors%  |Throughput/sec|Avg | 95th pct | 99th pct|
 |--------------------|------------|--------|---------| -------------|-----------|-------------|---------|
-|User Enrollment List|200         |1000000 |0 (0.00%)| 902.6      |    217       |       299     |  378       |
+|User Enrollment List|200         |1000000 |0 (0.00%)| 867.4     |    223      |       389     |  577.99      |
 
 
 ### Server Utilisation:
 | Backend          | CPU Usage %(max) | Memory Utilization (max) |
 | ------------- | ------------- |------------- |
 | LMS Service (CPU-1 Core; Memory- 3 GB)  |60% | 520 MiB     |
-| Cassandra (CPU- 16Core; Memory- 64GB)| 5.43% |13.14 GB |
+| Cassandra (CPU- 16Core; Memory- 64GB)|  4.99%   | 13.79 GB |
