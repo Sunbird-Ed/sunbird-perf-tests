@@ -9,7 +9,7 @@ Benchmarking content read API.
 3. ES Cluster - 3 Nodes  (CPU - 16core ; Memory - 32 GB)
 4. Cassandra Cluster- 5 Nodes (CPU- 8Core; Memory- 32GB)
 5. Redis - 1 node  (CPU- 2core; Memory - 8GB)
-6. Release version - Release 4.3.0
+6. Release version - Release 4.8.0
 
 
 **API End Point:** 
@@ -33,7 +33,7 @@ e.g.
 
 | API           | Thread Count  | Samples  | Errors %     | Throughput/sec |Avg Resp Time|95th pct| 99th pct |
 | ------------- | ------------- | -------- | -------------| ---------------|-------------|--------|----------|
-| Content Read  | 200           | 20000000  | 0 (0.00%) | 27360.7          |    2       |    3  |    5    |
+| Content Read  | 200           | 20000000  | 0 (0.00%) | 30073.8          |    1      |    2  |    6    |
 
 
 ### Server Utilisation:
