@@ -7,7 +7,7 @@ Benchmarking Org Search API.
 1. No of AKS node - 16
 2. No of learner service replicas - 8 (1 Core and 3 GB)
 3. Cassandra Cluster- 5 Nodes; CPU- 8Core; Memory- 32GB
-4. Release version - Release 4.3.0
+4. Release version - Release 4.8.0
 
 
 **API End Point:** 
@@ -33,7 +33,7 @@ e.g.
 
 |API       |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
 |----------|------------|--------|---------| -------------|--------------|---------|--------|
-|Org Search V1 |200         |10000000|0(0.00%) | 13319.6       | 7           | 13     |25   |
+|Org Search V1 |200         |10000000|0(0.00%) | 13554.3       | 10           | 12     |23  |
 
 
 ### Server Utilisation:
@@ -45,7 +45,7 @@ e.g.
 
 |API       |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
 |----------|------------|--------|---------| -------------|--------------|---------|--------|
-|Org Search V2 |200         |10000000|0(0.00%) | 17497       | 3           | 9     |23   |
+|Org Search V2 |200         |10000000|0(0.00%) | 14482.8      | 10           | 10     |22   |
 
 
 ### Server Utilisation:
