@@ -31,7 +31,7 @@ e.g.
 
 | API           | Thread Count  | Samples  | Throughput/sec  | Errors%   |Avg Resp Time  |   95th pct  |  99th pct   |
 | ------------- | ------------- | -------- | --------- | --------------- |---------------|-------------|-------------|
-|   Certificate Download |   200        |  1000000  |1139.7 |     0 (0.00%)    | 168          |  602     |  1197.95    |
+|   Certificate Download |   200        |  1000000  |1139.7 |     0 (0.00%)    | 168          |  602     |  1197.95   |
 
 ### Server Utilisation: 
 | Backend          | CPU Usage %(max) | Memory Utilization (max) |
