@@ -35,5 +35,5 @@ e.g.
 ### Server Utilisation:
 | Backend          | CPU Usage %(max) | Memory Utilization (max)|
 | ------------- | ------------- |------------- |
-|Dial Service (CPU-1 Core; Memory- 1 GB)  |65% | 30%   |
-|Cassandra (CPU- 16Core; Memory- 64GB)|   6.80%   |  13.946 GB   |
+|Dial Service (CPU-1 Core; Memory- 1 GB)  |65% | 30%  |
+|Cassandra (CPU- 16Core; Memory- 64GB)|   6.80%   |  13.946 GB  |
