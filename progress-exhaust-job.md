@@ -28,7 +28,7 @@
   - Configuration: 11 Nodes Cluster (16Core, 64GB)
   
 **4. Postgres:**
-  - Configuration:
+  - Configuration: General Purpose, 4Core, 100GB
   
 **5. Redis:**
   - Configuration: 1 node (64core, 256GB)
