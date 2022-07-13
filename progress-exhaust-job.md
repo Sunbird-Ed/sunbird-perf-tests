@@ -1,4 +1,4 @@
-## Progres Exhaust Job Details
+## Progres Exhaust Job Test Run Details
 
 **Pre-requisites:** To run the progres exhaust job following services/VMs needs to be up and running before running the test
 
