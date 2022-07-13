@@ -10,3 +10,6 @@
 - **Redis:**
   - Configuration: 1 node (64core, 256GB)
 
+**Steps to follow:**
+
+**Test Result:** 
