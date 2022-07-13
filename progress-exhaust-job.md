@@ -33,12 +33,12 @@
 **5. Redis:**
   - Configuration: 1 node (64core, 256GB)
 
-**Steps to follow:**
+##Steps to follow:**
   1. Provision the SparkHDinsightCluster with required head node and worker node configuration (/job/Provision/job/loadtest/job/DataPipeline/job/SparkHDinsightCluster/)
   2. Submit the progres exhaust requests using Data Exhaust - Request API
   3. Submit the SparkClusterSubmitJobs job from jenkins (/job/Deploy/job/loadtest/job/DataPipeline/job/SparkClusterSubmitJobs/)
 
-### Test Result:
+## Test Result:
 ***Note**: Total batches: 1000 (20 course batches per request)
 | No of Requests | Parallelism| Spark Worker Nodes | Cassandra CPU Usage (max) | Time Taken (Hours) | Failure|
 |--------------|----------|--------------|----------|----------|----------|
