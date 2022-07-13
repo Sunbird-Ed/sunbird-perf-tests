@@ -8,7 +8,7 @@ Benchmarking Framework Read API with and without category.
 2. No of learner service replicas - 8 (1 Core and 1GB)
 3. ES Cluster - 3 nodes (CPU- 16core ; Memory- 64GB)
 4. Cassandra Cluster- 5 Nodes (CPU- 8Core; Memory- 32GB)
-5. Release version - Release 4.3.0
+5. Release version - Release 4.8.0
 
 **API End Point:** 
 `/api/framework/v1/read`
@@ -32,5 +32,5 @@ Note:
 
 | API                              | Thread Count| Samples  | Errors% |Throughput/sec|Avg Resp Time| 95th pct|99th pct|API Endpoint|
 | ---------------------------------| ------------| -------- | --------| -------------|-------------|---------|--------|------------|
-| Framework Read-without category  | 200         | 1000000   | 0(0.00%)|1073.6       | 146        | 592.95  |1359  |/api/framework/v1/read|
-| Framework Read-with category     | 200         | 16000000  | 0(0.00%)|38444.3        | 1         | 1      |5  |/api/framework/v1/read|
+| Framework Read-without category  | 200         | 1000000   | 0(0.00%)|1135.6      | 148        | 1135.6  |1201  |/api/framework/v1/read|
+| Framework Read-with category     | 200         | 16000000  | 0(0.00%)|41662.8       | 2         | 2      |7  |/api/framework/v1/read|

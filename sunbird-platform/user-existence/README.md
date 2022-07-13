@@ -6,9 +6,9 @@ Benchmarking User Existence API.
 ### Test Environment Details
 1. No of AKS node - 16
 2. No of learner service replicas - 16 (1 Core and 3 GB)
-3. Cassandra Cluster- 5 Nodes (CPU- 16Core; Memory- 64GB)
+3. Cassandra Cluster- 7 Nodes (CPU- 16Core; Memory- 64GB)
 4. ES Cluster - 3 nodes (CPU- 16core ; Memory- 64GB)
-5. Release version - Release 4.3.0
+5. Release version - Release 4.8.0
 
 
 **API End Point:** 
@@ -35,10 +35,10 @@ e.g.
 
 |API                |Thread Count|Samples |Errors%  |Throughput/sec|Avg Resp Time |95th pct |99th pct|
 |-------------------|------------|--------|---------| -------------|--------------|---------|--------|
-|User Existence     |200         |2000000 |0(0.00%) | 7711       | 25           |  71     |80      |
+|User Existence     |200         |2000000 |0(0.00%) | 7727       | 25           |  48     |67     |
 
 ### Server Utilisation:
 | Backend          | CPU Usage %(max) | Memory Utilization (max) |
 | ------------- | ------------- |------------- |
-| Learner Service (CPU-1 Core; Memory- 3 GB)  | 99%| 889 MiB |
-| Cassandra (CPU- 16Core; Memory- 64GB)| 15.30%  | 13.196 GB|
+| Learner Service (CPU-1 Core; Memory- 3 GB)  | 99%| 639 MiB |
+| Cassandra (CPU- 16Core; Memory- 64GB)| 11.20%  | 13.81 GB|

@@ -7,7 +7,7 @@ Benchmarking Search Content API with different search queries.
 1. No of AKS node - 16
 2. No of Search service replicas - 6 (1Core and 3GB)
 3. ES Cluster - 3 Nodes (CPU - 16core ; Memory - 32 GB)
-4. Release version - Release 4.3.0
+4. Release version - Release 4.8.0
 
 
 **API End Point:** 
@@ -31,11 +31,11 @@ e.g.
 
 | API             | Thread Count  | Errors%   | Throughput/sec  |Avg Resp Time |   95th pct  |  99th pct   |
 | --------------- | ------------- | --------- | --------------- |--------------|-------------|-------------|
-| Search Content  | 200           | 0 (0.00%) | 7691.1          |23            |18           | 56          |
+| Search Content  | 200           | 0 (0.00%) | 9393.7         |17            |15         | 41         |
 
 
 ### Server Utilisation:
 | Backend          | CPU Usage %(max) | Memory Utilization (max) |
 | ------------- | ------------- |------------- |
-|Search Service (CPU-1 Core; Memory- 3 GB)  |42% | 540 Mi|
-|ES (CPU- 16core ; Memory- 32GB)|62.18%  |  19.64 GB|
+|Search Service (CPU-1 Core; Memory- 3 GB)  |42% |  467 MiB|
+|ES (CPU- 16core ; Memory- 32GB)|60%  |  19.69 GB|

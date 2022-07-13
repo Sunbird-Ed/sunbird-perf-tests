@@ -8,7 +8,7 @@ Benchmarking Course Batch Enrol API.
 2.  No of LMS service replicas - 16 (1Core and  3 GB)
 3.  ES Cluster - 3 nodes (CPU- 16core ; Memory- 64GB)
 4.  Cassandra Cluster- 5 Nodes (CPU- 8Core; Memory- 32GB)
-5.  Release version - Release 4.3.0
+5.  Release version - Release 4.8.0
 
 
 **API End Point:** 
@@ -34,11 +34,11 @@ e.g.
 
 | API                 | Thread Count  | Samples  | Errors%   | Throughput/sec  |Avg Resp Time|  95th pct | 99th pct |
 | ------------------- | ------------- | -------- | --------- | --------------- |-------------|-----------|----------|
-| Course Batch Enrol  | 200           | 1000000  | 0 (0.00%) | 5020.7          |       40    |    84   |  91.99   |
+| Course Batch Enrol  | 200           | 1000000  | 0 (0.00%) | 4968.3         |       38    |    39   |  81  |
 
 
 ### Server Utilisation:
 | Backend          | CPU Usage %(max) | Memory Utilization (max) |
 | ------------- | ------------- |------------- |
-|LMS Service (CPU-1 Core; Memory- 3 GB)  |80% | 632 MiB  |
-|Cassandra (CPU- 16Core; Memory- 64GB)| 20.17% |13.05 GB |
+|LMS Service (CPU-1 Core; Memory- 3 GB)  |80% |  618 MiB |
+|Cassandra (CPU- 16Core; Memory- 64GB)| 15.55% |13.72 GB |

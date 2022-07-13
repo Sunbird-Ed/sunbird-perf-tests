@@ -31,10 +31,10 @@ e.g.
 
 | API           | Thread Count  | Samples  | Throughput/sec  | Errors%   |Avg Resp Time  |   95th pct  |  99th pct   |
 | ------------- | ------------- | -------- | --------- | --------------- |---------------|-------------|-------------|
-|   Certificate Search |   100        |  2000000  |2149.3|     0 (0.00%)    |  43         |  28     |  83     |
+|   Certificate Search |   100        |  2000000  |2149.3|     0 (0.00%)    |  43         |  28     |  83      |
 
 ### Server Utilisation: 
 | Backend          | CPU Usage %(max) | Memory Utilization (max) |
 | ------------- | ------------- |------------- |
 |Registry Service- 16 (CPU- 1 Core; Memory- 1 GB)|80%|50%|
-|ES Usage (3 Nodes; CPU - 16core ; Memory -  64GB)|30%| 28.48 GB   |
+|ES Usage (3 Nodes; CPU - 16core ; Memory -  64GB)|30%| 28.48 GB |
