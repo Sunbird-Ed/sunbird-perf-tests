@@ -43,6 +43,6 @@
 | No of Requests | Parallelism| Spark Worker Nodes | Cassandra CPU Usage (max) | Time Taken (Hours) | Failure|
 |--------------|----------|--------------|----------|----------|----------|
 |50 (1000 course batches)          |1         |16            |22%       |11        |0         |
-|50 (1000 course batches)           |2         |16            |32%       |7.5       |0         |
+|50 (1000 course batches)          |2         |16            |32%       |7.5       |0         |
 |50 (1000 course batches)          |4         |16            |62%       |6         |0         |
 |50 (1000 course batches)          |5         |16            |74%       |5         |0         |
